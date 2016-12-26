@@ -81,7 +81,7 @@ header {
 	background-color: #e7e7e8;
 	background-repeat: no-repeat;
 	background-position: right;
-	background-size: 60%;
+	background-size: contain;
 }
 
 
@@ -157,8 +157,8 @@ header {
 	}
 
 	.firstV {
-		width: 100vw;
-		height: calc(100vh - 40px); //высота блока .links - 1 строка
+		width: auto;
+		height: calc(100vh - 57px); //высота блока .links - 1 строка
 		background-image: none;
 		background-color: #f4faf8;
 		background-size: 0%;
@@ -206,8 +206,8 @@ header {
 @media (max-width: 768px){
 
 	.firstV {
-		width: 100vw;
-		height: calc(100vh - 146px); //высота блока .links - 2 строки
+		width: auto;
+		height: calc(100vh - 163px); //высота блока .links - 2 строки
 		background-image: none;
 		background-color: #f4faf8;
 	}
@@ -257,8 +257,8 @@ header {
 @media (max-width: 450px){
 
 	.firstV {
-		width: 100vw;
-		height: calc(100vh - 262px); //высота блока .links - 4 строки
+		width: auto;
+		height: calc(100vh - 279px); //высота блока .links - 4 строки
 		background-image: none;
 		background-color: #f4faf8;
 	}
