@@ -90,7 +90,7 @@ header {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	margin-bottom: 20px;
+	padding-bottom: 10px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -200,7 +200,7 @@ header {
 
 	.links a,
 	.ended p {
-		font-size: 20px;
+		font-size: 17px;
 	}
 }
 
@@ -236,22 +236,22 @@ header {
 
 	.icon::before{
 		content: '';
-		width: 40px;
-		height: 40px;
+		width: 30px;
+		height: 30px;
 		left: -50px;
 	}
 
 	.icon1::before{
-		background-position: 2x 0;
+		background-position: 2px 0;
 	}
 	.icon2::before{
-		background-position: -39px 0;
+		background-position: -29px 0;
 	}
 	.icon3::before{
-		background-position: -78px 0;
+		background-position: -58px 0;
 	}
 	.icon4::before{
-		background-position: -118px 0;
+		background-position: -88px 0;
 	}
 }
 
