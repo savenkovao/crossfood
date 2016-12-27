@@ -46,7 +46,7 @@ header {
 }
 
 .leftScr {
-	padding-top: 100px;
+	padding-top: 50px;
 	padding-top: 15vh;
 	position: relative;
 	z-index: 100;
@@ -109,6 +109,11 @@ header {
 	color: #272a2b;
 }
 
+.ended:hover p {
+	color: #82bb5d;
+}
+
+
 .cont{
 	display: inline-block;
 	width: 25%;
@@ -116,6 +121,8 @@ header {
 	position: relative;
 	text-align: left;
 }
+
+
 .icon{
 	display: inline-block;
 }
@@ -124,24 +131,38 @@ header {
 	content: '';
 	position: absolute;
 	width: 33px;
-	height: 33px;
-	background-image: url(../img/icons.png);
+	height: 33px;	
 	background-size: cover;
 	background-repeat: no-repeat;
 	left: 0;
 }
 
+
+
 .icon1::before{
-	background-position: 0 0;
+	background-image: url(../img/phone.svg);
 }
 .icon2::before{
-	background-position: -32px 0;
+	background-image: url(../img/vk.svg);
 }
 .icon3::before{
-	background-position: -64px 0;
+	background-image: url(../img/instagram.svg);
 }
 .icon4::before{
-	background-position: -96px 0;
+	background-image: url(../img/facebook.svg);
+}
+
+.cont-in:hover .icon1::before{
+	background-image: url(../img/phone-h.svg);
+}
+.cont-in:hover .icon2::before{
+	background-image: url(../img/vk-h.svg);
+}
+.cont-in:hover .icon3::before{
+	background-image: url(../img/instagram-h.svg);
+}
+.cont-in:hover .icon4::before{
+	background-image: url(../img/facebook-h.svg);
 }
 
 
@@ -208,7 +229,7 @@ header {
 
 	.firstV {
 		width: auto;
-		height: calc(100vh - 146px); //высота блока .links - 2 строки
+		height: calc(100vh - 138px); //высота блока .links - 2 строки
 		background-image: none;
 		background-color: #f4faf8;
 	}
@@ -231,35 +252,24 @@ header {
 	}
 
 	.easy{
-		font-size: 20px;
+		font-size: 25px;
 	}
 
 	.icon::before{
 		content: '';
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 35px;
 		left: -50px;
+		top: -5px;
 	}
 
-	.icon1::before{
-		background-position: 2px 0;
-	}
-	.icon2::before{
-		background-position: -29px 0;
-	}
-	.icon3::before{
-		background-position: -58px 0;
-	}
-	.icon4::before{
-		background-position: -88px 0;
-	}
 }
 
 @media (max-width: 450px){
 
 	.firstV {
 		width: auto;
-		height: calc(100vh - 262px); //высота блока .links - 4 строки
+		height: calc(100vh - 247px); //высота блока .links - 4 строки
 		background-image: none;
 		background-color: #f4faf8;
 	}
