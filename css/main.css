@@ -122,6 +122,12 @@ header {
 	text-align: left;
 }
 
+.cont-in:visited,
+.cont-in:focus,
+.cont-in:visited{
+	text-decoration: none;
+	color: #272a2b;
+}
 
 .icon{
 	display: inline-block;
