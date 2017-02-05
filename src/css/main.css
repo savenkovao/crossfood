@@ -188,6 +188,7 @@ body {
 .header-button {
   text-align: left;
   padding-top: 44px;
+  user-select: none;
 }
 @media screen and (max-width: 768px) {
   .header-button {
@@ -303,6 +304,9 @@ body {
   user-select: none;
   border-radius: 20px;
   text-transform: uppercase;
+}
+.button:focus {
+  outline: none;
 }
 .button_filled {
   background-color: #6b9e3d;
