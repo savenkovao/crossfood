@@ -1,0 +1,52 @@
+.button{	
+	display: inline-block;
+	width: 220px;
+	height: 54px;
+	line-height: 42px;
+	font-family: "Century Gothic";
+	font-size: @btn-font-size;
+	// letter-spacing: 0.5px;
+	cursor: pointer;
+	border: none;
+	user-select: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+
+	// color: #ffffff;
+	
+
+}
+
+.button_filled {
+	.setButton (#ffffff);
+	transition: background-color 0.2s linear;
+
+	&:active,
+	&:hover{
+		background-color: darken(#6b9e3d, 5%);
+	}
+}
+
+.button_bordered{
+	.setButton (@btn-background-color);
+	transition: background-color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0), color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0);
+
+	&:active,
+	&:hover{
+		background-color: @btn-background-color;
+		color: white;
+	}
+}
+
+
+
+
+// .button_position-left{
+	
+// }
+// .button_position-center{
+	
+// }
+// .button_position-rigth{
+	
+// }
