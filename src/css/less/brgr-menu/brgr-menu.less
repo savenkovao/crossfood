@@ -1,29 +1,31 @@
 .brgr-menu{
-	display: none;
+	display: block;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: inline-block;
+	width: 32px;
+	height: 26px;
+	cursor: pointer;		
+	z-index: 2;	
+
 	@media @tablet{
-		display: block;
-		position: fixed;
-		top: 20px;
-		right: 20px;
-		display: inline-block;
-		width: 32px;
-		height: 26px;
-		cursor: pointer;		
-		z-index: 2;	
+		display: none;
 	}
 
 }
 
 .brgr-menu__stick {
-	display: none;
+	display: block;
+	height: 4px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	background-color: @btn-background-color;
+	transition: all 0.1s linear;
+	
 	@media @tablet{
-		display: block;
-		height: 4px;
-		width: 100%;
-		position: absolute;
-		left: 0;
-		background-color: @brgr-stck-bgclr;
-		transition: all 0.1s linear;
+		display: none;		
 	}
 	
 }
