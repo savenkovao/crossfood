@@ -1,0 +1,91 @@
+.team-block{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+	@media @tablet{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+}
+
+.team-block__item{
+	width: 100%;
+
+	@media @tablet{
+		width: 28.5%;
+	}
+
+	@media @laptop{
+		width: 25%;
+	}
+}
+
+.team-block__img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.team-block__text{
+	// padding-top: 50px;
+	// padding-left: 50px;
+
+	// @media @tablet {
+		padding-top: 100px;
+		padding-left: 70px;
+	// }
+}
+
+.team-block__name{
+	position: relative;	
+	line-height: 26px;
+	font-family: "Fira Sans Extra Condensed";
+	font-size: 28px;
+	font-weight: 400;
+	color: @main-color;
+	text-align: center;
+
+		&::before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: -80px;
+		width: 31px;
+		height: 95px;
+		left: -5px;
+
+		.setBackgroundImage(@round-arrow);
+		// @media @tablet {
+		// 	width: 31px;
+		// 	height: 95px;
+		// 	left: 55px;
+		// }		
+	} 
+}
+.team-block__name-1{}
+.team-block__name-2{}
+.team-block__name-3{}
+
+
+/* Text style for "Мария Савв" */
+
+
+/* Text style for "нутрициоло" */
+
+
+
+.team-block__descript{
+	color: #2d2d2d;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.team-block__descript-1{}
+.team-block__descript-2{}
+.team-block__descript-3{}
+

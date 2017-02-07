@@ -138,6 +138,12 @@ table {
   src: local("Roboto+Condensed"), url(../fonts/RobotoCondensed-Regular.ttf);
   /* Путь к файлу со шрифтом */
 }
+@font-face {
+  font-family: "Fira Sans Extra Condensed";
+  /* Имя шрифта */
+  src: local("Fira Sans Extra Condensed"), url(../fonts/FiraSansExtraCondensed-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
 * {
   box-sizing: border-box;
 }
@@ -282,28 +288,35 @@ body {
   cursor: default;
 }
 .title-3__h3 {
-  margin: 0;
-  font-size: 3.5em;
-  line-height: 24px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 4.4em;
+  line-height: 42px;
+  font-weight: 500;
+  font-family: "Fira Sans Extra Condensed";
+  user-select: none;
+  cursor: default;
 }
-@media only screen and (min-width: 320px) {
-  .title-3__h3 {
-    font-size: 2.45em;
-  }
+.title-3__h3_dark {
+  color: #3d3d3d;
+}
+.title-3__h3_dark:before {
+  background-color: #6b9e3d;
+}
+.title-3__h3_light {
+  color: white;
+}
+.title-3__h3_light:before {
+  background-color: white;
 }
 .hr-line {
   position: relative;
 }
 .hr-line::before {
   content: '';
-  width: 8.25em;
-  height: 3px;
-  background-color: #be3835;
+  width: 2em;
+  height: 6px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2px;
   margin-top: 47px;
 }
 .button {
@@ -383,4 +396,367 @@ body {
 .stick-3 {
   top: 22px;
   transform-origin: 0% 100% 0;
+}
+.brgr-menu {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 32px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .brgr-menu {
+    display: none;
+  }
+}
+.brgr-menu__stick {
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #6b9e3d;
+  transition: all 0.1s linear;
+}
+@media only screen and (min-width: 768px) {
+  .brgr-menu__stick {
+    display: none;
+  }
+}
+.stick-1 {
+  top: 0;
+  transform-origin: 0% 0% 0;
+}
+.stick-2 {
+  top: 11px;
+}
+.stick-3 {
+  top: 22px;
+  transform-origin: 0% 100% 0;
+}
+.how-it-works_position {
+  padding: 96px 3%;
+}
+@media only screen and (min-width: 980px) {
+  .how-it-works_position {
+    padding: 96px 0%;
+  }
+}
+.how-it-works_title-3-position {
+  padding-top: 105px;
+}
+.how-it-works_steps-pos {
+  padding-top: 65px;
+}
+.descript {
+  width: 78%;
+  margin: 0 auto;
+  color: #272929;
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.descript__highlited {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.steps {
+  position: relative;
+  padding: 85px 0;
+}
+.steps__item {
+  position: absolute;
+  color: #707070;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+}
+@media only screen and (min-width: 768px) {
+  .steps__item {
+    width: 31%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .steps__item {
+    width: 23%;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .steps__item {
+    width: 21%;
+  }
+}
+.steps__item-1 {
+  bottom: 0%;
+}
+@media only screen and (min-width: 768px) {
+  .steps__item-1 {
+    left: 1%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .steps__item-1 {
+    left: 7%;
+  }
+}
+.steps__item-2 {
+  top: 0%;
+}
+@media only screen and (min-width: 768px) {
+  .steps__item-2 {
+    left: 23%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .steps__item-2 {
+    left: 28%;
+  }
+}
+.steps__item-3 {
+  bottom: 0%;
+}
+@media only screen and (min-width: 768px) {
+  .steps__item-3 {
+    left: 45%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .steps__item-3 {
+    left: 49%;
+  }
+}
+.steps__item-4 {
+  top: 0%;
+}
+@media only screen and (min-width: 768px) {
+  .steps__item-4 {
+    left: 68%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .steps__item-4 {
+    left: 72%;
+  }
+}
+.steps__img {
+  display: block;
+  width: 68.4%;
+  margin: 0 auto;
+  user-select: none;
+  cursor: default;
+}
+.advantages_background {
+  background-image: url("../img/dsg/backgrounds/advantages-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+.advantages_position {
+  padding: 55px 3% 90px;
+}
+@media only screen and (min-width: 980px) {
+  .advantages_position {
+    padding: 55px 0% 90px;
+  }
+}
+.advantages_advantage-block-pos {
+  padding-top: 45px;
+}
+@media only screen and (min-width: 768px) {
+  .advantages_advantage-block-pos {
+    padding-top: 95px;
+  }
+}
+.advantage-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+.advantage-block__item {
+  width: 100%;
+  padding-top: 200px;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block__item {
+    width: 28.5%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .advantage-block__item {
+    width: 23.5%;
+  }
+}
+.advantage-block__descript {
+  position: relative;
+  color: #f0f5e9;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  user-select: none;
+  cursor: default;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block__descript {
+    width: 100%;
+  }
+}
+.advantage-block__descript:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  top: -165px;
+  left: 0;
+  right: 0;
+  background-image: url("../img/dsg/backgrounds/advantage-item-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  background-size: contain;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block__descript:before {
+    top: -200px;
+  }
+}
+.advantage-block__descript-1::before {
+  height: 125px;
+  top: -150px;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block__descript-1::before {
+    top: -185px;
+  }
+}
+.advantage-block__descript-2::before {
+  margin-left: 12px;
+  background-image: url("../img/dsg/backgrounds/advantage-item-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  background-size: contain;
+}
+.advantage-block__descript-3::before {
+  top: -170px;
+  height: 150px;
+  background-image: url("../img/dsg/backgrounds/advantage-item-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  background-size: contain;
+}
+@media only screen and (min-width: 768px) {
+  .advantage-block__descript-3::before {
+    top: -205px;
+  }
+}
+.team-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .team-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+.team-block__item {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .team-block__item {
+    width: 28.5%;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .team-block__item {
+    width: 25%;
+  }
+}
+.team-block__img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.team-block__text {
+  padding-top: 100px;
+  padding-left: 70px;
+}
+.team-block__name {
+  position: relative;
+  line-height: 26px;
+  font-family: "Fira Sans Extra Condensed";
+  font-size: 28px;
+  font-weight: 400;
+  color: #6b9e3d;
+  text-align: center;
+}
+.team-block__name::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -80px;
+  width: 31px;
+  height: 95px;
+  left: -5px;
+  background-image: url("../img/dsg/round-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+/* Text style for "Мария Савв" */
+
+/* Text style for "нутрициоло" */
+
+.team-block__descript {
+  color: #2d2d2d;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.our-team_position {
+  padding: 110px 3%;
+}
+@media only screen and (min-width: 980px) {
+  .our-team_position {
+    padding: 110px 0%;
+  }
+}
+.our-team_team-block-pos {
+  padding-top: 45px;
+}
+@media only screen and (min-width: 768px) {
+  .our-team_team-block-pos {
+    padding-top: 95px;
+  }
 }
