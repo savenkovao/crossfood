@@ -1,13 +1,12 @@
 //site name and logo (optional)
 .title-1{
 	display: inline-block;	
-	padding-top: 98px;
 	user-select: none;
 }
 .title-1__h1{
 	margin: 0;
 	padding-top: 20px; 
-	font-size: @h1-font-size;
+	
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	color: #1c1c1c;
@@ -15,12 +14,12 @@
 	line-height: 58px;
 	font-weight: bold;
 	cursor: default;
-	
+	font-size: @h1-font-size*0.5;
 
 	
-	// @media @mobileS{
-	// 	font-size: @h1FntSzdktp*0.7;
-	// }
+	@media @tablet{
+		font-size: @h1-font-size;
+	}
 }
 
 .title-1__img{
@@ -44,10 +43,11 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	cursor: default;
-	
-	// @media @mobileS{
-	// 	font-size: @h2FntSzdktp*0.7;
-	// }
+	text-align: center;
+
+	@media @tablet{
+		font-size: @h2-font-size*0.7;
+	}
 }
 
 // site headings (of different sections)

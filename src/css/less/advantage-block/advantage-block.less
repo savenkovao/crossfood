@@ -14,9 +14,15 @@
 .advantage-block__item{
 	width: 100%;
 	padding-top: 200px;
+	margin-top: 15px;
+
+	&:first-child{
+		margin-top: 0;
+	}
 
 	@media @tablet{
 		width: 28.5%;
+		margin-top: 0;
 	}
 
 	@media @laptop{
@@ -27,12 +33,11 @@
 .advantage-block__descript{
 	position: relative;
 	color: #f0f5e9;
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 28px;
 	text-align: center;
-	width: 80%;
+	width: 67%;
 	margin: 0 auto;
-	user-select: none;
 	cursor: default;
 
 	@media @tablet{
