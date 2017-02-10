@@ -1,0 +1,154 @@
+.cuisine{}
+.cuisine_background{
+	.setBackgroundImage(@cuisine-background-img);
+}
+.cuisine_position{
+	padding: 65px 3% 40px; 
+
+	@media @laptop {
+		padding: 65px 0% 40px;
+	}
+}
+
+.cuisine-block_position{
+	padding-top: 60px;
+}
+
+.cuisine-block__navigation_pos{
+	display: flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;	
+	border-radius: 4px 4px 0 0;
+	background-color: #ffffff;
+	width: 90%;
+	margin: 0 auto;
+	z-index: 1;
+
+	@media @laptop{
+		max-width: 725px;
+		flex-direction:row;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+.cuisine-block__button{
+	margin: 15px 0;
+	color: #666565;
+	font-size: 18px;
+	line-height: 1.67;
+}
+.cuisine-block__button_active{
+	color: @main-color;
+}
+
+
+
+.cuisine__item{
+	display: flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 95%;
+	padding: 25px 10px 35px;
+	background-color: #ffffff;
+	box-shadow: 0 8px 29px 3px rgba(0, 2, 4, 0.14);
+	border-radius: 4px;
+
+	@media @laptop{
+		width: 79%;
+		max-width: 835px;
+		flex-direction:row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 25px 50px 35px;
+	}
+}
+
+.cuisine__item-text-cont{
+	max-width: 360px;
+	color: #494949;
+
+	@media @tablet{
+		padding-right: 10px;
+	}	
+}
+
+.cuisine__item-text-menu,
+.cuisine__item-text-calories{	
+	font-size: 18px;
+	line-height: 1.44;
+}
+
+.cuisine__item-text-menu{
+	list-style-type: decimal;
+	margin-left: 20px;
+
+	@media @tablet {
+		margin-left: 0;
+	}
+}
+
+.cuisine__item-text-calories{
+	padding-top: 30px;	
+	text-align: center;
+
+	@media @laptop{
+		text-align: left;
+		margin-left: -15px;
+	}
+}
+
+.cuisine__item-text-highlited{
+	font-size: 26px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+
+.cuisine__item-img-cont{
+	padding-top: 30px;
+	@media @tablet{
+		padding-left: 10px;
+	}	
+}
+.cuisine__item-img-block{
+	max-width: 330px;
+}
+.cuisine__item-img{
+	width: 100%;
+}
+.cuisine__item-price-block{
+	padding-top: 30px;
+	text-align: center;
+}
+.cuisine__item-price-text{
+	color: @main-color;
+	font-family: "Roboto";
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 0.78;
+}
+
+.cuisine-notation_position{
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 0 0 6px 6px;
+	background-color: #ffffff;
+
+	@media @laptop {
+		max-width: 700px;
+	}
+}
+.cuisine-notation{
+	text-align: center;
+	padding: 10px 5px;
+	color: #2f2f2f;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.27;
+
+	@media @mobileL{
+		font-size: 22px;
+	}
+}

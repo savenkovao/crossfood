@@ -11,7 +11,7 @@
 	letter-spacing: -1px;
 	color: #1c1c1c;
 	font-family: @h1-font-family;
-	line-height: 58px;
+	line-height: 0.78;
 	font-weight: bold;
 	cursor: default;
 	font-size: @h1-font-size*0.5;
@@ -40,7 +40,7 @@
 	margin: 0;
 	color: #383838;
 	font-size: @h2-font-size;
-	line-height: 20px;
+	line-height: 1;
 	text-transform: uppercase;
 	cursor: default;
 	text-align: center;
@@ -59,7 +59,7 @@
 .title-3__h3{
 
 	font-size: @h3-font-size;
-	line-height: 42px;
+	line-height: 1;
 	font-weight: 500;    
 	font-family: "Fira Sans Extra Condensed";
 	user-select: none;
@@ -88,6 +88,7 @@
 
 
 .hr-line {
+	margin-bottom: 15px;
 	position: relative;
 	&::before{
 		content: '';
@@ -95,7 +96,6 @@
 		height: @hr-line-height;		
 		position: absolute;
 		left: 0;
-		top: 2px;
-		margin-top: 47px;
+		bottom: -15px;
 	}
 }
