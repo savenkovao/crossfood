@@ -11,11 +11,42 @@
 }
 
 .reviews-slider{
-
+	padding-top: 55px;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden
+	
 }
 
+
+.reviews-slider__item{
+	margin-right: 3.125%;
+	width: 31.25%;
+	max-width: 300px;
+}
+.reviews-slider__img{
+	width: 100%;
+}
+
+.reviews-slider__btn-nav{
+	height: 12px;
+	width: 96px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-color: @main-color;
+}
+
+
+
+
+
+
+
+
+
 .reviews-hashtag-block{
-	padding-top: 35px;
+	padding: 35px 10px 0;
 }
 
 .reviews-hashtag-block__text{
@@ -59,11 +90,11 @@
 }
 .reviews-hashtag-block_link-insta{
 	&::before{
-		.setBackgroundImage(@hashtag-block_link-insta);
+		.setBackgroundImage(@hashtag-block_link-insta-img);
 	}
 }
 .reviews-hashtag-block_link-fb{
 	&::before{
-		.setBackgroundImage(@hashtag-block_link-vk-fb);
+		.setBackgroundImage(@hashtag-block_link-fb-img);
 	}
 }

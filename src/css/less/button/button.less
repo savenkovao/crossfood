@@ -14,24 +14,15 @@
 }
 
 .button_filled {
-	.setButton (#ffffff);
-	transition: background-color 0.2s linear;
-
-	&:active,
-	&:hover{
-		background-color: darken(#6b9e3d, 5%);
-	}
+	.setButton (#ffffff);	
 }
 
 .button_bordered{
 	.setButton (@btn-background-color);
-	transition: background-color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0), color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0);
+}
 
-	&:active,
-	&:hover{
-		background-color: @btn-background-color;
-		color: white;
-	}
+.button_bordered-dark{
+	.setButton (#272929);
 }
 
 

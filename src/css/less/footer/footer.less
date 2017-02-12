@@ -1,0 +1,99 @@
+.footer_position{
+	padding: 110px 3% 125px;
+
+	@media @laptop {
+		padding: 110px 0% 125px;
+	}
+}
+
+.footer-content{
+	width: 100%;
+	max-width: 725px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	@media @tablet {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.footer-tagline-block{
+	width: 100%;
+	max-width: 260px;
+}
+.footer-tagline-block__img-cont{
+	.setBackgroundImage(@tagline-img);
+}
+.footer-tagline-block__text-cont{
+	font-size: 24px;
+	line-height: 1.33;
+	font-family: "Fira Sans Extra Condensed";	
+	color: #161410;	
+}
+.footer-tagline-block__text{}
+
+
+.footer-contact-block{
+	width: 100%;
+	max-width: 240px;
+	padding-top: 20px;
+
+	@media @tablet{
+		padding-top: 0px;
+	}
+}
+
+.footer-contact-block__text-cont{
+	margin: 0 auto;
+}
+.footer-contact-block__text{
+	text-align: center;
+	color: #272929;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.footer-contact-block__link-cont{
+	padding-top: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+.footer-contact-block__link{
+
+}
+.footer-contact-block__link-1{
+	.setBackgroundImage(@hashtag-block_link-vk-img);
+}
+.footer-contact-block__link-2{
+	.setBackgroundImage(@hashtag-block_link-insta-img);
+}
+.footer-contact-block__link-3{
+	.setBackgroundImage(@hashtag-block_link-fb-img);
+}
+
+.footer-contact-block__tel-cont{
+	padding-top: 40px;
+	margin: 0 auto;
+}
+.footer-contact-block__tel{
+	color: #272929;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.footer-contact-block__btn-cont{
+	padding-top: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.footer-button-btn{
+	width: 220px;
+	height: 54px;
+	line-height: 42px;
+}
