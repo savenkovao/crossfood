@@ -261,13 +261,13 @@
 					<div id="subscribe-block__item-prem" class="tab-block__tab-item disable" >
 						<div class="subscribe__item subscribe__item-col-2">
 
-							<ul class="subscribe__item-text">			
+							<ul class="subscribe__item-text">
+								<li class="subscribe__item-text-li">Меню - обычное</li>
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
-								<li class="subscribe__item-text-li">На 1/5/7 дней</li>
-								<li class="subscribe__item-text-li">Количество ккал - индивидуально</li>
-								<li class="subscribe__item-text-li">Меню - обычное/вегетарианское</li>
+								<li class="subscribe__item-text-li">На 14 дней</li>
+								<li class="subscribe__item-text-li">Количество ккал - индивидуально</li>								
 								<li class="subscribe__item-text-li">Доставка по дням</li>
-								<li class="subscribe__item-text-li">Стоимость - индивидуально</li>
+								<li class="subscribe__item-text-li">Стоимость - от 4 000 грн</li>
 							</ul>
 
 							<div class="subscribe__button-cnt">
@@ -278,13 +278,13 @@
 
 						<div class="subscribe__item subscribe__item-col-2">
 
-							<ul class="subscribe__item-text">			
+							<ul class="subscribe__item-text">
+								<li class="subscribe__item-text-li">Меню - вегетарианское</li>
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
-								<li class="subscribe__item-text-li">На 1/5/7 дней</li>
-								<li class="subscribe__item-text-li">Количество ккал - индивидуально</li>
-								<li class="subscribe__item-text-li">Меню - обычное/вегетарианское</li>
+								<li class="subscribe__item-text-li">На 14 дней</li>
+								<li class="subscribe__item-text-li">Количество ккал - индивидуально</li>								
 								<li class="subscribe__item-text-li">Доставка по дням</li>
-								<li class="subscribe__item-text-li">Стоимость - индивидуально</li>
+								<li class="subscribe__item-text-li">Стоимость - от 3 500 грн</li>
 							</ul>
 
 							<div class="subscribe__button-cnt">
@@ -310,30 +310,30 @@
 			<div class="tab-block cuisine-block_position">
 
 				<div id="cuisine-block__navigation" class="tab-block__navigation cuisine-block__navigation_pos">
-					<div class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
-					<div class="tab-block__nav-button cuisine-block__button">Вторинк</div>
-					<div class="tab-block__nav-button cuisine-block__button">Среда</div>
-					<div class="tab-block__nav-button cuisine-block__button">Четверг</div>
-					<div class="tab-block__nav-button cuisine-block__button">Пятница</div>
-					<div class="tab-block__nav-button cuisine-block__button">Суббота</div>
-					<div class="tab-block__nav-button cuisine-block__button">Воскресенье</div>
+					<div data-action="monday" class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
+					<div data-action="tuesday" class="tab-block__nav-button cuisine-block__button">Вторинк</div>
+					<div data-action="wednesday" class="tab-block__nav-button cuisine-block__button">Среда</div>
+					<div data-action="thursday" class="tab-block__nav-button cuisine-block__button">Четверг</div>
+					<div data-action="friday" class="tab-block__nav-button cuisine-block__button">Пятница</div>
+					<div data-action="saturday" class="tab-block__nav-button cuisine-block__button">Суббота</div>
+					<div data-action="sunday" class="tab-block__nav-button cuisine-block__button">Воскресенье</div>
 				</div>
+					
+					<div id="tab-block__3-5-cuisines" class="tab-block__3-5-cuisines">
+						<span data-action="cuisines_3" class="tab-block__3-cuisines">3 блюда</span>
+						<span> / </span>
+						<span data-action="cuisines_5" class="tab-block__5-cuisines tab-block__3-5-cuisines_active">5 блюд</span>
+					</div>
 
 				<div class="tab-block__tabs cuisine__tabs-position">
 
-					<div id="tab-block__3-5-cuisines" class="tab-block__3-5-cuisines">
-						<span data-action="3-cuisines" class="tab-block__3-cuisines">3 блюда</span>
-						<span> / </span>
-						<span data-action="5-cuisines" class="tab-block__5-cuisines tab-block__3-5-cuisines_active">5 блюд</span>
-					</div>
+					
 
-					<div class="tab-block__tab-item">
+					<div id="monday" class="tab-block__tab-item">
 						
 						<div class="cuisine__item">
-
 							<div class="cuisine__item-text-cont">
-
-								<div id="5-cuisines">
+								<div class="cuisines_5">
 									<ol class="cuisine__item-text-menu">
 										<li>Творожные блинчики, джем, ванильный маффин</li>
 										<li>Куриная грудка в медово-горчичном соусе</li>
@@ -341,7 +341,6 @@
 										<li>Салат Мехико</li>
 										<li>Творожная запеканка с кокосом, джем.</li>
 									</ol>
-
 
 									<ul class="cuisine__item-text-calories">
 										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
@@ -351,7 +350,7 @@
 									</ul>									
 								</div>								
 
-								<div id="3-cuisines" class="disable">
+								<div class="cuisines_3 disable">
 									<ol class="cuisine__item-text-menu">
 										<li>Куриная грудка в медово-горчичном соусе</li>
 										<li>Сациви. Гречка с овощами</li>
@@ -364,7 +363,7 @@
 										<li>Жиры - 43 г</li>
 										<li>Углеводы - 130г</li>
 									</ul>									
-								</div>								
+								</div>
 							</div>
 
 							<div class="cuisine__item-img-cont">
@@ -380,6 +379,331 @@
 
 						</div>
 					</div>
+					<div id="tuesday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Вторник</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Вторник в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+					<div id="wednesday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Среда</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Среда в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+					<div id="thursday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Четверг</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Четверг в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+					<div id="friday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Пятница</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Пятница в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+					<div id="saturday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Суббота</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Суббота в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+					<div id="sunday" class="tab-block__tab-item disable">
+						
+						<div class="cuisine__item">
+
+							<div class="cuisine__item-text-cont">
+
+								<div class="cuisines_5">
+									<ol class="cuisine__item-text-menu">
+										<li>Воскресенье</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div class="cuisines_3 disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Воскресенье в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>
+
+							</div>
+
+							<div class="cuisine__item-img-cont">
+
+								<div class="cuisine__item-img-block">
+									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
+								</div>
+								<div class="cuisine__item-price-block">
+									<span class="cuisine__item-price-text">290 грн</span>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+
 				</div>
 
 			</div>

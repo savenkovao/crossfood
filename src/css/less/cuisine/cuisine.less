@@ -12,6 +12,7 @@
 
 .cuisine-block_position{
 	padding-top: 60px;
+	position: relative;
 }
 
 .cuisine-block__navigation_pos{
@@ -46,44 +47,43 @@
 
 
 .cuisine__tabs-position{
-	position: relative;
+	// position: relative;
 }
 
 
 .cuisine__item{
-	display: flex;
-	flex-direction:column;
-	justify-content: flex-start;
-	align-items: center;
 	width: 95%;
 	padding: 25px 10px 35px;
 	background-color: #ffffff;
 	box-shadow: 0 8px 29px 3px rgba(0, 2, 4, 0.14);
 	border-radius: 4px;
+	text-align: justify;
+	
+	@media @tablet{
+		padding: 25px 50px 35px;
+	}	
 
 	@media @laptop{
 		width: 79%;
-		max-width: 835px;
-		flex-direction:row;
-		justify-content: space-between;
-		align-items: flex-start;
-		padding: 25px 50px 35px;
+		max-width: 835px;		
 	}
 }
 
 .cuisine__item-text-cont{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	position: relative;
+	width: 100%;
 	max-width: 360px;
-	color: #494949;
+	margin: 0 auto;
+	margin-top: 30px;
 
 	@media @tablet{
-		min-height: 295px;
-		align-items: flex-start;
+		display: inline-block;
+		width: 49%;
+		min-height: 360px;
+		vertical-align: top;
 		padding-right: 10px;
-		padding-top: 25px;
+		margin-top: 25px;
+		// padding-top: 25px;
 	}	
 }
 
@@ -96,19 +96,18 @@
 
 .cuisine__item-text-menu{
 	list-style-type: decimal;
-	margin-left: 0;
-	
-	@media @tablet {
-		margin-left: 20px;
-	}
+	margin-left: 20px;
 }
 
 .cuisine__item-text-calories{
 	padding-top: 30px;	
 	text-align: center;
+	position: static;
 
 	@media @laptop{
 		text-align: left;
+		position: absolute;
+		bottom: 0;
 	}
 }
 
@@ -120,22 +119,30 @@
 
 
 .cuisine__item-img-cont{
-	padding-top: 30px;
+	padding-top: 40px;
 	
 	@media @tablet{
+		min-height: 360px;
 		padding-left: 10px;
-		// padding-top: 0px;
+		display: inline-block;
+		vertical-align: top;
+		width: 49%;
 	}	
 }
 
 .tab-block__3-5-cuisines{
 	position: absolute;
 	top: 10px;
-	right: 23%;
+	left: ~'calc(50% - 70px)';	
 	text-align: center;
 	font-size: 18px;
 	line-height: 1.44;
 	padding: 10px 0;
+
+	@media @tablet{
+		top: 23%;
+		right: 10%;	
+	}
 }
 .tab-block__3-cuisines{
 	cursor: pointer;
@@ -150,12 +157,15 @@
 
 .cuisine__item-img-block{
 	max-width: 330px;
+	max-height: 250px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 .cuisine__item-img{
 	width: 100%;
 }
 .cuisine__item-price-block{
-	padding-top: 30px;
+	padding-top: 40px;
 	text-align: center;
 }
 .cuisine__item-price-text{

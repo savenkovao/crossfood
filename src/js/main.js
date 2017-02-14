@@ -20,6 +20,7 @@
 
 	subscribeBlockNavigation.addEventListener("click", chooseAction, false);
 	cuisineQuantityNavigation.addEventListener("click", chooseAction, false);
+	cuisineBlockNavigation.addEventListener("click", chooseAction, false);
 	
 
 	function highlightTabButton(event){
@@ -53,16 +54,36 @@
 		}
 	}
 
-	function enableBlock(node, parent) {
+	function enableBlock(node) {
 		var action = node.getAttribute("data-action");
 		var enablingBlock = document.getElementById(action);
-		var parentBlock = enablingBlock.parentElement;
+		var parentBlock;
+
+		if(!enablingBlock) {
+			enablingBlock = searchNodes(action);
+
+			for(var i = 0; i < enablingBlock.length; i++){				
+				var sibling = enablingBlock[i].previousElementSibling || enablingBlock[i].nextElementSibling;
+				sibling.classList.add('disable');
+				enablingBlock[i].classList.remove('disable');
+			}			
+
+			return;
+		}
+
+		parentBlock = enablingBlock.parentElement;	
 
 		for (var i = 0; i < parentBlock.children.length; i++){
 			parentBlock.children[i].classList.add('disable');
 		}
 
 		enablingBlock.classList.remove('disable');
+	}
+
+
+	function searchNodes(selector){
+		var nodes = document.getElementsByClassName(selector);
+		return nodes;
 	}
 	
 	
