@@ -48,12 +48,12 @@
 
 				<div class="menu">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="#" class="menu__link">Как это работает</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Преимущества</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Наша команда</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Планы подписок</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+						<li class="menu__item"><a href="#how-it-works" class="menu__link">Как это работает</a></li>
+						<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
+						<li class="menu__item"><a href="#our-team" class="menu__link">Наша команда</a></li>
+						<li class="menu__item"><a href="#subscribe" class="menu__link">Планы подписок</a></li>
+						<li class="menu__item"><a href="#discount" class="menu__link">Акции</a></li>
+						<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
 					</ul>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 				</p>
 			</div>				
 
-			<div class="title-3 how-it-works_title-3-position">
+			<div id="how-it-works" class="title-3 how-it-works_title-3-position">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Как это работает</h3>	
 			</div>	
 
@@ -109,7 +109,7 @@
 		</div>
 	</section>
 
-	<section class="advantages advantages_background">
+	<section id="advantages" class="advantages advantages_background">
 		<div class="wrapper advantages_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_light hr-line">Преимущества</h3>	
@@ -138,29 +138,40 @@
 	</section>
 
 
-	<section class="our-team">
+	<section id="our-team" class="our-team">
 		<div class="wrapper our-team_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Наша команда</h3>	
 			</div>
 
 			<div class="team-block our-team_team-block-pos">
+
 				<div class="team-block__item"> 
-					<img class="team-block__img" src="src/img/cnt/team/item-1.png">
-					
-					<div class="team-block__text">
+					<img class="team-block__img team-block__img-s" src="src/img/cnt/team/item-1.png">					
+					<div class="team-block__text disable">
+						<h5 class="team-block__name team-block__name-1">
+							Жак Фреско
+						</h5>
+						<p class="team-block__descript team-block__descript-1">
+							хороший парень
+						</p>
+					</div>						
+				</div>
+				
+				<div class="team-block__item"> 
+					<img class="team-block__img team-block__img-m" src="src/img/cnt/team/item-1.png">					
+					<div class="team-block__text disable">
 						<h5 class="team-block__name team-block__name-1">
 							Мария Саввина
 						</h5>
 						<p class="team-block__descript team-block__descript-1">
 							нутрициолог
 						</p>
-					</div>
-						
+					</div>						
 				</div>
 
 				<div class="team-block__item"> 
-					<img class="team-block__img" src="src/img/cnt/team/item-2.png">
+					<img class="team-block__img team-block__img-l" src="src/img/cnt/team/item-2.png">
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-2">
 							Иван Воробьёв
@@ -172,8 +183,8 @@
 				</div>
 
 				<div class="team-block__item"> 					
-					<img class="team-block__img" src="src/img/cnt/team/item-3.png">
-					<div class="team-block__text">
+					<img class="team-block__img team-block__img-m" src="src/img/cnt/team/item-3.png">
+					<div class="team-block__text disable">
 						<h5 class="team-block__name team-block__name-3">
 							Ольга Янгичер
 						</h5>
@@ -182,12 +193,25 @@
 						</p>
 					</div>
 				</div>
+
+				<div class="team-block__item"> 					
+					<img class="team-block__img team-block__img-s" src="src/img/cnt/team/item-3.png">
+					<div class="team-block__text disable">
+						<h5 class="team-block__name team-block__name-3">
+							Петр Иванов
+						</h5>
+						<p class="team-block__descript team-block__descript-3">
+							член команды
+						</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>
 
 
-	<section class="subscribe subscribe_background">
+	<section id="subscribe" class="subscribe subscribe_background">
 		<div class="wrapper subscribe_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Планы подписок</h3>	
@@ -195,14 +219,13 @@
 
 			<div class="tab-block subscribe_tab-block-pos">
 
-				<div class="tab-block__navigation">
-					<div class="tab-block__nav-button subscribe__nav-button subscribe__nav-button_active">Fitnes</div>
-					<div class="tab-block__nav-button subscribe__nav-button">Premium</div>
-					<div class="tab-block__nav-button subscribe__nav-button">Premium</div>
+				<div id="subscribe-block__navigation" class="tab-block__navigation">
+					<div id="subscribe__nav-button-fit" data-action="subscribe-block__item-fit" class="tab-block__nav-button subscribe__nav-button subscribe__nav-button_active">Fitnes</div>
+					<div id="subscribe__nav-button-prem" data-action="subscribe-block__item-prem" class="tab-block__nav-button subscribe__nav-button">Premium</div>
 				</div>
 
 				<div class="tab-block__tabs subscribe_tabs-position">
-					<div class="tab-block__tab-item">
+					<div id="subscribe-block__item-fit" class="tab-block__tab-item">
 						<div class="subscribe__item subscribe__item-col-2">
 
 							<ul class="subscribe__item-text">
@@ -211,7 +234,7 @@
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
 								<li class="subscribe__item-text-li">Доставка по дням</li>
 								<li class="subscribe__item-text-li">300/400 грн на день</li>
-								<li class="subscribe__item-text-li">1500/2000 грн на 5 дней</li>
+								<li class="subscribe__item-text-li">4 000/5 500 грн на 14 дней</li>
 							</ul>
 
 							<div class="subscribe__button-cnt">
@@ -226,7 +249,7 @@
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>	
 								<li class="subscribe__item-text-li">Доставка по дням</li>
 								<li class="subscribe__item-text-li">300/400 грн на день</li>
-								<li class="subscribe__item-text-li">1500/2000 грн на 5 дней</li>
+								<li class="subscribe__item-text-li">4 000/5 500 грн на 14 дней</li>
 							</ul>
 
 							<div class="subscribe__button-cnt">
@@ -235,8 +258,8 @@
 						</div>
 
 					</div>
-					<div class="tab-block__tab-item">
-						<div class="subscribe__item subscribe__item-col-1" hidden>
+					<div id="subscribe-block__item-prem" class="tab-block__tab-item disable" >
+						<div class="subscribe__item subscribe__item-col-2">
 
 							<ul class="subscribe__item-text">			
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
@@ -252,6 +275,25 @@
 							</div>
 			
 						</div>
+
+						<div class="subscribe__item subscribe__item-col-2">
+
+							<ul class="subscribe__item-text">			
+								<li class="subscribe__item-text-li">3/5 блюд в день</li>
+								<li class="subscribe__item-text-li">На 1/5/7 дней</li>
+								<li class="subscribe__item-text-li">Количество ккал - индивидуально</li>
+								<li class="subscribe__item-text-li">Меню - обычное/вегетарианское</li>
+								<li class="subscribe__item-text-li">Доставка по дням</li>
+								<li class="subscribe__item-text-li">Стоимость - индивидуально</li>
+							</ul>
+
+							<div class="subscribe__button-cnt">
+								<button class="button button_bordered subscribe__button-btn">Заказать</button>
+							</div>
+			
+						</div>
+
+
 					</div>				
 				</div>	
 
@@ -267,7 +309,7 @@
 
 			<div class="tab-block cuisine-block_position">
 
-				<div class="tab-block__navigation cuisine-block__navigation_pos">
+				<div id="cuisine-block__navigation" class="tab-block__navigation cuisine-block__navigation_pos">
 					<div class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
 					<div class="tab-block__nav-button cuisine-block__button">Вторинк</div>
 					<div class="tab-block__nav-button cuisine-block__button">Среда</div>
@@ -278,27 +320,55 @@
 				</div>
 
 				<div class="tab-block__tabs cuisine__tabs-position">
+
+					<div id="tab-block__3-5-cuisines" class="tab-block__3-5-cuisines">
+						<span data-action="3-cuisines" class="tab-block__3-cuisines">3 блюда</span>
+						<span> / </span>
+						<span data-action="5-cuisines" class="tab-block__5-cuisines tab-block__3-5-cuisines_active">5 блюд</span>
+					</div>
+
 					<div class="tab-block__tab-item">
+						
 						<div class="cuisine__item">
 
 							<div class="cuisine__item-text-cont">
-								<ol class="cuisine__item-text-menu">
-									<li>Творожные блинчики, джем, ванильный маффин</li>
-									<li>Куриная грудка в медово-горчичном соусе</li>
-									<li>Сациви. Гречка с овощами</li>
-									<li>Салат Мехико</li>
-									<li>Творожная запеканка с кокосом, джем.</li>
-								</ol>
 
-								<ul class="cuisine__item-text-calories">
-									<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-									<li>Белки -110 г</li>
-									<li>Жиры - 73 г</li>
-									<li>Углеводы - 160г</li>
-								</ul>
+								<div id="5-cuisines">
+									<ol class="cuisine__item-text-menu">
+										<li>Творожные блинчики, джем, ванильный маффин</li>
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+										<li>Творожная запеканка с кокосом, джем.</li>
+									</ol>
+
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+										<li>Белки -110 г</li>
+										<li>Жиры - 73 г</li>
+										<li>Углеводы - 160г</li>
+									</ul>									
+								</div>								
+
+								<div id="3-cuisines" class="disable">
+									<ol class="cuisine__item-text-menu">
+										<li>Куриная грудка в медово-горчичном соусе</li>
+										<li>Сациви. Гречка с овощами</li>
+										<li>Салат Мехико</li>
+									</ol>								
+
+									<ul class="cuisine__item-text-calories">
+										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+										<li>Белки - 70 г</li>
+										<li>Жиры - 43 г</li>
+										<li>Углеводы - 130г</li>
+									</ul>									
+								</div>								
 							</div>
 
 							<div class="cuisine__item-img-cont">
+
 								<div class="cuisine__item-img-block">
 									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
 								</div>
@@ -328,7 +398,7 @@
 	</section>
 
 
-	<section class="discount">
+	<section id="discount" class="discount">
 		<div class="wrapper">
 			
 		</div>
@@ -337,7 +407,7 @@
 
 	<section class="reviews reviews_background">
 		<div class="wrapper reviews_position">
-			<div class="title-3">
+			<div id="reviews" class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Отзывы</h3>	
 			</div>
 			
@@ -415,5 +485,7 @@
 			</div>
 		</div>
 	</footer>	
+
+	<script src="src/js/main.js"></script>
 </body>
 </html>

@@ -27,13 +27,6 @@
 
 	@media @laptop{
 			width: 25%;
-
-			&:hover .team-block__img{
-				transform: scale(1.2);
-			}
-			&:hover .team-block__text{
-				padding-top: 40px;
-			}
 	}
 
 }
@@ -41,10 +34,8 @@
 .team-block__img{
 	display: block;
 	margin: 0 auto;
-	width: 80%;
 	max-width: 250px;
 	user-select: none;
-	transition: transform 0.4s linear;
 
 	@media @tablet{
 		width: 100%;
@@ -53,9 +44,17 @@
 }
 
 .team-block__text{
-	padding-top: 20px;
-	transition: padding 0.4s linear;
+	padding-top: 30px;
+}
 
+.team-block__img-l{
+	width: 80%;
+}
+.team-block__img-m{
+	width: 50%;
+}
+.team-block__img-s{
+	width: 30%;
 }
 
 .team-block__name{
