@@ -1,11 +1,7 @@
 .brgr-menu{
 	display: block;
 	position: fixed;
-	top: 20px;
-	right: 20px;
 	display: inline-block;
-	width: 32px;
-	height: 26px;
 	cursor: pointer;		
 	z-index: 2;	
 
@@ -17,11 +13,10 @@
 
 .brgr-menu__stick {
 	display: block;
-	height: 4px;
+	height: 16%;
 	width: 100%;
 	position: absolute;
 	left: 0;
-	background-color: @btn-background-color;
 	transition: all 0.1s linear;
 	
 	@media @tablet{
@@ -34,11 +29,20 @@
 	transform-origin: 0% 0% 0;
 }
 .stick-2{
-	top: 11px;
+	top: ~"calc(50% - 8%)";
 }
 .stick-3{
-	top: 22px;
+	bottom: 0;
 	transform-origin: 0% 100% 0;
+}
+
+
+.stick-1-active{
+	transform: rotate(45deg) translateY(-4.5px) translateX(7px); 
+}
+.stick-2-active{}
+.stick-3-active{
+	transform: rotate(-45deg) translateX(6.5px) translateY(4.5px); 
 }
 
 

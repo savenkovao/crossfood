@@ -1,9 +1,25 @@
 .steps{
 	position: relative;
-	padding: 85px 0;
+	width: 95%;
+	 margin: 0 auto;
+
+	@media @mobileL {
+		width: 77%;
+		max-width: 420px;   
+	}
+
+	
+
+	@media @tablet {
+		width: 100%;
+		padding: 85px 0;
+		max-width: none;	
+	}
+	
 
 }
 .steps__item{
+
 	position: absolute;	
 	color: #707070;
 	font-size: 1.8em;
@@ -12,8 +28,18 @@
 	text-align: center;
 	user-select: none;
 	cursor: default;
+	width: 71%;
+    max-width: 260px;
+    left: 26%;
+
+	@media @mobileL {
+		left: 27%;
+	}
+	
+	
 
 	@media @tablet{
+
 		width: 31%;
 	}
 
@@ -28,9 +54,11 @@
 }
 
 .steps__item-1{
-	bottom: 0%;
+	top: 0%;
 
 	@media @tablet{
+		top: initial;
+		bottom: 0; 
 		left: 1%;	
 	}
 
@@ -40,9 +68,10 @@
 }
 
 .steps__item-2{
-	top: 0%;
+	top: 29%;
 
 	@media @tablet{
+		top: 0%;
 		left: 23%;	
 	}
 
@@ -54,10 +83,12 @@
 }
 
 .steps__item-3{
-	bottom: 0%;
+	top: 57.5%;
 
 	@media @tablet{
-		left: 45%;		
+		top: initial;
+		bottom: 0%;
+		left: 45%;	
 	}
 
 	@media @laptop{		
@@ -67,9 +98,10 @@
 }
 
 .steps__item-4{
-	top: 0%;
+	top: 87%;
 
 	@media @tablet{
+		top: 0%;
 		left: 68%;	
 	}
 
@@ -78,10 +110,26 @@
 	}		
 }
 
-.steps__img{
-	display: block;
-	width: 68.4%;
-	margin: 0 auto;
+.steps__img-desktop{
+	display: none;
+
+	@media @tablet {
+		display: block;
+		width: 68.4%;
+		margin: 0 auto;
+		user-select: none;
+		cursor: default;	
+	}
+}
+
+.steps__img-mobile{
+	width: 14%;
+	max-width: 55px;
+	min-width: 50px;
 	user-select: none;
 	cursor: default;
+
+	@media @tablet {
+		display: none;
+	}
 }

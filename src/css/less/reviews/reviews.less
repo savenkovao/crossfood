@@ -11,37 +11,76 @@
 }
 
 .reviews-slider{
-	padding-top: 55px;
-	width: 100%;
-	max-width: 960px;
+	width: 85%;
+	max-width: 335px;
+	padding-top: 55px;	
 	margin: 0 auto;
-	overflow: hidden
+
+	@media @tablet{
+		width: 100%;
+		max-width: 960px;
+	}
 	
 }
 
 
 .reviews-slider__item{
-	margin-right: 3.125%;
-	width: 31.25%;
-	max-width: 300px;
+	width: 100%;
+
+	@media @tablet{
+		margin-right: 3.125%;
+		width: 31.25%;
+		max-width: 300px;
+	}
 }
 .reviews-slider__img{
 	width: 100%;
 }
 
 .reviews-slider__btn-nav{
+	display: none;
 	height: 12px;
-	width: 96px;
+	max-width: 300px;
 	margin: 0 auto;
 	margin-top: 40px;
+
+	@media @tablet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.reviews-slider__button {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 15px;
+	background-color: grey;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.reviews-slider__button_active {
 	background-color: @main-color;
 }
 
 
+.reviews-slider__arrow{	
+	width: 18px;
+	height: 48px;
+	.setBackgroundImage(@slider-arrow-img);
 
-
-
-
+	@media @tablet {
+		display: none;
+	}
+}
+.reviews-slider__arrow-left{
+	left: -11%;
+}
+.reviews-slider__arrow-right{
+	right: -11%;
+}
 
 
 
@@ -98,3 +137,5 @@
 		.setBackgroundImage(@hashtag-block_link-fb-img);
 	}
 }
+
+

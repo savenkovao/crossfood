@@ -12,20 +12,20 @@
 	<link rel="stylesheet" href="src/css/main.css">
 
 	<link rel="shortcut icon" href="src/img/dsg/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="56x57" href="src/img/dsg/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="59x60" href="src/img/dsg/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="71x72" href="src/img/dsg/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="75x76" href="src/img/dsg/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="113x114" href="src/img/dsg/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="119x120" href="src/img/dsg/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="143x144" href="src/img/dsg/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="151x152" href="src/img/dsg/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="179x180" href="src/img/dsg/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="191x192"  href="src/img/dsg/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="src/img/dsg/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="src/img/dsg/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="src/img/dsg/favicon/favicon-16x16.png">
-  <link rel="manifest" href="src/img/dsg/favicon/manifest.json">
+	<link rel="apple-touch-icon" sizes="56x57" href="src/img/dsg/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="59x60" href="src/img/dsg/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="71x72" href="src/img/dsg/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="75x76" href="src/img/dsg/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="113x114" href="src/img/dsg/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="119x120" href="src/img/dsg/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="143x144" href="src/img/dsg/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="151x152" href="src/img/dsg/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="179x180" href="src/img/dsg/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="191x192"  href="src/img/dsg/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="src/img/dsg/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="src/img/dsg/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="src/img/dsg/favicon/favicon-16x16.png">
+	<link rel="manifest" href="src/img/dsg/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="src/img/dsg/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -40,13 +40,13 @@
 
 			<div class="header-menu">
 
-				<div class="brgr-menu">					
-					<div class="brgr-menu__stick stick-1"></div>
-					<div class="brgr-menu__stick stick-2"></div>
-					<div class="brgr-menu__stick stick-3"></div>
+				<div id="brgr-menu" data-meta-node class="brgr-menu header-brgr-menu_pos">					
+					<div id="brgr-menu-stick-1" class="brgr-menu__stick header-brgr-menu__stick stick-1"></div>
+					<div id="brgr-menu-stick-2" class="brgr-menu__stick header-brgr-menu__stick stick-2"></div>
+					<div id="brgr-menu-stick-3" class="brgr-menu__stick header-brgr-menu__stick stick-3"></div>
 				</div>
 
-				<div class="menu">
+				<div id="header-menu" class="menu">
 					<ul class="menu__list">
 						<li class="menu__item"><a href="#how-it-works" class="menu__link">Как это работает</a></li>
 						<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
@@ -58,18 +58,18 @@
 				</div>
 			</div>
 
-			<div class="header_left-center">
+			<div class="header_content-position">
 				
 
 				<div class="header-title">
 
-					<div class="title-1">
-						<div class="title-1__img"></div>
-						<h1 class="title-1__h1">Crossfood</h1>
+					<div class="title-1 header__title-1_pos">
+						<div class="title-1__img header__title-1__img-pos"></div>
+						<h1 class="title-1__h1 header__title-1__h1">Crossfood</h1>
 					</div>
 				
-					<div class="title-2">
-						<h2 class="title-2__h2">Правильное питание - это просто</h2>
+					<div class="title-2 header__title-2_pos">
+						<h2 class="title-2__h2 header__title-2__h2">Правильное питание - это просто</h2>
 					</div>
 
 				</div>
@@ -102,7 +102,8 @@
 					<p class="steps__item steps__item-2">Приготовление еды для тебя и порциям</p>
 					<p class="steps__item steps__item-3">Бесплатная доставка в любую точку города каждое  утро</p>
 					<p class="steps__item steps__item-4">Твоё правильно питание без усилий на протяжении всего дня</p>
-					<img class="steps__img" src="src/img/dsg/steps.png" alt="Crossfood - как это работает">
+					<img class="steps__img-desktop" src="src/img/dsg/steps.png" alt="Crossfood - как это работает">
+					<img class="steps__img-mobile" src="src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
 				</div>
 			</div>
 			
@@ -211,7 +212,7 @@
 	</section>
 
 
-	<section id="subscribe" class="subscribe subscribe_background">
+	<section class="subscribe subscribe_background">
 		<div class="wrapper subscribe_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Планы подписок</h3>	
@@ -219,17 +220,18 @@
 
 			<div class="tab-block subscribe_tab-block-pos">
 
-				<div id="subscribe-block__navigation" class="tab-block__navigation">
-					<div id="subscribe__nav-button-fit" data-action="subscribe-block__item-fit" class="tab-block__nav-button subscribe__nav-button subscribe__nav-button_active">Fitnes</div>
-					<div id="subscribe__nav-button-prem" data-action="subscribe-block__item-prem" class="tab-block__nav-button subscribe__nav-button">Premium</div>
+				<div  id="subscribe" class="tab-block__navigation">
+					<div data-action="data-subscribe" data-identifier="fit" data-meta-node data-highlight="subscribe__nav-button_active" class="tab-block__nav-button subscribe__nav-button subscribe__nav-button_active">Fitnes</div>
+					<div data-action="data-subscribe" data-identifier="prem" data-meta-node data-highlight="subscribe__nav-button_active" class="tab-block__nav-button subscribe__nav-button">Premium</div>
 				</div>
 
-				<div class="tab-block__tabs subscribe_tabs-position">
-					<div id="subscribe-block__item-fit" class="tab-block__tab-item">
-						<div class="subscribe__item subscribe__item-col-2">
-
+				<div id="subscribe-items" class="tab-block__tabs subscribe_tabs-position">
+					
+					<div data-subscribe="fit" class="tab-block__tab-item">
+						
+						<div data-identifier="sl" data-meta-node data-highlight="subscribe__item-active" class="subscribe__item subscribe__item-col-2 subscribe__item-active">
+							<h4 class="subscribe__item-title">Slim</h4>
 							<ul class="subscribe__item-text">
-
 								<li class="subscribe__item-text-li"><strong>1200-1400 ккал</strong></li>	
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
 								<li class="subscribe__item-text-li">Доставка по дням</li>
@@ -242,8 +244,8 @@
 							</div>
 
 						</div>
-						<div class="subscribe__item subscribe__item-col-2">
-
+						<div data-identifier="pow" data-meta-node data-highlight="subscribe__item-active" class="subscribe__item subscribe__item-col-2">
+							<h4 class="subscribe__item-title">Power</h4>
 							<ul class="subscribe__item-text">
 								<li class="subscribe__item-text-li"><strong>От 1800 ккал</strong></li>	
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>	
@@ -258,9 +260,11 @@
 						</div>
 
 					</div>
-					<div id="subscribe-block__item-prem" class="tab-block__tab-item disable" >
-						<div class="subscribe__item subscribe__item-col-2">
 
+					<div data-subscribe="prem" class="tab-block__tab-item disable" >
+						
+						<div data-identifier="reg" data-meta-node data-highlight="subscribe__item-active" class="subscribe__item subscribe__item-col-2 subscribe__item-active">
+							<h4 class="subscribe__item-title">Regular</h4>
 							<ul class="subscribe__item-text">
 								<li class="subscribe__item-text-li">Меню - обычное</li>
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
@@ -276,8 +280,8 @@
 			
 						</div>
 
-						<div class="subscribe__item subscribe__item-col-2">
-
+						<div data-identifier="veg" data-meta-node data-highlight="subscribe__item-active" class="subscribe__item subscribe__item-col-2">
+							<h4 class="subscribe__item-title">Vegetarian</h4>
 							<ul class="subscribe__item-text">
 								<li class="subscribe__item-text-li">Меню - вегетарианское</li>
 								<li class="subscribe__item-text-li">3/5 блюд в день</li>
@@ -293,8 +297,8 @@
 			
 						</div>
 
+					</div>
 
-					</div>				
 				</div>	
 
 			</div>
@@ -309,401 +313,1452 @@
 
 			<div class="tab-block cuisine-block_position">
 
-				<div id="cuisine-block__navigation" class="tab-block__navigation cuisine-block__navigation_pos">
-					<div data-action="monday" class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
-					<div data-action="tuesday" class="tab-block__nav-button cuisine-block__button">Вторинк</div>
-					<div data-action="wednesday" class="tab-block__nav-button cuisine-block__button">Среда</div>
-					<div data-action="thursday" class="tab-block__nav-button cuisine-block__button">Четверг</div>
-					<div data-action="friday" class="tab-block__nav-button cuisine-block__button">Пятница</div>
-					<div data-action="saturday" class="tab-block__nav-button cuisine-block__button">Суббота</div>
-					<div data-action="sunday" class="tab-block__nav-button cuisine-block__button">Воскресенье</div>
+				<div id="cuisine-week" class="tab-block__navigation cuisine-block__navigation_pos">
+					<div data-identifier="mo" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
+					<div data-identifier="tu" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Вторинк</div>
+					<div data-identifier="we" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Среда</div>
+					<div data-identifier="th" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Четверг</div>
+					<div data-identifier="fr" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Пятница</div>
+					<div data-identifier="sa" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Суббота</div>
+					<div data-identifier="su" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Воскресенье</div>
 				</div>
 					
-					<div id="tab-block__3-5-cuisines" class="tab-block__3-5-cuisines">
-						<span data-action="cuisines_3" class="tab-block__3-cuisines">3 блюда</span>
-						<span> / </span>
-						<span data-action="cuisines_5" class="tab-block__5-cuisines tab-block__3-5-cuisines_active">5 блюд</span>
-					</div>
+				<div id="cuisines_3_5" class="tab-block__3-5-cuisines">
+					<span data-action="data-cuisine-qount" data-identifier="3" data-meta-node data-highlight="tab-block__3-5-cuisines_active" class="tab-block__3-cuisines">3 блюда</span>
+					<span> / </span>
+					<span data-action="data-cuisine-qount" data-identifier="5" data-meta-node data-highlight="tab-block__3-5-cuisines_active" class="tab-block__5-cuisines tab-block__3-5-cuisines_active">5 блюд</span>
+				</div>
 
-				<div class="tab-block__tabs cuisine__tabs-position">
+				<div id="all-cuisines" class="tab-block__tabs cuisine__tabs-position">
 
-					
+						<div id="fit-sl-mo" class="tab-block__tab-item">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>fit-sl-mo блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-					<div id="monday" class="tab-block__tab-item">
-						
-						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Творожные блинчики, джем, ванильный маффин</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
 								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="tuesday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-tu" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>fit-sl-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Вторник</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>fit-sl-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Вторник в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="wednesday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-we" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>fit-sl-we грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Среда</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-we. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Среда в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="thursday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-th" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Четверг</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Четверг в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="friday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-fr" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-fr. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Пятница</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>fit-sl-fr Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пятница в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="saturday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-sa" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Суббота</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Суббота в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
-					<div id="sunday" class="tab-block__tab-item disable">
-						
-						<div class="cuisine__item">
 
-							<div class="cuisine__item-text-cont">
+						<div id="fit-sl-su" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>SLIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
 
-								<div class="cuisines_5">
-									<ol class="cuisine__item-text-menu">
-										<li>Воскресенье</li>
-										<li>Куриная грудка в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-										<li>Творожная запеканка с кокосом, джем.</li>
-									</ol>
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
 
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-sl-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
 
-								<div class="cuisines_3 disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Воскресенье в медово-горчичном соусе</li>
-										<li>Сациви. Гречка с овощами</li>
-										<li>Салат Мехико</li>
-									</ol>								
+								<div class="cuisine__item-img-cont">
 
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
 								</div>
 
 							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
-								</div>
-								<div class="cuisine__item-price-block">
-									<span class="cuisine__item-price-text">290 грн</span>
-								</div>
-								
-							</div>
-
 						</div>
-					</div>
 
+						<div id="fit-pow-mo" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>fit-pow-mo блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-tu" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>fit-pow-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>fit-pow-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-we" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>fit-pow-we грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-we. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-th" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-fr" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-fr. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>fit-pow-fr Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-sa" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="fit-pow-su" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>powIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>fit-pow-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-mo" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>prem-reg-mo блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-tu" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>prem-reg-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>prem-reg-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-we" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>prem-reg-we грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-we. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-th" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-fr" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-fr. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>prem-reg-fr Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-sa" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-reg-su" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>regIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-reg-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-mo" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>prem-veg-mo блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-1.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-tu" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>prem-veg-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>prem-veg-tu грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-2.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-we" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>prem-veg-we грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-we. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-3.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-th" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-th. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-4.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-fr" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-fr. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>Сациви. Гречка с овощами</li>
+											<li>prem-veg-fr Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-5.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-sa" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-sa. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-6.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+						<div id="prem-veg-su" class="tab-block__tab-item disable">
+							<div class="cuisine__item">
+								<div class="cuisine__item-text-cont">
+									<div data-cuisine-qount="5" class="">
+										<ol class="cuisine__item-text-menu">
+											<li>vegIM блинчики, джем, ванильный маффин</li>
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+											<li>Творожная запеканка с кокосом, джем.</li>
+										</ol>
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
+											<li>Белки -110 г</li>
+											<li>Жиры - 73 г</li>
+											<li>Углеводы - 160г</li>
+										</ul>									
+									</div>								
+
+									<div data-cuisine-qount="3" class="disable">
+										<ol class="cuisine__item-text-menu">
+											<li>Куриная грудка в медово-горчичном соусе</li>
+											<li>prem-veg-su. Гречка с овощами</li>
+											<li>Салат Мехико</li>
+										</ol>								
+
+										<ul class="cuisine__item-text-calories">
+											<li><u class="cuisine__item-text-highlited">1100 ккал</u></li>
+											<li>Белки - 70 г</li>
+											<li>Жиры - 43 г</li>
+											<li>Углеводы - 130г</li>
+										</ul>									
+									</div>
+								</div>
+
+								<div class="cuisine__item-img-cont">
+
+									<div class="cuisine__item-img-block">
+										<img class="cuisine__item-img" src="src/img/cnt/cuisine/item-7.png" alt="Салат">
+									</div>
+									<div class="cuisine__item-price-block">
+										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
+										<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+	
 				</div>
 
 			</div>
@@ -735,31 +1790,46 @@
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Отзывы</h3>	
 			</div>
 			
-			<div class="slider reviews-slider">
-				<div class="slider__inner">
-					<div class="slider__item reviews-slider__item">
+			<div id="reviews-slider" data-slides-onpage="3" class="slider reviews-slider">
+				<div id="reviews-slider-inner" class="slider__inner">
+					<div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-1.jpg" alt="Отзыв покупателя">
 					</div><!-- 
-					 --><div class="slider__item reviews-slider__item">
+					 --><div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-2.jpg" alt="Отзыв покупателя">
 					</div><!-- 
-					 --><div class="slider__item reviews-slider__item">
+					 --><div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
-					</div>
-					<div class="slider__item reviews-slider__item">
+					</div><!-- 
+					 --><div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-1.jpg" alt="Отзыв покупателя">
 					</div><!-- 
-					 --><div class="slider__item reviews-slider__item">
+					 --><div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-2.jpg" alt="Отзыв покупателя">
 					</div><!-- 
-					 --><div class="slider__item reviews-slider__item">
+					 --><div data-slide class="slider__item reviews-slider__item">
+						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
+					</div><!-- 
+					 --><div data-slide class="slider__item reviews-slider__item">
+						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
+					</div><!-- 
+					 --><div data-slide class="slider__item reviews-slider__item">
+						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-2.jpg" alt="Отзыв покупателя">
+					</div><!-- 
+					 --><div data-slide class="slider__item reviews-slider__item">
+						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-4.jpg" alt="Отзыв покупателя">
+					</div><!-- 
+					 --><div data-slide class="slider__item reviews-slider__item">
 						<img class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
 					</div>
 				</div>
-
-				<div class="slider__arrow slider_arrow-left"></div>
-				<div class="slider__arrow slider_arrow-right"></div>
-				<div class="slider__btn-nav reviews-slider__btn-nav"></div>
+				
+				<div id="reviews-slider-nav-arw">
+					<div data-action="left" data-meta-node class="slider__arrow  slider_arrow-left reviews-slider__arrow reviews-slider__arrow-left"></div>
+					<div data-action="right" data-meta-node class="slider__arrow  slider_arrow-right reviews-slider__arrow reviews-slider__arrow-right"></div>
+				</div>
+					
+				<div id="reviews-slider-nav-btn" class="slider__btn-nav reviews-slider__btn-nav"></div>
 			</div>
 
 
@@ -809,6 +1879,7 @@
 			</div>
 		</div>
 	</footer>	
+
 
 	<script src="src/js/main.js"></script>
 </body>
