@@ -3,7 +3,8 @@
 	.setBackgroundImage(@cuisine-background-img);
 }
 .cuisine_position{
-	padding: 65px 3% 40px; 
+	padding: 40px 3% 45px; 
+		text-align: right;
 
 	@media @laptop {
 		padding: 65px 0% 40px;
@@ -13,54 +14,119 @@
 .cuisine-block_position{
 	padding-top: 60px;
 	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+
+	@media @tablet {
+		display: block;
+	}
+
 }
 
-.cuisine-block__navigation_pos{
-	position: relative;
-	display: flex;
-	flex-direction:column;
-	justify-content: flex-start;
-	align-items: center;	
-	width: 90%;
-	margin: 0 auto;
-	border-radius: 4px 4px 0 0;
-	background-color: #ffffff;	
-	box-shadow: -20px -21px 56px -12px rgba(0, 2, 4, 0.14);
+.cuisine-block__navigation_pos{	
+	max-width: 41px;
+	padding-top: 40px;
+	display: inline-block;
 
-	@media @laptop{
+	@media @mobileL {
+		max-width: 75px;
+	}
+
+	@media @tablet {
+		max-width: none;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 0;
+		text-align: center;
+		background-color: #ffffff;	
+	// }
+
+	// @media @laptop{
+		position: relative;
+		display: flex;
+		// flex-direction:column;
+		// justify-content: flex-start;
+		// align-items: center;	
+		width: 90%;
 		max-width: 725px;
+
+		
 		flex-direction:row;
 		justify-content: space-around;
 		align-items: center;
+		border-radius: 4px 4px 0 0;		
+		box-shadow: -20px -21px 56px -12px rgba(0, 2, 4, 0.14);
+
 	}
 }
 .cuisine-block__button{
-	margin: 15px 0;
+	display: inline-block;
+	width: 45px;
+	padding: 21px 0;
+	margin: 1px;
+	text-align: center;
+    border-radius: 4px;
+	background-color: #ffffff;
+    line-height: 1;
 	color: #666565;
-	font-size: 18px;
-	line-height: 1.67;
+	font-size: 1.8em;
+
+	@media @mobileL {
+		width: 78px;
+	}
+
+	@media @tablet {
+		width: auto;
+		padding: 15px 0;
+		margin: 0;
+		background-color: transparent;
+		line-height: 1.67;		
+	}
 }
 .cuisine-block__button_active{
+	position: relative;
 	color: @main-color;
 	font-weight: bolder;
+}
+
+.cuisine-block__button-desktop {
+	display: none;
+	@media @tablet {
+		display: inline;
+	}
+}
+.cuisine-block__button-mobile {
+	display: inline;
+	@media @tablet {
+		display: none;
+	}
 }
 
 
 
 .cuisine__tabs-position{
-	// position: relative;
+	width: ~"calc(100% - 60px)";
+	display: inline-block;
+	
+	@media @tablet{
+		width: auto;
+		display: block;
+	}
 }
 
 
 .cuisine__item{
-	width: 95%;
-	padding: 25px 10px 35px;
+	width: 100%;
+	padding: 60px 5% 10px;
 	background-color: #ffffff;
 	box-shadow: 0 8px 29px 3px rgba(0, 2, 4, 0.14);
-	border-radius: 4px;
+	border-radius: 4px 4px 0 0;
 	text-align: justify;
 	
 	@media @tablet{
+		border-radius: 4px;
 		padding: 25px 50px 35px;
 	}	
 
@@ -75,7 +141,6 @@
 	width: 100%;
 	max-width: 360px;
 	margin: 0 auto;
-	margin-top: 30px;
 
 	@media @tablet{
 		display: inline-block;
@@ -89,10 +154,14 @@
 }
 
 .cuisine__item-text-menu,
-.cuisine__item-text-calories{	
-	font-size: 18px;
-	line-height: 1.44;
+.cuisine__item-text-calories{
+	line-height: 1.375;
+	font-size: 1.6em;
+	text-align: left;
 
+	@media @tablet {
+		font-size: 1.8em;
+	}
 }
 
 .cuisine__item-text-menu{
@@ -101,11 +170,12 @@
 }
 
 .cuisine__item-text-calories{
-	padding-top: 30px;	
-	text-align: center;
+	padding-top: 25px;		
 	position: static;
 
 	@media @laptop{
+		padding-top: 30px;
+		text-align: center;
 		text-align: left;
 		position: absolute;
 		bottom: 0;
@@ -113,14 +183,18 @@
 }
 
 .cuisine__item-text-highlited{
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: 500;
 	text-decoration: none;
+
+	@media @tablet {
+		font-size: 26px;
+	}
 }
 
 
 .cuisine__item-img-cont{
-	padding-top: 40px;
+	padding-top: 25px;
 	
 	@media @tablet{
 		min-height: 360px;
@@ -133,16 +207,17 @@
 
 .tab-block__3-5-cuisines{
 	position: absolute;
-	top: 10px;
-	left: ~'calc(50% - 70px)';	
+	top: 70px;
+	left: ~'calc(58% - 70px)';	
 	text-align: center;
-	font-size: 18px;
+	font-size: 1.6em;
 	line-height: 1.44;
 	padding: 10px 0;
 
 	@media @tablet{
 		top: 23%;
 		right: 10%;	
+		font-size: 1.8em;
 	}
 }
 .tab-block__3-cuisines{
@@ -158,47 +233,62 @@
 }
 
 .cuisine__item-img-block{
-	max-width: 330px;
-	max-height: 250px;
+	max-height: 220px;
+	max-width: 330px;	
 	margin: 0 auto;
 	overflow: hidden;
+
+	@media @mobileL{
+		max-height: 250px;
+	}
+	
 }
 .cuisine__item-img{
 	width: 100%;
 }
 .cuisine__item-price-block{
-	padding-top: 40px;
-	text-align: center;
+	text-align: center;	
+	padding-top: 20px;
+
+	@media @tablet{
+		padding-top: 40px;
+	}
+	
+	
 }
 .cuisine__item-price-text{
 	color: @main-color;
 	font-family: "Roboto";
-	font-size: 36px;
+	font-size: 3.6em;
 	font-weight: bold;
 	line-height: 0.78;
 }
 
 .cuisine-notation_position{
 	position: relative;
-	width: 90%;
-	margin: 0 auto;
-	border-radius: 0 0 6px 6px;
+	width: ~"calc(100% - 75px)";
+	display: inline-block;	
 	background-color: #ffffff;
+	border-radius: 0 0 6px 6px;
 	box-shadow: 0px 17px 29px -6px rgba(0, 2, 4, 0.14);
-
+	
 	@media @laptop {
+		display: block;
+		width: 90%;
 		max-width: 700px;
+		margin: 0 auto;		
+		
 	}
 }
 .cuisine-notation{
 	text-align: center;
 	padding: 10px 5px;
 	color: #2f2f2f;
-	font-size: 18px;
+	font-size: 1.8em;
 	font-weight: bold;
 	line-height: 1.27;
 
 	@media @mobileL{
-		font-size: 22px;
+		font-size: 2.2em;
 	}
 }

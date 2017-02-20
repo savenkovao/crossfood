@@ -14,7 +14,8 @@
 
 .team-block__item{
 	width: 100%;
-	margin-top: 30px;
+	max-width: 240px;
+	margin-top: 65px;
 
 	&:first-child{
 		margin-top: 0px;
@@ -34,7 +35,7 @@
 .team-block__img{
 	display: block;
 	margin: 0 auto;
-	max-width: 250px;
+	max-width: 240px;
 	user-select: none;
 
 	@media @tablet{
@@ -44,17 +45,29 @@
 }
 
 .team-block__text{
-	padding-top: 30px;
+	padding-top: 40px;
 }
 
 .team-block__img-l{
-	width: 80%;
+	width: 100%;
+
+	@media @tablet{
+		width: 80%;	
+	}
 }
 .team-block__img-m{
-	width: 50%;
+	width: 100%;
+
+	@media @tablet{
+		width: 50%;	
+	}
 }
 .team-block__img-s{
-	width: 30%;
+	width: 100%;
+
+	@media @tablet{
+		width: 30%;	
+	}
 }
 
 .team-block__name{
@@ -113,6 +126,8 @@
 	font-size: 18px;
 	font-weight: 300;
 	text-align: center;
+	line-height: 1.7;
+	letter-spacing: 1px;
 }
 
 .team-block__descript-1{}

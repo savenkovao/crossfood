@@ -149,7 +149,7 @@
 
 				<div class="team-block__item"> 
 					<img class="team-block__img team-block__img-s" src="src/img/cnt/team/item-1.png">					
-					<div class="team-block__text disable">
+					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-1">
 							Жак Фреско
 						</h5>
@@ -161,7 +161,7 @@
 				
 				<div class="team-block__item"> 
 					<img class="team-block__img team-block__img-m" src="src/img/cnt/team/item-1.png">					
-					<div class="team-block__text disable">
+					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-1">
 							Мария Саввина
 						</h5>
@@ -185,7 +185,7 @@
 
 				<div class="team-block__item"> 					
 					<img class="team-block__img team-block__img-m" src="src/img/cnt/team/item-3.png">
-					<div class="team-block__text disable">
+					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-3">
 							Ольга Янгичер
 						</h5>
@@ -197,7 +197,7 @@
 
 				<div class="team-block__item"> 					
 					<img class="team-block__img team-block__img-s" src="src/img/cnt/team/item-3.png">
-					<div class="team-block__text disable">
+					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-3">
 							Петр Иванов
 						</h5>
@@ -314,13 +314,48 @@
 			<div class="tab-block cuisine-block_position">
 
 				<div id="cuisine-week" class="tab-block__navigation cuisine-block__navigation_pos">
-					<div data-identifier="mo" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">Понедельник</div>
-					<div data-identifier="tu" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Вторинк</div>
-					<div data-identifier="we" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Среда</div>
-					<div data-identifier="th" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Четверг</div>
-					<div data-identifier="fr" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Пятница</div>
-					<div data-identifier="sa" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Суббота</div>
-					<div data-identifier="su" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">Воскресенье</div>
+					<div data-identifier="mo" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button cuisine-block__button_active">
+
+						<span class="cuisine-block__button-desktop">Понедельник</span>
+						<span  class="cuisine-block__button-mobile">Пн</span>
+
+					</div>
+					<div data-identifier="tu" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Вторинк</span>
+						<span  class="cuisine-block__button-mobile">Вт</span>
+
+					</div>
+					<div data-identifier="we" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Среда</span>
+						<span  class="cuisine-block__button-mobile">Ср</span>
+
+					</div>
+					<div data-identifier="th" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Четверг</span>
+						<span  class="cuisine-block__button-mobile">Чт</span>
+
+					</div>
+					<div data-identifier="fr" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Пятница</span>
+						<span  class="cuisine-block__button-mobile">Пт</span>
+
+					</div>
+					<div data-identifier="sa" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Суббота</span>
+						<span  class="cuisine-block__button-mobile">Сб</span>
+
+					</div>
+					<div data-identifier="su" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
+
+						<span class="cuisine-block__button-desktop">Воскресенье</span>
+						<span  class="cuisine-block__button-mobile">Вс</span>
+
+					</div>
 				</div>
 					
 				<div id="cuisines_3_5" class="tab-block__3-5-cuisines">
@@ -1761,9 +1796,9 @@
 	
 				</div>
 
-			</div>
+			</div><!-- 
 
-			<div class="cuisine-notation_position">
+			 --><div class="cuisine-notation_position">
 				<p class="cuisine-notation">Пробный день - 250 грн</p>
 			</div>
 			
