@@ -107,7 +107,7 @@
 
 
 .cuisine__tabs-position{
-	width: ~"calc(100% - 60px)";
+	width: 100%;
 	display: inline-block;
 	
 	@media @tablet{
@@ -142,15 +142,20 @@
 	max-width: 360px;
 	margin: 0 auto;
 
+
 	@media @tablet{
 		display: inline-block;
 		width: 49%;
-		min-height: 360px;
+		min-height: 320px;
 		vertical-align: top;
 		padding-right: 10px;
 		margin-top: 25px;
 		// padding-top: 25px;
 	}	
+
+	@media @laptopL {
+		min-height: 350px;
+	}
 }
 
 .cuisine__item-text-menu,
@@ -197,12 +202,16 @@
 	padding-top: 25px;
 	
 	@media @tablet{
-		min-height: 360px;
+		min-height: 320px;
 		padding-left: 10px;
 		display: inline-block;
 		vertical-align: top;
 		width: 49%;
-	}	
+	}
+
+	@media @laptopL {
+		min-height: 350px;
+	}
 }
 
 .tab-block__3-5-cuisines{
@@ -266,11 +275,16 @@
 
 .cuisine-notation_position{
 	position: relative;
-	width: ~"calc(100% - 75px)";
+	width: ~"calc(100% - 41px)";
 	display: inline-block;	
 	background-color: #ffffff;
 	border-radius: 0 0 6px 6px;
 	box-shadow: 0px 17px 29px -6px rgba(0, 2, 4, 0.14);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	@media @mobileL {
+		width: ~"calc(100% - 75px)";
+	}
 	
 	@media @laptop {
 		display: block;

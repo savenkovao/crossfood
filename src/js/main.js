@@ -45,7 +45,61 @@
 }());
 
 
+(function(){
+	var teamSlider = document.getElementById('team-slider');
 
+	var currentScreenWidth;
+
+
+	function getScreenWidth() {
+		currentScreenWidth = document.documentElement.clientWidth;
+	}
+
+
+	teamSlider.addEventListener('click', browseTeamSlider, false);
+
+	function browseTeamSlider(event) {
+		browseSlider(event);
+	}
+
+	function browseSlider(event) {
+
+		getScreenWidth();
+
+		if (currentScreenWidth > 768) {
+
+			var target = event.target;
+
+			while (target != event.currentTarget) {
+
+			if (target.hasAttribute('data-meta-node')) {
+				var dataAction = target.getAttribute('data-action');
+				console.log(dataAction);
+
+				var currentL = teamSlider.querySelectorAll('.l')[0];
+				var dataActionCurrentL = currentL.setAttribute('data-action', dataAction);
+				currentL.classList.remove('l');
+				currentL.classList.add(dataAction);
+
+
+
+
+				target.classList.remove(dataAction);
+				target.dataAction = 'l';
+				target.classList.add('l');
+
+				return;
+			}
+
+				target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
+			}
+		}
+	}
+
+
+
+
+}());
 
 
 
