@@ -241,12 +241,16 @@
 	var slidesOnPage = reviewsSlider.getAttribute('data-slides-onpage');
 	var reviewsSliderNavBtn = document.getElementById('reviews-slider-nav-btn');
 	var buttonsQuantity = Math.ceil(reviewsSliderInner.children.length / +slidesOnPage);
-
+	var body = document.querySelectorAll('body')[0];
 
 	var reviewsSliderNavArw = document.getElementById('reviews-slider-nav-arw');
 
 	var sliderInnerWidth;
 	var sliderInnerMargin = 0;
+
+	var currentScreenWidth;
+
+
 
 
 	createNavButtons();
@@ -254,6 +258,7 @@
 
 	reviewsSliderNavBtn.addEventListener('click', btnBrowseSlider, false);
 	reviewsSliderNavArw.addEventListener('click', arwBrowseSlider, false);
+	reviewsSliderInner.addEventListener('click', openCurrentSlide, false);
 	window.addEventListener('resize', resizeFunction, false);
 
 
@@ -263,6 +268,10 @@
 
 	function arwBrowseSlider(event) {
 		browseSlider(event);
+	}
+
+	function openCurrentSlide(event) {
+		openSlide(event);
 	}
 
 	function resizeFunction() {
@@ -290,12 +299,8 @@
 		buttons[0].classList.add('reviews-slider__button_active');
 	}
 
-	function getInnerWidth() {
-		sliderInnerWidth = reviewsSliderInner.clientWidth;
-	}
 
 	function browseSlider(event) {
-		getInnerWidth();
 
 		var target = event.target;
 		var currentTarget = event.currentTarget
@@ -316,6 +321,46 @@
 		}	
 	}
 
+	function openSlide(event) {
+		getScreenWidth();
+		var target = event.target;
+		var currentTarget = event.currentTarget
+
+		while (target != event.currentTarget) {
+		if (target.hasAttribute('data-meta-node')) {
+
+			if (currentScreenWidth > 768) {
+				createNewNode(target);
+			}
+
+				return;
+			}
+			
+			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
+		}	
+	}
+
+
+	function createNewNode(target) {
+		var currentSlideSrc = target.getAttribute('src'); 
+		var currentTagName = target.tagName; 
+		var nodeContainer = document.createElement('div');
+		var node = document.createElement(currentTagName);
+
+		node.setAttribute('src', currentSlideSrc);
+		node.classList.add('reviews-slider__opened-item');
+
+		nodeContainer.classList.add('reviews-slider__opened-item-cont');
+		nodeContainer.addEventListener('click', removeNode, false);
+
+		nodeContainer.appendChild(node);
+		body.appendChild(nodeContainer);
+	}
+
+	function removeNode(event) {
+		var currentTarget = event.currentTarget;
+		body.removeChild(currentTarget);
+	}
 
 
 	function browseSliderInner(target, currentTarget, slider) {
@@ -365,6 +410,10 @@
 			object.parentNode.children[i].classList.remove(modificator);
 		}
 		object.classList.add(modificator);
+	}
+
+	function getScreenWidth() {
+		currentScreenWidth = document.documentElement.clientWidth;
 	}
 
 }());
