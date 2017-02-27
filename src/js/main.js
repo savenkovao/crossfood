@@ -173,6 +173,10 @@
 						allItems.sr.classList.remove('sr');
 						allItems.sr.classList.add('mr');
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 						lItem.classList.add('ml');
 						lItem.setAttribute('data-action', 'ml');
 
@@ -284,10 +288,13 @@
 		currentScreenWidth = document.documentElement.clientWidth;
 	}
 
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 }());
 
 
@@ -439,6 +446,9 @@
 
 	var currentScreenWidth;
 
+	var coordX;
+	var coordY;
+
 
 
 
@@ -515,11 +525,15 @@
 		var target = event.target;
 		var currentTarget = event.currentTarget
 
+		coordX = event.clientX;
+		coordY = event.clientY;
+		
+
 		while (target != event.currentTarget) {
 		if (target.hasAttribute('data-meta-node')) {
 
 			if (currentScreenWidth > 768) {
-				createNewNode(target);
+				createNewNode(target, coordX, coordY);
 			}
 
 				return;
@@ -530,7 +544,7 @@
 	}
 
 
-	function createNewNode(target) {
+	function createNewNode(target, coordX, coordY) {
 		var currentSlideSrc = target.getAttribute('src'); 
 		var currentTagName = target.tagName; 
 		var nodeContainer = document.createElement('div');
@@ -538,6 +552,11 @@
 
 		node.setAttribute('src', currentSlideSrc);
 		node.classList.add('reviews-slider__opened-item');
+
+
+		node.style.top = coordY +'px';
+		node.style.left = coordX +'px';
+		console.log(coordX + '--' + coordY);
 
 		nodeContainer.classList.add('reviews-slider__opened-item-cont');
 		nodeContainer.setAttribute('id', 'reveiws-open-container');
@@ -550,8 +569,14 @@
 
 		setTimeout( function() {
 			node.classList.add('visible');
+<<<<<<< HEAD
+			node.style.top ='';
+			node.style.left = '';
+=======
+>>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 		}, 0);
 	}
+
 
 	function removeNode(event) {
 		var currentTarget;
@@ -565,6 +590,12 @@
 
 		node = currentTarget.firstChild;
 		node.classList.remove('visible');
+<<<<<<< HEAD
+		
+		node.style.top = coordY +'px';
+		node.style.left = coordX +'px';
+=======
+>>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 
 		setTimeout( function() {
 			body.removeChild(currentTarget);
@@ -583,7 +614,7 @@
 			var dataButtonNumber = target.getAttribute('data-button-number');
 			var rest = allSlides % slidesOnPage;
 			var integer = reviewsSliderInner.children.length/3 - rest;			
-
+			// 3.125 - margin left for items
 			if(target != reviewsSliderNavBtn.lastChild) {
 				sliderInnerMargin = -dataButtonNumber * (100 + 3.125);
 			} else {
