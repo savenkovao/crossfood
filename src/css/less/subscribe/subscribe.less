@@ -136,6 +136,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	min-height: 220px;
 	color: #444444;
 	font-size: 16px;
 	font-weight: 300;
@@ -151,16 +152,21 @@
 .subscribe__item-text-li {
 	position: relative;
 	margin-left: 10px;
+	text-align: center;
 
 	&::before {
     content:  "-";
     position: absolute;
     left:     -16px;
   }
+
+  @media @tablet{
+  	text-align: left;
+  }
 }
 
 .subscribe__button-cnt{
-	padding-top: 55px;
+	// padding-top: 55px;
 	text-align: center;
 	user-select: none;
 }

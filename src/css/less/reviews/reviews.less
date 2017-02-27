@@ -150,13 +150,22 @@
 }
 .reviews-slider__opened-item {
 	position: absolute;
-	height: 90%;
-	max-height: 600px;
+	height: 0;
+	// max-height: 600px;
 	top: 0;
 	bottom: 0;
 	margin: auto;
 	left: 0%;
 	right: 0%;
+	opacity: 0;
+	cursor: pointer;
+	transition: all 0.2s linear;
+
+	&.visible {
+		opacity: 1;
+		height: 90%;
+		max-height: 600px;
+	}
 }
 
 

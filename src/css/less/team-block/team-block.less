@@ -3,12 +3,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+
 	
 	@media @tablet{
-		display: flex;
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
 		flex-direction: row;
-		justify-content: space-around;
-		align-items: flex-start;
+    	align-items: center;
 	}
 }
 
@@ -18,19 +20,23 @@
 	margin-top: 65px;
 	transition: order 1s linear;
 	cursor: pointer;
+	
+
 	&:first-child{
 		margin-top: 0px;
 	}
 
 	@media @tablet{
-		width: 28.5%;
-		margin-top: 0px;
-	}
+		width: 20%;
+		display: inline-block;
+		margin-top: -10%;
+		vertical-align: middle;
+		transition: margin-left 0.3s linear;
 
-	@media @laptop{
-			width: 25%;
+	&:first-child{
+		margin-top: -10%;
 	}
-
+	}
 }
 
 .team-block__img{
@@ -39,37 +45,10 @@
 	border-radius: 50%;
 	max-width: 240px;
 	user-select: none;
-	// width: 80%;
-	@media @tablet{
-		// width: 100%;
-		// max-width: 300px;
-	}
 }
 
 .team-block__text{
 	padding-top: 40px;
-}
-
-.team-block__img-l{
-	// width: 100%;
-
-	@media @tablet{
-		// width: 80%;	
-	}
-}
-.team-block__img-m{
-	// width: 100%;
-
-	@media @tablet{
-		// width: 50%;	
-	}
-}
-.team-block__img-s{
-	// width: 100%;
-
-	@media @tablet{
-		// width: 30%;	
-	}
 }
 
 .team-block__name{
@@ -81,46 +60,7 @@
 	color: @main-color;
 	text-align: center;
 
-	// &::before{
-	// 	content: '';
-	// 	display: block;
-	// 	position: absolute;
-	// 	top: -80px;
-	// 	left: -5px;
-
-	// 	width: 31px;
-	// 	height: 95px;
-		
-	// 	.setBackgroundImage(@round-arrow);
-
-	// 	@media @tablet{
-	// 		left: -32px;
-	// 	}
-
-	// 	@media @laptop{
-	// 		left: -32px;
-	// 	}
-		
-	// 	@media @laptopL {
-	// 		left: -32px;
-	// 	}
-	// 	@media @4k {
-	// 		left: -5px;
-	// 	}	
-	// } 
 }
-
-
-.team-block__name-1{}
-.team-block__name-2{}
-.team-block__name-3{}
-
-
-/* Text style for "Мария Савв" */
-
-
-/* Text style for "нутрициоло" */
-
 
 
 .team-block__descript{
@@ -137,11 +77,13 @@
 .team-block__descript-3{}
 
 .sl{
+	order: 4;
 	@media @tablet{
-		order: 1;
+		
 
 		.team-block__img {
-			width: 75%;
+			width: 70%;
+			opacity: 0.9;
 		}
 
 		.team-block__text{
@@ -150,10 +92,11 @@
 	}
 }
 .ml{
-	@media @tablet{
-		order: 2;
+	order: 2;
+	@media @tablet{		
 		.team-block__img {
-			width: 90%;
+			width: 70%;
+			opacity: 0.8;
 		}
 
 		.team-block__text{
@@ -162,12 +105,13 @@
 	}
 }
 .l {
+	order: 1;
 	@media @tablet{
-		order: 3;
+		margin-top: 0;
 
 		.team-block__img {
 			width: 100%;
-			box-shadow: 0px 0px 45px 0px @main-color;
+			box-shadow: 0 9px 28px 1px rgba(0, 1, 3, 0.3);
 		}
 
 		.team-block__text{
@@ -176,10 +120,12 @@
 	}
 }
 .mr{
+		order: 3;
 		@media @tablet{
-		order: 4;
+		
 		.team-block__img {
-			width: 90%;
+			width: 70%;
+			opacity: 0.8;
 		}
 
 		.team-block__text{
@@ -188,11 +134,12 @@
 	}
 }
 .sr{
-		@media @tablet{
 		order: 5;
+		@media @tablet{		
 
 		.team-block__img {
-			width: 75%;
+			width: 70%;
+			opacity: 0.8;
 		}
 
 		.team-block__text{
