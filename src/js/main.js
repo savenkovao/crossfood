@@ -173,10 +173,6 @@
 						allItems.sr.classList.remove('sr');
 						allItems.sr.classList.add('mr');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 						lItem.classList.add('ml');
 						lItem.setAttribute('data-action', 'ml');
 
@@ -288,13 +284,6 @@
 		currentScreenWidth = document.documentElement.clientWidth;
 	}
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 }());
 
 
@@ -569,11 +558,8 @@
 
 		setTimeout( function() {
 			node.classList.add('visible');
-<<<<<<< HEAD
 			node.style.top ='';
 			node.style.left = '';
-=======
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 		}, 0);
 	}
 
@@ -590,12 +576,9 @@
 
 		node = currentTarget.firstChild;
 		node.classList.remove('visible');
-<<<<<<< HEAD
 		
 		node.style.top = coordY +'px';
 		node.style.left = coordX +'px';
-=======
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
 
 		setTimeout( function() {
 			body.removeChild(currentTarget);

@@ -943,11 +943,7 @@ body {
 @media only screen and (min-width: 768px) {
   .sl .team-block__img {
     width: 70%;
-<<<<<<< HEAD
     opacity: 0.7;
-=======
-    opacity: 0.9;
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   }
   .sl .team-block__text {
     display: none;
@@ -959,11 +955,7 @@ body {
 @media only screen and (min-width: 768px) {
   .ml .team-block__img {
     width: 70%;
-<<<<<<< HEAD
     opacity: 0.7;
-=======
-    opacity: 0.8;
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   }
   .ml .team-block__text {
     display: none;
@@ -990,11 +982,7 @@ body {
 @media only screen and (min-width: 768px) {
   .mr .team-block__img {
     width: 70%;
-<<<<<<< HEAD
     opacity: 0.7;
-=======
-    opacity: 0.8;
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   }
   .mr .team-block__text {
     display: none;
@@ -1006,11 +994,7 @@ body {
 @media only screen and (min-width: 768px) {
   .sr .team-block__img {
     width: 70%;
-<<<<<<< HEAD
     opacity: 0.7;
-=======
-    opacity: 0.8;
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   }
   .sr .team-block__text {
     display: none;
@@ -1670,10 +1654,7 @@ body {
 .reviews-slider__opened-item {
   position: absolute;
   height: 0;
-<<<<<<< HEAD
   margin: auto;
-=======
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   top: 0;
   left: 0;
   opacity: 0;
@@ -1682,18 +1663,7 @@ body {
 }
 .reviews-slider__opened-item.visible {
   bottom: 0;
-<<<<<<< HEAD
   right: 0;
-=======
-  margin: auto;
-  left: 0%;
-  right: 0%;
-  opacity: 0;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-.reviews-slider__opened-item.visible {
->>>>>>> 506b0aaa919ea129687b19a8eea9e9f912f5a514
   opacity: 1;
   height: 90%;
   max-height: 600px;
