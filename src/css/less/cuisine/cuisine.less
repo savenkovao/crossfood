@@ -131,8 +131,12 @@
 	}	
 
 	@media @laptop{
-		width: 79%;
-		max-width: 835px;		
+		width: 95%;
+		// max-width: 835px;		
+	}
+
+	@media @4k {
+		width: 81%;
 	}
 }
 
@@ -145,17 +149,28 @@
 
 	@media @tablet{
 		display: inline-block;
-		width: 49%;
-		min-height: 320px;
+		width: 56%;
+		max-width: none;
+		min-height: 350px;
 		vertical-align: top;
 		padding-right: 10px;
 		margin-top: 25px;
-		// padding-top: 25px;
+		padding-bottom: 130px;
+	}
+
+	@media @laptop{
+		width: 55%;	
 	}	
 
 	@media @laptopL {
-		min-height: 350px;
+		width: 59%;
 	}
+
+	@media @4k {
+		width: 54%;
+	}
+
+
 }
 
 .cuisine__item-text-menu,
@@ -165,7 +180,7 @@
 	text-align: left;
 
 	@media @tablet {
-		font-size: 1.8em;
+		font-size: 1.6em;
 	}
 }
 
@@ -178,7 +193,7 @@
 	padding-top: 25px;		
 	position: static;
 
-	@media @laptop{
+	@media @tablet{
 		padding-top: 30px;
 		text-align: center;
 		text-align: left;
@@ -206,11 +221,22 @@
 		padding-left: 10px;
 		display: inline-block;
 		vertical-align: top;
-		width: 49%;
+		width: 43%;
+	}
+
+	@media @laptop{
+		width: 44%;
 	}
 
 	@media @laptopL {
 		min-height: 350px;
+		width: 40%;
+	}
+
+	@media @4k {
+		width: 45%;
+		min-height: auto;
+		min-width: 360px;		
 	}
 }
 
@@ -224,9 +250,21 @@
 	padding: 10px 0;
 
 	@media @tablet{
-		top: 23%;
-		right: 10%;	
+		top: 125px;
 		font-size: 1.8em;
+		left: ~'calc(76% - 70px)';	
+	}
+
+	@media @laptop{
+		left: ~'calc(74% - 70px)';	
+	}
+
+	@media @laptopL{
+		left: ~'calc(77% - 70px)';	
+	}
+
+	@media @4k{
+		left: ~'calc(70% - 70px)';	
 	}
 }
 .tab-block__3-cuisines{
@@ -249,6 +287,11 @@
 
 	@media @mobileL{
 		max-height: 250px;
+	}
+
+	@media @4k {
+		max-height: 270px;
+		max-width: 360px;
 	}
 	
 }
@@ -281,12 +324,11 @@
 	border-radius: 0 0 6px 6px;
 	box-shadow: 0px 17px 29px -6px rgba(0, 2, 4, 0.14);
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	@media @mobileL {
 		width: ~"calc(100% - 75px)";
 	}
 	
-	@media @laptop {
+	@media @tablet {
 		display: block;
 		width: 90%;
 		max-width: 700px;

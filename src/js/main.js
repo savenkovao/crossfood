@@ -1,5 +1,7 @@
 (function(){
 
+	// Mobile menu enabling
+
 	var brgrMenu = document.getElementById("brgr-menu");
 	var menu = document.getElementById("header-menu");
 
@@ -8,237 +10,240 @@
 	var stick3 = document.getElementById("brgr-menu-stick-3");
 	var count = 0;
 
-	brgrMenu.addEventListener("click", activateBrgrMenu, false);
+	brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
 
+	function enableBrgrMenu(event){
+		var e = getTarget(event);
 
-	function activateBrgrMenu(event){
-		var target = event.target		
+		if (e != undefined) {
+			count++;
+			if(count%2==0) {
+				deactivateBrgrMenu();
+				
+			} else {
+				activateBrgrMenu();
 
-		while (target != target.currentTarget) {
-
-			if (target.hasAttribute('data-meta-node')) {
-				count++;
-
-				if(count%2==0) {
-					menu.style.display = '';
-
-					stick1.classList.remove('stick-1-active');
-					stick2.classList.remove('disable');
-					stick3.classList.remove('stick-3-active');
-
-					count = 0;
-				} else {
-					menu.style.display = 'block';
-					stick1.classList.add('stick-1-active');
-					stick2.classList.add('disable');
-					stick3.classList.add('stick-3-active');
-				}
-
-				return;
 			}
-
-			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
-		}	
+		}
 	}
 
-}());
+	function activateBrgrMenu(){
+		menu.style.display = 'block';
+		stick1.classList.add('stick-1-active');
+		stick2.classList.add('disable');
+		stick3.classList.add('stick-3-active');
+		
+	}
+
+	function deactivateBrgrMenu(){
+		menu.style.display = '';
+		stick1.classList.remove('stick-1-active');
+		stick2.classList.remove('disable');
+		stick3.classList.remove('stick-3-active');
+		count = 0;
+	}
+
+// team slider browsing
 
 
-(function(){
 	var teamSlider = document.getElementById('team-slider');
-	var currentScreenWidth;
+
 
 	teamSlider.addEventListener('click', browseTeamSlider, false);
 
 	function browseTeamSlider(event) {
-		browseSlider(event);
+		var e = getTarget(event);
+
+		if (e != undefined)	browseSlider(e);
+
 	}
 
 
+	function getTarget(event) {
+		var target = event.target;
+		var currentTarget = event.currentTarget;
+
+		while (target != event.currentTarget) {
+
+			if (target.hasAttribute('data-meta-node')) {
+				var e = {target, currentTarget};
+				
+				return e;
+			}
+
+			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
+		}
+
+		return;
+	}
 
 
-	function browseSlider(event) {
+	function browseSlider(e) {
 
 		getScreenWidth();
 
-		if (currentScreenWidth > 768) {
+		if (currentScreenWidth >= 768) {
+			
+			var target = e.target;
+			var currentTarget = e.currentTarget;
 
-			var target = event.target;
-			var currentTarget = event.currentTarget;
 			var targetWidth = target.clientWidth;
+			var dataAction = target.getAttribute('data-action');			
+			var allItems = getItems();
 
-			while (target != event.currentTarget) {
+			var lItem = teamSlider.querySelectorAll('.l')[0];
+			lItem.classList.remove('l');
+			target.classList.remove(dataAction);
+			target.classList.add('l');
+			target.setAttribute('data-action', 'l');
 
-				if (target.hasAttribute('data-meta-node')) {
-					var dataAction = target.getAttribute('data-action');
+			if (dataAction == 'ml') {
+				
+				var newSl = allItems.sr.cloneNode(true);
+				
+				newSl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
+				newSl.setAttribute('data-action', 'sl');
+				newSl.setAttribute('data-meta-node','');
+				newSl.classList.remove('sr');
+				newSl.classList.add('sl');
+
+				allItems.sl.setAttribute('data-action', 'ml');
+				allItems.sl.classList.remove('sl');
+				allItems.sl.classList.add('ml');
+
+				lItem.classList.add('mr');
+				lItem.setAttribute('data-action', 'mr');
+
+				allItems.mr.setAttribute('data-action', 'sr');
+				allItems.mr.classList.remove('mr');
+				allItems.mr.classList.add('sr');
+
+
+
+				currentTarget.insertBefore(newSl, currentTarget.firstChild);
+
+				setTimeout( function() {
+					newSl.style.marginLeft = 0;
 					
-					var allItems = getItems();
+				}, 0);
 
-					var lItem = teamSlider.querySelectorAll('.l')[0];
-					lItem.classList.remove('l');
+				setTimeout( function() {
+					allItems.sr.remove();
+				}, 200);
 
-					target.classList.remove(dataAction);
-					target.classList.add('l');
-					target.setAttribute('data-action', 'l');
+			} else if (dataAction == 'sl'){
 
-					if (dataAction == 'ml') {
-						
-						var newSl = allItems.sr.cloneNode(true);
-						
-						newSl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
-						newSl.setAttribute('data-action', 'sl');
-						newSl.setAttribute('data-meta-node','');
-						newSl.classList.remove('sr');
-						newSl.classList.add('sl');
+				var newSl = allItems.sr.cloneNode(true);
+				var newMl = allItems.mr.cloneNode(true);
+				
 
-						allItems.sl.setAttribute('data-action', 'ml');
-						allItems.sl.classList.remove('sl');
-						allItems.sl.classList.add('ml');
+				newMl.setAttribute('data-action', 'sl');
+				newMl.setAttribute('data-meta-node','');
+				newMl.classList.remove('mr');
+				newMl.classList.add('sl');
 
-						lItem.classList.add('mr');
-						lItem.setAttribute('data-action', 'mr');
-
-						allItems.mr.setAttribute('data-action', 'sr');
-						allItems.mr.classList.remove('mr');
-						allItems.mr.classList.add('sr');
+				newSl.setAttribute('data-action', 'ml');
+				newSl.setAttribute('data-meta-node','');
+				newSl.classList.remove('sr');
+				newSl.classList.add('ml');
 
 
+				newMl.style.marginLeft = (-targetWidth * 2*(100/70)) + 'px';
+				currentTarget.insertBefore(newSl, currentTarget.firstChild);
+				currentTarget.insertBefore(newMl, currentTarget.firstChild);
 
-						currentTarget.insertBefore(newSl, currentTarget.firstChild);
+				lItem.classList.add('sr');
+				lItem.setAttribute('data-action', 'sr');
 
-						setTimeout( function() {
-							newSl.style.marginLeft = 0;
-							
-						}, 0);
-
-						setTimeout( function() {
-							allItems.sr.remove();
-						}, 200);
-
-
-					} else if (dataAction == 'sl'){
-
-						var newSl = allItems.sr.cloneNode(true);
-						var newMl = allItems.mr.cloneNode(true);
-
-						
-
-						newMl.setAttribute('data-action', 'sl');
-						newMl.setAttribute('data-meta-node','');
-						newMl.classList.remove('mr');
-						newMl.classList.add('sl');
-
-						newSl.setAttribute('data-action', 'ml');
-						newSl.setAttribute('data-meta-node','');
-						newSl.classList.remove('sr');
-						newSl.classList.add('ml');
-
-
-						newMl.style.marginLeft = (-targetWidth * 2*(100/70)) + 'px';
-						currentTarget.insertBefore(newSl, currentTarget.firstChild);
-						currentTarget.insertBefore(newMl, currentTarget.firstChild);
-
-						lItem.classList.add('sr');
-						lItem.setAttribute('data-action', 'sr');
-
-						allItems.ml.setAttribute('data-action', 'mr');
-						allItems.ml.classList.remove('ml');
-						allItems.ml.classList.add('mr');
+				allItems.ml.setAttribute('data-action', 'mr');
+				allItems.ml.classList.remove('ml');
+				allItems.ml.classList.add('mr');
 
 
 
-						setTimeout( function() {
-							newMl.style.marginLeft = 0;
-							
-						}, 0);
+				setTimeout( function() {
+					newMl.style.marginLeft = 0;
+					
+				}, 0);
 
-						setTimeout( function() {
-							allItems.sr.remove();
-							allItems.mr.remove();
-						}, 200);
+				setTimeout( function() {
+					allItems.sr.remove();
+					allItems.mr.remove();
+				}, 200);
 
-						
+			} else if (dataAction == 'mr'){
+				
+				var newSr = allItems.sl.cloneNode(true);
+				
+				newSr.setAttribute('data-action', 'sr');
+				newSr.setAttribute('data-meta-node','');
+				newSr.classList.remove('sl');
+				newSr.classList.add('sr');
 
-					} else if (dataAction == 'mr'){
-						
-						var newSr = allItems.sl.cloneNode(true);
-						
-						newSr.setAttribute('data-action', 'sr');
-						newSr.setAttribute('data-meta-node','');
-						newSr.classList.remove('sl');
-						newSr.classList.add('sr');
+				allItems.sr.setAttribute('data-action', 'mr');
+				allItems.sr.classList.remove('sr');
+				allItems.sr.classList.add('mr');
 
-						allItems.sr.setAttribute('data-action', 'mr');
-						allItems.sr.classList.remove('sr');
-						allItems.sr.classList.add('mr');
+				lItem.classList.add('ml');
+				lItem.setAttribute('data-action', 'ml');
 
-						lItem.classList.add('ml');
-						lItem.setAttribute('data-action', 'ml');
-
-						allItems.ml.setAttribute('data-action', 'sl');
-						allItems.ml.classList.remove('ml');
-						allItems.ml.classList.add('sl');
+				allItems.ml.setAttribute('data-action', 'sl');
+				allItems.ml.classList.remove('ml');
+				allItems.ml.classList.add('sl');
 
 
 
-						currentTarget.appendChild(newSr);
+				currentTarget.appendChild(newSr);
 
-						setTimeout( function() {
-							allItems.sl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
-							
-						}, 0);
+				setTimeout( function() {
+					allItems.sl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
+					
+				}, 0);
 
-						setTimeout( function() {
-							allItems.sl.remove();
-						}, 200);
-						
-					} else if (dataAction == 'sr'){
+				setTimeout( function() {
+					allItems.sl.remove();
+				}, 200);
+				
+			} else if (dataAction == 'sr'){
 
-						var newSr = allItems.ml.cloneNode(true);
-						var newMr = allItems.sl.cloneNode(true);
+				var newSr = allItems.ml.cloneNode(true);
+				var newMr = allItems.sl.cloneNode(true);
 
-						newSr.setAttribute('data-action', 'sr');
-						newSr.setAttribute('data-meta-node','');
-						newSr.classList.remove('ml');
-						newSr.classList.add('sr');
+				newSr.setAttribute('data-action', 'sr');
+				newSr.setAttribute('data-meta-node','');
+				newSr.classList.remove('ml');
+				newSr.classList.add('sr');
 
-						newMr.setAttribute('data-action', 'mr');
-						newMr.setAttribute('data-meta-node','');
-						newMr.classList.remove('sl');
-						newMr.classList.add('mr');
+				newMr.setAttribute('data-action', 'mr');
+				newMr.setAttribute('data-meta-node','');
+				newMr.classList.remove('sl');
+				newMr.classList.add('mr');
 
-						allItems.sr.setAttribute('data-action', 'l');
-						allItems.sr.classList.remove('sr');
-						allItems.sr.classList.add('l');
+				allItems.sr.setAttribute('data-action', 'l');
+				allItems.sr.classList.remove('sr');
+				allItems.sr.classList.add('l');
 
-						allItems.mr.setAttribute('data-action', 'ml');
-						allItems.mr.classList.remove('mr');
-						allItems.mr.classList.add('ml');
+				allItems.mr.setAttribute('data-action', 'ml');
+				allItems.mr.classList.remove('mr');
+				allItems.mr.classList.add('ml');
 
-						lItem.classList.add('sl');
-						lItem.setAttribute('data-action', 'sl');
+				lItem.classList.add('sl');
+				lItem.setAttribute('data-action', 'sl');
 
-						currentTarget.appendChild(newMr);
-						currentTarget.appendChild(newSr);
+				currentTarget.appendChild(newMr);
+				currentTarget.appendChild(newSr);
 
-						setTimeout( function() {
-							allItems.sl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
-							
-						}, 0);
+				setTimeout( function() {
+					allItems.sl.style.marginLeft = (-targetWidth * 1*(100/70)) + 'px';
+					
+				}, 0);
 
-						setTimeout( function() {
-							allItems.sl.remove();
-							allItems.ml.remove();
-						}, 200);
-						
-					}
-
-
-					return;
-				}
-
-				target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
+				setTimeout( function() {
+					allItems.sl.remove();
+					allItems.ml.remove();
+				}, 200);
+				
 			}
 		}
 	}
@@ -279,16 +284,8 @@
 	}
 
 
+// cuisine switching 
 
-	function getScreenWidth() {
-		currentScreenWidth = document.documentElement.clientWidth;
-	}
-
-}());
-
-
-
-(function(){
 	var cuisineListener = {
 		subscribe: 'fit',
 		subItem: 'sl',
@@ -323,36 +320,20 @@
 		enableBlock(event);
 	}
 
-	function enableBlock(event){
-		var target = event.target;
+	function enableBlock(event) {
+		var e = getTarget(event);
+		if (e != undefined) {
+			var dataAction = e.target.getAttribute('data-action');
+			var dataIdentifier = e.target.getAttribute('data-identifier');
+			var dataHighlight = e.target.getAttribute('data-highlight');
 
-		while (target != event.currentTarget) {
+			highlight (e.target, dataHighlight);
 
-			if (target.hasAttribute('data-meta-node')) { //элемент, по которому кликнули
-				var dataAction = target.getAttribute('data-action');
-				var dataIdentifier = target.getAttribute('data-identifier');
-				var dataHighlight = target.getAttribute('data-highlight');
+			searchByAttribute(dataAction, dataIdentifier, e.target);
 
-				highlight (target, dataHighlight);
-
-				searchByAttribute(dataAction, dataIdentifier, target);
-
-				changeListener(dataIdentifier);
-
-				return;
-			}
-
-			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
-		}	
-	}
-
-
-	function highlight (object, modificator) {
-		for(var i = 0; i < object.parentNode.children.length;i++){
-			object.parentNode.children[i].classList.remove(modificator);
-		}
-		object.classList.add(modificator);
-	}
+			changeListener(dataIdentifier);
+		}		
+	} 
 
 	function searchByAttribute(action, identifier, target) {
 		var nodes = document.querySelectorAll('[' + action + ']');
@@ -400,7 +381,6 @@
 		currentItem.classList.remove('disable');
 	}
 
-
 	function checkHighLightedItem() {
 
 		var items = subscribeItems.querySelectorAll('[' + 'data-identifier' + ']');
@@ -415,12 +395,10 @@
 		}		
 	}
 
-}());
+
+// reviewsSlider browsing/opening
 
 
-
-
-(function(){
 	var reviewsSlider = document.getElementById('reviews-slider');
 	var reviewsSliderInner = document.getElementById('reviews-slider-inner');
 	var slidesOnPage = reviewsSlider.getAttribute('data-slides-onpage');
@@ -451,11 +429,11 @@
 
 
 	function btnBrowseSlider(event) {
-		browseSlider(event);
+		browseReviewsSlider(event);
 	}
 
 	function arwBrowseSlider(event) {
-		browseSlider(event);
+		browseReviewsSlider(event);
 	}
 
 	function openCurrentSlide(event) {
@@ -463,12 +441,21 @@
 	}
 
 	function resizeFunction() {
-		sliderInnerMargin = 0;
+		getScreenWidth();
+		console.log(currentScreenWidth + '    ' + previousScreenWidth);
 
-		var sliderBtnFirst = reviewsSliderNavBtn.firstChild;
-		var modificator = sliderBtnFirst.getAttribute('data-highlight');
-		highlight (sliderBtnFirst, modificator);
-		browseSliderInner('','',reviewsSliderInner);
+		if ((previousScreenWidth >= 768 && currentScreenWidth >= 768) || (previousScreenWidth < 768 && currentScreenWidth < 768)) {
+
+		} else {
+			sliderInnerMargin = 0;
+
+			var sliderBtnFirst = reviewsSliderNavBtn.firstChild;
+			var modificator = sliderBtnFirst.getAttribute('data-highlight');
+			highlight (sliderBtnFirst, modificator);
+			browseSliderInner('','',reviewsSliderInner);
+		}
+
+		previousScreenWidth = currentScreenWidth;
 	}
 
 
@@ -488,48 +475,38 @@
 	}
 
 
-	function browseSlider(event) {
+	function browseReviewsSlider(event) {
 
-		var target = event.target;
-		var currentTarget = event.currentTarget
+		var e = getTarget(event);
 
-		while (target != event.currentTarget) {
+		if (e != undefined) {
+				var dataHighlight = e.target.getAttribute('data-highlight');
 
-			if (target.hasAttribute('data-meta-node')) { //элемент, по которому кликнули
-				var dataHighlight = target.getAttribute('data-highlight');
+				browseSliderInner(e.target, e.currentTarget, reviewsSliderInner);
 
-				browseSliderInner(target, currentTarget, reviewsSliderInner);
+				highlight (e.target, dataHighlight);
 
-				highlight (target, dataHighlight);
-
-				return;
-			}
-			
-			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
-		}	
+		}
 	}
 
+
+
+
 	function openSlide(event) {
+
 		getScreenWidth();
-		var target = event.target;
-		var currentTarget = event.currentTarget
+		var e = getTarget(event);
+		var target = e.target;
+		var currentTarget = e.currentTarget
 
 		coordX = event.clientX;
 		coordY = event.clientY;
-		
 
-		while (target != event.currentTarget) {
-		if (target.hasAttribute('data-meta-node')) {
-
+		if (e != undefined) {
 			if (currentScreenWidth > 768) {
 				createNewNode(target, coordX, coordY);
 			}
-
-				return;
-			}
-			
-			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
-		}	
+		}
 	}
 
 
@@ -542,10 +519,8 @@
 		node.setAttribute('src', currentSlideSrc);
 		node.classList.add('reviews-slider__opened-item');
 
-
 		node.style.top = coordY +'px';
 		node.style.left = coordX +'px';
-		console.log(coordX + '--' + coordY);
 
 		nodeContainer.classList.add('reviews-slider__opened-item-cont');
 		nodeContainer.setAttribute('id', 'reveiws-open-container');
@@ -596,8 +571,10 @@
 
 			var dataButtonNumber = target.getAttribute('data-button-number');
 			var rest = allSlides % slidesOnPage;
-			var integer = reviewsSliderInner.children.length/3 - rest;			
+			var integer = reviewsSliderInner.children.length/3 - rest;	
+
 			// 3.125 - margin left for items
+
 			if(target != reviewsSliderNavBtn.lastChild) {
 				sliderInnerMargin = -dataButtonNumber * (100 + 3.125);
 			} else {
@@ -629,7 +606,6 @@
 	}
 
 
-
 	function highlight (object, modificator) {
 		for(var i = 0; i < object.parentNode.children.length;i++){
 			object.parentNode.children[i].classList.remove(modificator);
@@ -637,8 +613,14 @@
 		object.classList.add(modificator);
 	}
 
+
+
+	var currentScreenWidth;
+	var previousScreenWidth = getScreenWidth();
+
 	function getScreenWidth() {
 		currentScreenWidth = document.documentElement.clientWidth;
+		return currentScreenWidth;
 	}
 
 }());
