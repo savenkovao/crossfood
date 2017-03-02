@@ -1779,11 +1779,25 @@ body {
   max-width: 260px;
 }
 .footer-tagline-block__img-cont {
-  background-image: url("../img/dsg/logo-tagline.png");
+  background-image: url("../img/dsg/logo-main.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: transparent;
+  background-size: contain;
+}
+.footer-tagline-block__header-cont {
+  padding-top: 25px;
+}
+.footer-tagline-block__header {
+  color: #1c1c1c;
+  font-family: "Roboto+Condensed", sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
 }
 .footer-tagline-block__text-cont {
   font-size: 24px;
@@ -1802,6 +1816,7 @@ body {
   }
 }
 .footer-contact-block__text-cont {
+  padding-top: 15px;
   margin: 0 auto;
 }
 .footer-contact-block__text {
@@ -1820,8 +1835,18 @@ body {
     padding-top: 30px;
   }
 }
+.footer-contact-block__link {
+  transition: all 0.2s linear;
+}
 .footer-contact-block__link-1 {
   background-image: url("../img/dsg/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+.footer-contact-block__link-1:hover {
+  background-image: url("../img/dsg/vk-h.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1834,8 +1859,22 @@ body {
   background-size: cover;
   background-color: transparent;
 }
+.footer-contact-block__link-2:hover {
+  background-image: url("../img/dsg/insta-h.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
 .footer-contact-block__link-3 {
   background-image: url("../img/dsg/facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+.footer-contact-block__link-3:hover {
+  background-image: url("../img/dsg/facebook-h.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1871,8 +1910,8 @@ body {
   line-height: 42px;
 }
 .tagline-block__img-cont {
-  width: 260px;
-  height: 154px;
+  width: 200px;
+  height: 90px;
   margin: 0 auto;
 }
 .tagline-block__text-cont {

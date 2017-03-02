@@ -520,8 +520,8 @@
 		node.setAttribute('src', currentSlideSrc);
 		node.classList.add('reviews-slider__opened-item');
 
-		node.style.top = coordY +'px';
-		node.style.left = coordX +'px';
+		node.style.top = 'calc(' + coordY +'px' + ' - ' + "50%)";
+		node.style.left = 'calc(' + coordX +'px' + ' - ' + "50%)";
 
 		nodeContainer.classList.add('reviews-slider__opened-item-cont');
 		nodeContainer.setAttribute('id', 'reveiws-open-container');

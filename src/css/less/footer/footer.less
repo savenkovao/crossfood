@@ -28,7 +28,24 @@
 }
 .footer-tagline-block__img-cont{
 	.setBackgroundImage(@tagline-img);
+	background-size: contain;
 }
+
+.footer-tagline-block__header-cont {
+	padding-top: 25px;
+}
+
+.footer-tagline-block__header {
+	color: #1c1c1c;
+	font-family: "Roboto+Condensed", sans-serif;
+	font-size: @h3-font-size-footer;
+	font-weight: bold;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
 .footer-tagline-block__text-cont{
 	font-size: 24px;
 	line-height: 1.33;
@@ -49,6 +66,7 @@
 }
 
 .footer-contact-block__text-cont{
+	padding-top: 15px;
 	margin: 0 auto;
 }
 .footer-contact-block__text{
@@ -68,16 +86,25 @@
 	}
 }
 .footer-contact-block__link{
-
+	transition:all 0.2s linear;
 }
 .footer-contact-block__link-1{
 	.setBackgroundImage(@hashtag-block_link-vk-img);
+	&:hover {
+		.setBackgroundImage(@hashtag-block_link-vk-img-h);
+	}
 }
 .footer-contact-block__link-2{
 	.setBackgroundImage(@hashtag-block_link-insta-img);
+	&:hover {
+		.setBackgroundImage(@hashtag-block_link-insta-img-h);
+	}
 }
 .footer-contact-block__link-3{
 	.setBackgroundImage(@hashtag-block_link-fb-img);
+	&:hover {
+		.setBackgroundImage(@hashtag-block_link-fb-img-h);
+	}
 }
 
 .footer-contact-block__tel-cont{
