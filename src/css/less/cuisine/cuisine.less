@@ -1,6 +1,10 @@
 .cuisine{}
 .cuisine_background{
-	.setBackgroundImage(@cuisine-background-img);
+	.setBackgroundImage(@cuisine-background-img-m);
+	@media @tablet {
+		background-image: url(@cuisine-background-img);
+	}
+	
 }
 .cuisine_position{
 	padding: 40px 3% 45px; 

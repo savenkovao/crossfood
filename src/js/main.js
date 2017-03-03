@@ -553,8 +553,8 @@
 		node = currentTarget.firstChild;
 		node.classList.remove('visible');
 		
-		node.style.top = coordY +'px';
-		node.style.left = coordX +'px';
+		node.style.top = 'calc(' + coordY +'px' + ' - ' + "5%)";
+		node.style.left = 'calc(' + coordX +'px' + ' - ' + "5%)";
 
 		setTimeout( function() {
 			body.removeChild(currentTarget);
