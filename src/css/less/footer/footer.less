@@ -86,24 +86,28 @@
 	}
 }
 .footer-contact-block__link{
-	transition:all 0.2s linear;
+	background-size: 168px;
+	background-image: url(@hashtag-block_link-img);
+	background-repeat: no-repeat;
+	// transition:all 0.2s linear;	
 }
-.footer-contact-block__link-1{
-	.setBackgroundImage(@hashtag-block_link-vk-img);
+.footer-contact-block__link-1{	
+	background-position: 0 0;
+
 	&:hover {
-		background-image: url(@hashtag-block_link-vk-img-h);
+		background-position: 0 -59.5px;
 	}
 }
 .footer-contact-block__link-2{
-	.setBackgroundImage(@hashtag-block_link-insta-img);
+	background-position: -59px 0;
 	&:hover {
-		background-image: url(@hashtag-block_link-insta-img-h);
+		background-position: -59px -59.5px;
 	}
 }
 .footer-contact-block__link-3{
-	.setBackgroundImage(@hashtag-block_link-fb-img);
+	background-position: -118px 0;
 	&:hover {
-		background-image: url(@hashtag-block_link-fb-img-h);
+		background-position: -118px -59.5px;
 	}
 }
 
