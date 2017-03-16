@@ -1,92 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Crossfood</title>
-
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="src/css/main.css">
-
-	<link rel="shortcut icon" href="src/img/dsg/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="56x57" href="src/img/dsg/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="59x60" href="src/img/dsg/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="71x72" href="src/img/dsg/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="75x76" href="src/img/dsg/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="113x114" href="src/img/dsg/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="119x120" href="src/img/dsg/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="143x144" href="src/img/dsg/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="151x152" href="src/img/dsg/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="179x180" href="src/img/dsg/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="191x192"  href="src/img/dsg/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="src/img/dsg/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="src/img/dsg/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="src/img/dsg/favicon/favicon-16x16.png">
-	<link rel="manifest" href="src/img/dsg/favicon/manifest.json">	
-	<meta name="msapplication-TileColor" content="#ffffff">	
-	<meta name="msapplication-TileImage" content="src/img/dsg/favicon/ms-icon-144x144.png">	
-	<meta name="theme-color" content="#ffffff">
-
-
-</head>
-<body>
-
-
-	<header class="header header_background">
-		<div class="wrapper header_position">
-
-			<div class="header-menu">
-
-
-
-				<div id="brgr-menu">
-					<div  data-meta-node class="brgr-menu header-brgr-menu_pos">					
-						<div id="brgr-menu-stick-1" class="brgr-menu__stick header-brgr-menu__stick stick-1"></div>
-						<div id="brgr-menu-stick-2" class="brgr-menu__stick header-brgr-menu__stick stick-2"></div>
-						<div id="brgr-menu-stick-3" class="brgr-menu__stick header-brgr-menu__stick stick-3"></div>
-					</div>
-				</div>
-
-				<div id="header-menu" class="menu">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="#how-it-works" class="menu__link">Как это работает</a></li>
-						<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
-						<li class="menu__item"><a href="#our-team" class="menu__link">Наша команда</a></li>
-						<li class="menu__item"><a href="#subscribe" class="menu__link">Планы подписок</a></li>
-<!-- 						<li class="menu__item"><a href="#discount" class="menu__link">Акции</a></li> -->
-						<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="header_content-position">
-				
-
-				<div class="header-title">
-
-					<div class="title-1 header__title-1_pos">
-						<div class="title-1__img header__title-1__img-pos"></div>
-						<h1 class="title-1__h1 header__title-1__h1">Crossfood</h1>
-					</div>
-				
-					<div class="title-2 header__title-2_pos">
-						<h2 class="title-2__h2 header__title-2__h2">Правильное питание - это просто</h2>
-					</div>
-
-				</div>
-				
-				<div class="header__button-cnt">
-					<button class="button button_filled header__button-btn">Связаться с нами</button>
-				</div>
-				
-			</div>
-		</div>
-	</header>
-
-
+<?php get_header() ?>
 	<section class="how-it-works">
 		<div class="wrapper  how-it-works_position">
 			
@@ -106,8 +18,8 @@
 					<p class="steps__item steps__item-2">Приготовление еды для тебя и порциям</p>
 					<p class="steps__item steps__item-3">Бесплатная доставка в любую точку города каждое  утро</p>
 					<p class="steps__item steps__item-4">Твоё правильно питание без усилий на протяжении всего дня</p>
-					<img class="steps__img-desktop" src="src/img/dsg/steps.png" alt="Crossfood - как это работает">
-					<img class="steps__img-mobile" src="src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
+					<img class="steps__img-desktop" src="<?php bloginfo("template_url"); ?>/src/img/dsg/steps.png" alt="Crossfood - как это работает">
+					<img class="steps__img-mobile" src="<?php bloginfo("template_url"); ?>/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
 				</div>
 			</div>
 			
@@ -152,7 +64,7 @@
 			<div id="team-slider" class="team-block our-team_team-block-pos">
 
 				<div data-action="sl" data-meta-node class="team-block__item sl"> 
-					<img class="team-block__img" src="src/img/cnt/team/item-0.jpg" alt="Жак Фреско - хороший парень">					
+					<img class="team-block__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/team/item-0.jpg" alt="Жак Фреско - хороший парень">					
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-1">
 							Жак Фреско
@@ -163,7 +75,7 @@
 					</div>						
 				</div>
 				<div data-action="ml" data-meta-node class="team-block__item ml"> 
-					<img class="team-block__img" src="src/img/cnt/team/item-1.jpg" alt="Мария Саввина - нутрициолог">					
+					<img class="team-block__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/team/item-1.jpg" alt="Мария Саввина - нутрициолог">					
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-1">
 							Мария Саввина
@@ -174,7 +86,7 @@
 					</div>						
 				</div>
 				<div data-action="l" data-meta-node class="team-block__item l"> 
-					<img class="team-block__img team-b" src="src/img/cnt/team/item-2.jpg" alt="Иван Воробьёв - шеф">
+					<img class="team-block__img team-b" src="<?php bloginfo("template_url"); ?>/src/img/cnt/team/item-2.jpg" alt="Иван Воробьёв - шеф">
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-2">
 							Иван Воробьёв
@@ -185,7 +97,7 @@
 					</div>
 				</div>
 				<div data-action="mr" data-meta-node class="team-block__item mr"> 					
-					<img class="team-block__img" src="src/img/cnt/team/item-3.jpg" alt="Ольга Янгичер - диетолог">
+					<img class="team-block__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/team/item-3.jpg" alt="Ольга Янгичер - диетолог">
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-3">
 							Ольга Янгичер
@@ -196,7 +108,7 @@
 					</div>
 				</div>
 				<div data-action="sr" data-meta-node class="team-block__item sr"> 					
-					<img class="team-block__img" src="src/img/cnt/team/item-4.jpg" alt="Петр Иванов - член команды">
+					<img class="team-block__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/team/item-4.jpg" alt="Петр Иванов - член команды">
 					<div class="team-block__text">
 						<h5 class="team-block__name team-block__name-3">
 							Петр Иванов
@@ -409,7 +321,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-mo.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-mo.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -461,7 +373,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-tu.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-tu.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -512,7 +424,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-we.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-we.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -563,7 +475,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-th.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-th.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -614,7 +526,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-fr.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-fr.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -666,7 +578,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -717,7 +629,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-sl-su.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-sl-su.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -769,7 +681,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-pow-mo.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-pow-mo.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -821,7 +733,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -872,7 +784,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-pow-we.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-pow-we.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -923,7 +835,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -974,7 +886,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-pow-fr.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-pow-fr.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1026,7 +938,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-pow-sa.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-pow-sa.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1077,7 +989,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/fit-pow-su.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/fit-pow-su.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1129,7 +1041,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-reg-mo.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-reg-mo.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1181,7 +1093,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1233,7 +1145,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-reg-we.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-reg-we.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1284,7 +1196,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1336,7 +1248,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1387,7 +1299,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1438,7 +1350,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-reg-su.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-reg-su.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1489,7 +1401,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-veg-mo.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-veg-mo.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1540,7 +1452,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1592,7 +1504,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-veg-we.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-veg-we.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1643,7 +1555,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1694,7 +1606,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/prem-veg-fr.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/prem-veg-fr.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1745,7 +1657,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1796,7 +1708,7 @@
 								<div class="cuisine__item-img-cont">
 
 									<div class="cuisine__item-img-block">
-										<img class="cuisine__item-img" src="src/img/cnt/cuisine/custom.jpg" alt="Салат">
+										<img class="cuisine__item-img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/cuisine/custom.jpg" alt="Салат">
 									</div>
 									<div class="cuisine__item-price-block">
 										<span data-cuisine-qount="3" class="cuisine__item-price-text disable">290 грн</span>
@@ -1842,19 +1754,19 @@
 			<div id="reviews-slider" data-slides-onpage="3" class="slider reviews-slider">
 				<div id="reviews-slider-inner" class="slider__inner">
 					<div data-slide class="slider__item reviews-slider__item">
-						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-1.jpg" alt="Отзыв покупателя">
+						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/reviews/slide-1-1.jpg" alt="Отзыв покупателя">
 					</div><!-- 
 					 --><div data-slide class="slider__item reviews-slider__item">
-						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-2.jpg" alt="Отзыв покупателя">
+						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/reviews/slide-1-2.jpg" alt="Отзыв покупателя">
 					</div><!-- 
 					 --><div data-slide class="slider__item reviews-slider__item">
-						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
+						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/reviews/slide-1-3.jpg" alt="Отзыв покупателя">
 					</div><!-- 
 					 --><div data-slide class="slider__item reviews-slider__item">
-						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-4.jpg" alt="Отзыв покупателя">
+						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/reviews/slide-1-4.jpg" alt="Отзыв покупателя">
 					</div><!-- 
 					 --><div data-slide class="slider__item reviews-slider__item">
-						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="src/img/cnt/reviews/slide-1-5.jpg" alt="Отзыв покупателя">
+						<img data-meta-node data-action="slide-img" class="reviews-slider__img" src="<?php bloginfo("template_url"); ?>/src/img/cnt/reviews/slide-1-5.jpg" alt="Отзыв покупателя">
 					</div>
 				</div>
 				
@@ -1880,63 +1792,4 @@
 		</div>
 	</section>
 
-
-	<footer class="footer">
-		<div class="wrapper footer_position">
-			<div class="footer-content">
-
-				<div class="tagline-block footer-tagline-block">
-					<div class="tagline-block__img-cont footer-tagline-block__img-cont"></div>
-					<div class="footer-tagline-block__header-cont">
-						<h3 class="footer-tagline-block__header">CrossFood</h3>
-					</div>
-					<div class="tagline-block__text-cont footer-tagline-block__text-cont">
-						<p class="tagline-block__text footer-tagline-block__text">Готовим пока ты спишь, доставляем каждое утро!</p>
-					</div>
-				</div>
-
-				<div class="contact-block footer-contact-block">
-					<div class="footer-contact-block__text-cont">
-						<p class="contact-block__text footer-contact-block__text">Мы в социальных сетях</p>
-					</div>
-					<div class="footer-contact-block__link-cont">
-						<a href="https://vk.com/crossfood_od" class="contact-block__link footer-contact-block__link footer-contact-block__link-1" target="blank"></a>
-						<a href="https://www.instagram.com/crossfood_od/" class="contact-block__link footer-contact-block__link footer-contact-block__link-2" target="blank"></a>
-						<a href="https://www.facebook.com/crossfood.od/" class="contact-block__link footer-contact-block__link footer-contact-block__link-3" target="blank"></a>
-					</div>
-					<div class="footer-contact-block__tel-cont">
-						<p class="contact-block__tel footer-contact-block__tel">+380732088048</p>
-					</div>
-					<div class="footer-contact-block__btn-cont">
-						<button class="button button_bordered-dark footer-button-btn">Связаться с нами</button>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<input type="checkbox">lorem ipsumdvfd fvj
-	</footer>	
-
-
-	<script src="src/js/main.js"></script>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="src/js/bootstrap.js"></script>
-
-	<!-- scroll -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#header-menu").on("click","a", function (event) {
-				event.preventDefault();
-				var id = $(this).attr('href'),
-				top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 1500);
-			});
-		});
-	</script>
-
-</body>
-</html>
+	<?php get_footer() ?>
