@@ -1,4 +1,4 @@
-.advantage-block{
+.advantage-block ol{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,17 +11,38 @@
 		align-items: flex-start;
 	}
 }
-.advantage-block__item{
+.advantage-block ol li{
 	width: 100%;
-	padding-top: 165px;
+	padding: 165px 15% 0;
 	margin-top: 80px;
+	
+	position: relative;
+	color: #f0f5e9;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+	cursor: default;
+
+	&::before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 140px;
+		top: -15px;
+		left: 0;
+		right: 0;
+		.setBackgroundImage(@advantage-item-1);
+		background-size: contain;
+		
+	}
 
 	&:first-child{
 		margin-top: 0;
 	}
 
 	@media @tablet{
-		padding-top: 200px;
+		padding: 200px 0 0;
 		width: 28.5%;
 		margin-top: 0;
 	}
@@ -29,68 +50,38 @@
 	@media @laptop{
 		width: 23.5%;
 	}
-}
 
-.advantage-block__descript{
-	position: relative;
-	color: #f0f5e9;
-	font-size: 18px;
-	line-height: 28px;
-	text-align: center;
-	width: 67%;
-	margin: 0 auto;
-	cursor: default;
-
-	@media @tablet{
-		width: 100%;
-	}
-
-	&:before{
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: 140px;
-		top: -165px;
-		left: 0;
-		right: 0;
-		.setBackgroundImage(@advantage-item-1);
-		background-size: contain;
-		
-		@media @tablet{		
-			top: -200px;			
-		}
-	}
-}
-
-.advantage-block__descript-1{
-	&::before{
+	&:nth-child(1)::before{
 		height: 125px;
-		top: -150px;
-		@media @tablet{
-			top: -185px;
-		}
+		top: 0;
 		background-size: 185px;	
 	}
-}
-.advantage-block__descript-2{
-	&::before{
-		margin-left: 12px;
+
+	&:nth-child(2)::before{
 		.setBackgroundImage(@advantage-item-2);
 		background-size: contain;
-}
+	}
 
-	
-}
-.advantage-block__descript-3{
-	&::before{
-		top: -170px;
+	&:nth-child(3)::before{
+		top: -20px;
 		height: 150px;
 		.setBackgroundImage(@advantage-item-3);
 		background-size: contain;
-		
-		@media @tablet{
-				top: -205px;
-		}
 	}	
 }
+
+
+
+
+.advantage-block__descript{
+
+	// width: 67%;
+	// margin: 0 auto;
+	
+
+	// @media @tablet{
+	// 	width: 100%;
+	// }
+
+}
+

@@ -20,11 +20,6 @@
 	margin-top: 65px;
 	transition: order 1s linear;
 	cursor: pointer;
-	
-
-	&:first-child{
-		margin-top: 0px;
-	}
 
 	@media @tablet{
 		width: 20%;
@@ -39,7 +34,7 @@
 	}
 }
 
-.team-block__img{
+.team-block__item img{
 	display: block;
 	margin: 0 auto;
 	border-radius: 50%;
@@ -47,102 +42,98 @@
 	user-select: none;
 }
 
-.team-block__text{
+.team-block__item ol{
 	padding-top: 40px;
+
+	& li:first-child {
+		position: relative;	
+		line-height: 24px;
+		font-family: "Fira Sans Extra Condensed", sans-serif;
+		font-size: 26px;
+		font-weight: 400;
+		color: @main-color;
+		text-align: center;
+	}
+
+	& li:last-child {
+		color: #2d2d2d;
+		font-size: 18px;
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.7;
+		letter-spacing: 1px;
+	}
 }
-
-.team-block__name{
-	position: relative;	
-	line-height: 24px;
-	font-family: "Fira Sans Extra Condensed", sans-serif;
-	font-size: 26px;
-	font-weight: 400;
-	color: @main-color;
-	text-align: center;
-
-}
-
-
-.team-block__descript{
-	color: #2d2d2d;
-	font-size: 18px;
-	font-weight: 300;
-	text-align: center;
-	line-height: 1.7;
-	letter-spacing: 1px;
-}
-
-.team-block__descript-1{}
-.team-block__descript-2{}
-.team-block__descript-3{}
 
 .sl{
 	order: 4;
-	@media @tablet{
-		
 
-		.team-block__img {
+	@media @tablet{
+		img {
 			width: 70%;
 			opacity: 0.7;
 		}
 
-		.team-block__text{
+		ol {
 			display: none;
 		}
 	}
 }
 .ml{
 	order: 2;
+
 	@media @tablet{		
-		.team-block__img {
+		img {
 			width: 70%;
 			opacity: 0.7;
 		}
 
-		.team-block__text{
+		ol {
 			display: none;
 		}	
 	}
 }
 .l {
 	order: 1;
-	@media @tablet{
-		margin-top: 0;
+	margin-top: 0;
 
-		.team-block__img {
+	@media @tablet{
+		img {
 			width: 100%;
 			box-shadow: 0 9px 28px 1px rgba(0, 1, 3, 0.3);
 		}
 
-		.team-block__text{
+		ol {
 			display: block;
 		}	
 	}
 }
 .mr{
 		order: 3;
+
 		@media @tablet{
 		
-		.team-block__img {
+		img {
 			width: 70%;
 			opacity: 0.7;
 		}
 
-		.team-block__text{
+		ol {
 			display: none;
 		}	
 	}
 }
+
 .sr{
 		order: 5;
 		@media @tablet{		
 
-		.team-block__img {
+		img{
 			width: 70%;
 			opacity: 0.7;
 		}
 
-		.team-block__text{
+		ol {
 			display: none;
 		}
 	}

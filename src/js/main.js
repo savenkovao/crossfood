@@ -290,7 +290,8 @@
 	var cuisineListener = {
 		subscribe: 'fit',
 		subItem: 'sl',
-		day: 'mo'
+		day: 'mo',
+		cuisines: 5
 	}
 
 	var subscribe = document.getElementById('subscribe');
@@ -332,7 +333,7 @@
 
 			searchByAttribute(dataAction, dataIdentifier, e.target);
 
-			changeListener(dataIdentifier);
+			changeListener(dataIdentifier);			
 		}		
 	} 
 
@@ -341,6 +342,7 @@
 
 		for (var i = 0; i < nodes.length; i++) {
 			var currentIdentifier = nodes[i].getAttribute(action);
+
 			if(currentIdentifier == identifier) {
 				nodes[i].classList.remove('disable');
 			} else {
@@ -362,24 +364,29 @@
 			checkHighLightedItem();
 
 		} else if (event.currentTarget == subscribeItems) {
-			cuisineListener.subItem = identifier;
+		 if(identifier)	cuisineListener.subItem = identifier;
 		} else if (event.currentTarget == cuisineWeek) {
 			cuisineListener.day = identifier;
+		} else if (event.currentTarget == cuisines_3_5) {
+			cuisineListener.cuisines = identifier;
 		}
 
 		selectCuisineItem();
+		console.log(cuisineListener);
 	}
 
 	function selectCuisineItem() {
 		var selector = cuisineListener.subscribe + '-' + cuisineListener.subItem + '-' + cuisineListener.day;
-		console.log(selector);
-
-		for(var i = 0; i < allCuisines.children.length; i++) {
-			allCuisines.children[i].classList.add('disable');
-		}
-
 		var currentItem = document.getElementById(selector);
-		currentItem.classList.remove('disable');
+		
+		if (currentItem) {
+		
+			for(var i = 0; i < allCuisines.children.length; i++) {
+				allCuisines.children[i].classList.add('disable');
+			}
+
+			currentItem.classList.remove('disable');
+		}
 	}
 
 	function checkHighLightedItem() {
@@ -443,7 +450,6 @@
 
 	function resizeFunction() {
 		getScreenWidth();
-		console.log(currentScreenWidth + '    ' + previousScreenWidth);
 
 		if ((previousScreenWidth >= 768 && currentScreenWidth >= 768) || (previousScreenWidth < 768 && currentScreenWidth < 768)) {
 
@@ -624,4 +630,74 @@
 		return currentScreenWidth;
 	}
 
+
+	// Forms
+
+
+	document.body.addEventListener('click', switchNode, false);
+
+	function switchNode(event) {
+		var e = getTarget(event);
+
+		if (e != undefined) {
+			var target = e.target;
+			var action = target.getAttribute('data-action');
+			var targetNodeSelector = target.getAttribute('data-target');
+			var targetNode = document.getElementById(targetNodeSelector);
+
+			if (targetNode) {
+
+				if (action == 'activate') {
+					activateNode(targetNode);
+				} else if (action == 'deactivate'){
+					deactivateNode(targetNode);
+				}
+			}
+		}	
+	}
+
+	function activateNode(targetNode) {
+		targetNode.classList.add('active');	
+
+		selectOtions(targetNode);	
+	}
+
+	function deactivateNode(targetNode) {
+		targetNode.classList.remove('active');		
+	}
+
+
+
+	// Select options
+
+	
+	function selectOtions (targetNode) {
+		var form = document.forms[1];
+		var selectSubscribe = form.elements.menu77;
+		var selectCuisines = form.elements.menu104;
+
+		if (cuisineListener.subscribe == 'fit') {
+			if(cuisineListener.subItem == 'sl') {
+				selectSubscribe.selectedIndex = 0;
+			} else if(cuisineListener.subItem == 'pow') {
+				selectSubscribe.selectedIndex = 1;				
+			}
+		} else if (cuisineListener.subscribe == 'prem') {
+			if(cuisineListener.subItem == 'reg') {
+				selectSubscribe.selectedIndex = 2;
+			} else if(cuisineListener.subItem == 'veg') {
+				selectSubscribe.selectedIndex = 3;
+			}
+		}
+
+		if (cuisineListener.cuisines == 3) {
+			selectCuisines.selectedIndex = 0;
+		} else if (cuisineListener.cuisines == 5) {
+			selectCuisines.selectedIndex = 1;
+		}
+	}
+
+
 }());
+
+  

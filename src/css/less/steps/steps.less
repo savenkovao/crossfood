@@ -1,114 +1,105 @@
 .steps{
 	position: relative;
 	width: 95%;
-	 margin: 0 auto;
+	margin: 0 auto;
 
 	@media @mobileL {
 		width: 77%;
 		max-width: 420px;   
-	}
-
-	
+	}	
 
 	@media @tablet {
 		width: 100%;
 		padding: 85px 0;
 		max-width: none;	
 	}
-	
 
-}
-.steps__item{
+	& ol li:nth-child(-n+4) {
+		position: absolute;	
+		color: #707070;
+		font-size: 1.8em;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: center;
+		user-select: none;
+		cursor: default;
+		width: 71%;
+	  max-width: 260px;
+	  left: 26%;
 
-	position: absolute;	
-	color: #707070;
-	font-size: 1.8em;
-	font-weight: 300;
-	line-height: 24px;
-	text-align: center;
-	user-select: none;
-	cursor: default;
-	width: 71%;
-    max-width: 260px;
-    left: 26%;
+		@media @mobileL {
+			left: 27%;
+		}
+		
+		@media @tablet{
 
-	@media @mobileL {
-		left: 27%;
-	}
-	
-	
+			width: 31%;
+		}
 
-	@media @tablet{
+		@media @laptop{
+			width: 23%;
+		}
 
-		width: 31%;
-	}
-
-	@media @laptop{
-		width: 23%;
-	}
-
-	@media @laptopL{
-		width: 21%;
+		@media @laptopL{
+			width: 21%;
+		}
 	}
 
-}
-
-.steps__item-1{
-	top: 0%;
-
-	@media @tablet{
-		top: initial;
-		bottom: 0; 
-		left: 1%;	
-	}
-
-	@media @laptop{		
-		left: 7%;
-	}
-}
-
-.steps__item-2{
-	top: 29%;
-
-	@media @tablet{
+	& ol li:nth-child(1){
 		top: 0%;
-		left: 23%;	
+	
+		@media @tablet{
+			top: initial;
+			bottom: 0; 
+			left: 1%;	
+		}
+
+		@media @laptop{		
+			left: 7%;
+		}
 	}
 
-	@media @laptop{		
-		left: 28%;
+	& ol li:nth-child(2){
+		top: 29%;
+
+		@media @tablet{
+			top: 0%;
+			left: 23%;	
+		}
+
+		@media @laptop{		
+			left: 28%;
+		}	
 	}	
 
-	
-}
+	& ol li:nth-child(3){
+		top: 57.5%;
 
-.steps__item-3{
-	top: 57.5%;
+		@media @tablet{
+			top: initial;
+			bottom: 0%;
+			left: 45%;	
+		}
 
-	@media @tablet{
-		top: initial;
-		bottom: 0%;
-		left: 45%;	
+		@media @laptop{		
+			left: 49%;
+		}
 	}
 
-	@media @laptop{		
-		left: 49%;
-	}
-	
+	& ol li:nth-child(4){
+		top: 87%;
+
+		@media @tablet{
+			top: 0%;
+			left: 68%;	
+		}
+
+		@media @laptop{
+			left: 72%;
+		}
+	}	
 }
 
-.steps__item-4{
-	top: 87%;
-
-	@media @tablet{
-		top: 0%;
-		left: 68%;	
-	}
-
-	@media @laptop{
-		left: 72%;
-	}		
-}
 
 .steps__img-desktop{
 	display: none;

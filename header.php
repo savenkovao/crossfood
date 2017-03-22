@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes() ?> >
 <head>
 	<meta charset="UTF-8">
-	<title>Crossfood</title>
+	<title><?php wp_title(); ?></title>
 
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/src/css/style.css">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css">
 
-	<link rel="shortcut icon" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="56x57" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="59x60" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="71x72" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="75x76" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="113x114" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="119x120" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="143x144" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="151x152" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="179x180" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="191x192"  href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/favicon-16x16.png">
-	<link rel="manifest" href="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/manifest.json">	
+	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="56x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="59x60" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="71x72" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="75x76" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="113x114" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="119x120" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="143x144" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="151x152" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="179x180" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="191x192"  href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/manifest.json">	
 	<meta name="msapplication-TileColor" content="#ffffff">	
-	<meta name="msapplication-TileImage" content="<?php bloginfo("template_url"); ?>/src/img/dsg/favicon/ms-icon-144x144.png">	
+	<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/ms-icon-144x144.png">	
 	<meta name="theme-color" content="#ffffff">
 
-
+	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?> >
 
 	<header class="header header_background">
 		<div class="wrapper header_position">
@@ -78,7 +78,7 @@
 				</div>
 				
 				<div class="header__button-cnt">
-					<button class="button button_filled header__button-btn">Связаться с нами</button>
+					<button data-meta-node data-target="form_1" data-action="activate" class="button button_filled header__button-btn">Связаться с нами</button>
 				</div>
 				
 			</div>
