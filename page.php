@@ -172,7 +172,7 @@
 					</div>
 					<div data-identifier="tu" data-meta-node data-highlight="cuisine-block__button_active" class="tab-block__nav-button cuisine-block__button">
 
-						<span class="cuisine-block__button-desktop">Вторинк</span>
+						<span class="cuisine-block__button-desktop">Вторник</span>
 						<span  class="cuisine-block__button-mobile">Вт</span>
 
 					</div>
