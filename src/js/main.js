@@ -289,7 +289,8 @@
 
 	var cuisineListener = {
 		subscribe: 'fit',
-		subItem: 'sl',
+		week: 1,
+		calories: '1200',
 		day: 'mo',
 		cuisines: 5
 	}
@@ -322,20 +323,61 @@
 		enableBlock(event);
 	}
 
+	getStartCuisine();
+
+
+
+
+	function getStartCuisine() {
+		getCurrentDate ();
+		selectCuisineItem();
+	}
+
+
+	function getCurrentDate () {
+	
+		var date = new Date();
+
+		Date.prototype.getWeekNumber = function(){
+			var d = new Date(+this);
+			d.setHours(0,0,0,0);
+			d.setDate(d.getDate()+4-(d.getDay()||7));
+			return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
+		};
+
+		var weekNumber = date.getWeekNumber();
+		var dayNumber = date.getDay();
+		var hourNumber = date.getHours();
+
+		getWeek(weekNumber, dayNumber, hourNumber);
+
+	}
+
+
+	function getWeek(weekNumber, dayNumber, hourNumber) {
+		// there are 2 weeks - №1 and №2
+		cuisineListener.week = (weekNumber + 1) % 2 + 1;
+
+		if (dayNumber == 0 && hourNumber >= 5) {			
+			cuisineListener.week =weekNumber % 2 + 1;
+		}
+	}
+
+
 	function enableBlock(event) {
 		var e = getTarget(event);
 		if (e != undefined) {
 			var dataAction = e.target.getAttribute('data-action');
 			var dataIdentifier = e.target.getAttribute('data-identifier');
-			var dataHighlight = e.target.getAttribute('data-highlight');
 
-			highlight (e.target, dataHighlight);
+			highlight (e.target);
 
 			searchByAttribute(dataAction, dataIdentifier, e.target);
 
 			changeListener(dataIdentifier);			
 		}		
 	} 
+
 
 	function searchByAttribute(action, identifier, target) {
 		var nodes = document.querySelectorAll('[' + action + ']');
@@ -356,15 +398,17 @@
 			cuisineListener.subscribe = identifier;
 
 			if (identifier == 'fit') {
-				cuisineListener.subItem = 'sl';
+				cuisineListener.calories = '1200';
 			} else if (identifier == 'prem') {
-				cuisineListener.subItem = 'reg';
+				cuisineListener.calories = '1200';
+			} else if (identifier == 'veg') {
+				cuisineListener.calories = '1200';
 			}
 
 			checkHighLightedItem();
 
 		} else if (event.currentTarget == subscribeItems) {
-		 if(identifier)	cuisineListener.subItem = identifier;
+		 if(identifier)	cuisineListener.calories = identifier;
 		} else if (event.currentTarget == cuisineWeek) {
 			cuisineListener.day = identifier;
 		} else if (event.currentTarget == cuisines_3_5) {
@@ -372,13 +416,12 @@
 		}
 
 		selectCuisineItem();
-		console.log(cuisineListener);
 	}
 
 	function selectCuisineItem() {
-		var selector = cuisineListener.subscribe + '-' + cuisineListener.subItem + '-' + cuisineListener.day;
+		var selector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.calories + '-' + cuisineListener.day;
 		var currentItem = document.getElementById(selector);
-		
+		console.log(selector);
 		if (currentItem) {
 		
 			for(var i = 0; i < allCuisines.children.length; i++) {
@@ -395,10 +438,9 @@
 
 		for (var i = 0; i < items.length; i++) {
 			var itemIdentifier = items[i].getAttribute('data-identifier');
-			var itemModificator = items[i].getAttribute('data-highlight');
 			
-			if (cuisineListener.subItem == itemIdentifier) {
-				highlight (items[i], itemModificator);
+			if (cuisineListener.calories == itemIdentifier) {
+				highlight (items[i]);
 			}
 		}		
 	}
@@ -457,8 +499,7 @@
 			sliderInnerMargin = 0;
 
 			var sliderBtnFirst = reviewsSliderNavBtn.firstChild;
-			var modificator = sliderBtnFirst.getAttribute('data-highlight');
-			highlight (sliderBtnFirst, modificator);
+			highlight (sliderBtnFirst);
 			browseSliderInner('','',reviewsSliderInner);
 		}
 
@@ -474,11 +515,10 @@
 			buttons[i].classList.add('reviews-slider__button');			
 			buttons[i].setAttribute('data-button-number', i);
 			buttons[i].setAttribute('data-meta-node', '');
-			buttons[i].setAttribute('data-highlight', 'reviews-slider__button_active');
 			reviewsSliderNavBtn.appendChild(buttons[i]);
 		}
 
-		buttons[0].classList.add('reviews-slider__button_active');
+		buttons[0].classList.add('active');
 	}
 
 
@@ -487,11 +527,10 @@
 		var e = getTarget(event);
 
 		if (e != undefined) {
-				var dataHighlight = e.target.getAttribute('data-highlight');
 
 				browseSliderInner(e.target, e.currentTarget, reviewsSliderInner);
 
-				highlight (e.target, dataHighlight);
+				highlight (e.target);
 
 		}
 	}
@@ -613,11 +652,11 @@
 	}
 
 
-	function highlight (object, modificator) {
+	function highlight (object) {
 		for(var i = 0; i < object.parentNode.children.length;i++){
-			object.parentNode.children[i].classList.remove(modificator);
+			object.parentNode.children[i].classList.remove('active');
 		}
-		object.classList.add(modificator);
+		object.classList.add('active');
 	}
 
 
@@ -658,7 +697,6 @@
 
 	function activateNode(targetNode) {
 		targetNode.classList.add('active');	
-
 		selectOtions(targetNode);	
 	}
 
@@ -674,29 +712,36 @@
 	function selectOtions (targetNode) {
 		var form = document.forms[1];
 		var selectSubscribe = form.elements.menu77;
+		var selectCalories = form.elements.menu29;
 		var selectCuisines = form.elements.menu104;
+		
 
 		if (cuisineListener.subscribe == 'fit') {
-			if(cuisineListener.subItem == 'sl') {
 				selectSubscribe.selectedIndex = 0;
-			} else if(cuisineListener.subItem == 'pow') {
+		} else if(cuisineListener.subscribe == 'prem') {
 				selectSubscribe.selectedIndex = 1;				
-			}
-		} else if (cuisineListener.subscribe == 'prem') {
-			if(cuisineListener.subItem == 'reg') {
+		} else if (cuisineListener.subscribe == 'veg') {
 				selectSubscribe.selectedIndex = 2;
-			} else if(cuisineListener.subItem == 'veg') {
-				selectSubscribe.selectedIndex = 3;
-			}
 		}
 
-		if (cuisineListener.cuisines == 3) {
+
+		if (cuisineListener.calories == '1200') {
+				selectCalories.selectedIndex = 0;
+		} else if(cuisineListener.calories == '1500') {
+				selectCalories.selectedIndex = 1;				
+		} else if (cuisineListener.calories == '2000') {
+				selectCalories.selectedIndex = 2;
+		} else if (cuisineListener.calories == '2500') {
+				selectCalories.selectedIndex = 3;
+		}
+
+
+		if (+cuisineListener.cuisines == '3') {
 			selectCuisines.selectedIndex = 0;
-		} else if (cuisineListener.cuisines == 5) {
+		} else if (+cuisineListener.cuisines == '5') {
 			selectCuisines.selectedIndex = 1;
 		}
 	}
-
 
 }());
 
