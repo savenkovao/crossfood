@@ -63,11 +63,17 @@
 	padding: 21px 0;
 	margin: 1px;
 	text-align: center;
-    border-radius: 4px;
+  border-radius: 4px;
 	background-color: #ffffff;
-    line-height: 1;
+  line-height: 1;
 	color: #666565;
 	font-size: 1.8em;
+
+	&.active {
+		position: relative;
+		color: @main-color;
+		font-weight: bolder;
+	}
 
 	@media @mobileL {
 		width: 78px;
@@ -80,11 +86,6 @@
 		background-color: transparent;
 		line-height: 1.67;		
 	}
-}
-.cuisine-block__button_active{
-	position: relative;
-	color: @main-color;
-	font-weight: bolder;
 }
 
 .cuisine-block__button-desktop {
@@ -263,17 +264,16 @@
 		left: ~'calc(70% - 70px)';	
 	}
 }
-.tab-block__3-cuisines{
+.tab-block__3-cuisines,
+.tab-block__5-cuisines {
 	cursor: pointer;
-}
-.tab-block__5-cuisines{
-	cursor: pointer;
+
+	&.active{
+		color: @main-color;
+		font-weight: bolder;
+	}
 }
 
-.tab-block__3-5-cuisines_active{
-	color: @main-color;
-	font-weight: bolder;
-}
 
 .cuisine__item-img-block{
 	max-height: 220px;
