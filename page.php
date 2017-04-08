@@ -18,11 +18,15 @@
 			<div class="how-it-works_steps-pos">
 				<div class="steps">
 					
-					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
+					
 
 					<img class="steps__img-desktop" src="<?php echo esc_url( get_template_directory_uri()) ?>/src/img/dsg/steps.png" alt="Crossfood - как это работает">
 					<img class="steps__img-mobile" src="<?php echo esc_url( get_template_directory_uri())?>/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
+
+					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
 				</div>
+
+				<?php $post = get_post($post_id = 669); echo $post->post_content; ?>
 			</div>
 			
 		</div>
@@ -51,7 +55,7 @@
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Наша команда</h3>	
 			</div>
 
-			<div id="team-slider" class="team-block our-team_team-block-pos">
+<!-- 			<div id="team-slider" class="team-block our-team_team-block-pos">
 
 				<div data-action="sl" data-meta-node class="team-block__item sl">					
 
@@ -83,7 +87,34 @@
 					
 				</div>
 
+			</div> -->
+
+			<div id="team-slider" class="team-block our-team_team-block-pos">
+
+				<div class="team-block__item"> 
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/cnt/team/item-1.jpg" alt="Мария Саввина - нутрициолог">					
+					<ol>
+						<li>Мария Саввина</li>
+						<li>Фитнес-тренер, дипломированный спортивный нутрициолог</li>
+					</ol>											
+				</div>
+				<div class="team-block__item"> 
+					<img class=" team-b" src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/cnt/team/item-2.jpg" alt="Иван Воробьёв - шеф">
+					<ol>
+						<li>Иван Воробьёв</li>
+						<li>Шефповар, "зеленый" Шеф Одессы, эксперт здоровой кулинарии</li>
+					</ol>					
+				</div>
+				<div class="team-block__item"> 					
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/cnt/team/item-3.jpg" alt="Ольга Янгичер - диетолог">
+					<ol>
+						<li>Ольга Янгичер</li>
+						<li>Врач-диетолог, практик с 15 летним опытом и специалист в области спортивного питания</li>
+					</ol>					
+				</div>
 			</div>
+
+
 		</div>
 	</section>
 
@@ -486,360 +517,43 @@
 
 					<div id="fit-2-1200-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, индейкой и творогом;</li>
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Бескалорийные макароны «Широтаке» с соусом «болоньезе».</li>
-									</ol>						
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 495); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1200-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола + йогуртом + фрукты;</li>
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>										
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 497); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1200-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной;</li>
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Творог с клубнично мятным джемом.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 499); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1200-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет с болгарским перцем и печеной куриной пулькой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Творожная Мусака из баклажан и корений с телятиной.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 501); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1200-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром;</li>
-										<li>Чизкейк творожный на льняном корже и натуральном сахзаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 503); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1200-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с индейкой, шпинатом и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники ПП на натуральном сахЗаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 505); echo $post->post_content; ?>	
 						</div>
 					</div>
 
 					<div id="fit-2-1200-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Скрамбл, ростбиф, сыр твердый, тосты мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом;</li>
-										<li>Творожный смузи ягодами и ванильной палочкой.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1300 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 507); echo $post->post_content; ?>	
 						</div>
 					</div>
 
@@ -847,716 +561,86 @@
 
 					<div id="fit-2-1500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, индейкой и творогом;</li>
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Бескалорийные макароны «Широтаке» с соусом «болоньезе».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 509); echo $post->post_content; ?>	
 						</div>
 					</div>
 
 					<div id="fit-2-1500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола + йогуртом + фрукты;</li>
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
-						</div>5						</div>
+							<?php $post = get_post($post_id = 511); echo $post->post_content; ?>	
+						</div>
+					</div>
 
 					<div id="fit-2-1500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной;</li>
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Творог с клубнично мятным джемом.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
-						</div>5						</div>
+							<?php $post = get_post($post_id = 513); echo $post->post_content; ?>	
+						</div>
+					</div>
 
 					<div id="fit-2-1500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет с болгарским перцем и печеной куриной пулькой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Творожная Мусака из баклажан и корений с телятиной.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 515); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром;</li>
-										<li>Чизкейк творожный на льняном корже и натуральном сахзаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
-						</div>5						</div>
+							<?php $post = get_post($post_id = 517); echo $post->post_content; ?>
+						</div>
+					</div>
 
 					<div id="fit-2-1500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с индейкой, шпинатом и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники ПП на натуральном сахЗаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 519); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-1500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Скрамбл, ростбиф, сыр твердый, тосты мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом;</li>
-										<li>Творожный смузи ягодами и ванильной палочкой.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
-						</div>5						</div>
+							<?php $post = get_post($post_id = 521); echo $post->post_content; ?>							
+						</div>
+					</div>
 
 
 					<div id="fit-2-2000-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, индейкой и творогом;</li>
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Бескалорийные макароны «Широтаке» с соусом «болоньезе».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 523); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола + йогуртом + фрукты;</li>
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 525); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной;</li>
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Творог с клубнично мятным джемом.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 528); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет с болгарским перцем и печеной куриной пулькой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Творожная Мусака из баклажан и корений с телятиной.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 530); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром;</li>
-										<li>Чизкейк творожный на льняном корже и натуральном сахзаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 532); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с индейкой, шпинатом и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники ПП на натуральном сахЗаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 534); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2000-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Скрамбл, ростбиф, сыр твердый, тосты мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом;</li>
-										<li>Творожный смузи ягодами и ванильной палочкой.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 536); echo $post->post_content; ?>							
 						</div>
 					</div>
 
@@ -1564,360 +648,43 @@
 
 					<div id="fit-2-2500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, индейкой и творогом;</li>
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Бескалорийные макароны «Широтаке» с соусом «болоньезе».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью и травами;</li>
-										<li>ПП Пицца на корже из куриного филе;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 538); echo $post->post_content; ?>
 						</div>
 					</div>
 
 					<div id="fit-2-2500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола + йогуртом + фрукты;</li>
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из куриного филе с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Гороховая лапша с тайским соусом с рыбой и грибами;</li>
-										<li>Салат из свежих овощей и перепелиных яиц с сырным соусом на основе йогурта.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 540); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной;</li>
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Творог с клубнично мятным джемом.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Паштет из печени индейки с льняными тостами;</li>
-										<li>Греча с фрикадельками домашней куры в сметано-грибной подливке;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 542); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет с болгарским перцем и печеной куриной пулькой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Творожная Мусака из баклажан и корений с телятиной.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины + льняные тосты;</li>
-										<li>Греча с пюре из сельдерея + Куриная грудка Су-вид с тимьяном;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 544); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром;</li>
-										<li>Чизкейк творожный на льняном корже и натуральном сахзаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами;</li>
-										<li>Фурм Д.Амбер Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 546); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с индейкой, шпинатом и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники ПП на натуральном сахЗаме «FitParad».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный + шоколадное печенье с курагой;</li>
-										<li>Пшенная каша с палтусом Су-вид и рюмкой бульона с зеленью;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 548); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="fit-2-2500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Скрамбл, ростбиф, сыр твердый, тосты мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом;</li>
-										<li>Творожный смузи ягодами и ванильной палочкой.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай ПП в сливочной пропитке;</li>
-										<li>Перловая каша с отварным ягненком в крепком бульоне с зеленью;</li>
-										<li>Салат с телятиной, яйцом, огурцом и йогуртным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 550); echo $post->post_content; ?>							
 						</div>
 					</div>
 
@@ -2095,1442 +862,174 @@
 <!-- prem-2-xxx-yy -->
 					<div id="prem-2-1200-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Сытная Фритатта со шпинатом, индейкой, годовалым пармезаном и травами;</li>
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Безкаллорийные Широтаке1200\1500 с соусом болоньез или 2000\2500 Классическая лазанья « болоньез-бешамель».</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 553); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-								
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 555); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной, маковыми отрубями и домашним вареньем;</li> 
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени;</li>
-										<li>Котлетки домашние в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-									</ol>											
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 557); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Свехпышный Омлет «Облако» от ЗеленогоШефа с болгарским перцем и индейкой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом;</li>
-										<li>Мусака из баклажан и корений с телятиной, маслинами и сыром Фета.</li>
-									</ol>										
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 559); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью( по древнему рецепту ) + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-									
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 561); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Интересный Омлет - Маффин с индейкой, капустой брокколи и адыгейским сыром;</li>
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Нежнейший Палтус Су-Вид с овощами и соусом из йогурта огурца и зелени.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 563); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1200-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, ростбиф, сыр твердый, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом;</li>
-										<li>Ароматное Рагу из телятины и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>		
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 565); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="prem-2-1500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Сытная Фритатта со шпинатом, индейкой, годовалым пармезаном и травами;</li>
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Безкаллорийные Широтаке1200\1500 с соусом болоньез или 2000\2500 Классическая лазанья « болоньез-бешамель».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 567); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 569); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной, маковыми отрубями и домашним вареньем;</li> 
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени;</li>
-										<li>Котлетки домашние в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 571); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Свехпышный Омлет «Облако» от ЗеленогоШефа с болгарским перцем и индейкой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом;</li>
-										<li>Мусака из баклажан и корений с телятиной, маслинами и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 573); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью( по древнему рецепту ) + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 575); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Интересный Омлет - Маффин с индейкой, капустой брокколи и адыгейским сыром;</li>
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Нежнейший Палтус Су-Вид с овощами и соусом из йогурта огурца и зелени.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 577); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-1500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, ростбиф, сыр твердый, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом;</li>
-										<li>Ароматное Рагу из телятины и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 579); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="prem-2-2000-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Сытная Фритатта со шпинатом, индейкой, годовалым пармезаном и травами;</li>
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Безкаллорийные Широтаке1200\1500 с соусом болоньез или 2000\2500 Классическая лазанья « болоньез-бешамель».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 581); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 583); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной, маковыми отрубями и домашним вареньем;</li> 
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени;</li>
-										<li>Котлетки домашние в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 585); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Свехпышный Омлет «Облако» от ЗеленогоШефа с болгарским перцем и индейкой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом;</li>
-										<li>Мусака из баклажан и корений с телятиной, маслинами и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 587); echo $post->post_content; ?>
+							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью( по древнему рецепту ) + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 589); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Интересный Омлет - Маффин с индейкой, капустой брокколи и адыгейским сыром;</li>
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Нежнейший Палтус Су-Вид с овощами и соусом из йогурта огурца и зелени.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 591); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2000-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, ростбиф, сыр твердый, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом;</li>
-										<li>Ароматное Рагу из телятины и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 593); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="prem-2-2500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Сытная Фритатта со шпинатом, индейкой, годовалым пармезаном и травами;</li>
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Безкаллорийные Широтаке1200\1500 с соусом болоньез или 2000\2500 Классическая лазанья « болоньез-бешамель».</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента Печеная с черной фасолью, томатами, анчоусом и травами от ЗеленогоШефа;</li>
-										<li>Легендарный Таматно-апельсиновый суп пюре с морепродуктами и Гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 595); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и телятиной.</li>
-									</ol>
-
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки - 110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из индейки с болгарским перцем и рисом Басмати в кисло-сладком соусе;</li>
-										<li>Мегаполезный Рыбный мисо-суп с водорослями Вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с домашним майонезе на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 597); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной, маковыми отрубями и домашним вареньем;</li> 
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени;</li>
-										<li>Котлетки домашние в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Нежный Паштет из печени индейки с льняными тостами;</li>
-										<li>Рассольник с телятиной, белыми грибами и перловкой + сметана;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе с ростками Микрозелени.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 599); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Свехпышный Омлет «Облако» от ЗеленогоШефа с болгарским перцем и индейкой + мультизлаковый хлеб;</li>
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом;</li>
-										<li>Мусака из баклажан и корений с телятиной, маслинами и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Пате из телятины и с клюквенным желе + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти и живыми хлебцами;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, микрозеленью, гороховой лапшой и арахисом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 601); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью( по древнему рецепту ) + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром;</li>
-										<li>Пулькоги ( корейское мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из индейки;</li>
-										<li>Суп ФО с телятиной, ростками МАШ, грибами и гороховой лапшой;</li>
-										<li>Фурм Д.Амбер Груша запеченная с морепродуктами яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 603); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Интересный Омлет - Маффин с индейкой, капустой брокколи и адыгейским сыром;</li>
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Нежнейший Палтус Су-Вид с овощами и соусом из йогурта огурца и зелени.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смузи «Чернично миндальный с бананом и ванильной палочкой» от ЗеленогоШефа + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты «Дюбари» + соте из филе лимона и гигантского кальмара + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из телятины с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 605); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="prem-2-2500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, ростбиф, сыр твердый, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом;</li>
-										<li>Ароматное Рагу из телятины и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай с голубикой в сливочной - медовой пропитке;</li>
-										<li>Ирландский суп с ягненком и зеленым горошкам + льняной хлеб;</li>
-										<li>Шотладский салат с телятиной, яйцом, огурцом и легким сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 607); echo $post->post_content; ?>
+							
 						</div>
 					</div>
 
@@ -3614,6 +1113,12 @@
 						</div>
 					</div>
 
+					<div id="veg-1-1500-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 837); echo $post->post_content; ?>							
+						</div>
+					</div>
+
 
 					<div id="veg-1-2000-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
@@ -3670,6 +1175,12 @@
 						</div>
 					</div>
 
+					<div id="veg-1-2500-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 839); echo $post->post_content; ?>							
+						</div>
+					</div>
+
 					<div id="veg-1-2500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
 							<?php $post = get_post($post_id = 481); echo $post->post_content; ?>							
@@ -3697,1437 +1208,173 @@
 <!-- veg-2-xxx-yy -->
 					<div id="veg-2-1200-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, грибами и пармезаном;</li>
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Широтаке1200\1500 с болоньезе, лазанья болоньез-бешамель.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 609); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и спаржевой фасолью.</li>
-									</ol>
-										
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 611); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной и домашним вареньем;</li>
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Котлетки домашние овощные в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-									</ol>
-										
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 613); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет «Облако» с болгарским перцем и спаржевой фасолью + мультизлаковый хлеб;</li>
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Мусака из баклажан и корений с турецким горохом и сыром Фета.</li>
-									</ol>							
-										
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 615); echo $post->post_content; ?>
+							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром;</li>
-										<li>Пулькоги ( корейское соевое мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>												
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 617); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с овощами, брокколи и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники с домашним вареньем.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 620); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1200-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, сыр твердый,овощи свежие, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом;</li>
-										<li>Рагу из соевого мяса и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1200 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">900 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">250 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">300 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 622); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="veg-2-1500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, грибами и пармезаном;</li>
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Широтаке1200\1500 с болоньезе, лазанья болоньез-бешамель.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 624); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и спаржевой фасолью.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 626); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной и домашним вареньем;</li>
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Котлетки домашние овощные в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 628); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет «Облако» с болгарским перцем и спаржевой фасолью + мультизлаковый хлеб;</li>
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Мусака из баклажан и корений с турецким горохом и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 630); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром;</li>
-										<li>Пулькоги ( корейское соевое мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 632); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с овощами, брокколи и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники с домашним вареньем.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 634); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-1500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, сыр твердый,овощи свежие, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом;</li>
-										<li>Рагу из соевого мяса и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">300 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">350 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 636); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="veg-2-2000-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, грибами и пармезаном;</li>
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Широтаке1200\1500 с болоньезе, лазанья болоньез-бешамель.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 638); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и спаржевой фасолью.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 640); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной и домашним вареньем;</li>
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Котлетки домашние овощные в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 642); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет «Облако» с болгарским перцем и спаржевой фасолью + мультизлаковый хлеб;</li>
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Мусака из баклажан и корений с турецким горохом и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 644); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром;</li>
-										<li>Пулькоги ( корейское соевое мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 646); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с овощами, брокколи и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники с домашним вареньем.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 648); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2000-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, сыр твердый,овощи свежие, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом;</li>
-										<li>Рагу из соевого мяса и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">1500 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 650); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 
 					<div id="veg-2-2500-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Фритатта со шпинатом, грибами и пармезаном;</li>
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом;</li>
-										<li>Широтаке1200\1500 с болоньезе, лазанья болоньез-бешамель.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Палента с черной фасолью, томатом, анчоусом и травами;</li>
-										<li>Таматно-апельсиновый суп пюре с соевым мясом и гриссини;</li>
-										<li>Салатный микс с моцареллой, томатами, каперсами и чили-базиликовым соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 652); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-tu" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Гранола орехово-имбирная с йогуртом и фруктами от ЗеленогоШефа;</li>
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле;</li>
-										<li>Запеканка творожная с овощами и спаржевой фасолью.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Шашлычки из грибов и соевого мяса с рисом Басмати в кисло-сладком соусе;</li>
-										<li>Рыбный мисо-суп с водорослями вакаме и древесными грибами;</li>
-										<li>Салат из свежих овощей с соусом из домашнего майонеза на перепелиных яйцах и оливковом масле.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 654); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-we" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Ленивые вареники со сметаной и домашним вареньем;</li>
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе;</li>
-										<li>Котлетки домашние овощные в гречневой панировке на пюре из корня сельдерея и грибов.</li>
-
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Клюквенный морс + Лобио с льняными тостами;</li>
-										<li>Рассольник с белыми грибами, перловкой и сметаной;</li>
-										<li>Винегрет ПП на льняном масле и яблочном уксусе.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 656); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-th" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет «Облако» с болгарским перцем и спаржевой фасолью + мультизлаковый хлеб;</li>
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью;</li>
-										<li>Мусака из баклажан и корений с турецким горохом и сыром Фета.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Хумус от Зеленогошефа с овощами + льняные тосты;</li>
-										<li>Крем суп из корня сельдерея с ароматным грибным ассорти;</li>
-										<li>Тайский салат с печеным сыром тофу, огурцом, гороховой лапшой и зеленью.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 658); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-fr" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Индийская Морковная халва с орехами кешью + Чай Массала;</li>
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром;</li>
-										<li>Пулькоги ( корейское соевое мясо ) с гречневой лапшой и овощами.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Кубинский Конгри ( рис+черная фасоль ) с фрикасе из овощей;</li>
-										<li>Суп ФО с тофу, ростками, грибами и гороховой лапшой;</li>
-										<li>«Фурм Д.Амбер» Груша запеченная с яйцом и сыром.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 660); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-sa" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Омлет - Маффин с овощами, брокколи и адыгейским сыром;</li>
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-										<li>Творожные сочники с домашним вареньем.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Смуззи «Чернично миндальный с бананом и ванильной палочкой + шоколадное печенье с курагой;</li>
-										<li>Крем-суп из цветной капусты с тимьяном «Дюбари» + злаковые чипсы из лаваша;</li>
-										<li>Бланкет из соевого мяса с салатным миксом и чипсами из пророщенной пшеницы;</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">350 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">400 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 662); echo $post->post_content; ?>							
 						</div>
 					</div>
 
 					<div id="veg-2-2500-su" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
-							<div class="cuisine__item-text-cont">
-								<div data-cuisine-qount="5" class="">
-									<ol class="cuisine__item-text-menu">
-										<li>Завтрак по английски : Скрамбл, фасоль в томате, сыр твердый,овощи свежие, тосты Мультизлаковые;</li>
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом;</li>
-										<li>Рагу из соевого мяса и грибов, запеченное под пюре из корня сельдерея.</li>
-									</ol>
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2500 ккал</u></li>
-										<li>Белки -110 г</li>
-										<li>Жиры - 73 г</li>
-										<li>Углеводы - 160г</li>
-									</ul>									
-								</div>								
-
-								<div data-cuisine-qount="3" class="disable">
-									<ol class="cuisine__item-text-menu">
-										<li>Ягодно-ореховый Пай в сливочной - медовой пропитке;</li>
-										<li>Ирландский густой грибной сливочный суп + льняной хлеб;</li>
-										<li>Шотладский салат с зеленым горошком, яйцом, огурцом и сливочным соусом.</li>
-									</ol>								
-
-									<ul class="cuisine__item-text-calories">
-										<li><u class="cuisine__item-text-highlited">2000 ккал</u></li>
-										<li>Белки - 70 г</li>
-										<li>Жиры - 43 г</li>
-										<li>Углеводы - 130г</li>
-									</ul>									
-								</div>
-							</div>
-
-							<div class="cuisine__item-img-cont">
-
-								<div class="cuisine__item-img-block">
-									<img src="http://www.crossfood.od.ua/wp-content/uploads/2017/03/custom.jpg" alt="Меню" />
-								</div>
-								<div class="cuisine__item-price-block">
-									<span data-cuisine-qount="3" class="cuisine__item-price-text disable">400 грн</span>
-									<span data-cuisine-qount="5" class="cuisine__item-price-text">450 грн</span>
-								</div>
-								
-							</div>
-
+							<?php $post = get_post($post_id = 664); echo $post->post_content; ?>							
 						</div>
 					</div>
 

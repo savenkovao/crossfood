@@ -355,11 +355,11 @@
 
 
 	function getWeek(weekNumber, dayNumber, hourNumber) {
-		// there are 2 weeks - №1 and №2
-		cuisineListener.week = (weekNumber + 1) % 2 + 1;
-
+		// there are 2 weeks - №1 and №2		
+		cuisineListener.week =weekNumber % 2 + 1;
+		
 		if (dayNumber == 0 && hourNumber >= 5) {			
-			cuisineListener.week =weekNumber % 2 + 1;
+			cuisineListener.week = (weekNumber + 1) % 2 + 1;
 		}
 	}
 

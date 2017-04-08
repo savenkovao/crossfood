@@ -2,14 +2,16 @@
 <html <?php language_attributes() ?> >
 <head>
 	<meta charset="UTF-8">
-	<title><?php wp_title(); ?></title>
+	<title><?php bloginfo("name"); ?></title>
 
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="keywords" content="crossfood cross food кросфуд кроссфуд кросс крос фуд одесса odessa facebook правильное здоровое питание рационы на весь день просто доставка">
+	<meta name="description" content="CrossFood - официальный сайт. Правильное питание - это просто">
+	<meta name="author" content="CrossFood">
+
+	<meta name="robots" content="all"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.0">
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="56x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-57x57.png">
@@ -50,14 +52,7 @@
 				</div>
 
 				<div id="header-menu" class="menu">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="#how-it-works" class="menu__link">Как это работает</a></li>
-						<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
-						<li class="menu__item"><a href="#our-team" class="menu__link">Наша команда</a></li>
-						<li class="menu__item"><a href="#subscribe" class="menu__link">Планы подписок</a></li>
-<!-- 						<li class="menu__item"><a href="#discount" class="menu__link">Акции</a></li> -->
-						<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
-					</ul>
+					<?php wp_nav_menu('primary'); ?>
 				</div>
 			</div>
 
