@@ -1,3 +1,5 @@
+
+
 	<footer class="footer">
 		<div class="wrapper footer_position">
 			<div class="footer-content">
@@ -35,24 +37,10 @@
 		</div>
 	</footer>
 
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/js/main.js?ver_1.0"></script>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/js/bootstrap.js"></script>
 
 	<!-- scroll -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#header-menu").on("click","a", function (event) {
-				event.preventDefault();
-				var id = $(this).attr('href'),
-				top = $(id).offset().top;
-				$('body,html').animate({scrollTop: top}, 1500);
-			});
-		});
-	</script>
+
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

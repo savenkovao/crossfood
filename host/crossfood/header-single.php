@@ -2,16 +2,16 @@
 <html <?php language_attributes() ?> >
 <head>
 	<meta charset="UTF-8">
-	<title><?php bloginfo("name"); ?></title>
+	<title><?php bloginfo("name"); ?> - <?php bloginfo("description"); ?></title>
 
-	<meta name="keywords" content="crossfood cross food кросфуд кроссфуд кросс крос фуд одесса odessa facebook правильное здоровое питание рационы на весь день просто доставка">
-	<meta name="description" content="CrossFood - официальный сайт. Правильное питание - это просто">
+	<meta name="keywords" content="crossfood, cross, food, кросфуд, кроссфуд, кросс, крос, фуд, одесса, odessa, facebook, правильное, здоровое питание, рационы на весь день, просто, доставка">
+	<meta name="description" content="Cross Food - это сервис по доставке 5-разового правильного питания. Все блюда сбалансированы по КБЖУ. Готовим пока Вы спите, доставляем каждое утро! Программы для похудения, набора массы, и просто сбалансированные ежедневные рационы">
 	<meta name="author" content="CrossFood">
 
-	<meta name="robots" content="all"/>
+	<meta name="robots" content="index, follow"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.0">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.12">
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="56x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/apple-icon-57x57.png">
@@ -36,46 +36,20 @@
 </head>
 <body <?php body_class(); ?> >
 
-	<header class="header header_background">
-		<div class="wrapper header_position">
+	<header class="header">
+		<div class="wrapper header_position_single">
 
 			<div class="header-menu">
 
-
-
-				<div id="brgr-menu">
-					<div  data-meta-node class="brgr-menu header-brgr-menu_pos">					
-						<div id="brgr-menu-stick-1" class="brgr-menu__stick header-brgr-menu__stick stick-1"></div>
-						<div id="brgr-menu-stick-2" class="brgr-menu__stick header-brgr-menu__stick stick-2"></div>
-						<div id="brgr-menu-stick-3" class="brgr-menu__stick header-brgr-menu__stick stick-3"></div>
-					</div>
-				</div>
-
-				<div id="header-menu" class="menu">
-					<?php wp_nav_menu('primary'); ?>
-				</div>
-			</div>
-
-			<div class="header_content-position">
-				
-
-				<div class="header-title">
-
-					<div class="title-1 header__title-1_pos">
-						<div class="title-1__img header__title-1__img-pos"></div>
-						<h1 class="title-1__h1 header__title-1__h1"><?php bloginfo("name"); ?></h1>
-					</div>
-				
-					<div class="title-2 header__title-2_pos">
-						<h2 class="title-2__h2 header__title-2__h2"><?php bloginfo("description"); ?></h2>
+				<nav class="menu-sp">
+					<div class="back-cont">
+						<a href="http://www.crossfood.od.ua/">На главную</a>
 					</div>
 
-				</div>
-				
-				<div class="header__button-cnt">
-					<button data-meta-node data-target="form_1" data-action="activate" class="button button_filled header__button-btn">Связаться с нами</button>
-				</div>
-				
+					<div class="logo-cont">
+					</div>
+				</nav>
+
 			</div>
 		</div>
 	</header>

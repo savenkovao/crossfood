@@ -49,45 +49,11 @@
 	</section>
 
 
-	<section id="our-team" class="our-team">
+	<section id="our-team" class="our-team" style="display: none;">
 		<div class="wrapper our-team_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Наша команда</h3>	
 			</div>
-
-<!-- 			<div id="team-slider" class="team-block our-team_team-block-pos">
-
-				<div data-action="sl" data-meta-node class="team-block__item sl">					
-
-					<?php $post = get_post($post_id = 53); echo $post->post_content; ?>
-											
-				</div>
-
-				<div data-action="ml" data-meta-node class="team-block__item ml">
-
-					<?php $post = get_post($post_id = 55); echo $post->post_content; ?>
-											
-				</div>
-
-				<div data-action="l" data-meta-node class="team-block__item l">
-
-					<?php $post = get_post($post_id = 57); echo $post->post_content; ?>
-						
-				</div>
-
-				<div data-action="mr" data-meta-node class="team-block__item mr">					
-
-					<?php $post = get_post($post_id = 59); echo $post->post_content; ?>
-					
-				</div>
-				
-				<div data-action="sr" data-meta-node class="team-block__item sr">
-
-					<?php $post = get_post($post_id = 61); echo $post->post_content; ?>
-					
-				</div>
-
-			</div> -->
 
 			<div id="team-slider" class="team-block our-team_team-block-pos">
 
@@ -102,7 +68,7 @@
 					<img class=" team-b" src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/cnt/team/item-2.jpg" alt="Иван Воробьёв - шеф">
 					<ol>
 						<li>Иван Воробьёв</li>
-						<li>Шефповар, "зеленый" Шеф Одессы, эксперт здоровой кулинарии</li>
+						<li>Бренд-шеф, "зеленый" Шеф Одессы, эксперт здоровой кулинарии</li>
 					</ol>					
 				</div>
 				<div class="team-block__item"> 					
@@ -128,8 +94,11 @@
 			<div class="tab-block subscribe_tab-block-pos">
 
 				<div  id="subscribe" class="tab-block__navigation">
+					<div data-action="data-subscribe" data-identifier="stand" data-meta-node class="tab-block__nav-button subscribe__nav-button active">
+						<span>Стандарт</span>
+					</div>
 
-					<div data-action="data-subscribe" data-identifier="fit" data-meta-node class="tab-block__nav-button subscribe__nav-button active">
+					<div data-action="data-subscribe" data-identifier="fit" data-meta-node class="tab-block__nav-button subscribe__nav-button">
 						<span>Фитнес</span>
 					</div>
 
@@ -143,8 +112,47 @@
 				</div>
 
 				<div id="subscribe-items" class="tab-block__tabs subscribe_tabs-position">
-					
-					<div data-subscribe="fit" class="tab-block__tab-item">
+					<div data-subscribe="stand" class="tab-block__tab-item">
+						
+						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+							
+							<?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
+
+							<div class="subscribe__button-cnt">
+								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+							</div>
+
+						</div>
+
+						<div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
+							
+							<?php $post = get_post($post_id = 1616); echo $post->post_content; ?>
+
+							<div class="subscribe__button-cnt">
+								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+							</div>
+						</div>
+
+						<div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
+							
+							<?php $post = get_post($post_id = 1618); echo $post->post_content; ?>
+
+							<div class="subscribe__button-cnt">
+								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+							</div>
+						</div>
+
+						<div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
+							
+							<?php $post = get_post($post_id = 1621); echo $post->post_content; ?>
+
+							<div class="subscribe__button-cnt">
+								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+							</div>
+						</div>
+					</div>
+
+					<div data-subscribe="fit" class="tab-block__tab-item disable">
 						
 						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
 							
@@ -182,7 +190,6 @@
 								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
 							</div>
 						</div>
-
 					</div>
 
 					<div data-subscribe="prem" class="tab-block__tab-item disable" >
@@ -340,7 +347,7 @@
 
 <!-- fit-1-xxx-yy -->
 
-					<div id="fit-1-1200-mo" class="tab-block__tab-item">
+					<div id="fit-1-1200-mo" class="tab-block__tab-item disable">
 						<div class="cuisine__item">
 							<?php $post = get_post($post_id = 130); echo $post->post_content; ?>	
 						</div>
@@ -1378,7 +1385,349 @@
 						</div>
 					</div>
 
+<!-- stand-1-xxx-yy -->
+					<div id="stand-1-1200-mo" class="tab-block__tab-item">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1376); echo $post->post_content; ?>
+						</div>
+					</div>
 
+					<div id="stand-1-1200-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1386); echo $post->post_content; ?>
+						</div>
+					</div>
+
+					<div id="stand-1-1200-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1400); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1200-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1402); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1200-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1416); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1200-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1418); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1200-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1432); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-1-1500-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1380); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1388); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1398); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1404); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1414); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1420); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-1500-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1430); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-1-2000-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1382); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1390); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1396); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1406); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1412); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1422); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2000-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1428); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-1-2500-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1384); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1392); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1394); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1408); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1410); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1424); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-1-2500-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1426); echo $post->post_content; ?>
+						</div>
+					</div>
+
+<!-- stand-2-xxx-yy -->
+					<div id="stand-2-1200-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1434); echo $post->post_content; ?>
+						</div>
+					</div>
+
+					<div id="stand-2-1200-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1453); echo $post->post_content; ?>
+						</div>
+					</div>
+
+					<div id="stand-2-1200-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1455); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1200-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1469); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1200-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1471); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1200-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1485); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1200-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1487); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-2-1500-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1436); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1451); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1457); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1467); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1473); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1483); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-1500-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1489); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-2-2000-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1438); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1449); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1459); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1465); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1475); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1481); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2000-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1491); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+
+					<div id="stand-2-2500-mo" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1445); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-tu" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1447); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-we" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1461); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-th" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1463); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-fr" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1477); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-sa" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1479); echo $post->post_content; ?>							
+						</div>
+					</div>
+
+					<div id="stand-2-2500-su" class="tab-block__tab-item disable">
+						<div class="cuisine__item">
+							<?php $post = get_post($post_id = 1493); echo $post->post_content; ?>
+						</div>
+					</div>
 
 
 				</div>
@@ -1394,20 +1743,86 @@
 			
 		</div>
 	</section>
+<!-- 
+	<section id="news" class="news news_position wrapper">
+		<div id="news" class="title-3">
+			<h3 class="title-3__h3 title-3__h3_dark hr-line">Новости</h3>	
+		</div>
+		<div class="news-block">
+			<div class="main-carousel-cont">
+				<div id="carousel" class="carousel slide" data-interval="false">	
 
-<!-- 	<section class="our-video">
-		<div class="wrapper">
+					
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="news-item">
 			
+								<div class="news-item__img-cont">
+									<img class="news-item__img" src="src/img/cnt/cuisine/custom.jpg" alt="news image">
+								</div>
+			
+								<div class="news-item__descr-cont">
+									<div class="news-item__title-cont">
+										<h4  class="news-item__title">Название статьи - возможно длинное, еще пару слов. Вот так нормально</h4>
+									</div>
+			
+									<div class="news-item__req-cont">
+										<p class="news-item__author">Автор: Нутрициолог Маша</p>
+										<p class="news-item__date">25.06.17</p>
+									</div>
+			
+									<div class="news-item__txt-cont">
+										<p  class="news-item__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam harum officia, voluptatem molestiae rem explicabo provident esse, excepturi soluta labore accusantium consequatur voluptas, ut aliquam ullam officiis nam sapiente.</p>
+									</div>
+			
+			
+									<div class="news-item__read-cont">
+										<a href="#" class="button button_filled news__button-btn">Читать дальше</a>
+									</div>
+			
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="news-item">
+			
+								<div class="news-item__img-cont">
+									<img class="news-item__img" src="src/img/cnt/cuisine/custom.jpg" alt="news image">
+								</div>
+			
+								<div class="news-item__descr-cont">
+									<div class="news-item__title-cont">
+										<h4  class="news-item__title">Название статьи - возможно длинное, еще пару слов. Вот так нормально</h4>
+									</div>
+			
+									<div class="news-item__req-cont">
+										<p class="news-item__author">Автор: Нутрициолог Маша</p>
+										<p class="news-item__date">25.06.17</p>
+									</div>
+			
+									<div class="news-item__txt-cont">
+										<p  class="news-item__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam harum officia, voluptatem molestiae rem explicabo provident esse, excepturi soluta labore accusantium consequatur voluptas, ut aliquam ullam officiis nam sapiente.</p>
+									</div>
+			
+			
+									<div class="news-item__read-cont">
+										<a href="#" class="button button_filled news__button-btn">Читать дальше</a>
+									</div>
+			
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<a href="#carousel" class="left carousel-control main-carousel__control news__carousel-arrow" data-slide="prev">
+					</a>
+					<a href="#carousel" class="right carousel-control main-carousel__control news__carousel-arrow" data-slide="next">
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
-
-
-	<section id="discount" class="discount">
-		<div class="wrapper">
-			
-		</div>
-	</section> -->
-
+ -->
 
 	<section class="reviews reviews_background">
 		<div class="wrapper reviews_position">

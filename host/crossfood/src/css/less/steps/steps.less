@@ -1,0 +1,126 @@
+.steps{
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+
+	@media @mobileL {
+		width: 77%;
+		max-width: 420px;   
+	}	
+
+	@media @tablet {
+		width: 100%;
+		padding: 85px 0;
+		max-width: none;	
+	}
+
+	& ol li:nth-child(-n+4) {
+		position: absolute;	
+		color: #707070;
+		font-size: 1.6em;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: center;
+		user-select: none;
+		cursor: default;
+		width: 71%;
+	  max-width: 260px;
+	  left: 26%;
+
+		@media @mobileL {
+			left: 27%;
+		}
+		
+		@media @tablet{
+
+			width: 31%;
+		}
+
+		@media @laptop{
+			width: 23%;
+		}
+
+		@media @laptopL{
+			width: 21%;
+		}
+	}
+
+	& ol li:nth-child(1){
+		top: -2%;
+	
+		@media @tablet{
+			top: initial;
+			bottom: 0; 
+			left: 1%;	
+		}
+
+		@media @laptop{		
+			left: 7%;
+		}
+	}
+
+	& ol li:nth-child(2){
+		top: 29%;
+
+		@media @tablet{
+			top: 0%;
+			left: 23%;	
+		}
+
+		@media @laptop{		
+			left: 28%;
+		}	
+	}	
+
+	& ol li:nth-child(3){
+		top: 53.5%;
+
+		@media @tablet{
+			top: initial;
+			bottom: 0%;
+			left: 45%;	
+		}
+
+		@media @laptop{		
+			left: 49%;
+		}
+	}
+
+	& ol li:nth-child(4){
+		top: 87%;
+
+		@media @tablet{
+			top: 0%;
+			left: 68%;	
+		}
+
+		@media @laptop{
+			left: 72%;
+		}
+	}	
+}
+
+
+.steps__img-desktop{
+	display: none;
+
+	@media @tablet {
+		display: block;
+		width: 68.4%;
+		margin: 0 auto;
+		user-select: none;
+		cursor: default;	
+	}
+}
+
+.steps__img-mobile{
+	width: 14%;
+	max-width: 55px;
+	min-width: 50px;
+	user-select: none;
+	cursor: default;
+
+	@media @tablet {
+		display: none;
+	}
+}

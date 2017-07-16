@@ -2,15 +2,16 @@
 
 	// Mobile menu enabling
 
-	var brgrMenu = document.getElementById("brgr-menu");
+	// var brgrMenu = document.getElementById("brgr-menu");
 	var menu = document.getElementById("header-menu");
 
-	var stick1 = document.getElementById("brgr-menu-stick-1");
-	var stick2 = document.getElementById("brgr-menu-stick-2");
-	var stick3 = document.getElementById("brgr-menu-stick-3");
-	var count = 0;
+	// var stick1 = document.getElementById("brgr-menu-stick-1");
+	// var stick2 = document.getElementById("brgr-menu-stick-2");
+	// var stick3 = document.getElementById("brgr-menu-stick-3");
+	// var count = 0;
 
-	brgrMenu.addEventListener("click", enableBrgrMenu, false);
+
+	// brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
 
 	function enableBrgrMenu(event){
@@ -49,8 +50,9 @@
 
 	var teamSlider = document.getElementById('team-slider');
 
-
-	teamSlider.addEventListener('click', browseTeamSlider, false);
+	if (teamSlider) {
+		teamSlider.addEventListener('click', browseTeamSlider, false);
+	}
 
 	function browseTeamSlider(event) {
 		var e = getTarget(event);

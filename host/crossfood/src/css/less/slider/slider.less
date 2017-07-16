@@ -1,0 +1,37 @@
+.slider{
+	position: relative;
+}
+
+.slider__inner{
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.slider__inner li{
+	display: inline-block;
+	vertical-align: top;
+	transition: margin-left 0.3s linear;
+	overflow: hidden;
+}
+
+.slider__img{
+}
+
+.slider__arrow{	
+	position: absolute;
+	.top(50%,-,21px);
+	cursor: pointer;
+
+}
+
+.slider_arrow-left{
+	// .left(0%,-,25px,-7%);
+	background-position: bottom;
+}
+
+.slider_arrow-right{
+	// .right(0%,-,25px,-7%);
+	background-position: top;
+}

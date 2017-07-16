@@ -2,7 +2,7 @@
 	Options +FollowSymLinks
 	RewriteEngine On
 
-	Redirect 301 / http://main.crossfood.od.ua/
+	Redirect 301 / http://www.crossfood.od.ua/
 
 
 </ifModule>

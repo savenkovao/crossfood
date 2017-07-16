@@ -1,0 +1,175 @@
+.reviews_position{
+	padding: 85px 3% 80px;
+
+	@media @laptop {
+		padding: 80px 0% 40px;
+	}
+}
+
+.reviews_background {
+	background-color: #e9e9e9;
+}
+
+.reviews-slider{
+	width: 90%;
+	max-width: 400px;
+	padding-top: 55px;	
+	margin: 0 auto;
+	cursor: pointer;
+
+	@media @tablet{
+		width: 100%;
+		max-width: 960px;
+	}
+	
+}
+
+
+.slider__inner li{
+	width: 100%;
+
+	@media @tablet{
+		margin-right: 3.125%;
+		width: 31.25%;
+		max-width: 300px;
+	}
+}
+
+.slider__inner li img{
+	width: 100%;
+}
+
+.reviews-slider__btn-nav{
+	display: none;
+	height: 12px;
+	max-width: 300px;
+	margin: 0 auto;
+	margin-top: 25px;
+
+	@media @tablet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.reviews-slider__button {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 15px;
+	background-color: grey;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&.active {
+		background-color: @main-color;
+	}
+}
+
+
+.reviews-slider__arrow{	
+	width: 18px;
+	height: 48px;
+	.setBackgroundImage(@slider-arrow-img);
+
+	@media @tablet {
+		display: none;
+	}
+}
+.reviews-slider__arrow-left{
+	left: -8%;
+}
+.reviews-slider__arrow-right{
+	right: -8%;
+}
+
+
+
+.reviews-hashtag-block{
+	padding: 10px 10px 0;
+}
+
+.reviews-hashtag-block li{
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 2.1;
+	text-align: center;
+	color: #333333;
+}
+
+.reviews-hashtag-block li a:nth-child(n){
+
+	text-decoration: none;
+	color: @main-color;
+	padding-left:5px; 
+	position: relative;
+	padding-left: 30px;
+
+	&:hover{
+		color: lighten(@main-color, 10%);
+		&::before {
+			opacity: 0.85;
+		}
+	}
+
+	&::before{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 3px;
+		left: 5px;
+		background-size: 66px;
+		background-image: url(@hashtag-block_link-img);
+		background-repeat: no-repeat;
+	}
+
+}
+
+.reviews-hashtag-block li a:nth-child(1){
+	&::before{
+		background-position: 0 0;
+	}
+}
+.reviews-hashtag-block li a:nth-child(2){
+	&::before{
+		background-position: -23px 0;
+	}
+}
+.reviews-hashtag-block li a:nth-child(3){
+	&::before{
+		background-position: -46px 0;
+	}
+}
+
+
+
+.reviews-slider__opened-item-cont {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.reviews-slider__opened-item {
+	position: absolute;
+	height: 0;
+	margin: auto;
+	top: 0;		
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	transition: all 0.2s linear;
+
+	&.visible {
+		bottom: 0;
+		right: 0;
+		opacity: 1;
+		height: 90%;
+		max-height: 500px;
+	}
+}
+
+
