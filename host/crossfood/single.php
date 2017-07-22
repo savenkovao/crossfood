@@ -20,13 +20,15 @@ if (is_single()) {
 			<?php
 				$thumb_id = get_post_thumbnail_id();
 				$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-				echo $thumb_url[0];
+				$thumb_url_def = get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg';
 			?>
-			style="background-image: url( <?php echo $thumb_url[0] ?> )"
+
+			style="background-image: url( <?php echo has_post_thumbnail() ? $thumb_url[0] : $thumb_url_def; ?> )"
 		></div>
 	
 		<div class="post-cont">
-			<div class="post-auth">				
+			<h1 class="post-title"><?php the_title(); ?></h1>
+			<div class="post-auth">
 				<p>Автор: <?php echo get_post_meta( get_the_ID(), 'news_author', 1); ?></p>
 				
 				<p><?php the_date( ); ?></p>
@@ -34,25 +36,10 @@ if (is_single()) {
 	
 	
   		<?php the_content(); ?>
+  		<?php wp_reset_postdata(); ?>
 		</div>
 	</div>
 </section>
-
-	<section id="forms">
-
-		<?php $posts = get_posts ("ID=200&numberposts=1"); ?> 
-		<?php if ($posts) : ?>
-		<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
-			
-			<?php the_content(); ?>
-
-		<?php endforeach; else:	?>
-		<?php 
-		endif; ?>
-
-	</section>
-
-
 
 <?php get_footer(); ?>
 

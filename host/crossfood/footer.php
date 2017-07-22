@@ -1,4 +1,21 @@
+	<section id="forms">
 
+
+		<?php $posts = get_posts ("category_name=forms&orderby=date&numberposts=1"); ?> 
+		<?php if ($posts) : ?>
+		<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
+			
+			<?php the_content(); ?>
+
+		<?php endforeach; else:	?>
+
+			<p><?php _e('“We believe that every human being deserves love, respect, and a chance to live a dignified life.”'); ?></p>
+
+		<?php 
+			wp_reset_postdata();
+		endif; ?>
+
+	</section>
 
 	<footer class="footer">
 		<div class="wrapper footer_position">

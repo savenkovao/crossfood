@@ -11,7 +11,8 @@
 	<meta name="robots" content="index, follow"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.01">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.09">
 
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon.ico">

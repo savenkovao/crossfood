@@ -1743,7 +1743,7 @@
 			
 		</div>
 	</section>
-<!-- 
+
 	<section id="news" class="news news_position wrapper">
 		<div id="news" class="title-3">
 			<h3 class="title-3__h3 title-3__h3_dark hr-line">Новости</h3>	
@@ -1752,66 +1752,69 @@
 			<div class="main-carousel-cont">
 				<div id="carousel" class="carousel slide" data-interval="false">	
 
-					
 					<div class="carousel-inner">
-						<div class="item active">
-							<div class="news-item">
-			
-								<div class="news-item__img-cont">
-									<img class="news-item__img" src="src/img/cnt/cuisine/custom.jpg" alt="news image">
-								</div>
-			
-								<div class="news-item__descr-cont">
-									<div class="news-item__title-cont">
-										<h4  class="news-item__title">Название статьи - возможно длинное, еще пару слов. Вот так нормально</h4>
+
+						<?php $posts = get_posts ("category_name=news&orderby=date&numberposts=3"); 
+									$i = 0;
+						?> 
+						<?php if ($posts) : ?>
+						<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
+								
+							<div class="item <?php echo $i == 0 ? 'active' : ''; ?>">
+								<div class="news-item">
+
+								<?php
+									$thumb_id = get_post_thumbnail_id();
+									$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+								?>
+				
+									<div class="news-item__img-cont">
+
+
+										<?php  
+											if (has_post_thumbnail()) {
+											  $thumb_id = get_post_thumbnail_id();
+												$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+
+												echo '<img class="news-item__img" src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+											}
+											else {
+											    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+											}
+										?>	
+
 									</div>
-			
-									<div class="news-item__req-cont">
-										<p class="news-item__author">Автор: Нутрициолог Маша</p>
-										<p class="news-item__date">25.06.17</p>
+		
+									<div class="news-item__descr-cont">
+										<div class="news-item__title-cont">
+											<h4  class="news-item__title"><?php the_title(); ?></h4>
+										</div>
+				
+										<div class="news-item__req-cont">
+											<p class="news-item__author">Автор: <?php echo get_post_meta( get_the_ID(), 'news_author', 1); ?></p>
+											<p class="news-item__date"><?php the_date( ); ?></p>
+										</div>
+				
+										<div class="news-item__txt-cont">
+											<div  class="news-item__txt"><?php the_excerpt(); ?></div>
+										</div>
+				
+				
+										<div class="news-item__read-cont">
+											<a href="<?php the_permalink() ?>" class="button button_filled news__button-btn">Читать дальше</a>
+										</div>
+				
 									</div>
-			
-									<div class="news-item__txt-cont">
-										<p  class="news-item__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam harum officia, voluptatem molestiae rem explicabo provident esse, excepturi soluta labore accusantium consequatur voluptas, ut aliquam ullam officiis nam sapiente.</p>
-									</div>
-			
-			
-									<div class="news-item__read-cont">
-										<a href="#" class="button button_filled news__button-btn">Читать дальше</a>
-									</div>
-			
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="news-item">
-			
-								<div class="news-item__img-cont">
-									<img class="news-item__img" src="src/img/cnt/cuisine/custom.jpg" alt="news image">
-								</div>
-			
-								<div class="news-item__descr-cont">
-									<div class="news-item__title-cont">
-										<h4  class="news-item__title">Название статьи - возможно длинное, еще пару слов. Вот так нормально</h4>
-									</div>
-			
-									<div class="news-item__req-cont">
-										<p class="news-item__author">Автор: Нутрициолог Маша</p>
-										<p class="news-item__date">25.06.17</p>
-									</div>
-			
-									<div class="news-item__txt-cont">
-										<p  class="news-item__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum veniam harum officia, voluptatem molestiae rem explicabo provident esse, excepturi soluta labore accusantium consequatur voluptas, ut aliquam ullam officiis nam sapiente.</p>
-									</div>
-			
-			
-									<div class="news-item__read-cont">
-										<a href="#" class="button button_filled news__button-btn">Читать дальше</a>
-									</div>
-			
 								</div>
 							</div>
-						</div>
+
+						<?php $i++; endforeach; else:	?>
+
+							<p><?php _e('“We believe that every human being deserves love, respect, and a chance to live a dignified life.”'); ?></p>
+
+						<?php 
+							wp_reset_postdata();
+						endif; ?>
 					</div>
 					
 					<a href="#carousel" class="left carousel-control main-carousel__control news__carousel-arrow" data-slide="prev">
@@ -1822,7 +1825,7 @@
 			</div>
 		</div>
 	</section>
- -->
+
 
 	<section class="reviews reviews_background">
 		<div class="wrapper reviews_position">
@@ -1852,12 +1855,6 @@
 		</div>
 	</section>
 
-	<section id="forms">
 
-		<?php if (have_posts()): while (have_posts()): the_post(); ?>
-			<?php the_content(); ?>
-		<?php endwhile; endif; ?>
-
-	</section>
 
 	<?php get_footer() ?>
