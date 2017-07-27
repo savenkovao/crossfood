@@ -52,6 +52,27 @@
 
 	add_action('after_setup_theme', 'crossfood_setup');
 
+		// TEL MASK
+
+        add_action('wp_enqueue_scripts', 'wpmidia_enqueue_masked_input');
+            function wpmidia_enqueue_masked_input(){
+            wp_enqueue_script('masked-input', get_template_directory_uri().'/src/js/jquery.maskedinput.min.js', array('jquery'));
+        }
+
+        add_action('wp_footer', 'wpmidia_activate_masked_input');
+            function wpmidia_activate_masked_input(){
+            ?>
+                <script type="text/javascript">
+                    jQuery( function($){
+                        $(".data").mask("99/99/9999");
+                        $(".tel").mask("+38 (099) 999 99 99");
+                        $(".cpf").mask("999.999.999-99");
+                        $(".cnpj").mask("99.999.999/9999-99");
+                    });
+                </script>
+            <?php
+        }
+
 
 
 
@@ -102,7 +123,7 @@ function my_extra_fields_update( $post_id ){
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/src/js/bootstrap.js',"","1.0");
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.28");
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.29");
 
 	}
 

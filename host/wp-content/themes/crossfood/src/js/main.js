@@ -17,9 +17,9 @@
 		function enableBrgrMenu(event){
 			var e = getTarget(event);
 
-			if (e != undefined) {
+			if (e !== undefined) {
 				count++;
-				if(count%2==0) {
+				if(count%2===0) {
 					deactivateBrgrMenu();
 					
 				} else {
@@ -57,7 +57,7 @@
 		function browseTeamSlider(event) {
 			var e = getTarget(event);
 
-			if (e != undefined)	browseSlider(e);
+			if (e !== undefined)	browseSlider(e);
 
 		}
 
@@ -66,10 +66,10 @@
 			var target = event.target;
 			var currentTarget = event.currentTarget;
 
-			while (target != event.currentTarget) {
+			while (target !== event.currentTarget) {
 
 				if (target.hasAttribute('data-meta-node')) {
-					var e = {target, currentTarget};
+					var e = {target:target, currentTarget:currentTarget};
 					// console.log(e);
 					return e;
 
@@ -101,7 +101,7 @@
 				target.classList.add('l');
 				target.setAttribute('data-action', 'l');
 
-				if (dataAction == 'ml') {
+				if (dataAction === 'ml') {
 					
 					var newSl = allItems.sr.cloneNode(true);
 					
@@ -136,7 +136,7 @@
 						allItems.sr.remove();
 					}, 405);
 
-				} else if (dataAction == 'sl'){
+				} else if (dataAction === 'sl'){
 
 					var newSl = allItems.sr.cloneNode(true);
 					var newMl = allItems.mr.cloneNode(true);
@@ -176,7 +176,7 @@
 						allItems.mr.remove();
 					}, 205);
 
-				} else if (dataAction == 'mr'){
+				} else if (dataAction === 'mr'){
 					
 					var newSr = allItems.sl.cloneNode(true);
 					
@@ -209,7 +209,7 @@
 						allItems.sl.remove();
 					}, 300);
 					
-				} else if (dataAction == 'sr'){
+				} else if (dataAction === 'sr'){
 
 					var newSr = allItems.ml.cloneNode(true);
 					var newMr = allItems.sl.cloneNode(true);
@@ -263,26 +263,26 @@
 			for (var i = 0; i < nodes.length; i++) {
 				var current = nodes[i].getAttribute('data-action');
 
-				if (current == 'sl') {
+				if (current === 'sl') {
 
 					var sl = nodes[i];
 
-				} else if (current == 'ml'){
+				} else if (current === 'ml'){
 
 					var ml = nodes[i];
 
-				} else if (current == 'mr'){
+				} else if (current === 'mr'){
 
 						var mr = nodes[i];
 
-				} else if (current == 'sr'){
+				} else if (current === 'sr'){
 
 					var sr = nodes[i];
 
 				}
 			}
 
-			var items = {sl, ml, mr, sr};
+			var items = {sl:sl, ml:ml, mr:mr, sr:sr};
 
 			return items;
 		}
@@ -364,7 +364,7 @@
 			// there are 2 weeks - №1 and №2		
 			cuisineListener.week = weekNumber % 2 + 1;
 			
-			if (dayNumber == 0 && hourNumber >= 5) {			
+			if (dayNumber === 0 && hourNumber >= 5) {
 				cuisineListener.week = (weekNumber + 1) % 2 + 1;
 			}
 		}
@@ -372,7 +372,7 @@
 
 		function enableBlock(event) {
 			var e = getTarget(event);
-			if (e != undefined) {
+			if (e !== undefined) {
 				var dataAction = e.target.getAttribute('data-action');
 				var dataIdentifier = e.target.getAttribute('data-identifier');
 
@@ -391,7 +391,7 @@
 			for (var i = 0; i < nodes.length; i++) {
 				var currentIdentifier = nodes[i].getAttribute(action);
 
-				if(currentIdentifier == identifier) {
+				if(currentIdentifier === identifier) {
 					nodes[i].classList.remove('disable');
 				} else {
 					nodes[i].classList.add('disable');
@@ -400,16 +400,16 @@
 		}
 
 		function changeListener(identifier) {
-			if(event.currentTarget == subscribe) {
+			if(event.currentTarget === subscribe) {
 				cuisineListener.subscribe = identifier;
 
-				if (identifier == 'fit') {
+				if (identifier === 'fit') {
 					cuisineListener.calories = '1200';
-				} else if (identifier == 'prem') {
+				} else if (identifier === 'prem') {
 					cuisineListener.calories = '1200';
-				} else if (identifier == 'veg') {
+				} else if (identifier === 'veg') {
 					cuisineListener.calories = '1200';
-				} else if (identifier == 'stand') {
+				} else if (identifier === 'stand') {
 					cuisineListener.calories = '1200';
 				}
 				
@@ -418,9 +418,9 @@
 
 				checkHighLightedItem();
 
-			} else if (event.currentTarget == subscribeItems) {
+			} else if (event.currentTarget === subscribeItems) {
 			 if(identifier)	cuisineListener.calories = identifier;
-			} else if (event.currentTarget == cuisineWeek) {
+			} else if (event.currentTarget === cuisineWeek) {
 				cuisineListener.day = identifier;
 			}
 			//  else if (event.currentTarget == cuisines_3_5) {
@@ -456,7 +456,7 @@
 			for (var i = 0; i < items.length; i++) {
 				var itemIdentifier = items[i].getAttribute('data-identifier');
 				
-				if (cuisineListener.calories == itemIdentifier) {
+				if (cuisineListener.calories === itemIdentifier) {
 					highlight (items[i]);
 				}
 			}		
@@ -545,7 +545,7 @@
 
 			var e = getTarget(event);
 
-			if (e != undefined) {
+			if (e !== undefined) {
 
 					browseSliderInner(e.target, e.currentTarget, reviewsSliderInner);
 
@@ -567,7 +567,7 @@
 			coordX = event.clientX;
 			coordY = event.clientY;
 
-			if (e != undefined) {
+			if (e !== undefined) {
 				if (currentScreenWidth > 768) {
 					createNewNode(target, coordX, coordY);
 				}
@@ -632,7 +632,7 @@
 			var allSlides = reviewsSliderInner.children.length;
 
 
-			if (currentTarget == reviewsSliderNavBtn) {
+			if (currentTarget === reviewsSliderNavBtn) {
 
 				var dataButtonNumber = target.getAttribute('data-button-number');
 				var rest = allSlides % slidesOnPage;
@@ -640,24 +640,24 @@
 
 				// 3.125 - margin left for items
 
-				if(target != reviewsSliderNavBtn.lastChild) {
+				if(target !== reviewsSliderNavBtn.lastChild) {
 					sliderInnerMargin = -dataButtonNumber * (100 + 3.125);
 				} else {
 					sliderInnerMargin = -(dataButtonNumber - 1 + (rest/slidesOnPage)) * (100 + 3.125);
 				}
 
-			} else if (currentTarget == reviewsSliderNavArw) {
+			} else if (currentTarget === reviewsSliderNavArw) {
 
 				var arrow = target.getAttribute('data-action');
 
-				if (arrow == 'left') {
+				if (arrow === 'left') {
 					sliderInnerMargin += 100;
 
 					if( sliderInnerMargin > 0 ) {
 						sliderInnerMargin = 0;
 					}
 
-				} else if (arrow == 'right') {
+				} else if (arrow === 'right') {
 					sliderInnerMargin -= 100;
 
 					if( sliderInnerMargin <= (-allSlides * 100) ) {
@@ -697,7 +697,7 @@
 		function switchNode(event) {
 			var e = getTarget(event);
 
-			if (e != undefined) {
+			if (e !== undefined) {
 				var target = e.target;
 				var action = target.getAttribute('data-action');
 				var targetNodeSelector = target.getAttribute('data-target');
@@ -705,9 +705,9 @@
 
 				if (targetNode) {
 
-					if (action == 'activate') {
+					if (action === 'activate') {
 						activateNode(targetNode);
-					} else if (action == 'deactivate'){
+					} else if (action === 'deactivate'){
 						deactivateNode(targetNode);
 						console.log(action);
 					}
@@ -737,31 +737,31 @@
 			var dataCal;
 			
 
-			if (cuisineListener.subscribe == 'stand') {
+			if (cuisineListener.subscribe === 'stand') {
 					selectSubscribe.selectedIndex = 0;
 					dataSub = 'stand';
-			} else if(cuisineListener.subscribe == 'fit') {
+			} else if(cuisineListener.subscribe === 'fit') {
 					selectSubscribe.selectedIndex = 1;
 					dataSub = 'fit';
-			} else if (cuisineListener.subscribe == 'prem') {
+			} else if (cuisineListener.subscribe === 'prem') {
 					selectSubscribe.selectedIndex = 2;
 					dataSub = 'prem';
-			} else if (cuisineListener.subscribe == 'veg') {
+			} else if (cuisineListener.subscribe === 'veg') {
 					selectSubscribe.selectedIndex = 3;
 					dataSub = 'veg';
 			}
 
 
-			if (cuisineListener.calories == '1200') {
+			if (cuisineListener.calories === '1200') {
 					selectCalories.selectedIndex = 0;
 					dataCal = 1200;
-			} else if(cuisineListener.calories == '1500') {
+			} else if(cuisineListener.calories === '1500') {
 					selectCalories.selectedIndex = 1;	
 					dataCal = 1500;
-			} else if (cuisineListener.calories == '2000') {
+			} else if (cuisineListener.calories === '2000') {
 					selectCalories.selectedIndex = 2;
 					dataCal = 2000;
-			} else if (cuisineListener.calories == '2500') {
+			} else if (cuisineListener.calories === '2500') {
 					selectCalories.selectedIndex = 3;
 					dataCal = 2500;
 			}
@@ -776,15 +776,15 @@
 			var selectSubscribe = document.getElementById('form-input_subscribe').value;
 			var selectCalories = document.getElementById('form-input_calories').value;
 
-			if (selectSubscribe == 'Фитнес') {
+			if (selectSubscribe === 'Фитнес') {
 					selectSubscribe = 'fit';
-			} else if(selectSubscribe == 'Премиум') {
+			} else if(selectSubscribe === 'Премиум') {
 					selectSubscribe = 'prem';
-			} else if (selectSubscribe == 'Вегетарианский') {
+			} else if (selectSubscribe === 'Вегетарианский') {
 					selectSubscribe = 'veg';
-			} else if (selectSubscribe == 'Стандарт') {
+			} else if (selectSubscribe === 'Стандарт') {
 					selectSubscribe = 'stand';
-			} else if (selectSubscribe == 'Пробный день') {
+			} else if (selectSubscribe === 'Пробный день') {
 					selectSubscribe = 'trial';
 			}
 
@@ -795,12 +795,11 @@
 
 
 		function setPriceInForm(subscribe, calories){
-			if (subscribe != 'trial') {
+			if (subscribe !== 'trial') {
 				cuisineListener.price = $('#'+subscribe+'-'+cuisineListener.week+'-'+calories+'-'+'mo'+' .cuisine__item-price-text'+'[data-cuisine-qount = 5]').html();
-			} else if(subscribe == 'trial'){
+			} else if(subscribe === 'trial'){
 				cuisineListener.price = $('#'+subscribe).html();
 			}
-
 
 			$('#form-input_price').val(cuisineListener.price);
 		}
@@ -817,16 +816,10 @@
 		$('#forms .sharedaddy.sd-sharing-enabled').remove();
 
 
+        $('img').each(function(){
+            $(this).removeAttr('height');
+            $(this).removeAttr('width');
+        });
 
-
-
-		
-	});
+    });
 }(jQuery));
-
-jQuery(document).ready(function($){
-	$('img').each(function(){
-		$(this).removeAttr('height');
-		$(this).removeAttr('width');
-	});	 
-});

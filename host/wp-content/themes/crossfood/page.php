@@ -1745,7 +1745,7 @@
 	</section>
 
 	<section id="news" class="news news_position wrapper">
-		<div id="news" class="title-3">
+		<div class="title-3">
 			<h3 class="title-3__h3 title-3__h3_dark hr-line">Блог</h3>	
 		</div>
 		<div class="news-block">
