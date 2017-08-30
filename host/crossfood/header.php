@@ -12,7 +12,7 @@
 
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/bootstrap.css">
-	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.09">
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/css/style.css?ver_1.10">
 
 
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/dsg/favicon/favicon.ico">
@@ -36,19 +36,26 @@
 
 	<!-- Facebook Pixel Code -->
 	<script>
-		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-		document,'script','https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '503333443201632'); // Insert your pixel ID here.
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window,document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	 	fbq('init', '250533495468251'); 
 		fbq('track', 'PageView');
+		fbq('track', 'ViewContent');
+		fbq('track', 'InitiateCheckout');
+		fbq('track', 'Purchase', {value: '0.00', currency: 'UAH'});
+		fbq('track', 'Lead');
 	</script>
-	
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=503333443201632&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- DO NOT MODIFY -->
+	<noscript>
+	 <img height="1" width="1" 
+	src="https://www.facebook.com/tr?id=250533495468251&ev=PageView
+	&noscript=1"/>
+	</noscript>
 	<!-- End Facebook Pixel Code -->
 
 	<?php wp_head(); ?>

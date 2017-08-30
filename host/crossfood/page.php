@@ -337,10 +337,10 @@
 					</div>
 				</div>
 					
-				<div id="cuisines_3_5" class="tab-block__3-5-cuisines">
-					<span data-action="data-cuisine-qount" data-identifier="3" data-meta-node class="tab-block__3-cuisines">3 блюда</span>
+				<div style="display: none;" id="cuisines_3_5" class="tab-block__3-5-cuisines">
+<!-- 					<span data-action="data-cuisine-qount" data-identifier="3" data-meta-node class="tab-block__3-cuisines">3 блюда</span>
 					<span> / </span>
-					<span data-action="data-cuisine-qount" data-identifier="5" data-meta-node class="tab-block__5-cuisines active">5 блюд</span>
+					<span data-action="data-cuisine-qount" data-identifier="5" data-meta-node class="tab-block__5-cuisines active">5 блюд</span> -->
 				</div>
 
 				<div id="all-cuisines" class="tab-block__tabs cuisine__tabs-position">
@@ -1746,7 +1746,7 @@
 
 	<section id="news" class="news news_position wrapper">
 		<div id="news" class="title-3">
-			<h3 class="title-3__h3 title-3__h3_dark hr-line">Новости</h3>	
+			<h3 class="title-3__h3 title-3__h3_dark hr-line">Блог</h3>	
 		</div>
 		<div class="news-block">
 			<div class="main-carousel-cont">
