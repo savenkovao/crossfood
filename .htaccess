@@ -1,8 +1,0 @@
-<ifModule mod_rewrite.c>
-	Options +FollowSymLinks
-	RewriteEngine On
-
-	Redirect 301 / http://www.crossfood.od.ua/
-
-
-</ifModule>
