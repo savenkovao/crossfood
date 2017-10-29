@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /
 Disallow: /cgi-bin          # классика...
 Disallow: /?                # все параметры запроса на главной
 Disallow: /wp-              # все файлы WP: /wp-json/, /wp-includes, /wp-content/plugins

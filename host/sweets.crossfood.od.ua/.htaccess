@@ -1,3 +1,5 @@
+RewriteCond %{HTTP_HOST} ^sweets.crossfood.od.ua
+RewriteRule ^(.*)$ http://crossfood.od.ua/$1 [R=301,L]
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
