@@ -121,32 +121,6 @@
 
 	</script>
 
-	<script>
-		jQuery("#form_1 form .wpcf7-submit").on("click", function (event) {
-			ga('send', 'event', {
-			  'eventCategory': 'Callback',
-			  'eventAction': 'Callback_click',
-			  eventLabel: 'Callback',
-			  hitCallback: function() {
-		      console.log('sent ga');
-		    }
-			});
-		});
-
-		jQuery("#form_2 form .wpcf7-submit").on("click", function (event) {
-			ga('send', 'event', {
-			  'eventCategory': 'Purchase',
-			  'eventAction': 'Purchase_click',
-			  eventLabel: 'Purchase',
-			  'eventValue': jQuery("#form-input_price").val().replace(/\W/g, ''),
-			  hitCallback: function() {
-		      console.log(jQuery("#form-input_price").val().replace(/\W/g, ''));
-		      console.log(jQuery("#form-input_price").val());
-		    }
-			})
-		});
-	</script>
-
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 	    (function (d, w, c) {

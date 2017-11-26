@@ -88,8 +88,58 @@ function my_extra_fields_update( $post_id ){
 	}
 	return $post_id;
 }
-	function crossfood_scripts() {
-		wp_enqueue_script( 'jquery');
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.41", true);
-	}
-	add_action( 'wp_enqueue_scripts', 'crossfood_scripts' );
+
+function crossfood_scripts() {
+	wp_enqueue_script( 'jquery');
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.41", true);
+}
+
+add_action( 'wp_enqueue_scripts', 'crossfood_scripts' );
+
+
+// ga
+
+add_action( 'wp_footer', 'ga_callback_func' );
+ 
+function ga_callback_func() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '2085' == event.detail.contactFormId ) {
+			ga('send', 'event', {
+			  'eventCategory': 'Callback',
+			  'eventAction': 'Callback_click',
+			  eventLabel: 'Callback',
+			  hitCallback: function() {
+		      console.log('sent ga - callback');
+		    }
+			});
+    }
+}, false );
+</script>
+<?php
+}
+
+
+add_action( 'wp_footer', 'ga_purchase_func' );
+ 
+function ga_purchase_func() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '2087' == event.detail.contactFormId ) {
+			ga('send', 'event', {
+			  'eventCategory': 'Purchase',
+			  'eventAction': 'Purchase_click',
+			  eventLabel: 'Purchase',
+			  // 'eventValue': jQuery("#form-input_price").val().replace(/\W/g, ''),
+			  'eventValue': 3.40, //0.87% от 385 грн (средняя цена заказа)
+			  hitCallback: function() {
+		      console.log('sent ga - 3.40');
+		    }
+			});
+    }
+}, false );
+</script>
+<?php
+}
