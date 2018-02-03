@@ -25,7 +25,14 @@
 .footer-tagline-block{
 	width: 100%;
 	max-width: 260px;
+
+	& a,
+	& a:hover,
+	& a:active {
+		text-decoration: none
+	}
 }
+
 .footer-tagline-block__img-cont{
 	.setBackgroundImage(@tagline-img);
 	background-size: contain;

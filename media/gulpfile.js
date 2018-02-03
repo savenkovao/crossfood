@@ -29,9 +29,9 @@ var runSequence = require('run-sequence');
 // path
 var PUBLIC_DIR = './../prod/';
 var path = {
-    scripts :  'prod/src/js/**/*.js' ,
-    less    :  'prod/src/less/index.less' ,
-    css     :  'src/css',
+    scripts :  'dev/src/js/**/*.js' ,
+    less    :  'dev/src/css/style.less' ,
+    css     :  'dev/src/css',
     fonts   :  'src/fonts/**/*.*',
     vendors :  'vendors/**/*.*',
     img     :  'src/img/**/*.*'
@@ -56,12 +56,8 @@ gulp.task('less', function(){
         .pipe(less()) // используем gulp-less
         .pipe(autoprefixer())
         .pipe(cssmin())
-        .pipe(rename('index.min.css'))
-        .pipe(gulp.dest(PUBLIC_DIR  + path.css))
-        .pipe(gulp.dest(path.css))
-        .pipe(browserSync.reload({
-            stream: true //обновление страницы после изменения файлов
-        }));
+        .pipe(gulp.dest(path.css));
+        // .pipe(gulp.dest(PUBLIC_DIR  + path.css))
 });
 
 gulp.task('scripts', function(){
@@ -116,18 +112,18 @@ gulp.task(
     function(callback){
 
         runSequence(
-            'clean:cache',
+            // 'clean:cache',
             [
-                'browserSync',
+                // 'browserSync',
                 'less',
-                'scripts'
+                // 'scripts'
             ],
             callback
         );
 
         gulp.watch(path.less, ['less']);
         gulp.watch(path.scripts, ['scripts']);
-        gulp.watch('*.html', browserSync.reload);
+        // gulp.watch('*.html', browserSync.reload);
     }
 );
 

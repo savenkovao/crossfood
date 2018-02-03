@@ -40,21 +40,35 @@
 .header-menu{
 	text-align: right;
 	position: relative;	
+	background-color: transparent;
+	transition: background-color .3s;
 }
 
-
 .header-menu_scrolled {
-    position: fixed;
-    left: 0;
-    right: 0;
-    margin-left: -73px;
-    background-color: #fff;
-    z-index: 2;
-    padding: 18px 31px 18px 0;
-    top: 0px;
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin-left: -73px;
+	background-color: #fff;
+	z-index: 2;
+	padding: 18px 31px 18px 0;
+	top: 0px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 0 20px rgba(0,0,0,.28);
+
+    @media @tablet {
+      display: block;
+    }
 
     .menu {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+
     	.menu-item {
+			a {
+              font-size: 1.8em;
+			}
     		&::before {
 			    top: -18px;
     		}
