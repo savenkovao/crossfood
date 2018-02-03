@@ -14,23 +14,6 @@
 
 
 	<link rel="shortcut icon" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="56x57" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="59x60" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="71x72" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="75x76" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="113x114" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="119x120" href="http://crossfood.od.?ver_1.39ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="143x144" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="151x152" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="179x180" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="191x192"  href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon-16x16.png">
-	<link rel="manifest" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/manifest.json">	
-	<meta name="msapplication-TileColor" content="#ffffff">	
-	<meta name="msapplication-TileImage" content="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/ms-icon-144x144.png">	
-	<meta name="theme-color" content="#ffffff">
 
 	<style>
 		.header-menu {
@@ -39,7 +22,7 @@
 		}
 
 		.header-menu_scrolled {
-				display: none;
+			display: none;
 		    position: fixed;
 		    left: 0;
 		    right: 0;
@@ -48,12 +31,28 @@
 		    z-index: 2;
 		    padding: 18px 31px 18px 0;
 		    top: 0px;
+		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 0 20px rgba(0,0,0,.28);
 		}
 
 		.header-menu_scrolled .menu{
-	    max-width: 1200px;
-	    margin: 0 auto;
-	    width: 100%;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    width: 100%;
+		}
+
+		.header-menu_scrolled .menu li a{
+			font-size: 1.8em;
+		}
+		.close-btn_f-pos {
+			z-index: 2;
+		}
+
+		.notation-text {
+		    font-size: 12px;
+		    text-align: center;
+		    color: #707070;
+		    line-height: 1.5;
+		    padding: 5px;
 		}
 		
 		@media only screen and (min-width:768px){
@@ -65,6 +64,62 @@
 		.header-menu_scrolled .menu .menu-item::before {
 		    top: -18px;
 		}
+		/* _________________________________________ */
+
+		.loader {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background: rgba(255, 255, 255, .7);
+		  z-index: 1010;
+		  display: block;
+		}
+		.preloader {
+		  background: #fff;
+		  position: fixed;
+		  z-index: 1010;
+		}
+		.spinner {
+		  width: 40px;
+		  height: 40px;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translateX(-50%)translateY(-50%);
+		}
+		.double-bounce1, .double-bounce2 {
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 50%;
+		  background-color: #333;
+		  opacity: 0.6;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+		  animation: sk-bounce 2.0s infinite ease-in-out;
+		}
+		.double-bounce2 {
+		  -webkit-animation-delay: -1.0s;
+		  animation-delay: -1.0s;
+		}
+		@-webkit-keyframes sk-bounce {
+		  0%, 100% { -webkit-transform: scale(0.0) }
+		  50% { -webkit-transform: scale(1.0) }
+		}
+		@keyframes sk-bounce {
+		  0%, 100% {
+		    transform: scale(0.0);
+		    -webkit-transform: scale(0.0);
+		  } 50% {
+		      transform: scale(1.0);
+		      -webkit-transform: scale(1.0);
+		    }
+		}
+
+		/* _________________________________________ */
 	</style>
 
 	<?php wp_head(); ?>

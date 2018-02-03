@@ -19,6 +19,9 @@ Allow: /wp-*.jpg            # картинки в плагинах, cache пап
 Allow: /wp-*.jpeg           # картинки в плагинах, cache папке и т.д.
 Allow: /wp-*.gif            # картинки в плагинах, cache папке и т.д.
 #Disallow: /wp/             # когда WP установлен в подкаталог wp
+Disallow: /desserts
+Disallow: /menu-item
+Disallow: /menu_subscribe
 
 Host: www.crossfood.od.ua
 Sitemap: http://www.crossfood.od.ua/sitemap.xml

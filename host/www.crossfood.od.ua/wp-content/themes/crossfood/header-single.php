@@ -47,7 +47,7 @@
 		}
 
 		.header-menu_scrolled {
-				display: none;
+			display: none;
 		    position: fixed;
 		    left: 0;
 		    right: 0;
@@ -56,12 +56,29 @@
 		    z-index: 2;
 		    padding: 18px 31px 18px 0;
 		    top: 0px;
+		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 0 20px rgba(0,0,0,.28);
 		}
 
 		.header-menu_scrolled .menu{
-	    max-width: 1200px;
-	    margin: 0 auto;
-	    width: 100%;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    width: 100%;
+		}
+
+		.header-menu_scrolled .menu li a{
+			font-size: 1.8em;
+		}
+
+		.close-btn_f-pos {
+			z-index: 2;
+		}
+		
+		.notation-text {
+		    font-size: 12px;
+		    text-align: center;
+		    color: #707070;
+		    line-height: 1.5;
+		    padding: 5px;
 		}
 		
 		@media only screen and (min-width:768px){

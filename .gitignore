@@ -33,6 +33,7 @@ Ankh.NoLoad
 .idea/
 #Node
 node_modules/
+media/node_modules/
 #Various images
 /*.png
 /*.jpg

@@ -62,28 +62,6 @@
 		</div>
 	</footer>
 
-	<?php if(is_front_page()) { ?>
-		<script>
-		  jQuery(function($) {
-		    $(document).on('scroll', (e) => {
-		      if(window.pageYOffset > $('.how-it-works_position').offset().top) {
-		          $('.header-menu').addClass('header-menu_scrolled');
-		      } else {
-		        $('.header-menu').removeClass('header-menu_scrolled');
-		      }
-		    });
-		  });
-		</script>
-	<?php } ?>
-
-	<script type="text/javascript">
-
-
-
-</script>
-
-
-
 
 	<!-- Facebook Pixel Code -->
 	<script>

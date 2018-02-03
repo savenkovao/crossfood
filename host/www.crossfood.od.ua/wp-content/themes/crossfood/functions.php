@@ -89,9 +89,45 @@ function my_extra_fields_update( $post_id ){
 	return $post_id;
 }
 
+
+// _________________________________________
+
+
+add_action('wp_ajax_hello', 'say_hello');
+add_action('wp_ajax_nopriv_hello', 'say_hello');
+
+function say_hello() {
+	if(empty($_POST['name'])){
+		$name = 'stand-2-su';	
+	} else {
+		$name = esc_attr( $_POST['name'] );	
+	}
+
+	$args = array(
+		'category_name'    => $name,
+	);
+
+	$posts_array = get_posts( $args );
+	echo json_encode($posts_array);
+	wp_die();
+}
+
+
+// _________________________________________
+
 function crossfood_scripts() {
-	wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.41", true);
+
+	wp_deregister_script( 'jquery' );
+  wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+  wp_enqueue_script( 'jquery' );
+
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.43", true);
+	// wp_enqueue_script( 'ajax-post-load', get_template_directory_uri() . '/src/js/ajax-post-load.js',"","1.015", array('jquery'));
+
+	wp_localize_script('main', 'myPlugin', array(
+		'ajaxurl' => admin_url('admin-ajax.php'),
+		'name' => wp_get_current_user()->display_name
+	));
 }
 
 add_action( 'wp_enqueue_scripts', 'crossfood_scripts' );
