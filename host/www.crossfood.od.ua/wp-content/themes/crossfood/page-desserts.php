@@ -1,6 +1,10 @@
-<?php get_header() ?>
+<?php get_header('desserts') ?>
 
-
+    <script>
+        window.CONFIG = {
+            page: 'desserts'
+        }
+    </script>
 
 
 	<section class="how-it-works">
@@ -82,7 +86,7 @@
 
 										<div class="cuisine__item-text-cont desserts__item-text-cont">
 
-											<div class="desserts__title"><?php the_title(); ?></div>
+											<h4 class="desserts__title"><?php the_title(); ?></h4>
 
 
 											<div data-cuisine-qount="5">
@@ -91,9 +95,9 @@
 												</div>
 												<ul class="cuisine__item-text-calories">
 												 	<li><u class="cuisine__item-text-highlited"><?php echo get_post_meta( get_the_ID(), 'desserts_cal', 1); ?></u></li>
-												 	<li>Белки - <?php echo get_post_meta( get_the_ID(), 'desserts_prot', 1); ?></li>
-												 	<li>Жиры - <?php echo get_post_meta( get_the_ID(), 'desserts_fat', 1); ?></li>
-												 	<li>Углеводы - <?php echo get_post_meta( get_the_ID(), 'desserts_car', 1); ?></li>
+												 	<li>Белки - <?php echo get_post_meta( get_the_ID(), 'desserts_prot', 1); ?> г</li>
+												 	<li>Жиры - <?php echo get_post_meta( get_the_ID(), 'desserts_fat', 1); ?> г</li>
+												 	<li>Углеводы - <?php echo get_post_meta( get_the_ID(), 'desserts_car', 1); ?> г</li>
 												 	
 												</ul>
 											</div>
@@ -111,7 +115,7 @@
 														echo '<img class="news-item__img" src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 													}
 													else {
-													    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+													    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/cnt/cuisine/custom.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 													}
 												?>	
 											</div>

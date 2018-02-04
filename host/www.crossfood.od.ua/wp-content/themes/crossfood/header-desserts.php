@@ -2,13 +2,9 @@
 <html <?php language_attributes() ?> >
 <head>
 	<meta charset="UTF-8">
-	
-	<?php if (is_single()) { ?>
-		 	<title>| <?php echo get_post_meta( get_the_ID(), 'news_title', 1); ?> | - <?php bloginfo("name");?>!</title>
-	
-	<?php } else if(is_404()) { ?>
-			<title>| Доставка Правильного Здорового Питания в Одессе | - CrossFood!</title>
-	<?php } ?>
+
+    <title>| Дессерты | - <?php bloginfo("name");?>!</title>
+
 		
 
 
@@ -18,7 +14,7 @@
 	<meta name="robots" content="index, follow"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.41">
+	<link rel="stylesheet" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.40">
 
 
 	<link rel="shortcut icon" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">

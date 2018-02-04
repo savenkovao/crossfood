@@ -1,4 +1,9 @@
 <?php get_header() ?>
+    <script>
+        window.CONFIG = {
+            page: 'home'
+        }
+    </script>
 
 	<section class="how-it-works">
 		<div class="wrapper  how-it-works_position">

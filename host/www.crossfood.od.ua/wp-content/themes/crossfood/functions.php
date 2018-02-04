@@ -66,6 +66,29 @@ function extra_fields_box_func( $post ){
 
 	<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 
+    <hr>
+
+    <p><label>Цена <i>(только sweets*)</i><br> <input type="text" name="extra[desserts_price]" value="<?php echo get_post_meta($post->ID, 'desserts_price', 1); ?>" style="width:50%" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+
+    <p><label>Калории <i>(только sweets*)</i><br> <input type="text" name="extra[desserts_cal]" value="<?php echo get_post_meta($post->ID, 'desserts_cal', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Белки <i>(только sweets*)</i><br> <input type="text" name="extra[desserts_prot]" value="<?php echo get_post_meta($post->ID, 'desserts_prot', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Жиры <i>(только sweets*)</i><br> <input type="text" name="extra[desserts_fat]" value="<?php echo get_post_meta($post->ID, 'desserts_fat', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Углеводы <i>(только sweets*)</i><br> <input type="text" name="extra[desserts_car]" value="<?php echo get_post_meta($post->ID, 'desserts_car', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
 
 	<?php
 }
@@ -121,7 +144,7 @@ function crossfood_scripts() {
   wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
   wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.44", true);
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.45", true);
 	// wp_enqueue_script( 'ajax-post-load', get_template_directory_uri() . '/src/js/ajax-post-load.js',"","1.015", array('jquery'));
 
 	wp_localize_script('main', 'myPlugin', array(
@@ -178,4 +201,27 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 }, false );
 </script>
 <?php
+}
+
+
+add_action( 'wp_footer', 'ga_desserts_func' );
+
+function ga_desserts_func() {
+    ?>
+    <script type="text/javascript">
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            if ( '3052' == event.detail.contactFormId ) {
+                ga('send', 'event', {
+                    'eventCategory': 'Desserts',
+                    'eventAction': 'Desserts_click',
+                    eventLabel: 'Desserts',
+                    'eventValue': 1,
+                    hitCallback: function() {
+                        console.log('sent ga desserts - 1');
+                    }
+                });
+            }
+        }, false );
+    </script>
+    <?php
 }

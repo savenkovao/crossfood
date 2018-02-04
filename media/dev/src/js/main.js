@@ -1,4 +1,14 @@
 (function($){
+
+    /* Common */
+
+    if(window.CONFIG.page == undefined) {
+        window.CONFIG.page = '';
+    }
+
+    /* Common */
+
+
     $(document).ready(function(){
         window.POSTS = {};
         window.FIRST_LOAD = false;
@@ -299,40 +309,41 @@
             day: 'mo',
             cuisines: 5,
             price: '280/320'
-        }
+        };
 
-        var subscribe = document.getElementById('subscribe');
-        var subscribeItems = document.getElementById('subscribe-items');
-        var cuisineWeek = document.getElementById('cuisine-week');
-        // var cuisines_3_5 = document.getElementById('cuisines_3_5');
-        var allCuisines = document.getElementById('all-cuisines');
+        if(window.CONFIG.page === 'home') {
+            var subscribe = document.getElementById('subscribe');
+            var subscribeItems = document.getElementById('subscribe-items');
+            var cuisineWeek = document.getElementById('cuisine-week');
+            // var cuisines_3_5 = document.getElementById('cuisines_3_5');
+            var allCuisines = document.getElementById('all-cuisines');
 
-        if (subscribe) {
-            subscribe.addEventListener('click', setSubscribe, false);
-            subscribeItems.addEventListener('click', setSubscribeItems, false);
-            cuisineWeek.addEventListener('click', setCuisineWeek, false);
-            // cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
-        }
+            if (subscribe) {
+                subscribe.addEventListener('click', setSubscribe, false);
+                subscribeItems.addEventListener('click', setSubscribeItems, false);
+                cuisineWeek.addEventListener('click', setCuisineWeek, false);
+                // cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
+            }
+
+            function setSubscribe(event) {
+                enableBlock(event);
+            }
+
+            function setSubscribeItems(event) {
+                enableBlock(event);
+            }
+
+            function setCuisineWeek(event) {
+                enableBlock(event);
+            }
+
+            getStartCuisine();
 
 
-        function setSubscribe(event) {
-            enableBlock(event);
-        }
-
-        function setSubscribeItems(event) {
-            enableBlock(event);
-        }
-
-        function setCuisineWeek(event) {
-            enableBlock(event);
-        }
-
-        getStartCuisine();
-
-
-        function getStartCuisine() {
-            getCurrentDate ();
-            selectCuisineItem();
+            function getStartCuisine() {
+                getCurrentDate ();
+                selectCuisineItem();
+            }
         }
 
 
@@ -407,34 +418,33 @@
         }
 
         function changeListener(identifier, event) {
-            if(event.currentTarget === subscribe) {
-                cuisineListener.subscribe = identifier;
+            if(window.CONFIG.page === 'home'){
+                if(event.currentTarget === subscribe) {
+                    cuisineListener.subscribe = identifier;
 
-                if (identifier === 'fit') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'prem') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'veg') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'stand') {
-                    cuisineListener.calories = '1200';
+                    if (identifier === 'fit') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'prem') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'veg') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'stand') {
+                        cuisineListener.calories = '1200';
+                    }
+
+                    getCurrentDate ();
+
+
+                    checkHighLightedItem();
+
+                } else if (event.currentTarget === subscribeItems) {
+                    if(identifier)	cuisineListener.calories = identifier;
+                } else if (event.currentTarget === cuisineWeek) {
+                    cuisineListener.day = identifier;
                 }
 
-                getCurrentDate ();
-
-
-                checkHighLightedItem();
-
-            } else if (event.currentTarget === subscribeItems) {
-                if(identifier)	cuisineListener.calories = identifier;
-            } else if (event.currentTarget === cuisineWeek) {
-                cuisineListener.day = identifier;
+                selectCuisineItem();
             }
-            //  else if (event.currentTarget == cuisines_3_5) {
-            // 	cuisineListener.cuisines = identifier;
-            // }
-
-            selectCuisineItem();
         }
 
         function selectCuisineItem(callback, customSelector) {
@@ -826,7 +836,6 @@
             }
 
             setPriceInForm(dataSub, dataCal);
-
         }
 
 
@@ -851,8 +860,6 @@
 
         });
 
-
-
         function setPriceInForm(subscribe, calories){
 
             selectCuisineItem(function() {
@@ -863,7 +870,6 @@
                 }
 
                 $('#form-input_price').val(cuisineListener.price);
-                console.log(2);
             }, '#'+subscribe+'-'+cuisineListener.week+'-mo');
 
         }
@@ -944,5 +950,27 @@
             $(this).removeAttr('width').removeAttr('height');
         });
     }
+
+
+
+    /* Desserts Page*/
+
+    if(window.CONFIG.page === 'desserts'){
+        initDesertsPage();
+    }
+
+    function initDesertsPage() {
+        var $dessertsForm =  $('#form_3');
+        var $dessertsSelect =  $dessertsForm.find('select[name="menu-230"]');
+
+        $dessertsSelect.children().remove();
+
+        $('.desserts__title').each(function(i, item){
+            $dessertsSelect.append( '<option>' + $(item).text() + '</option>');
+        });
+    }
+
+
+    /* Desserts Page*/
 
 }(jQuery));
