@@ -925,7 +925,7 @@
 
 
     // Header toggling
-    if( $('.how-it-works').length ){
+    if( $('.how-it-works').length && window.CONFIG.page === 'home' ){
         toggleHeader();
 
         $(window).on('scroll', function() {
@@ -967,6 +967,18 @@
 
         $('.desserts__title').each(function(i, item){
             $dessertsSelect.append( '<option>' + $(item).text() + '</option>');
+        });
+
+        $('.desserts__button-cnt').on('click', function(){
+            var currentDessert = $(this).closest('.desserts__item').find('.desserts__title').text();
+
+            $dessertsSelect.find('option').each(function(i, item){
+                $(item).removeAttr('selected');
+
+                if($(item).text() === currentDessert){
+                    $(item).attr('selected', true);
+                }
+            });
         });
     }
 

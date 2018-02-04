@@ -14,7 +14,7 @@
 	<meta name="robots" content="index, follow"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.40">
+	<link rel="stylesheet" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.42">
 
 
 	<link rel="shortcut icon" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
@@ -24,6 +24,7 @@
 <body <?php body_class(); ?> >
 
 	<header class="header">
+        <div class="desserts-banner"></div>
 		<div class="wrapper header_position_single">
 
 			<div class="header-menu">
@@ -31,9 +32,6 @@
 				<nav class="menu-sp">
 					<div class="back-cont">
 						<a href="http://crossfood.od.ua/">На главную</a>
-					</div>
-
-					<div class="logo-cont">
 					</div>
 				</nav>
 
