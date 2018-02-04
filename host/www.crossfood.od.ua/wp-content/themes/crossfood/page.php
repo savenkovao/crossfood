@@ -74,7 +74,7 @@
 						<span>Премиум</span>
 					</div>
 					<div data-action="data-subscribe" data-identifier="veg" data-meta-node class="tab-block__nav-button subscribe__nav-button">
-						<span>Вегетарианский</span>
+						<span>Без Мяса</span>
 					</div>
 
 				</div>
