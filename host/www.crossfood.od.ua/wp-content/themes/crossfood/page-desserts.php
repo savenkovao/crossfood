@@ -8,50 +8,14 @@
 
 
 	<section class="how-it-works">
-		<div class="wrapper  how-it-works_position">
-			
+		<div class="wrapper how-it-works_position how-it-works_desserts">
 			<div>
 				<p class="descript">
-					
-						<?php $post = get_post($post_id = 25); echo $post->post_content; ?>
+
+                    <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
 
 				</p>
-			</div>				
-
-			<div id="how-it-works" class="title-3 how-it-works_title-3-position">
-				<h3 class="title-3__h3 title-3__h3_dark hr-line">Как это работает</h3>	
-			</div>	
-
-			<div class="how-it-works_steps-pos">
-				<div class="steps">
-					
-					
-
-					<img class="steps__img-desktop" src="<?php echo esc_url( get_template_directory_uri()) ?>/src/img/dsg/steps.png" alt="Crossfood - как это работает">
-					<img class="steps__img-mobile" src="<?php echo esc_url( get_template_directory_uri())?>/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
-
-					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
-				</div>
-
-				<?php $post = get_post($post_id = 669); echo $post->post_content; ?>
 			</div>
-			
-		</div>
-	</section>
-
-	<section id="advantages" class="advantages advantages_background" style="display: none;">
-		<div class="wrapper advantages_position">
-			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_light hr-line">Преимущества</h3>	
-			</div>
-
-			<div class="advantage-block advantages_advantage-block-pos">
-				<div class="advantage-block__item"> 
-						<?php $post = get_post($post_id = 46); echo $post->post_content; ?>
-				</div>
-			</div>
-
-
 		</div>
 	</section>
 
@@ -60,7 +24,7 @@
 
 
 			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_dark hr-line">Десерты</h3>	
+				<h3 class="title-3__h3 title-3__h3_light hr-line">Десерты</h3>
 			</div>
 
 				
@@ -120,9 +84,13 @@
 												?>	
 											</div>
 
-											<div class="cuisine__item-price-block">
+											<div class="cuisine__item-price-block desserts__item-price-block">
 												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span> грн/100г.</span>
 											</div>
+
+                                            <div class="subscribe__button-cnt desserts__button-cnt">
+                                                <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
+                                            </div>
 
 										</div>
 
@@ -149,13 +117,13 @@
 
 			
 
-			<div class="cuisine-notation_position desserts-notation_position">
-				<div class="cuisine-notation desserts-notation">
-					<div class="subscribe__button-cnt">
-						<button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
-					</div>
-				</div>
-			</div>
+<!--			<div class="cuisine-notation_position desserts-notation_position">-->
+<!--				<div class="cuisine-notation desserts-notation">-->
+<!--					<div class="subscribe__button-cnt">-->
+<!--						<button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
 
 
 

@@ -24,6 +24,7 @@
 <body <?php body_class(); ?> >
 
 	<header class="header">
+        <div class="desserts-banner"></div>
 		<div class="wrapper header_position_single">
 
 			<div class="header-menu">
@@ -31,9 +32,6 @@
 				<nav class="menu-sp">
 					<div class="back-cont">
 						<a href="http://crossfood.od.ua/">На главную</a>
-					</div>
-
-					<div class="logo-cont">
 					</div>
 				</nav>
 

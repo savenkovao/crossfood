@@ -1,3 +1,33 @@
+.desserts-banner{
+  width: 100%;
+  height: 300px;
+  height: 30vh;
+  max-height: 450px;
+  min-height: 120px;
+  margin-bottom: 40px;
+  background-image: url(@desserts-banner);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #d4d6d1;
+
+  @media @laptopL {
+    //height: 330px;
+  }
+  @media @4k {
+    //height: 380px;
+  }
+}
+
+.how-it-works_desserts{
+  padding: 70px 3% 95px;
+
+  @media @laptop {
+    padding: 100px 0 115px;
+  }
+}
+
+
 .carousel-control.desserts__carousel-arrow, .desserts_background {
   background-repeat: no-repeat;
   background-position: center;
@@ -11,15 +41,13 @@
 
 
 .desserts-block {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 450px;
   margin: 0 auto;
   padding-top: 50px;
 
   .carousel-inner {
     width: auto;
-    margin: 0 2.5%;
-    background-color: #fff;
   }
   .cuisine__item{
     width: 100%;
@@ -61,7 +89,9 @@
 
 .desserts__item {
   margin: 0 auto;
-  box-shadow: none
+  box-shadow: none;
+  padding: 50px 8%;
+  border-radius: 4px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -71,8 +101,8 @@
   }
 
   .desserts__item-text-cont {
-    min-height: 400px;
-    max-height: 400px
+    min-height: 360px;
+    max-height: 360px
   }
 }
 
@@ -103,28 +133,37 @@
   }
 }
 
+.desserts__item-price-block {
+  @media @tablet{
+    padding-top: 25px;
+  }
+}
+
+.desserts__button-cnt{
+  padding-top: 25px;
+}
+
 .desserts__item-text-menu {
   margin: 0;
   min-height: 100px
 }
 
 .carousel-control.desserts__carousel-arrow {
-  width: 18px;
-  height: 48px;
+  width: 12px;
+  height: 32px;
   position: absolute;
   top: 50%;
-  top: -webkit-calc(50% - 21px);
-  top: calc(50% - 21px);
+  top: ~'calc(50% - 21px)';
   cursor: pointer
 }
 
 .carousel-control.desserts__carousel-arrow.left {
-  left: -8%;
+  left: 2%;
   background-position: bottom
 }
 
 .carousel-control.desserts__carousel-arrow.right {
-  right: -8%;
+  right: 2%;
   background-position: top
 }
 
@@ -143,11 +182,11 @@
   }
 
   .carousel-control.desserts__carousel-arrow.left {
-    left: 0
+    left: 20px;
   }
 
   .carousel-control.desserts__carousel-arrow.right {
-    right: 0
+    right:20px;
   }
 
   .desserts-notation_position {
