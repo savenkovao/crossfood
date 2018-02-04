@@ -8,6 +8,7 @@ var rename          = require('gulp-rename');
 
 var uglify          = require('gulp-uglify');
 var concat 			= require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
 
 var copy            = require('gulp-contrib-copy');
 
@@ -27,14 +28,16 @@ var runSequence = require('run-sequence');
 
 
 // path
-var PUBLIC_DIR = './../prod/';
+var PUBLIC_DIR = './../host/www.crossfood.od.ua/wp-content/themes/crossfood/';
 var path = {
-    scripts :  'dev/src/js/**/*.js' ,
-    less    :  'dev/src/css/style.less' ,
+    js :  'dev/src/js/' ,
+    less    :  'dev/src/css/' ,
     css     :  'dev/src/css',
     fonts   :  'src/fonts/**/*.*',
     vendors :  'vendors/**/*.*',
-    img     :  'src/img/**/*.*'
+    img     :  'src/img/**/*.*',
+    css_prod: 'src/css',
+    js_prod:  'src/js'
 };
 
 //dev
@@ -51,24 +54,22 @@ gulp.task('browserSync', function () {
 
 
 gulp.task('less', function(){
-    return gulp.src(path.less)
-
+    return gulp.src(path.less + 'style.less')
         .pipe(less()) // используем gulp-less
         .pipe(autoprefixer())
-        .pipe(cssmin())
-        .pipe(gulp.dest(path.css));
-        // .pipe(gulp.dest(PUBLIC_DIR  + path.css))
+        .pipe(cssmin({keepSpecialComments : 0}))
+        .pipe(gulp.dest(path.css))
+        .pipe(gulp.dest(PUBLIC_DIR + path.css_prod))
+        .pipe(gulp.dest(PUBLIC_DIR));
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(['!src/js/index.min.js', path.scripts])
-        .pipe(concat('index.min.js'))
+    return gulp.src(['!dev/src/js/compiled/main.js', path.js + 'bootstrap.js', path.js + 'masked-input-plugin.js', path.js + 'main.js'])
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(path.js + 'compiled/'))
         .pipe(uglify())
-        .pipe(gulp.dest(PUBLIC_DIR +'src/js/'))
-        .pipe(gulp.dest('src/js/'))
-        .pipe(browserSync.reload({
-            stream: true //обновление страницы после изменения файлов
-        }));
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(PUBLIC_DIR + path.js_prod));
 });
 
 gulp.task('html', function() {
@@ -116,36 +117,36 @@ gulp.task(
             [
                 // 'browserSync',
                 'less',
-                // 'scripts'
+                'scripts'
             ],
             callback
         );
 
-        gulp.watch(path.less, ['less']);
-        gulp.watch(path.scripts, ['scripts']);
+        gulp.watch(path.less + '**/*.*', ['less']);
+        gulp.watch(path.js + '**/*.js', ['scripts']);
         // gulp.watch('*.html', browserSync.reload);
     }
 );
 
-gulp.task(
-    'build',
-
-    function(callback){
-
-        runSequence(
-            'clean:public',
-            'clean:cache',
-            [
-
-                'less',
-                'scripts',
-                'fonts',
-                'img',
-                'html',
-                'bower'
-            ],
-            callback
-        );
-    }
-);
+// gulp.task(
+//     'build',
+//
+//     function(callback){
+//
+//         runSequence(
+//             'clean:public',
+//             'clean:cache',
+//             [
+//
+//                 'less',
+//                 'scripts',
+//                 'fonts',
+//                 'img',
+//                 'html',
+//                 'bower'
+//             ],
+//             callback
+//         );
+//     }
+// );
 

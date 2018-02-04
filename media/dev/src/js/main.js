@@ -1,750 +1,948 @@
-(function(){
+(function($){
+    $(document).ready(function(){
+        window.POSTS = {};
+        window.FIRST_LOAD = false;
+        // Mobile menu enabling
 
-	// Mobile menu enabling
+        // var brgrMenu = document.getElementById("brgr-menu");
+        var menu = document.getElementById("header-menu");
 
-	// var brgrMenu = document.getElementById("brgr-menu");
-	var menu = document.getElementById("header-menu");
+        // var stick1 = document.getElementById("brgr-menu-stick-1");
+        // var stick2 = document.getElementById("brgr-menu-stick-2");
+        // var stick3 = document.getElementById("brgr-menu-stick-3");
+        // var count = 0;
 
-	// var stick1 = document.getElementById("brgr-menu-stick-1");
-	// var stick2 = document.getElementById("brgr-menu-stick-2");
-	// var stick3 = document.getElementById("brgr-menu-stick-3");
-	// var count = 0;
 
+        // brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
-	// brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
+        function enableBrgrMenu(event){
+            var e = getTarget(event);
 
-	function enableBrgrMenu(event){
-		var e = getTarget(event);
+            if (e !== undefined) {
+                count++;
+                if(count%2===0) {
+                    deactivateBrgrMenu();
 
-		if (e != undefined) {
-			count++;
-			if(count%2==0) {
-				deactivateBrgrMenu();
-				
-			} else {
-				activateBrgrMenu();
+                } else {
+                    activateBrgrMenu();
 
-			}
-		}
-	}
+                }
+            }
+        }
 
-	function activateBrgrMenu(){
-		menu.style.display = 'block';
-		stick1.classList.add('stick-1-active');
-		stick2.classList.add('disable');
-		stick3.classList.add('stick-3-active');
-		
-	}
+        function activateBrgrMenu(){
+            menu.style.display = 'block';
+            stick1.classList.add('stick-1-active');
+            stick2.classList.add('disable');
+            stick3.classList.add('stick-3-active');
 
-	function deactivateBrgrMenu(){
-		menu.style.display = '';
-		stick1.classList.remove('stick-1-active');
-		stick2.classList.remove('disable');
-		stick3.classList.remove('stick-3-active');
-		count = 0;
-	}
+        }
 
-// team slider browsing
+        function deactivateBrgrMenu(){
+            menu.style.display = '';
+            stick1.classList.remove('stick-1-active');
+            stick2.classList.remove('disable');
+            stick3.classList.remove('stick-3-active');
+            count = 0;
+        }
 
+        // team slider browsing
 
-	var teamSlider = document.getElementById('team-slider');
 
-	if (teamSlider) {
-		teamSlider.addEventListener('click', browseTeamSlider, false);
-	}
+        var teamSlider = document.getElementById('team-slider');
 
-	function browseTeamSlider(event) {
-		var e = getTarget(event);
+        if (teamSlider) {
+            teamSlider.addEventListener('click', browseTeamSlider, false);
+        }
 
-		if (e != undefined)	browseSlider(e);
+        function browseTeamSlider(event) {
+            var e = getTarget(event);
 
-	}
+            if (e !== undefined)	browseSlider(e);
 
+        }
 
-	function getTarget(event) {
-		var target = event.target;
-		var currentTarget = event.currentTarget;
 
-		while (target != event.currentTarget) {
+        function getTarget(event) {
+            var target = event.target;
+            var currentTarget = event.currentTarget;
 
-			if (target.hasAttribute('data-meta-node')) {
-				var e = {target, currentTarget};
-				
-				return e;
-			}
+            while (target !== event.currentTarget) {
 
-			target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
-		}
+                if (target.hasAttribute('data-meta-node')) {
+                    var e = {target:target, currentTarget:currentTarget};
 
-		return;
-	}
+                    return e;
 
+                }
 
-	function browseSlider(e) {
+                target = target.parentNode; // переход по иерархии на узел выше (от ребенка к родителю)
+            }
 
-		getScreenWidth();
+            return;
+        }
 
-		if (currentScreenWidth >= 768) {
-			
-			var target = e.target;
-			var currentTarget = e.currentTarget;
 
-			var targetWidth = target.clientWidth;
-			var dataAction = target.getAttribute('data-action');			
-			var allItems = getItems();
+        function browseSlider(e) {
 
-			var lItem = teamSlider.querySelectorAll('.l')[0];
-			lItem.classList.remove('l');
-			target.classList.remove(dataAction);
-			target.classList.add('l');
-			target.setAttribute('data-action', 'l');
+            getScreenWidth();
 
-			if (dataAction == 'ml') {
-				
-				var newSl = allItems.sr.cloneNode(true);
-				
-				newSl.style.marginLeft = (-targetWidth * 1) + 'px';
+            if (currentScreenWidth >= 768) {
 
-				newSl.setAttribute('data-action', 'sl');
-				newSl.setAttribute('data-meta-node','');
-				newSl.classList.remove('sr');
-				newSl.classList.add('sl');
+                var target = e.target;
+                var currentTarget = e.currentTarget;
 
-				allItems.sl.setAttribute('data-action', 'ml');
-				allItems.sl.classList.remove('sl');
-				allItems.sl.classList.add('ml');
+                var targetWidth = target.clientWidth;
+                var dataAction = target.getAttribute('data-action');
+                var allItems = getItems();
 
-				lItem.classList.add('mr');
-				lItem.setAttribute('data-action', 'mr');
+                var lItem = teamSlider.querySelectorAll('.l')[0];
+                lItem.classList.remove('l');
+                target.classList.remove(dataAction);
+                target.classList.add('l');
+                target.setAttribute('data-action', 'l');
 
-				allItems.mr.setAttribute('data-action', 'sr');
-				allItems.mr.classList.remove('mr');
-				allItems.mr.classList.add('sr');
+                if (dataAction === 'ml') {
 
+                    var newSl = allItems.sr.cloneNode(true);
 
+                    newSl.style.marginLeft = (-targetWidth * 1) + 'px';
 
-				currentTarget.insertBefore(newSl, currentTarget.firstChild);
+                    newSl.setAttribute('data-action', 'sl');
+                    newSl.setAttribute('data-meta-node','');
+                    newSl.classList.remove('sr');
+                    newSl.classList.add('sl');
 
-				setTimeout( function() {
-					newSl.style.marginLeft = 0;
-					
-				}, 0);
+                    allItems.sl.setAttribute('data-action', 'ml');
+                    allItems.sl.classList.remove('sl');
+                    allItems.sl.classList.add('ml');
 
-				setTimeout( function() {
-					allItems.sr.remove();
-				}, 405);
+                    lItem.classList.add('mr');
+                    lItem.setAttribute('data-action', 'mr');
 
-			} else if (dataAction == 'sl'){
+                    allItems.mr.setAttribute('data-action', 'sr');
+                    allItems.mr.classList.remove('mr');
+                    allItems.mr.classList.add('sr');
 
-				var newSl = allItems.sr.cloneNode(true);
-				var newMl = allItems.mr.cloneNode(true);
-				
 
-				newMl.setAttribute('data-action', 'sl');
-				newMl.setAttribute('data-meta-node','');
-				newMl.classList.remove('mr');
-				newMl.classList.add('sl');
 
-				newSl.setAttribute('data-action', 'ml');
-				newSl.setAttribute('data-meta-node','');
-				newSl.classList.remove('sr');
-				newSl.classList.add('ml');
+                    currentTarget.insertBefore(newSl, currentTarget.firstChild);
 
+                    setTimeout( function() {
+                        newSl.style.marginLeft = 0;
 
-				newMl.style.marginLeft = (-targetWidth * 2) + 'px';
-				currentTarget.insertBefore(newSl, currentTarget.firstChild);
-				currentTarget.insertBefore(newMl, currentTarget.firstChild);
+                    }, 0);
 
-				lItem.classList.add('sr');
-				lItem.setAttribute('data-action', 'sr');
+                    setTimeout( function() {
+                        allItems.sr.remove();
+                    }, 405);
 
-				allItems.ml.setAttribute('data-action', 'mr');
-				allItems.ml.classList.remove('ml');
-				allItems.ml.classList.add('mr');
+                } else if (dataAction === 'sl'){
 
+                    var newSl = allItems.sr.cloneNode(true);
+                    var newMl = allItems.mr.cloneNode(true);
 
 
-				setTimeout( function() {
-					newMl.style.marginLeft = 0;
-					
-				}, 0);
+                    newMl.setAttribute('data-action', 'sl');
+                    newMl.setAttribute('data-meta-node','');
+                    newMl.classList.remove('mr');
+                    newMl.classList.add('sl');
 
-				setTimeout( function() {
-					allItems.sr.remove();
-					allItems.mr.remove();
-				}, 205);
+                    newSl.setAttribute('data-action', 'ml');
+                    newSl.setAttribute('data-meta-node','');
+                    newSl.classList.remove('sr');
+                    newSl.classList.add('ml');
 
-			} else if (dataAction == 'mr'){
-				
-				var newSr = allItems.sl.cloneNode(true);
-				
-				newSr.setAttribute('data-action', 'sr');
-				newSr.setAttribute('data-meta-node','');
-				newSr.classList.remove('sl');
-				newSr.classList.add('sr');
 
-				allItems.sr.setAttribute('data-action', 'mr');
-				allItems.sr.classList.remove('sr');
-				allItems.sr.classList.add('mr');
+                    newMl.style.marginLeft = (-targetWidth * 2) + 'px';
+                    currentTarget.insertBefore(newSl, currentTarget.firstChild);
+                    currentTarget.insertBefore(newMl, currentTarget.firstChild);
 
-				lItem.classList.add('ml');
-				lItem.setAttribute('data-action', 'ml');
+                    lItem.classList.add('sr');
+                    lItem.setAttribute('data-action', 'sr');
 
-				allItems.ml.setAttribute('data-action', 'sl');
-				allItems.ml.classList.remove('ml');
-				allItems.ml.classList.add('sl');
+                    allItems.ml.setAttribute('data-action', 'mr');
+                    allItems.ml.classList.remove('ml');
+                    allItems.ml.classList.add('mr');
 
 
 
-				currentTarget.appendChild(newSr);
+                    setTimeout( function() {
+                        newMl.style.marginLeft = 0;
 
-				setTimeout( function() {
-					allItems.sl.style.marginLeft = (-targetWidth * 1) + 'px';
-					
-				}, 0);
+                    }, 0);
 
-				setTimeout( function() {
-					allItems.sl.remove();
-				}, 300);
-				
-			} else if (dataAction == 'sr'){
+                    setTimeout( function() {
+                        allItems.sr.remove();
+                        allItems.mr.remove();
+                    }, 205);
 
-				var newSr = allItems.ml.cloneNode(true);
-				var newMr = allItems.sl.cloneNode(true);
+                } else if (dataAction === 'mr'){
 
-				newSr.setAttribute('data-action', 'sr');
-				newSr.setAttribute('data-meta-node','');
-				newSr.classList.remove('ml');
-				newSr.classList.add('sr');
+                    var newSr = allItems.sl.cloneNode(true);
 
-				newMr.setAttribute('data-action', 'mr');
-				newMr.setAttribute('data-meta-node','');
-				newMr.classList.remove('sl');
-				newMr.classList.add('mr');
+                    newSr.setAttribute('data-action', 'sr');
+                    newSr.setAttribute('data-meta-node','');
+                    newSr.classList.remove('sl');
+                    newSr.classList.add('sr');
 
-				allItems.sr.setAttribute('data-action', 'l');
-				allItems.sr.classList.remove('sr');
-				allItems.sr.classList.add('l');
+                    allItems.sr.setAttribute('data-action', 'mr');
+                    allItems.sr.classList.remove('sr');
+                    allItems.sr.classList.add('mr');
 
-				allItems.mr.setAttribute('data-action', 'ml');
-				allItems.mr.classList.remove('mr');
-				allItems.mr.classList.add('ml');
+                    lItem.classList.add('ml');
+                    lItem.setAttribute('data-action', 'ml');
 
-				lItem.classList.add('sl');
-				lItem.setAttribute('data-action', 'sl');
+                    allItems.ml.setAttribute('data-action', 'sl');
+                    allItems.ml.classList.remove('ml');
+                    allItems.ml.classList.add('sl');
 
-				currentTarget.appendChild(newMr);
-				currentTarget.appendChild(newSr);
 
-				setTimeout( function() {
-					allItems.sl.style.marginLeft = (-targetWidth * 2) + 'px';
-					
-				}, 0);
 
-				setTimeout( function() {
-					allItems.sl.remove();
-					allItems.ml.remove();
-				}, 400);
-				
-			}
-		}
-	}
+                    currentTarget.appendChild(newSr);
 
+                    setTimeout( function() {
+                        allItems.sl.style.marginLeft = (-targetWidth * 1) + 'px';
 
+                    }, 0);
 
+                    setTimeout( function() {
+                        allItems.sl.remove();
+                    }, 300);
 
+                } else if (dataAction === 'sr'){
 
-	function getItems() {
+                    var newSr = allItems.ml.cloneNode(true);
+                    var newMr = allItems.sl.cloneNode(true);
 
-		var nodes = teamSlider.querySelectorAll('[data-action]');
+                    newSr.setAttribute('data-action', 'sr');
+                    newSr.setAttribute('data-meta-node','');
+                    newSr.classList.remove('ml');
+                    newSr.classList.add('sr');
 
-		for (var i = 0; i < nodes.length; i++) {
-			var current = nodes[i].getAttribute('data-action');
+                    newMr.setAttribute('data-action', 'mr');
+                    newMr.setAttribute('data-meta-node','');
+                    newMr.classList.remove('sl');
+                    newMr.classList.add('mr');
 
-			if (current == 'sl') {
+                    allItems.sr.setAttribute('data-action', 'l');
+                    allItems.sr.classList.remove('sr');
+                    allItems.sr.classList.add('l');
 
-				var sl = nodes[i];
+                    allItems.mr.setAttribute('data-action', 'ml');
+                    allItems.mr.classList.remove('mr');
+                    allItems.mr.classList.add('ml');
 
-			} else if (current == 'ml'){
+                    lItem.classList.add('sl');
+                    lItem.setAttribute('data-action', 'sl');
 
-				var ml = nodes[i];
+                    currentTarget.appendChild(newMr);
+                    currentTarget.appendChild(newSr);
 
-			} else if (current == 'mr'){
+                    setTimeout( function() {
+                        allItems.sl.style.marginLeft = (-targetWidth * 2) + 'px';
 
-					var mr = nodes[i];
+                    }, 0);
 
-			} else if (current == 'sr'){
+                    setTimeout( function() {
+                        allItems.sl.remove();
+                        allItems.ml.remove();
+                    }, 400);
 
-				var sr = nodes[i];
+                }
+            }
+        }
 
-			}
-		}
 
-		var items = {sl, ml, mr, sr};
 
-		return items;
-	}
 
 
-// cuisine switching 
+        function getItems() {
 
-	var cuisineListener = {
-		subscribe: 'fit',
-		week: 1,
-		calories: '1200',
-		day: 'mo',
-		cuisines: 5
-	}
+            var nodes = teamSlider.querySelectorAll('[data-action]');
 
-	var subscribe = document.getElementById('subscribe');
-	var subscribeItems = document.getElementById('subscribe-items');
-	var cuisineWeek = document.getElementById('cuisine-week');	
-	var cuisines_3_5 = document.getElementById('cuisines_3_5');
-	var allCuisines = document.getElementById('all-cuisines');
+            for (var i = 0; i < nodes.length; i++) {
+                var current = nodes[i].getAttribute('data-action');
 
-	subscribe.addEventListener('click', setSubscribe, false);
-	subscribeItems.addEventListener('click', setSubscribeItems, false);
-	cuisineWeek.addEventListener('click', setCuisineWeek, false);
-	cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
-	
+                if (current === 'sl') {
 
-	function setSubscribe(event) {
-		enableBlock(event);
-	}
+                    var sl = nodes[i];
 
-	function setSubscribeItems(event) {
-		enableBlock(event);
-	}
+                } else if (current === 'ml'){
 
-	function setCuisineWeek(event) {
-		enableBlock(event);
-	}
+                    var ml = nodes[i];
 
-	function setCuisines_3_5(event) {
-		enableBlock(event);
-	}
+                } else if (current === 'mr'){
 
-	getStartCuisine();
+                    var mr = nodes[i];
 
+                } else if (current === 'sr'){
 
+                    var sr = nodes[i];
 
+                }
+            }
 
-	function getStartCuisine() {
-		getCurrentDate ();
-		selectCuisineItem();
-	}
+            var items = {sl:sl, ml:ml, mr:mr, sr:sr};
 
+            return items;
+        }
 
-	function getCurrentDate () {
-	
-		var date = new Date();
 
-		Date.prototype.getWeekNumber = function(){
-			var d = new Date(+this);
-			d.setHours(0,0,0,0);
-			d.setDate(d.getDate()+4-(d.getDay()||7));
-			return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
-		};
+        // cuisine switching
 
-		var weekNumber = date.getWeekNumber();
-		var dayNumber = date.getDay();
-		var hourNumber = date.getHours();
+        var cuisineListener = {
+            subscribe: 'stand',
+            week: 1,
+            calories: '1200',
+            day: 'mo',
+            cuisines: 5,
+            price: '280/320'
+        }
 
-		getWeek(weekNumber, dayNumber, hourNumber);
+        var subscribe = document.getElementById('subscribe');
+        var subscribeItems = document.getElementById('subscribe-items');
+        var cuisineWeek = document.getElementById('cuisine-week');
+        // var cuisines_3_5 = document.getElementById('cuisines_3_5');
+        var allCuisines = document.getElementById('all-cuisines');
 
-	}
+        if (subscribe) {
+            subscribe.addEventListener('click', setSubscribe, false);
+            subscribeItems.addEventListener('click', setSubscribeItems, false);
+            cuisineWeek.addEventListener('click', setCuisineWeek, false);
+            // cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
+        }
 
 
-	function getWeek(weekNumber, dayNumber, hourNumber) {
-		// there are 2 weeks - №1 and №2		
-		cuisineListener.week =weekNumber % 2 + 1;
-		
-		if (dayNumber == 0 && hourNumber >= 5) {			
-			cuisineListener.week = (weekNumber + 1) % 2 + 1;
-		}
-	}
+        function setSubscribe(event) {
+            enableBlock(event);
+        }
 
+        function setSubscribeItems(event) {
+            enableBlock(event);
+        }
 
-	function enableBlock(event) {
-		var e = getTarget(event);
-		if (e != undefined) {
-			var dataAction = e.target.getAttribute('data-action');
-			var dataIdentifier = e.target.getAttribute('data-identifier');
+        function setCuisineWeek(event) {
+            enableBlock(event);
+        }
 
-			highlight (e.target);
+        getStartCuisine();
 
-			searchByAttribute(dataAction, dataIdentifier, e.target);
 
-			changeListener(dataIdentifier);			
-		}		
-	} 
+        function getStartCuisine() {
+            getCurrentDate ();
+            selectCuisineItem();
+        }
 
 
-	function searchByAttribute(action, identifier, target) {
-		var nodes = document.querySelectorAll('[' + action + ']');
+        function getCurrentDate () {
 
-		for (var i = 0; i < nodes.length; i++) {
-			var currentIdentifier = nodes[i].getAttribute(action);
+            var date = new Date();
 
-			if(currentIdentifier == identifier) {
-				nodes[i].classList.remove('disable');
-			} else {
-				nodes[i].classList.add('disable');
-			}
-		}	
-	}
+            Date.prototype.getWeekNumber = function(){
+                var d = new Date(+this);
+                d.setHours(0,0,0,0);
+                d.setDate(d.getDate()+4-(d.getDay()||7));
+                return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
+            };
 
-	function changeListener(identifier) {
-		if(event.currentTarget == subscribe) {
-			cuisineListener.subscribe = identifier;
+            var weekNumber = date.getWeekNumber();
+            var dayNumber = date.getDay();
+            var hourNumber = date.getHours();
 
-			if (identifier == 'fit') {
-				cuisineListener.calories = '1200';
-			} else if (identifier == 'prem') {
-				cuisineListener.calories = '1200';
-			} else if (identifier == 'veg') {
-				cuisineListener.calories = '1200';
-			}
+            getWeek(weekNumber, dayNumber, hourNumber);
 
-			checkHighLightedItem();
+        }
 
-		} else if (event.currentTarget == subscribeItems) {
-		 if(identifier)	cuisineListener.calories = identifier;
-		} else if (event.currentTarget == cuisineWeek) {
-			cuisineListener.day = identifier;
-		} else if (event.currentTarget == cuisines_3_5) {
-			cuisineListener.cuisines = identifier;
-		}
 
-		selectCuisineItem();
-	}
+        function getWeek(weekNumber, dayNumber, hourNumber) {
+            // there are 2 weeks - №1 and №2
+            cuisineListener.week = weekNumber % 2 + 1;
 
-	function selectCuisineItem() {
-		var selector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.calories + '-' + cuisineListener.day;
-		var currentItem = document.getElementById(selector);
-		console.log(selector);
-		if (currentItem) {
-		
-			for(var i = 0; i < allCuisines.children.length; i++) {
-				allCuisines.children[i].classList.add('disable');
-			}
+            if (dayNumber === 0 && hourNumber >= 15) {
+                cuisineListener.week = (weekNumber + 1) % 2 + 1;
+            }
+        }
 
-			currentItem.classList.remove('disable');
-		}
-	}
 
-	function checkHighLightedItem() {
+        function enableBlock(event) {
+            var e = getTarget(event);
+            if (e !== undefined) {
+                var dataAction = e.target.getAttribute('data-action');
+                var dataIdentifier = e.target.getAttribute('data-identifier');
 
-		var items = subscribeItems.querySelectorAll('[' + 'data-identifier' + ']');
+                highlight (e.target);
 
-		for (var i = 0; i < items.length; i++) {
-			var itemIdentifier = items[i].getAttribute('data-identifier');
-			
-			if (cuisineListener.calories == itemIdentifier) {
-				highlight (items[i]);
-			}
-		}		
-	}
+                searchByAttribute(dataAction, dataIdentifier, e.target);
 
+                changeListener(dataIdentifier, e);
+            }
+        }
 
-// reviewsSlider browsing/opening
 
+        function searchByAttribute(action, identifier, target) {
+            var nodes = document.querySelectorAll('[' + action + ']');
 
-	var reviewsSlider = document.getElementById('reviews-slider');
-	var reviewsSliderInner = document.getElementById('reviews-slider-inner');
-	var slidesOnPage = reviewsSlider.getAttribute('data-slides-onpage');
-	var reviewsSliderNavBtn = document.getElementById('reviews-slider-nav-btn');
-	var buttonsQuantity = Math.ceil(reviewsSliderInner.children.length / +slidesOnPage);
-	var body = document.querySelectorAll('body')[0];
+            if(action === 'data-subscribe'){
 
-	var reviewsSliderNavArw = document.getElementById('reviews-slider-nav-arw');
+                $(nodes).hide();
+                $('[data-subscribe="'+identifier+'"]').fadeIn(function(){
+                    $(".subscribe__item>p").addClass("animated zoomIn");
+                });
 
-	var sliderInnerWidth;
-	var sliderInnerMargin = 0;
+            } else {
+                for (var i = 0; i < nodes.length; i++) {
+                    var currentIdentifier = nodes[i].getAttribute(action);
 
-	var currentScreenWidth;
+                    if(currentIdentifier === identifier) {
+                        nodes[i].classList.remove('disable');
+                    } else {
+                        nodes[i].classList.add('disable');
+                    }
+                }
+            }
 
-	var coordX;
-	var coordY;
 
+        }
 
+        function changeListener(identifier, event) {
+            if(event.currentTarget === subscribe) {
+                cuisineListener.subscribe = identifier;
 
+                if (identifier === 'fit') {
+                    cuisineListener.calories = '1200';
+                } else if (identifier === 'prem') {
+                    cuisineListener.calories = '1200';
+                } else if (identifier === 'veg') {
+                    cuisineListener.calories = '1200';
+                } else if (identifier === 'stand') {
+                    cuisineListener.calories = '1200';
+                }
 
-	createNavButtons();
-	
+                getCurrentDate ();
 
-	reviewsSliderNavBtn.addEventListener('click', btnBrowseSlider, false);
-	reviewsSliderNavArw.addEventListener('click', arwBrowseSlider, false);
-	reviewsSliderInner.addEventListener('click', openCurrentSlide, false);
-	window.addEventListener('resize', resizeFunction, false);
 
+                checkHighLightedItem();
 
-	function btnBrowseSlider(event) {
-		browseReviewsSlider(event);
-	}
+            } else if (event.currentTarget === subscribeItems) {
+                if(identifier)	cuisineListener.calories = identifier;
+            } else if (event.currentTarget === cuisineWeek) {
+                cuisineListener.day = identifier;
+            }
+            //  else if (event.currentTarget == cuisines_3_5) {
+            // 	cuisineListener.cuisines = identifier;
+            // }
 
-	function arwBrowseSlider(event) {
-		browseReviewsSlider(event);
-	}
+            selectCuisineItem();
+        }
 
-	function openCurrentSlide(event) {
-		openSlide(event);
-	}
+        function selectCuisineItem(callback, customSelector) {
 
-	function resizeFunction() {
-		getScreenWidth();
+            var selector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.calories + '-' + cuisineListener.day;
+            var categorySelector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.day;
+            if(customSelector) { categorySelector = customSelector }
 
-		if ((previousScreenWidth >= 768 && currentScreenWidth >= 768) || (previousScreenWidth < 768 && currentScreenWidth < 768)) {
+            if(!window.POSTS[categorySelector]){
+                // с версии 2.8 'ajaxurl' всегда определен в админке
+                var data = {
+                    action: 'hello',
+                    name: categorySelector
+                };
 
-		} else {
-			sliderInnerMargin = 0;
+                if(window.FIRST_LOAD){
+                    showLoader('body');
+                }
 
-			var sliderBtnFirst = reviewsSliderNavBtn.firstChild;
-			highlight (sliderBtnFirst);
-			browseSliderInner('','',reviewsSliderInner);
-		}
+                window.FIRST_LOAD = true;
 
-		previousScreenWidth = currentScreenWidth;
-	}
+                jQuery.post( myPlugin.ajaxurl, data, function(response) {
+                    if(response){
 
+                        var posts = JSON.parse(response);
 
-	function createNavButtons() {
-		var buttons = [];
+                        posts.forEach(function(item, i, arr){
+                            var postItem = $('<div class="tab-block__tab-item disable"><div class="cuisine__item-text-cont"></div></div>');
+                            var postWrapper = $('<div class="cuisine__item"></div>');
 
-		for (var i = 0; i < buttonsQuantity; i++) {
-			buttons[i] = document.createElement('div');
-			buttons[i].classList.add('reviews-slider__button');			
-			buttons[i].setAttribute('data-button-number', i);
-			buttons[i].setAttribute('data-meta-node', '');
-			reviewsSliderNavBtn.appendChild(buttons[i]);
-		}
+                            postWrapper.html(item.post_content);
 
-		buttons[0].classList.add('active');
-	}
+                            postItem.html(postWrapper);
+                            postItem.attr('id', item.post_title);
 
+                            $('#all-cuisines').append(postItem);
+                            removeImgAttribures();
+                        });
 
-	function browseReviewsSlider(event) {
+                        window.POSTS[categorySelector] = true;
 
-		var e = getTarget(event);
+                        switchCuisineItems(selector);
+                    }
+                    if(callback) { callback(); }
+                    hideLoader('body');
 
-		if (e != undefined) {
+                });
+            } else {
+                switchCuisineItems(selector);
+                if(callback) { callback(); }
+                hideLoader('body');
+            }
+        }
 
-				browseSliderInner(e.target, e.currentTarget, reviewsSliderInner);
 
-				highlight (e.target);
+        function switchCuisineItems(selector){
+            var currentItem = document.getElementById(selector);
 
-		}
-	}
+            console.log(selector);
 
+            cuisineListener.price = $('#' + selector + ' .cuisine__item-price-text' +'[data-cuisine-qount = 5]').html();
 
+            // cuisineListener.cuisines
 
+            if (currentItem) {
 
-	function openSlide(event) {
+                for(var i = 0; i < allCuisines.children.length; i++) {
+                    allCuisines.children[i].classList.add('disable');
+                }
 
-		getScreenWidth();
-		var e = getTarget(event);
-		var target = e.target;
-		var currentTarget = e.currentTarget
+                currentItem.classList.remove('disable');
+            }
+        }
 
-		coordX = event.clientX;
-		coordY = event.clientY;
+        function checkHighLightedItem() {
 
-		if (e != undefined) {
-			if (currentScreenWidth > 768) {
-				createNewNode(target, coordX, coordY);
-			}
-		}
-	}
+            var items = subscribeItems.querySelectorAll('[' + 'data-identifier' + ']');
 
+            for (var i = 0; i < items.length; i++) {
+                var itemIdentifier = items[i].getAttribute('data-identifier');
 
-	function createNewNode(target, coordX, coordY) {
-		var currentSlideSrc = target.getAttribute('src'); 
-		var currentTagName = target.tagName; 
-		var nodeContainer = document.createElement('div');
-		var node = document.createElement(currentTagName);
+                if (cuisineListener.calories === itemIdentifier) {
+                    highlight (items[i]);
+                }
+            }
+        }
 
-		node.setAttribute('src', currentSlideSrc);
-		node.classList.add('reviews-slider__opened-item');
 
-		node.style.top = 'calc(' + coordY +'px' + ' - ' + "50%)";
-		node.style.left = 'calc(' + coordX +'px' + ' - ' + "50%)";
+        // reviewsSlider browsing/opening
 
-		nodeContainer.classList.add('reviews-slider__opened-item-cont');
-		nodeContainer.setAttribute('id', 'reveiws-open-container');
-		nodeContainer.addEventListener('click', removeNode, false);
 
-		window.addEventListener('scroll', removeNode, false);
+        var reviewsSlider = document.getElementById('reviews-slider');
 
-		nodeContainer.appendChild(node);
-		body.appendChild(nodeContainer);
+        if (reviewsSlider) {
+            var reviewsSliderInner = document.getElementById('reviews-slider-inner');
+            var slidesOnPage = reviewsSlider.getAttribute('data-slides-onpage');
+            var reviewsSliderNavBtn = document.getElementById('reviews-slider-nav-btn');
+            var buttonsQuantity = Math.ceil(reviewsSliderInner.children.length / +slidesOnPage);
+            var body = document.querySelectorAll('body')[0];
 
-		setTimeout( function() {
-			node.classList.add('visible');
-			node.style.top ='';
-			node.style.left = '';
-		}, 0);
-	}
+            var reviewsSliderNavArw = document.getElementById('reviews-slider-nav-arw');
 
+            var sliderInnerWidth;
+            var sliderInnerMargin = 0;
 
-	function removeNode(event) {
-		var currentTarget;
-		var node;
+            var currentScreenWidth;
 
-		if (event.type !== 'scroll') {
-			currentTarget = event.currentTarget;			
-		} else {
-			currentTarget = document.getElementById('reveiws-open-container');
-		}
+            var coordX;
+            var coordY;
 
-		node = currentTarget.firstChild;
-		node.classList.remove('visible');
-		
-		node.style.top = 'calc(' + coordY +'px' + ' - ' + "5%)";
-		node.style.left = 'calc(' + coordX +'px' + ' - ' + "5%)";
 
-		setTimeout( function() {
-			body.removeChild(currentTarget);
-		}, 200);
 
-		window.removeEventListener('scroll', removeNode, false);
-	}
 
+            createNavButtons();
 
-	function browseSliderInner(target, currentTarget, slider) {
-		var allSlides = reviewsSliderInner.children.length;
 
+            reviewsSliderNavBtn.addEventListener('click', btnBrowseSlider, false);
+            reviewsSliderNavArw.addEventListener('click', arwBrowseSlider, false);
+            reviewsSliderInner.addEventListener('click', openCurrentSlide, false);
+            window.addEventListener('resize', resizeFunction, false);
 
-		if (currentTarget == reviewsSliderNavBtn) {
 
-			var dataButtonNumber = target.getAttribute('data-button-number');
-			var rest = allSlides % slidesOnPage;
-			var integer = reviewsSliderInner.children.length/3 - rest;	
+            function btnBrowseSlider(event) {
+                browseReviewsSlider(event);
+            }
 
-			// 3.125 - margin left for items
+            function arwBrowseSlider(event) {
+                browseReviewsSlider(event);
+            }
 
-			if(target != reviewsSliderNavBtn.lastChild) {
-				sliderInnerMargin = -dataButtonNumber * (100 + 3.125);
-			} else {
-				sliderInnerMargin = -(dataButtonNumber - 1 + (rest/slidesOnPage)) * (100 + 3.125);
-			}
+            function openCurrentSlide(event) {
+                openSlide(event);
+            }
 
-		} else if (currentTarget == reviewsSliderNavArw) {
+            function resizeFunction() {
+                getScreenWidth();
 
-			var arrow = target.getAttribute('data-action');
+                if ((previousScreenWidth >= 768 && currentScreenWidth >= 768) || (previousScreenWidth < 768 && currentScreenWidth < 768)) {
 
-			if (arrow == 'left') {
-				sliderInnerMargin += 100;
+                } else {
+                    sliderInnerMargin = 0;
 
-				if( sliderInnerMargin > 0 ) {
-					sliderInnerMargin = 0;
-				}
+                    var sliderBtnFirst = reviewsSliderNavBtn.firstChild;
+                    highlight (sliderBtnFirst);
+                    browseSliderInner('','',reviewsSliderInner);
+                }
 
-			} else if (arrow == 'right') {
-				sliderInnerMargin -= 100;
+                previousScreenWidth = currentScreenWidth;
+            }
 
-				if( sliderInnerMargin <= (-allSlides * 100) ) {
-					sliderInnerMargin = -(allSlides - 1) * 100;
-				}
-				
-			}
-		}
 
-		slider.children[0].style.marginLeft = sliderInnerMargin + '%';
-	}
+            function createNavButtons() {
+                var buttons = [];
 
+                for (var i = 0; i < buttonsQuantity; i++) {
+                    buttons[i] = document.createElement('div');
+                    buttons[i].classList.add('reviews-slider__button');
+                    buttons[i].setAttribute('data-button-number', i);
+                    buttons[i].setAttribute('data-meta-node', '');
+                    reviewsSliderNavBtn.appendChild(buttons[i]);
+                }
 
-	function highlight (object) {
-		for(var i = 0; i < object.parentNode.children.length;i++){
-			object.parentNode.children[i].classList.remove('active');
-		}
-		object.classList.add('active');
-	}
+                buttons[0].classList.add('active');
+            }
 
 
+            function browseReviewsSlider(event) {
 
-	var currentScreenWidth;
-	var previousScreenWidth = getScreenWidth();
+                var e = getTarget(event);
 
-	function getScreenWidth() {
-		currentScreenWidth = document.documentElement.clientWidth;
-		return currentScreenWidth;
-	}
+                if (e !== undefined) {
 
+                    browseSliderInner(e.target, e.currentTarget, reviewsSliderInner);
 
-	// Forms
+                    highlight (e.target);
 
+                }
+            }
 
-	document.body.addEventListener('click', switchNode, false);
 
-	function switchNode(event) {
-		var e = getTarget(event);
 
-		if (e != undefined) {
-			var target = e.target;
-			var action = target.getAttribute('data-action');
-			var targetNodeSelector = target.getAttribute('data-target');
-			var targetNode = document.getElementById(targetNodeSelector);
 
-			if (targetNode) {
+            function openSlide(event) {
 
-				if (action == 'activate') {
-					activateNode(targetNode);
-				} else if (action == 'deactivate'){
-					deactivateNode(targetNode);
-				}
-			}
-		}	
-	}
+                getScreenWidth();
+                var e = getTarget(event);
+                var target = e.target;
+                var currentTarget = e.currentTarget;
 
-	function activateNode(targetNode) {
-		targetNode.classList.add('active');	
-		selectOtions(targetNode);	
-	}
+                coordX = event.clientX;
+                coordY = event.clientY;
 
-	function deactivateNode(targetNode) {
-		targetNode.classList.remove('active');		
-	}
+                if (e !== undefined) {
+                    if (currentScreenWidth > 768) {
+                        createNewNode(target, coordX, coordY);
+                    }
+                }
+            }
 
 
+            function createNewNode(target, coordX, coordY) {
+                var currentSlideSrc = target.getAttribute('src');
+                var currentTagName = target.tagName;
+                var nodeContainer = document.createElement('div');
+                var node = document.createElement(currentTagName);
 
-	// Select options
+                node.setAttribute('src', currentSlideSrc);
+                node.classList.add('reviews-slider__opened-item');
 
-	
-	function selectOtions (targetNode) {
-		var form = document.forms[1];
-		var selectSubscribe = form.elements.menu77;
-		var selectCalories = form.elements.menu29;
-		var selectCuisines = form.elements.menu104;
-		
+                node.style.top = 'calc(' + coordY +'px' + ' - ' + "50%)";
+                node.style.left = 'calc(' + coordX +'px' + ' - ' + "50%)";
 
-		if (cuisineListener.subscribe == 'fit') {
-				selectSubscribe.selectedIndex = 0;
-		} else if(cuisineListener.subscribe == 'prem') {
-				selectSubscribe.selectedIndex = 1;				
-		} else if (cuisineListener.subscribe == 'veg') {
-				selectSubscribe.selectedIndex = 2;
-		}
+                nodeContainer.classList.add('reviews-slider__opened-item-cont');
+                nodeContainer.setAttribute('id', 'reveiws-open-container');
+                nodeContainer.addEventListener('click', removeNode, false);
 
+                window.addEventListener('scroll', removeNode, false);
 
-		if (cuisineListener.calories == '1200') {
-				selectCalories.selectedIndex = 0;
-		} else if(cuisineListener.calories == '1500') {
-				selectCalories.selectedIndex = 1;				
-		} else if (cuisineListener.calories == '2000') {
-				selectCalories.selectedIndex = 2;
-		} else if (cuisineListener.calories == '2500') {
-				selectCalories.selectedIndex = 3;
-		}
+                nodeContainer.appendChild(node);
+                body.appendChild(nodeContainer);
 
+                setTimeout( function() {
+                    node.classList.add('visible');
+                    node.style.top ='';
+                    node.style.left = '';
+                }, 0);
+            }
 
-		if (+cuisineListener.cuisines == '3') {
-			selectCuisines.selectedIndex = 0;
-		} else if (+cuisineListener.cuisines == '5') {
-			selectCuisines.selectedIndex = 1;
-		}
-	}
 
-}());
+            function removeNode(event) {
+                var currentTarget;
+                var node;
 
-  
+                if (event.type !== 'scroll') {
+                    currentTarget = event.currentTarget;
+                } else {
+                    currentTarget = document.getElementById('reveiws-open-container');
+                }
+
+                node = currentTarget.firstChild;
+                node.classList.remove('visible');
+
+                node.style.top = 'calc(' + coordY +'px' + ' - ' + "5%)";
+                node.style.left = 'calc(' + coordX +'px' + ' - ' + "5%)";
+
+                setTimeout( function() {
+                    body.removeChild(currentTarget);
+                }, 200);
+
+                window.removeEventListener('scroll', removeNode, false);
+            }
+
+
+            function browseSliderInner(target, currentTarget, slider) {
+                var allSlides = reviewsSliderInner.children.length;
+
+
+                if (currentTarget === reviewsSliderNavBtn) {
+
+                    var dataButtonNumber = target.getAttribute('data-button-number');
+                    var rest = allSlides % slidesOnPage;
+                    var integer = reviewsSliderInner.children.length/3 - rest;
+
+                    // 3.125 - margin left for items
+
+                    if(target !== reviewsSliderNavBtn.lastChild) {
+                        sliderInnerMargin = -dataButtonNumber * (100 + 3.125);
+                    } else {
+                        sliderInnerMargin = -(dataButtonNumber - 1 + (rest/slidesOnPage)) * (100 + 3.125);
+                    }
+
+                } else if (currentTarget === reviewsSliderNavArw) {
+
+                    var arrow = target.getAttribute('data-action');
+
+                    if (arrow === 'left') {
+                        sliderInnerMargin += 100;
+
+                        if( sliderInnerMargin > 0 ) {
+                            sliderInnerMargin = 0;
+                        }
+
+                    } else if (arrow === 'right') {
+                        sliderInnerMargin -= 100;
+
+                        if( sliderInnerMargin <= (-allSlides * 100) ) {
+                            sliderInnerMargin = -(allSlides - 1) * 100;
+                        }
+
+                    }
+                }
+
+                slider.children[0].style.marginLeft = sliderInnerMargin + '%';
+            }
+
+
+            function highlight (object) {
+                for(var i = 0; i < object.parentNode.children.length;i++){
+                    object.parentNode.children[i].classList.remove('active');
+                }
+                object.classList.add('active');
+            }
+
+        }
+
+
+        var currentScreenWidth;
+        var previousScreenWidth = getScreenWidth();
+
+        function getScreenWidth() {
+            currentScreenWidth = document.documentElement.clientWidth;
+            return currentScreenWidth;
+        }
+
+
+
+
+        document.body.addEventListener('click', switchNode, false);
+
+        function switchNode(event) {
+            var e = getTarget(event);
+
+            if (e !== undefined) {
+                var target = e.target;
+                var action = target.getAttribute('data-action');
+                var targetNodeSelector = target.getAttribute('data-target');
+                var targetNode = document.getElementById(targetNodeSelector);
+
+                if (targetNode) {
+
+                    if (action === 'activate') {
+                        activateNode(targetNode);
+                    } else if (action === 'deactivate'){
+                        deactivateNode(targetNode);
+                    }
+                }
+            }
+        }
+
+        function activateNode(targetNode) {
+            targetNode.classList.add('active');
+            selectOtions(targetNode);
+        }
+
+        function deactivateNode(targetNode) {
+            targetNode.classList.remove('active');
+        }
+
+
+
+        // Select options
+
+
+        function selectOtions (targetNode) {
+            var selectSubscribe = document.getElementById('form-input_subscribe');
+            var selectCalories = document.getElementById('form-input_calories');
+
+            var dataSub;
+            var dataCal;
+
+
+            if (cuisineListener.subscribe === 'stand') {
+                selectSubscribe.selectedIndex = 0;
+                dataSub = 'stand';
+            } else if(cuisineListener.subscribe === 'fit') {
+                selectSubscribe.selectedIndex = 1;
+                dataSub = 'fit';
+            } else if (cuisineListener.subscribe === 'prem') {
+                selectSubscribe.selectedIndex = 2;
+                dataSub = 'prem';
+            } else if (cuisineListener.subscribe === 'veg') {
+                selectSubscribe.selectedIndex = 3;
+                dataSub = 'veg';
+            }
+
+
+            if (cuisineListener.calories === '1200') {
+                selectCalories.selectedIndex = 0;
+                dataCal = 1200;
+            } else if(cuisineListener.calories === '1500') {
+                selectCalories.selectedIndex = 1;
+                dataCal = 1500;
+            } else if (cuisineListener.calories === '2000') {
+                selectCalories.selectedIndex = 2;
+                dataCal = 2000;
+            } else if (cuisineListener.calories === '2500') {
+                selectCalories.selectedIndex = 3;
+                dataCal = 2500;
+            }
+
+            setPriceInForm(dataSub, dataCal);
+
+        }
+
+
+        $('#form_2 form').on('change', function (event) {
+
+            var selectSubscribe = document.getElementById('form-input_subscribe').value;
+            var selectCalories = document.getElementById('form-input_calories').value;
+
+            if (selectSubscribe === 'Фитнес') {
+                selectSubscribe = 'fit';
+            } else if(selectSubscribe === 'Премиум') {
+                selectSubscribe = 'prem';
+            } else if (selectSubscribe === 'Вегетарианский') {
+                selectSubscribe = 'veg';
+            } else if (selectSubscribe === 'Стандарт') {
+                selectSubscribe = 'stand';
+            } else if (selectSubscribe === 'Пробный день') {
+                selectSubscribe = 'trial';
+            }
+
+            setPriceInForm(selectSubscribe, selectCalories);
+
+        });
+
+
+
+        function setPriceInForm(subscribe, calories){
+
+            selectCuisineItem(function() {
+                if (subscribe !== 'trial') {
+                    cuisineListener.price = $('#'+subscribe+'-'+cuisineListener.week+'-'+calories+'-'+'mo'+' .cuisine__item-price-text'+'[data-cuisine-qount = 5]').html();
+                } else if(subscribe === 'trial'){
+                    cuisineListener.price = $('#'+subscribe).html();
+                }
+
+                $('#form-input_price').val(cuisineListener.price);
+                console.log(2);
+            }, '#'+subscribe+'-'+cuisineListener.week+'-mo');
+
+        }
+
+
+
+        $("#header-menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+
+        $('#forms').find('.sharedaddy.sd-sharing-enabled').remove();
+
+
+        $('img').each(function(){
+            $(this).removeAttr('height');
+            $(this).removeAttr('width');
+        });
+
+    });
+
+    $("input[type='tel']").mask("+38 (099) 999 99 99");
+
+    function showLoader(selector) {
+        if(!$(selector).length) {
+            return showLoader('body');
+        }
+
+        if($(selector).css('position') === 'static') {
+            $(selector).css({'position' : 'relative'});
+        }
+
+        hideLoader(selector);
+
+        $(selector).append('<div class="loader" style="display: none"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>');
+
+        if($(selector)[0].nodeName === 'BODY') {
+            $(selector).children('.loader').css({
+                position: 'fixed'
+            })
+        }
+
+        $(selector).children('.loader').fadeIn();
+    }
+
+    function hideLoader(selector) {
+        $(selector).children('.loader').fadeOut(function() {
+            $(this).remove()
+        });
+    }
+
+
+    // Header toggling
+    if( $('.how-it-works').length ){
+        toggleHeader();
+
+        $(window).on('scroll', function() {
+            toggleHeader();
+        });
+
+        function toggleHeader() {
+            var $headerMenu = $('.header-menu');
+
+            if( $(window).scrollTop() >= $('.how-it-works').offset().top ){
+                $headerMenu.addClass('header-menu_scrolled');
+            } else {
+                $headerMenu.removeClass('header-menu_scrolled');
+            }
+        }
+    }
+
+    // delete img attributes 'width/height'
+    removeImgAttribures();
+    function removeImgAttribures(){
+        $('img').each(function(){
+            $(this).removeAttr('width').removeAttr('height');
+        });
+    }
+
+}(jQuery));
