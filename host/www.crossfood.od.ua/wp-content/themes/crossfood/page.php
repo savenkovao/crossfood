@@ -333,6 +333,44 @@
 		</div>
 	</section>
 
+
+    <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" style="display: none;">
+        <div class="desserts-drink-container">
+            <p class="descript">
+                <?php $post = get_post($post_id = 3098); echo $post->post_content; ?>
+            </p>
+        </div>
+
+        <div class="desserts-drink-content">
+            <div class="desserts-drinks__item desserts-drinks__desserts-block">
+                <div class="title-3">
+                    <h3 class="title-3__h3 title-3__h3_dark hr-line">Десерты</h3>
+                </div>
+
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ipsa quis similique sit
+                    tenetur. At atque aut distinctio dolore impedit nam natus nihil numquam reprehenderit voluptate.
+                    Asperiores ea laudantium velit.
+                </div>
+            </div>
+
+            <div class="desserts-drinks__item desserts-drinks__drinks-block">
+                <div class="title-3">
+                    <h3 class="title-3__h3 title-3__h3_dark hr-line">Напитки</h3>
+                </div>
+
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum, delectus dignissimos
+                    eligendi error, eveniet fugit impedit iste neque non omnis placeat quam quod repellendus repudiandae
+                    sed temporibus tenetur ullam!
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
 	<section id="news" class="news news_position wrapper">
 		<div class="title-3">
 			<h3 class="title-3__h3 title-3__h3_dark hr-line">Статьи</h3>	
