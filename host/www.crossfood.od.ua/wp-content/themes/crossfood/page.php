@@ -348,7 +348,7 @@
                 </div>
 
                 <div class="desserts-drinks__item-media">
-                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/news-thumbnail.jpg" alt="Десерты Crossfood">
+                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
 
                     <div class="desserts-drinks__btn-cont">
                         <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать десерт</a>
@@ -363,7 +363,7 @@
                 </div>
 
                 <div class="desserts-drinks__item-media">
-                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
+                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">
 
                     <div class="desserts-drinks__btn-cont">
                         <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>
