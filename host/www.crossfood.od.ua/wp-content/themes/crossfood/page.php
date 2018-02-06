@@ -347,11 +347,14 @@
                     <h3 class="title-3__h3 title-3__h3_dark hr-line">Десерты</h3>
                 </div>
 
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ipsa quis similique sit
-                    tenetur. At atque aut distinctio dolore impedit nam natus nihil numquam reprehenderit voluptate.
-                    Asperiores ea laudantium velit.
+                <div class="desserts-drinks__item-media">
+                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/news-thumbnail.jpg" alt="Десерты Crossfood">
+
+                    <div class="desserts-drinks__btn-cont">
+                        <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать десерт</a>
+                    </div>
                 </div>
+
             </div>
 
             <div class="desserts-drinks__item desserts-drinks__drinks-block">
@@ -359,10 +362,12 @@
                     <h3 class="title-3__h3 title-3__h3_dark hr-line">Напитки</h3>
                 </div>
 
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum, delectus dignissimos
-                    eligendi error, eveniet fugit impedit iste neque non omnis placeat quam quod repellendus repudiandae
-                    sed temporibus tenetur ullam!
+                <div class="desserts-drinks__item-media">
+                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
+
+                    <div class="desserts-drinks__btn-cont">
+                        <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -428,7 +433,7 @@
 				
 				
 										<div class="news-item__read-cont">
-											<a href="<?php the_permalink() ?>" class="button button_filled news__button-btn">Читать дальше</a>
+											<a href="<?php the_permalink() ?>" class="button button_def button_filled news__button-btn">Читать дальше</a>
 										</div>
 				
 									</div>
