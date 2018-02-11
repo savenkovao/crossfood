@@ -32,7 +32,7 @@
 
 						<div class="carousel-inner">
 
-							<?php $posts = get_posts ("category_name=drinks&orderby=date"); 
+							<?php $posts = get_posts ("category_name=drinks&orderby=date&numberposts=25");
 										$i = 0;
 							?> 
 							<?php if ($posts) : ?>
