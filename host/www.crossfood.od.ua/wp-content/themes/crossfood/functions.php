@@ -144,7 +144,7 @@ function crossfood_scripts() {
   wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
   wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.47", true);
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/src/js/main.js',"","1.48", true);
 	// wp_enqueue_script( 'ajax-post-load', get_template_directory_uri() . '/src/js/ajax-post-load.js',"","1.015", array('jquery'));
 
 	wp_localize_script('main', 'myPlugin', array(

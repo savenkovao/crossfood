@@ -953,26 +953,35 @@
 
 
 
-    /* Desserts Page*/
 
-    if(window.CONFIG.page === 'desserts'){
-        initDesertsPage();
+    /* Page init */
+    switch(this.CONFIG.page) {
+        case 'desserts'                   : _initDesserts();                 break;
+        case 'drinks'                     : _initDrinks();                   break;
+    }
+    /* Page init */
+
+    function _initDesserts() {
+        _initDDPage('#form_3', 'select[name="menu-230"]');
+    }
+    function _initDrinks() {
+        _initDDPage('#form_4', 'select[name="menu-232"]');
     }
 
-    function initDesertsPage() {
-        var $dessertsForm =  $('#form_3');
-        var $dessertsSelect =  $dessertsForm.find('select[name="menu-230"]');
+    function _initDDPage(form, menuSelect) {
+        var $ddForm =  $(form);
+        var $ddSelect =  $ddForm.find(menuSelect);
+        console.log('asdsad')
+        $ddSelect.children().remove();
 
-        $dessertsSelect.children().remove();
-
-        $('.desserts__title').each(function(i, item){
-            $dessertsSelect.append( '<option>' + $(item).text() + '</option>');
+        $('.dd__title').each(function(i, item){
+            $ddSelect.append( '<option>' + $(item).text() + '</option>');
         });
 
-        $('.desserts__button-cnt').on('click', function(){
-            var currentDessert = $(this).closest('.desserts__item').find('.desserts__title').text();
+        $('.dd__button-cnt').on('click', function(){
+            var currentDessert = $(this).closest('.dd__item').find('.dd__title').text();
 
-            $dessertsSelect.find('option').each(function(i, item){
+            $ddSelect.find('option').each(function(i, item){
                 $(item).removeAttr('selected');
 
                 if($(item).text() === currentDessert){
@@ -983,6 +992,5 @@
     }
 
 
-    /* Desserts Page*/
 
 }(jQuery));

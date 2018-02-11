@@ -1,4 +1,4 @@
-.desserts-banner{
+.dd-banner{
   width: 100%;
   height: 300px;
   height: 30vh;
@@ -16,7 +16,17 @@
   }
 }
 
-.how-it-works_desserts{
+.drinks-banner{
+  background-image: url(@drinks-banner-m);
+
+  @media @tablet {
+    background-image: url(@drinks-banner);
+  }
+}
+
+
+
+.how-it-works_dd{
   padding: 70px 3% 95px;
 
   @media @laptop {
@@ -25,20 +35,32 @@
 }
 
 
-.carousel-control.desserts__carousel-arrow, .desserts_background {
+.carousel-control.dd__carousel-arrow, .dd_background {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent
 }
 
-.desserts_background {
+.dd_background {
   background-image: url(@desserts-bg-m);
   background-size: cover;
   background-position: right;
+
+  @media @tablet {
+      background-image: url(@desserts-bg);
+  }
+}
+
+.drinks_background {
+  background-image: url(@drinks-bg-m);
+
+  @media @tablet {
+    background-image: url(@drinks-bg);
+  }
 }
 
 
-.desserts-block {
+.dd-block {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
@@ -55,98 +77,52 @@
     display: none;
   }
 }
-@media only screen and (min-width: 768px) {
-  .carousel-control.news__carousel-arrow.left {
-    left: 0
-  }
 
-  .carousel-control.news__carousel-arrow.right {
-    right: 0
-  }
 
-  .desserts_background {
-    background-image: url(@desserts-bg)
-  }
-}
-
-.carousel-control.desserts__carousel-arrow, .reviews-slider__arrow {
+.carousel-control.dd__carousel-arrow, .reviews-slider__arrow {
   background-image: url(@slider-arrow-img);
   background-size: cover
 }
 
-.desserts_position {
+.dd_position {
   padding: 70px 3% 95px
 }
 
-@media only screen and (min-width: 980px) {
-  .desserts_position {
-    padding: 96px 0
-  }
-}
-
-
-.desserts__item {
+.dd__item {
   margin: 0 auto;
   box-shadow: none;
   padding: 50px 8%;
   border-radius: 4px;
 }
 
-@media only screen and (min-width: 768px) {
-  .desserts-block {
-    width: auto;
-    max-width: none;
-  }
 
-  .desserts__item-text-cont {
-    min-height: 360px;
-    max-height: 360px
-  }
-}
-
-.desserts__title {
+.dd__title {
   //display: none
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.desserts__item-img-block {
+.dd__item-img-block {
   height: 220px
 }
 
-@media only screen and (min-width: 426px) {
-  .desserts__item-img-block {
-    height: 250px
-  }
-
-  .desserts-notation {
-    font-size: inherit
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .desserts__item-img-block {
-    height: 270px
-  }
-}
-
-.desserts__item-price-block {
+.dd__item-price-block {
   @media @tablet{
     padding-top: 25px;
   }
 }
 
-.desserts__button-cnt{
+.dd__button-cnt{
   padding-top: 25px;
 }
 
-.desserts__item-text-menu {
+.dd__item-text-menu {
   margin: 0;
   min-height: 100px
 }
 
-.carousel-control.desserts__carousel-arrow {
+.carousel-control.dd__carousel-arrow {
   width: 12px;
   height: 32px;
   position: absolute;
@@ -155,17 +131,17 @@
   cursor: pointer
 }
 
-.carousel-control.desserts__carousel-arrow.left {
+.carousel-control.dd__carousel-arrow.left {
   left: 2%;
   background-position: bottom
 }
 
-.carousel-control.desserts__carousel-arrow.right {
+.carousel-control.dd__carousel-arrow.right {
   right: 2%;
   background-position: top
 }
 
-.desserts-notation_position {
+.dd-notation_position {
   display: block;
   width: 90%;
   max-width: 400px;
@@ -173,29 +149,70 @@
   padding-top: 20px;
   padding-bottom: 60px
 }
+.dd-notation {
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .dd__item-img-block {
+    height: 270px
+  }
+}
+
+
+
+@media only screen and (min-width: 980px) {
+  .dd_position {
+    padding: 96px 0
+  }
+}
 
 @media only screen and (min-width: 768px) {
-  .desserts__item-text-menu {
+  .dd__item-text-menu {
     min-height: inherit
   }
 
-  .carousel-control.desserts__carousel-arrow.left {
+  .carousel-control.dd__carousel-arrow.left {
     left: 20px;
   }
 
-  .carousel-control.desserts__carousel-arrow.right {
+  .carousel-control.dd__carousel-arrow.right {
     right:20px;
   }
 
-  .desserts-notation_position {
+  .dd-notation_position {
     max-width: 700px;
     padding-top: 0;
     padding-bottom: 0
   }
+
+  .dd-block {
+    width: auto;
+    max-width: none;
+  }
+
+  .dd__item-text-cont {
+    min-height: 360px;
+    max-height: 360px
+  }
+  .carousel-control.news__carousel-arrow.left {
+    left: 0
+  }
+
+  .carousel-control.news__carousel-arrow.right {
+    right: 0
+  }
 }
 
-.desserts-notation {
-  font-size: inherit;
-  font-weight: 400;
-  line-height: 1
+@media only screen and (min-width: 426px) {
+  .dd__item-img-block {
+    height: 250px
+  }
+
+  .dd-notation {
+    font-size: inherit
+  }
 }
