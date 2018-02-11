@@ -75,7 +75,7 @@
 }
 
 .wpcf7-form p {
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 15px;
   position: relative
@@ -112,16 +112,22 @@
 }
 
 .wpcf7-form-control {
-  width: 90%;
+  width: 100%;
   border: 1px solid #65b22e;
   font-size: 16px;
   margin: 0 auto;
   padding-left: 10px;
   border-radius: 4px;
+  height: 35px;
+
+  @media @tablet {
+    width: 90%;
+  }
 }
 
 .wpcf7-form-control.wpcf7-textarea {
   max-height: 100px;
+  height: 100px;
   resize: none;
 }
 
