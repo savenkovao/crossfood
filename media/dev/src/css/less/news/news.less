@@ -14,7 +14,7 @@
 	
 	@media @tablet {
 		width: auto;
-		max-width: initial;
+		max-width: none;
 	}
 
 }
@@ -110,12 +110,17 @@
 }
 
 .carousel-control.news__carousel-arrow{
-	width: 18px;
-	height: 48px;
+	width: 12px;
+	height: 32px;
 	position: absolute;
-	.top(50%,-,21px);
+	//.top(50%,-,21px);
+	top: 275px;
 	cursor: pointer;
 	.setBackgroundImage(@slider-arrow-img);
+
+	@media @tablet {
+		top: 140px;
+	}
 }
 
 .carousel-control.news__carousel-arrow.left{
