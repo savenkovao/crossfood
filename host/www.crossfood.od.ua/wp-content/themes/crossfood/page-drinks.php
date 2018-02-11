@@ -1,8 +1,8 @@
-<?php get_header('desserts') ?>
+<?php get_header('drinks') ?>
 
     <script>
         window.CONFIG = {
-            page: 'desserts'
+            page: 'drinks'
         }
     </script>
 
@@ -12,19 +12,19 @@
 			<div>
 				<p class="descript">
 
-                    <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
+          <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
 
 				</p>
 			</div>
 		</div>
 	</section>
 
-	<section id="desserts" class="desserts_background">
+	<section id="drinks" class="desserts_background">
 		<div class="desserts_position wrapper">
 
 
 			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_light hr-line">Десерты</h3>
+				<h3 class="title-3__h3 title-3__h3_light hr-line">Напитки</h3>
 			</div>
 
 				
@@ -34,7 +34,7 @@
 
 						<div class="carousel-inner">
 
-							<?php $posts = get_posts ("category_name=desserts&orderby=date"); 
+							<?php $posts = get_posts ("category_name=drinks&orderby=date"); 
 										$i = 0;
 							?> 
 							<?php if ($posts) : ?>
@@ -88,9 +88,9 @@
 												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span> грн/100г.</span>
 											</div>
 
-                                            <div class="subscribe__button-cnt desserts__button-cnt">
-                                                <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
-                                            </div>
+                      <div class="subscribe__button-cnt desserts__button-cnt">
+                          <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
+                      </div>
 
 										</div>
 

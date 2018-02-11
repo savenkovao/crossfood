@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 
     <title>| <?php bloginfo("description"); ?> | - <?php bloginfo("name");?>!</title>
+
 		
-	<meta name="description" content="<?php echo get_post_meta( get_the_ID(), 'news_description', 1); ?>">
 	<meta name="author" content="CrossFood">
 
 	<meta name="robots" content="index, follow"/>
