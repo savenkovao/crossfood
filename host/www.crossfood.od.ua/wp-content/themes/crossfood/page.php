@@ -334,7 +334,7 @@
 	</section>
 
 
-    <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" style="display: none;">
+    <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" <!--style="display: none;"-->>
 <!--        <div class="desserts-drink-container">-->
 <!--            <p class="descript">-->
 <!--                --><?php //$post = get_post($post_id = 3098); echo $post->post_content; ?>

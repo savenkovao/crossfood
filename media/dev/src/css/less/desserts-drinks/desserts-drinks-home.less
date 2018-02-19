@@ -7,10 +7,12 @@
 }
 
 .desserts-drink-content {
+  display: flex;
+  flex-direction: column-reverse;
   padding-top: 40px;
 
   @media @tablet {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 55px;
   }
@@ -18,7 +20,7 @@
 .desserts-drinks__item {
   margin: 0 0 50px;
 
-  &:last-child {
+  &:first-child {
     margin-bottom: 0;
   }
 
@@ -34,13 +36,20 @@
 
 }
 .desserts-drinks__desserts-block {}
-.desserts-drinks__drinks-block {}
+.desserts-drinks__drinks-block {
+  width: 100%;
+
+  @media @tablet {
+    width: 45%;
+  }
+}
 
 .desserts-drinks__item-media {
   position: relative;
   max-width: 460px;
   margin: 70px auto 0;
   overflow: hidden;
+  border-radius: 4px;
 
 
   @media @tablet {
