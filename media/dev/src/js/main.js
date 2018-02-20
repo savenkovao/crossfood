@@ -848,7 +848,7 @@
                 selectSubscribe = 'fit';
             } else if(selectSubscribe === 'Премиум') {
                 selectSubscribe = 'prem';
-            } else if (selectSubscribe === 'Вегетарианский') {
+            } else if (selectSubscribe === 'Без Мяса') {
                 selectSubscribe = 'veg';
             } else if (selectSubscribe === 'Стандарт') {
                 selectSubscribe = 'stand';

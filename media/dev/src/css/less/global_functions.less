@@ -42,8 +42,8 @@
 	height: ~"calc(@{parent}"~"@{operator}"~"@{child})";
 }
 
-.transition(@target, @time, @type:linear){
-	transition: @target @time @type;
+.transition(@time:0.2s, @selector: all, @func: linear){
+	transition: @selector @time @func;
 }
 
 .setButton (@text-color, @bg-color, @border-color, @text-color-h, @border-color-h, @bg-color-h){
