@@ -3357,7 +3357,7 @@ if (typeof jQuery === 'undefined') {
     function _initDDPage(form, menuSelect) {
         var $ddForm =  $(form);
         var $ddSelect =  $ddForm.find(menuSelect);
-        console.log('asdsad')
+
         $ddSelect.children().remove();
 
         $('.dd__title').each(function(i, item){
