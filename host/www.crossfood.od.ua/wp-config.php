@@ -40,7 +40,10 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 /* Первым делом защитимся от того, чтобы никто в открытых wifi сетях не смог подслушать ваш пароль при входе в админ панель wordpress. */
-define('FORCE_SSL_ADMIN', true);
+//define('FORCE_SSL_ADMIN', true);
+
+
+
 
 
 /**#@+
