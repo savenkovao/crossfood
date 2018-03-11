@@ -65,12 +65,12 @@ Disallow: /menu-stand-2
 Disallow: /menu-stand-2/*
 Disallow: /menu-trial
 
-Host: www.crossfood.od.ua
-Sitemap: http://www.crossfood.od.ua/sitemap.xml
-Sitemap: http://www.crossfood.od.ua/sitemap-image.xml
+Host: https://crossfood.od.ua
+Sitemap: https://crossfood.od.ua/sitemap.xml
+Sitemap: https://crossfood.od.ua/sitemap-image.xml
 
 # будет использована роботами Яндекса
 User-Agent: Yandex
-Sitemap: http://www.crossfood.od.ua/sitemap.xml
+Sitemap: https://crossfood.od.ua/sitemap.xml
 Disallow: /sitemap-image.xml
 

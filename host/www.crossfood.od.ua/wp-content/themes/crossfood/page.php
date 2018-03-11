@@ -25,8 +25,8 @@
 					
 					
 
-					<img class="steps__img-desktop" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png" alt="Crossfood - как это работает">
-					<img class="steps__img-mobile" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
+					<img class="steps__img-desktop" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png" alt="Crossfood - как это работает">
+					<img class="steps__img-mobile" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
 
 					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
 				</div>
@@ -348,7 +348,7 @@
                 </div>
 
                 <div class="desserts-drinks__item-media">
-                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
+                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
 
                     <div class="desserts-drinks__btn-cont">
                         <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать десерт</a>
@@ -371,7 +371,7 @@
 <!--                </div>-->
 <!---->
 <!--                <div class="desserts-drinks__item-media">-->
-<!--                    <img class="desserts-drinks__item-img" src="http://www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">-->
+<!--                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">-->
 <!---->
 <!--                    <div class="desserts-drinks__btn-cont">-->
 <!--                        <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>-->
