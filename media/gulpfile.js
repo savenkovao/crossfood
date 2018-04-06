@@ -65,7 +65,7 @@ gulp.task('less', function(){
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(['!dev/src/js/compiled/main.js', path.js + 'bootstrap.js', path.js + 'masked-input-plugin.js', path.js + 'main.js'])
+    return gulp.src(['!dev/src/js/compiled/main.js', path.js + 'bootstrap.js', path.js + 'jquery.touchSwipe.min.js', path.js + 'masked-input-plugin.js', path.js + 'main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(path.js + 'compiled/'))
         .pipe(uglify())

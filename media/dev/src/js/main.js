@@ -25,37 +25,37 @@
 
         // brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
-
-        function enableBrgrMenu(event){
-            var e = getTarget(event);
-
-            if (e !== undefined) {
-                count++;
-                if(count%2===0) {
-                    deactivateBrgrMenu();
-
-                } else {
-                    activateBrgrMenu();
-
-                }
-            }
-        }
-
-        function activateBrgrMenu(){
-            menu.style.display = 'block';
-            stick1.classList.add('stick-1-active');
-            stick2.classList.add('disable');
-            stick3.classList.add('stick-3-active');
-
-        }
-
-        function deactivateBrgrMenu(){
-            menu.style.display = '';
-            stick1.classList.remove('stick-1-active');
-            stick2.classList.remove('disable');
-            stick3.classList.remove('stick-3-active');
-            count = 0;
-        }
+        //
+        // function enableBrgrMenu(event){
+        //     var e = getTarget(event);
+        //
+        //     if (e !== undefined) {
+        //         count++;
+        //         if(count%2===0) {
+        //             deactivateBrgrMenu();
+        //
+        //         } else {
+        //             activateBrgrMenu();
+        //
+        //         }
+        //     }
+        // }
+        //
+        // function activateBrgrMenu(){
+        //     menu.style.display = 'block';
+        //     stick1.classList.add('stick-1-active');
+        //     stick2.classList.add('disable');
+        //     stick3.classList.add('stick-3-active');
+        //
+        // }
+        //
+        // function deactivateBrgrMenu(){
+        //     menu.style.display = '';
+        //     stick1.classList.remove('stick-1-active');
+        //     stick2.classList.remove('disable');
+        //     stick3.classList.remove('stick-3-active');
+        //     count = 0;
+        // }
 
         // team slider browsing
 
@@ -371,7 +371,7 @@
             // there are 2 weeks - №1 and №2
             cuisineListener.week = weekNumber % 2 + 1;
 
-            if (dayNumber === 0 && hourNumber >= 15) {
+            if (dayNumber === 0 && hourNumber >= 12) {
                 cuisineListener.week = (weekNumber + 1) % 2 + 1;
             }
         }
@@ -950,8 +950,59 @@
             $(this).removeAttr('width').removeAttr('height');
         });
     }
+    // delete img attributes 'width/height'
 
 
+    /* Bootstrap carousel swipe feature */
+    $(".carousel").swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction == 'left') $(this).carousel('next');
+            if (direction == 'right') $(this).carousel('prev');
+        },
+        allowPageScroll:"vertical"
+    });
+    /* Bootstrap carousel swipe feature */
+
+
+
+    /* set user-data into forms */
+    setUserData();
+
+    function setUserData() {
+        var $form = $('.wpcf7-form');
+        var userData = localStorage.getItem('userInfo') ? JSON.parse( localStorage.getItem('userInfo') ) : null;
+
+        if (userData) {
+            setUserData()
+        }
+
+        $('[data-target^="form_"]').on('click', function () {
+            if (userData) {
+                setUserData()
+            }
+        });
+
+        $form.on('submit', function (e) {
+            var userInfo = {
+                name:$form.find('[name="your-name"]').val() || '',
+                email:$form.find('[name=your-email]').val() || '',
+                phone:$form.find('[name="tel-611"]').val() || '',
+            };
+
+            console.log(localStorage.userInfo)
+
+            localStorage.setItem( 'userInfo',  JSON.stringify(userInfo) );
+        });
+
+        function setUserData() {
+            $form.find('[name="your-name"]').val( userData.name );
+            $form.find('[name=your-email]').val( userData.email );
+            $form.find('[name="tel-611"]').val( userData.phone );
+        }
+
+    }
+
+    /* set user-data into forms */
 
 
     /* Page init */
