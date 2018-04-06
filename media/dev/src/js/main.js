@@ -989,8 +989,6 @@
                 phone:$form.find('[name="tel-611"]').val() || '',
             };
 
-            console.log(localStorage.userInfo)
-
             localStorage.setItem( 'userInfo',  JSON.stringify(userInfo) );
         });
 
