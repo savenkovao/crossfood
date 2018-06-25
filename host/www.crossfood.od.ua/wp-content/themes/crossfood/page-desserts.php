@@ -85,7 +85,7 @@
 											</div>
 
 											<div class="cuisine__item-price-block dd__item-price-block">
-												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span> грн/100г.</span>
+												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span>
 											</div>
 
                                             <div class="subscribe__button-cnt dd__button-cnt">
