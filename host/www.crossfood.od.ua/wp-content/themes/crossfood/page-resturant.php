@@ -11,9 +11,7 @@
 		<div class="wrapper how-it-works_position how-it-works_dd">
 			<div>
 				<p class="descript">
-
-                    <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
-
+            <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
 				</p>
 			</div>
 		</div>
@@ -24,7 +22,7 @@
 
 
 			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_light hr-line">Десерты</h3>
+				<h3 class="title-3__h3 title-3__h3_light hr-line">Ресторан Crossfood</h3>
 			</div>
 
 				

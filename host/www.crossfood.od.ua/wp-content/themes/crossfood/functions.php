@@ -174,6 +174,8 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 		    }
 			});
     }
+
+
 }, false );
 </script>
 <?php

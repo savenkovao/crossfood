@@ -88,9 +88,9 @@
 												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span>
 											</div>
 
-                                            <div class="subscribe__button-cnt dd__button-cnt">
-                                                <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
-                                            </div>
+                      <div class="subscribe__button-cnt dd__button-cnt">
+                          <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
+                      </div>
 
 										</div>
 

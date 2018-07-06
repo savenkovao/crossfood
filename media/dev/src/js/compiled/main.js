@@ -3184,9 +3184,11 @@ if (typeof jQuery === 'undefined') {
 
 
         // Select options
+        $('[data-target="form_2"]').on('click', function () {
+          selectOtions ();
+        });
 
-
-        function selectOtions (targetNode) {
+        function selectOtions () {
             var selectSubscribe = document.getElementById('form-input_subscribe');
             var selectCalories = document.getElementById('form-input_calories');
 
@@ -3227,7 +3229,7 @@ if (typeof jQuery === 'undefined') {
         }
 
 
-        $('#form_2 form').on('change', function (event) {
+        $('#wpcf7-f2087-o7 form').on('change', function (event) {
 
             var selectSubscribe = document.getElementById('form-input_subscribe').value;
             var selectCalories = document.getElementById('form-input_calories').value;
@@ -3377,8 +3379,6 @@ if (typeof jQuery === 'undefined') {
                 phone:$form.find('[name="tel-611"]').val() || '',
             };
 
-            console.log(localStorage.userInfo)
-
             localStorage.setItem( 'userInfo',  JSON.stringify(userInfo) );
         });
 
@@ -3401,10 +3401,10 @@ if (typeof jQuery === 'undefined') {
     /* Page init */
 
     function _initDesserts() {
-        _initDDPage('#form_3', 'select[name="menu-230"]');
+        _initDDPage('#wpcf7-f3052-o5', 'select[name="menu-230"]');
     }
     function _initDrinks() {
-        _initDDPage('#form_4', 'select[name="menu-232"]');
+        _initDDPage('#wpcf7-f3143-o13', 'select[name="menu-232"]');
     }
 
     function _initDDPage(form, menuSelect) {
