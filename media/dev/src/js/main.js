@@ -1013,7 +1013,7 @@
     /* Page init */
 
     function _initDesserts() {
-        _initDDPage('#wpcf7-f3052-o5', 'select[name="menu-230"]');
+        _initDDPage('#wpcf7-f3052-o6', 'select[name="menu-230"]');
     }
     function _initDrinks() {
         _initDDPage('#wpcf7-f3143-o13', 'select[name="menu-232"]');
