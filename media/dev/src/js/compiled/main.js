@@ -3390,6 +3390,16 @@ if (typeof jQuery === 'undefined') {
 
     }
 
+
+    getText();
+    function getText(){
+        var date = new Date();
+        if(date.getHours() > 12) {
+            jQuery('#popup-success-content').html(' :) ')
+        }
+    }
+
+
     /* set user-data into forms */
 
 
@@ -3404,7 +3414,7 @@ if (typeof jQuery === 'undefined') {
         _initDDPage('#wpcf7-f3052-o6', 'select[name="menu-230"]');
     }
     function _initDrinks() {
-        _initDDPage('#wpcf7-f3143-o13', 'select[name="menu-232"]');
+        _initDDPage('#wpcf7-f3143-o5', 'select[name="menu-232"]');
     }
 
     function _initDDPage(form, menuSelect) {

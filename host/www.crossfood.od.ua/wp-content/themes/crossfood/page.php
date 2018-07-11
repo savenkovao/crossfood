@@ -335,11 +335,11 @@
 
 
     <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" <!--style="display: none;"-->>
-<!--        <div class="desserts-drink-container">-->
-<!--            <p class="descript">-->
-<!--                --><?php //$post = get_post($post_id = 3098); echo $post->post_content; ?>
-<!--            </p>-->
-<!--        </div>-->
+        <div class="desserts-drink-container">
+            <p class="descript">
+                <?php $post = get_post($post_id = 3098); echo $post->post_content; ?>
+            </p>
+        </div>
 
         <div class="desserts-drink-content">
             <div class="desserts-drinks__item desserts-drinks__desserts-block">
@@ -357,27 +357,27 @@
 
             </div>
 
-            <div class="desserts-drinks__item desserts-drinks__drinks-block" style="display: flex; align-items: center;">
-                <div class="desserts-drink-container">
-                    <p class="descript">
-                        <?php $post = get_post($post_id = 3098); echo $post->post_content; ?>
-                    </p>
-                </div>
-            </div>
-
-<!--            <div class="desserts-drinks__item desserts-drinks__drinks-block">-->
-<!--                <div class="title-3">-->
-<!--                    <h3 class="title-3__h3 title-3__h3_dark hr-line">Напитки</h3>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="desserts-drinks__item-media">-->
-<!--                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">-->
-<!---->
-<!--                    <div class="desserts-drinks__btn-cont">-->
-<!--                        <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>-->
-<!--                    </div>-->
+<!--            <div class="desserts-drinks__item desserts-drinks__drinks-block" style="display: flex; align-items: center;">-->
+<!--                <div class="desserts-drink-container">-->
+<!--                    <p class="descript">-->
+<!--                        --><?php //$post = get_post($post_id = 3098); echo $post->post_content; ?>
+<!--                    </p>-->
 <!--                </div>-->
 <!--            </div>-->
+
+            <div id="drinks" class="desserts-drinks__item desserts-drinks__drinks-block">
+                <div class="title-3">
+                    <h3 class="title-3__h3 title-3__h3_dark hr-line">Напитки</h3>
+                </div>
+
+                <div class="desserts-drinks__item-media">
+                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">
+
+                    <div class="desserts-drinks__btn-cont">
+                        <a href="/drinks" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
