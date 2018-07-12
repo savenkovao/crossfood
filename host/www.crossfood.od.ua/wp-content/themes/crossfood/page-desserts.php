@@ -19,7 +19,8 @@
 		</div>
 	</section>
 
-	<section id="dd" class="dd_background desserts_background">
+	<section id="dd" class="dd_background desserts_background"
+           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/desserts-bg.jpg?ver_1.01">
 		<div class="dd_position wrapper">
 
 
@@ -129,6 +130,16 @@
 
 		</div>
 	</section>
+
+  <section class="familiar p-t-75">
+    <p class="h3 text-center m-b-40">Обязательно ознакомьтесь с нашим меню вкусных и полезных
+      <span class="bold text-green">напитков</span>!
+    </p>
+
+    <p class="h3 text-center m-b-40">
+      <a class="button button_bordered header__button-btn pum-trigger" href="/drinks">Выбрать напиток</a>
+    </p>
+  </section>
 
 
 <?php get_footer() ?>

@@ -17,7 +17,8 @@
 		</div>
 	</section>
 
-	<section id="drinks" class="dd_background drinks_background">
+	<section id="drinks" class="dd_background drinks_background"
+           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-bg.jpg?ver_1.01">
 		<div class="dd_position wrapper">
 
 
@@ -39,7 +40,7 @@
 							<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
 									
 								<div class="tab-block__tab-item item <?php echo $i == 0 ? 'active' : ''; ?>">
-									<div class="cuisine__item dd__item">
+									<div class="cuisine__item dd__item cuisine-drinks__item">
 
 										<?php
 											$thumb_id = get_post_thumbnail_id();
@@ -108,4 +109,14 @@
 
 		</div>
 	</section>
+
+  <section class="familiar p-t-75">
+    <p class="h3 text-center m-b-40">Обязательно ознакомьтесь с нашим меню вкусных и полезных
+      <span class="bold text-green">десертов</span>!
+    </p>
+
+    <p class="h3 text-center m-b-40">
+      <a class="button button_bordered header__button-btn pum-trigger" href="/desserts">Выбрать десерт</a>
+    </p>
+  </section>
 <?php get_footer() ?>

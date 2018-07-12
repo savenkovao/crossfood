@@ -22,11 +22,8 @@
 
 			<div class="how-it-works_steps-pos">
 				<div class="steps">
-					
-					
-
-					<img class="steps__img-desktop" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png" alt="Crossfood - как это работает">
-					<img class="steps__img-mobile" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
+					<img class="steps__img-desktop" data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png" alt="Crossfood - как это работает">
+					<img class="steps__img-mobile" data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
 
 					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
 				</div>
@@ -37,7 +34,8 @@
 		</div>
 	</section>
 
-	<section id="advantages" class="advantages advantages_background">
+	<section id="advantages" class="advantages advantages_background"
+    data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/advantages-background.jpg?ver_1.01">
 		<div class="wrapper advantages_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_light hr-line">Преимущества</h3>	
@@ -252,7 +250,8 @@
 		</div>
 	</section>
 
-	<section id="menu" class="cuisine cuisine_background">
+	<section id="menu" class="cuisine cuisine_background"
+    data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/cuisine-background.jpg?ver_1.01">
 		<div class="wrapper cuisine_position">
 			<div class="title-3">
 				<h3 class="title-3__h3 title-3__h3_light hr-line">Наше меню</h3>
@@ -348,7 +347,9 @@
                 </div>
 
                 <div class="desserts-drinks__item-media">
-                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg" alt="Десерты Crossfood">
+                    <img class="desserts-drinks__item-img"
+                         data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg"
+                         alt="Десерты Crossfood">
 
                     <div class="desserts-drinks__btn-cont">
                         <a href="/desserts" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать десерт</a>
@@ -371,7 +372,9 @@
                 </div>
 
                 <div class="desserts-drinks__item-media">
-                    <img class="desserts-drinks__item-img" src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg" alt="Напитки Crossfood">
+                    <img class="desserts-drinks__item-img"
+                         data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg"
+                         alt="Напитки Crossfood">
 
                     <div class="desserts-drinks__btn-cont">
                         <a href="/drinks" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>
@@ -416,10 +419,10 @@
 											  $thumb_id = get_post_thumbnail_id();
 												$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
-												echo '<img class="news-item__img" src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+												echo '<img class="news-item__img" data-src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 											}
 											else {
-											    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+											    echo '<img class="news-item__img" data-src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 											}
 										?>	
 

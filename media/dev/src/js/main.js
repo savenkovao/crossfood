@@ -1054,4 +1054,63 @@
 
 
 
+  //  Image Lazy loading
+
+  var lazyLoadTimeout = null;
+  initLazyLoad();
+
+
+  $(window).bind('scroll', lazyLoadHandler);
+
+  function lazyLoadHandler() {
+    clearTimeout(lazyLoadTimeout);
+
+    lazyLoadTimeout = setTimeout(function () {
+      initLazyLoad();
+    }, 100);
+  }
+
+  function initLazyLoad() {
+    var windowTopPosition = $(window)[0].pageYOffset,
+        windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
+        $items = $('[data-bg-src], [data-src]'),
+        showOffsets = $(window)[0].innerHeight;
+
+    if(!$items.length) {
+      $(window).unbind('scroll', lazyLoadHandler);
+    }
+
+    if( window.matchMedia("(max-width: 768px)").matches ){
+      showOffsets =  $(window)[0].innerHeight * 4;
+    }
+
+    $items.each(function(i, item){
+      if (
+          ( windowTopPosition - ( $(item).offset().top + $(item).height ) <= showOffsets ) ||
+          (windowBottomPosition + showOffsets >= $(item).offset().top )
+      ) {
+        setSource(item)
+      }
+    });
+
+    function setSource (img) {
+
+      if ( img.hasAttribute("data-bg-src") ){
+        $(img).css({
+          'background-image' : 'url(' + img.getAttribute('data-bg-src') + ')'
+        });
+
+        img.removeAttribute('data-bg-src');
+        img.setAttribute('data-bg', '');
+      } else {
+        img.setAttribute('src', img.getAttribute('data-src'));
+
+        img.onload = function () {
+          img.removeAttribute('data-src');
+        };
+      }
+    }
+  }
+  //  Image Lazy loading
+
 }(jQuery));

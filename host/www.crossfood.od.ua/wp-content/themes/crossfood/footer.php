@@ -27,7 +27,8 @@
 						<a href="/">
 					<?php } ?>
 					
-						<div class="tagline-block__img-cont footer-tagline-block__img-cont"></div>
+						<div class="tagline-block__img-cont footer-tagline-block__img-cont"
+              data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/logo-main.svg"></div>
 						<div class="footer-tagline-block__header-cont">
 							<h3 class="footer-tagline-block__header"><?php bloginfo("name"); ?></h3>
 						</div>
