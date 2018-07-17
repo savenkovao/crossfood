@@ -11,6 +11,11 @@ if (is_single()) {
  	include(TEMPLATEPATH.'/header.php');
  } 
 ?>
+<script>
+  window.CONFIG = {
+    page: 'single'
+  }
+</script>
 
 <section>
 	<div class="wrapper">
