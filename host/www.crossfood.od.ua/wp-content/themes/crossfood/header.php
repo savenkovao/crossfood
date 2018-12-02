@@ -10,15 +10,16 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.40">
+	<link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.48">
 
-	<link rel="shortcut icon" href="http://crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
+	<link rel="shortcut icon" href="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
 
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
 
-	<header class="header header_background" itemscope itemtype="http://schema.org/WPHeader">
+	<header class="header header_background" itemscope itemtype="http://schema.org/WPHeader"
+    data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/header-background.jpg?ver_1.01">
 		<div class="wrapper header_position">
 
 			<div class="header-menu">
@@ -35,7 +36,7 @@
 				<div class="header-title">
 
 					<div class="title-1 header__title-1_pos">
-						<div class="title-1__img header__title-1__img-pos"></div>
+						<div data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/logo-main.svg" class="title-1__img header__title-1__img-pos"></div>
 						<h1 class="title-1__h1 header__title-1__h1" itemprop="headline"><?php bloginfo("name"); ?></h1>
 					</div>
 				

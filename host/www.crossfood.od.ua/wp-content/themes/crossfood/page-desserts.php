@@ -1,99 +1,68 @@
-<?php get_header() ?>
+<?php get_header('desserts') ?>
 
-
+    <script>
+        window.CONFIG = {
+            page: 'desserts'
+        }
+    </script>
 
 
 	<section class="how-it-works">
-		<div class="wrapper  how-it-works_position">
-			
+		<div class="wrapper how-it-works_position how-it-works_dd">
 			<div>
 				<p class="descript">
-					
-						<?php $post = get_post($post_id = 25); echo $post->post_content; ?>
+
+                    <?php $post = get_post($post_id = 3090); echo $post->post_content; ?>
 
 				</p>
-			</div>				
-
-			<div id="how-it-works" class="title-3 how-it-works_title-3-position">
-				<h3 class="title-3__h3 title-3__h3_dark hr-line">Как это работает</h3>	
-			</div>	
-
-			<div class="how-it-works_steps-pos">
-				<div class="steps">
-					
-					
-
-					<img class="steps__img-desktop" src="<?php echo esc_url( get_template_directory_uri()) ?>/src/img/dsg/steps.png" alt="Crossfood - как это работает">
-					<img class="steps__img-mobile" src="<?php echo esc_url( get_template_directory_uri())?>/src/img/dsg/steps-mobile.png" alt="Crossfood - как это работает">
-
-					<?php $post = get_post($post_id = 27); echo $post->post_content; ?>
-				</div>
-
-				<?php $post = get_post($post_id = 669); echo $post->post_content; ?>
 			</div>
-			
 		</div>
 	</section>
 
-	<section id="advantages" class="advantages advantages_background" style="display: none;">
-		<div class="wrapper advantages_position">
-			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_light hr-line">Преимущества</h3>	
-			</div>
-
-			<div class="advantage-block advantages_advantage-block-pos">
-				<div class="advantage-block__item"> 
-						<?php $post = get_post($post_id = 46); echo $post->post_content; ?>
-				</div>
-			</div>
-
-
-		</div>
-	</section>
-
-	<section id="desserts" class="desserts_background">
-		<div class="desserts_position wrapper">
+	<section id="dd" class="dd_background desserts_background"
+           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/desserts-bg.jpg?ver_1.01">
+		<div class="dd_position wrapper">
 
 
 			<div class="title-3">
-				<h3 class="title-3__h3 title-3__h3_dark hr-line">Десерты</h3>	
+				<h3 class="title-3__h3 title-3__h3_light hr-line">Десерты</h3>
 			</div>
 
 				
-			<div class="desserts-block">
+			<div class="dd-block">
 				<div class="main-carousel-cont">
 					<div id="carousel" class="carousel slide" data-interval="false">	
 
 						<div class="carousel-inner">
 
-							<?php $posts = get_posts ("category_name=desserts&orderby=date&numberposts=7"); 
+							<?php $posts = get_posts ("category_name=desserts&orderby=date&numberposts=25");
 										$i = 0;
 							?> 
 							<?php if ($posts) : ?>
 							<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
 									
 								<div class="tab-block__tab-item item <?php echo $i == 0 ? 'active' : ''; ?>">
-									<div class="cuisine__item desserts__item">
+									<div class="cuisine__item dd__item">
 
 										<?php
 											$thumb_id = get_post_thumbnail_id();
 											$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 									?>
 
-										<div class="cuisine__item-text-cont desserts__item-text-cont">
+										<div class="cuisine__item-text-cont dd__item-text-cont">
 
-											<div class="desserts__title"><?php the_title(); ?></div>
+											<h4 class="dd__title"><?php the_title(); ?></h4>
 
 
 											<div data-cuisine-qount="5">
-												<div class="cuisine__item-text-menu desserts__item-text-menu">
+												<div class="cuisine__item-text-menu dd__item-text-menu">
 												 	<?php the_content(); ?>
 												</div>
 												<ul class="cuisine__item-text-calories">
 												 	<li><u class="cuisine__item-text-highlited"><?php echo get_post_meta( get_the_ID(), 'desserts_cal', 1); ?></u></li>
-												 	<li>Белки - <?php echo get_post_meta( get_the_ID(), 'desserts_prot', 1); ?></li>
-												 	<li>Жиры - <?php echo get_post_meta( get_the_ID(), 'desserts_fat', 1); ?></li>
-												 	<li>Углеводы - <?php echo get_post_meta( get_the_ID(), 'desserts_car', 1); ?></li>
+												 	<li>Белки - <?php echo get_post_meta( get_the_ID(), 'desserts_prot', 1); ?> г</li>
+												 	<li>Жиры - <?php echo get_post_meta( get_the_ID(), 'desserts_fat', 1); ?> г</li>
+												 	<li>Углеводы - <?php echo get_post_meta( get_the_ID(), 'desserts_car', 1); ?> г</li>
 												 	
 												</ul>
 											</div>
@@ -101,7 +70,7 @@
 
 										<div class="cuisine__item-img-cont">
 
-											<div class="cuisine__item-img-block desserts__item-img-block">
+											<div class="cuisine__item-img-block dd__item-img-block">
 
 												<?php  
 													if (has_post_thumbnail()) {
@@ -111,14 +80,18 @@
 														echo '<img class="news-item__img" src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 													}
 													else {
-													    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+													    echo '<img class="news-item__img" src="' . get_bloginfo('template_directory') . '/src/img/cnt/cuisine/custom.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
 													}
 												?>	
 											</div>
 
-											<div class="cuisine__item-price-block">
-												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span> грн/100г.</span>
+											<div class="cuisine__item-price-block dd__item-price-block">
+												<span class="cuisine__item-price-text" data-cuisine-qount="5"><span><?php echo get_post_meta( get_the_ID(), 'desserts_price', 1); ?></span>
 											</div>
+
+                      <div class="subscribe__button-cnt dd__button-cnt">
+                          <button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
+                      </div>
 
 										</div>
 
@@ -135,9 +108,9 @@
 							endif; ?>
 						</div>
 						
-						<a href="#carousel" class="left carousel-control main-carousel__control desserts__carousel-arrow" data-slide="prev">
+						<a href="#carousel" class="left carousel-control main-carousel__control dd__carousel-arrow" data-slide="prev">
 						</a>
-						<a href="#carousel" class="right carousel-control main-carousel__control desserts__carousel-arrow" data-slide="next">
+						<a href="#carousel" class="right carousel-control main-carousel__control dd__carousel-arrow" data-slide="next">
 						</a>
 					</div>
 				</div>
@@ -145,18 +118,28 @@
 
 			
 
-			<div class="cuisine-notation_position desserts-notation_position">
-				<div class="cuisine-notation desserts-notation">
-					<div class="subscribe__button-cnt">
-						<button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>
-					</div>
-				</div>
-			</div>
+<!--			<div class="cuisine-notation_position dd-notation_position">-->
+<!--				<div class="cuisine-notation dd-notation">-->
+<!--					<div class="subscribe__button-cnt">-->
+<!--						<button class="button button_bordered subscribe__button-btn" data-meta-node="" data-target="form_3" data-action="activate">Заказать</button>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
 
 
 
 		</div>
 	</section>
+
+  <section class="familiar p-t-75">
+    <p class="h3 text-center m-b-40">Обязательно ознакомьтесь с нашим меню вкусных и полезных
+      <span class="bold text-green">напитков</span>!
+    </p>
+
+    <p class="h3 text-center m-b-40">
+      <a class="button button_bordered header__button-btn pum-trigger" href="/drinks">Выбрать напиток</a>
+    </p>
+  </section>
 
 
 <?php get_footer() ?>

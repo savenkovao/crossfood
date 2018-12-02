@@ -2,6 +2,12 @@
 	 	include(TEMPLATEPATH.'/header-single.php');
 ?>
 
+    <script>
+        window.CONFIG = {
+            page: '404'
+        }
+    </script>
+
 <section class="error-block">
 	<h1 class="error-h1">ОЙ, <span>404</span></h1>
 	<p class="error-descr">ОЧЕНЬ ЖАЛЬ, НО ЭТОЙ СТРАНИЦЫ НЕ СУЩЕСТВУЕТ</p>
