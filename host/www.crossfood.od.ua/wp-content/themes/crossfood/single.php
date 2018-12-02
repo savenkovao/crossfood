@@ -1,3 +1,16 @@
+<?php
+
+/*
+WP Post Template: single-news template
+Description: This is single-news post template
+*/
+
+if (is_single()) {
+    include(TEMPLATEPATH.'/header-single.php');
+} else {
+    include(TEMPLATEPATH.'/header.php');
+}
+?>
 <script>
   window.CONFIG = {
     page : 'single'
@@ -57,11 +70,6 @@
 </section>
 
 <?php
-
-/*
-WP Post Template: single-news template
-Description: This is single-news post template
-*/
 
 if (is_single()) {
     include(TEMPLATEPATH . '/footer-single.php');
