@@ -10,7 +10,7 @@
 	<meta name="robots" content="index, follow"/>
 
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.48">
+	<link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.50">
 
 
 	<link rel="shortcut icon" href="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
