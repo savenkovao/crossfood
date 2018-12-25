@@ -1,0 +1,235 @@
+.dd-banner{
+  width: 100%;
+  height: 300px;
+  height: 30vh;
+  max-height: 450px;
+  min-height: 120px;
+  margin-bottom: 40px;
+  //background-image: url(@desserts-banner-m);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d4d6d1;
+
+  @media @tablet {
+    //background-image: url(@desserts-banner);
+  }
+}
+
+.drinks-banner{
+  //background-image: url(@drinks-banner-m);
+
+  @media @tablet {
+    //background-image: url(@drinks-banner);
+  }
+}
+
+
+
+.how-it-works_dd{
+  padding: 70px 3% 95px;
+
+  @media @laptop {
+    padding: 100px 0 115px;
+  }
+}
+
+
+.carousel-control.dd__carousel-arrow, .dd_background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent
+}
+
+.dd_background {
+  //background-image: url(@desserts-bg-m);
+  background-size: cover;
+  background-position: right;
+  background-color: #896350;
+
+  @media @tablet {
+      //background-image: url(@desserts-bg);
+  }
+}
+
+.drinks_background {
+  //background-image: url(@drinks-bg-m);
+  background-color: #364224;
+  background-position: center;
+
+  @media @tablet {
+    //background-image: url(@drinks-bg);
+  }
+}
+
+
+.dd-block {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-top: 50px;
+
+  .carousel-inner {
+    width: auto;
+  }
+  .cuisine__item{
+    width: 100%;
+  }
+
+  .sharedaddy {
+    display: none;
+  }
+}
+
+
+.carousel-control.dd__carousel-arrow, .reviews-slider__arrow {
+  background-image: url(@slider-arrow-img);
+  background-size: cover
+}
+
+.dd_position {
+  padding: 70px 3% 95px
+}
+
+.dd__item {
+  margin: 0 auto;
+  box-shadow: none;
+  padding: 50px 8%;
+  border-radius: 4px;
+}
+
+
+.dd__title {
+  //display: none
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.dd__item-img-block {
+  height: 220px
+}
+
+.dd__item-price-block {
+  @media @tablet{
+    padding-top: 25px;
+  }
+}
+
+.dd__button-cnt{
+  padding-top: 25px;
+}
+
+.dd__item-text-menu {
+  margin: 0;
+  min-height: 100px
+}
+
+.carousel-control.dd__carousel-arrow {
+  width: 12px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  top: ~'calc(50% - 21px)';
+  cursor: pointer
+}
+
+.carousel-control.dd__carousel-arrow.left {
+  left: 2%;
+  background-position: bottom
+}
+
+.carousel-control.dd__carousel-arrow.right {
+  right: 2%;
+  background-position: top
+}
+
+.dd-notation_position {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px
+}
+.dd-notation {
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .dd__item-img-block {
+    height: 270px
+  }
+}
+
+
+
+@media only screen and (min-width: 980px) {
+  .dd_position {
+    padding: 96px 0
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dd__item-text-menu {
+    min-height: inherit
+  }
+
+  .carousel-control.dd__carousel-arrow.left {
+    left: 20px;
+  }
+
+  .carousel-control.dd__carousel-arrow.right {
+    right:20px;
+  }
+
+  .dd-notation_position {
+    max-width: 700px;
+    padding-top: 0;
+    padding-bottom: 0
+  }
+
+  .dd-block {
+    width: auto;
+    max-width: none;
+  }
+
+  .dd__item-text-cont {
+    min-height: 360px;
+    max-height: 360px
+  }
+  .carousel-control.news__carousel-arrow.left {
+    left: 0
+  }
+
+  .carousel-control.news__carousel-arrow.right {
+    right: 0
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .dd__item-img-block {
+    height: 250px
+  }
+
+  .dd-notation {
+    font-size: inherit
+  }
+}
+
+.cuisine-drinks__item {
+  .cuisine__item-img-block {
+    height: auto;
+    max-height: none;
+  }
+}
+
+.familiar {
+  .button {
+    line-height: 52px;
+    font-size: 16px;
+  }
+}

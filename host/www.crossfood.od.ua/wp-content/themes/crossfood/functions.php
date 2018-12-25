@@ -117,6 +117,29 @@ function extra_fields_box_func($post)
 
   <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>"/>
 
+    <hr>
+
+    <p><label>Цена <i>(только sweets/drinks*)</i><br> <input type="text" name="extra[desserts_price]" value="<?php echo get_post_meta($post->ID, 'desserts_price', 1); ?>" style="width:50%" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+
+    <p><label>Калории <i>(только sweets/drinks*)</i><br> <input type="text" name="extra[desserts_cal]" value="<?php echo get_post_meta($post->ID, 'desserts_cal', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Белки <i>(только sweets/drinks*)</i><br> <input type="text" name="extra[desserts_prot]" value="<?php echo get_post_meta($post->ID, 'desserts_prot', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Жиры <i>(только sweets/drinks*)</i><br> <input type="text" name="extra[desserts_fat]" value="<?php echo get_post_meta($post->ID, 'desserts_fat', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Углеводы <i>(только sweets/drinks*)</i><br> <input type="text" name="extra[desserts_car]" value="<?php echo get_post_meta($post->ID, 'desserts_car', 1); ?>" style="width:50%;" /></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
 
     <?php
 }

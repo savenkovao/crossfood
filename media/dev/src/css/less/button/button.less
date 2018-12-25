@@ -1,4 +1,4 @@
-.button{	
+.button {
 	display: inline-block;	
 	font-family: "Century Gothic", sans-serif;
 	font-size: @btn-font-size;
@@ -7,33 +7,36 @@
 	user-select: none;
 	border-radius: 30px;
 	text-transform: uppercase;
-
-	&:focus{
-		outline: none;
-	}
-}
-
-.button_filled {
-	.setButton (#ffffff);
+	text-decoration: none;
 
 	&:hover,
 	&:active,
-	&:focus,
-	&:visited {
-		.setButton (#ffffff);
+	&:focus {
+		outline: none;
 		text-decoration: none;
 	}
 }
 
+.button_def {
+	padding: 16px 21px;
+}
+
+.button_filled {
+	.setButton ( #fff, @btn-background-color, @btn-background-color, #fff, darken(@btn-background-color, 5%) ,darken(@btn-background-color, 5%) );
+}
+
 .button_bordered{
-	.setButton (@btn-background-color);
+	.setButton ( @btn-background-color, transparent, @btn-background-color, #fff, @btn-background-color, @btn-background-color );
 }
 
 .button_bordered-dark{
-	.setButton (#272929);
+	//.setButton (#272929, #272929);
+	.setButton (#272929, transparent, #272929, #fff, @btn-background-color, @btn-background-color );
 }
 
-
+.button_bordered-white{
+	.setButton (#fff, transparent, #fff, #fff, @btn-background-color, @btn-background-color );
+}
 
 
 .close-btn {
@@ -41,7 +44,11 @@
 	position: absolute;
 	display: inline-block;
 	cursor: pointer;
-	
+	.transition();
+
+	&:hover {
+		opacity: .65;
+	}
 }
 
 .close-btn_f-pos {

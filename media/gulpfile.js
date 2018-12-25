@@ -35,9 +35,10 @@ var path = {
     css     :  'dev/src/css',
     fonts   :  'src/fonts/**/*.*',
     vendors :  'vendors/**/*.*',
-    img     :  'src/img/**/*.*',
+    img     :  'dev/src/img/**/*.*',
     css_prod: 'src/css',
-    js_prod:  'src/js'
+    js_prod:  'src/js',
+    img_prod: 'src/img'
 };
 
 //dev
@@ -64,7 +65,7 @@ gulp.task('less', function(){
 });
 
 gulp.task('scripts', function(){
-    return gulp.src(['!dev/src/js/compiled/main.js', path.js + 'bootstrap.js', path.js + 'masked-input-plugin.js', path.js + 'main.js'])
+    return gulp.src(['!dev/src/js/compiled/main.js', path.js + 'bootstrap.js', path.js + 'jquery.touchSwipe.min.js', path.js + 'masked-input-plugin.js', path.js + 'main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(path.js + 'compiled/'))
         .pipe(uglify())
@@ -93,7 +94,7 @@ gulp.task('bower', function() {
 gulp.task('img', function() {
     return gulp.src(path.img)
         .pipe(imagemin())
-        .pipe(gulp.dest(PUBLIC_DIR+'src/img'));
+        .pipe(gulp.dest(PUBLIC_DIR + path.img_prod));
 });
 
 gulp.task('clean:public', function(){
@@ -117,7 +118,8 @@ gulp.task(
             [
                 // 'browserSync',
                 'less',
-                'scripts'
+                'scripts',
+                'img'
             ],
             callback
         );

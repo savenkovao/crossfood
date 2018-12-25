@@ -1,4 +1,40 @@
+/**
+Margin
+ */
+
+.help-size(@list, @type){
+  .margin-loop(@i: length(@list)) when(@i > 0){
+    .margin-loop(@i - 1);
+    @size: extract(@list, @i);
+    &-@{size}{   @{type}:         unit(@size, px) !important;}
+    &-r-@{size}{ @{type}-right:   unit(@size, px) !important;}
+    &-l-@{size}{ @{type}-left:    unit(@size, px) !important;}
+    &-t-@{size}{ @{type}-top:     unit(@size, px) !important;}
+    &-b-@{size}{ @{type}-bottom:  unit(@size, px) !important;}
+  }
+  .margin-loop();
+}
+
+.m{
+  @marginList: -20, -10, 0, 5, 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 75, 80, 120;
+  .help-size(@marginList, margin);
+}
+
+.p{
+  @marginList: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75;
+  .help-size(@marginList, padding);
+}
+
+/**
+Width
+ */
+
+.m-0-a {
+  margin: 0 auto;
+}
+
 /* Loader */
+
 .loader {
   position: absolute;
   top: 0;
@@ -53,10 +89,19 @@
 }
 /* Loader */
 
-.notation-text {
-  font-size: 12px;
-  text-align: center;
-  color: #707070;
-  line-height: 1.5;
-  padding: 5px;
+
+/* Image lazy load*/
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
+
+img[data-src] {
+  opacity: 0;
+}
+
+[data-bg],
+[data-bg-src] {
+  transition: .2s;
+}
+/* Image lazy load*/

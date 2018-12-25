@@ -1,5 +1,10 @@
-
 # BEGIN WordPress
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} ^443$ [OR]
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*)$ http://crossfood.od.ua/$1 [R=301,L]
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -7,6 +12,11 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+
+#for SSL
+#RewriteCond %{HTTP:SSL} !=1 [NC]
+#RewriteRule ^(.*) https://crossfood.od.ua/$1 [L,R=301]
+
 </IfModule>
 
 # END WordPress

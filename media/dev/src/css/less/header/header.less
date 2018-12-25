@@ -8,10 +8,11 @@
 }
 
 .header_background {
-	background-color: #f0eeee;
+	background-color: #f1f1f1!important;
+	background-image: none;
 
 	@media @tablet {
-		.setBackgroundImage(@header-background-img);
+		.setBackgroundImage('');
 	}
 }
 
@@ -49,10 +50,10 @@
 	position: fixed;
 	left: 0;
 	right: 0;
-	margin-left: -73px;
+	//margin-left: -73px;
 	background-color: #fff;
 	z-index: 2;
-	padding: 18px 31px 18px 0;
+	padding: 18px 31px;
 	top: 0px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 0 20px rgba(0,0,0,.28);
 

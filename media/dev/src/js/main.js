@@ -1,4 +1,14 @@
 (function($){
+
+    /* Common */
+
+    if(window.CONFIG.page == undefined) {
+        window.CONFIG.page = '';
+    }
+
+    /* Common */
+
+
     $(document).ready(function(){
         window.POSTS = {};
         window.FIRST_LOAD = false;
@@ -15,37 +25,37 @@
 
         // brgrMenu.addEventListener("click", enableBrgrMenu, false);
 
-
-        function enableBrgrMenu(event){
-            var e = getTarget(event);
-
-            if (e !== undefined) {
-                count++;
-                if(count%2===0) {
-                    deactivateBrgrMenu();
-
-                } else {
-                    activateBrgrMenu();
-
-                }
-            }
-        }
-
-        function activateBrgrMenu(){
-            menu.style.display = 'block';
-            stick1.classList.add('stick-1-active');
-            stick2.classList.add('disable');
-            stick3.classList.add('stick-3-active');
-
-        }
-
-        function deactivateBrgrMenu(){
-            menu.style.display = '';
-            stick1.classList.remove('stick-1-active');
-            stick2.classList.remove('disable');
-            stick3.classList.remove('stick-3-active');
-            count = 0;
-        }
+        //
+        // function enableBrgrMenu(event){
+        //     var e = getTarget(event);
+        //
+        //     if (e !== undefined) {
+        //         count++;
+        //         if(count%2===0) {
+        //             deactivateBrgrMenu();
+        //
+        //         } else {
+        //             activateBrgrMenu();
+        //
+        //         }
+        //     }
+        // }
+        //
+        // function activateBrgrMenu(){
+        //     menu.style.display = 'block';
+        //     stick1.classList.add('stick-1-active');
+        //     stick2.classList.add('disable');
+        //     stick3.classList.add('stick-3-active');
+        //
+        // }
+        //
+        // function deactivateBrgrMenu(){
+        //     menu.style.display = '';
+        //     stick1.classList.remove('stick-1-active');
+        //     stick2.classList.remove('disable');
+        //     stick3.classList.remove('stick-3-active');
+        //     count = 0;
+        // }
 
         // team slider browsing
 
@@ -299,40 +309,41 @@
             day: 'mo',
             cuisines: 5,
             price: '280/320'
-        }
+        };
 
-        var subscribe = document.getElementById('subscribe');
-        var subscribeItems = document.getElementById('subscribe-items');
-        var cuisineWeek = document.getElementById('cuisine-week');
-        // var cuisines_3_5 = document.getElementById('cuisines_3_5');
-        var allCuisines = document.getElementById('all-cuisines');
+        if(window.CONFIG.page === 'home') {
+            var subscribe = document.getElementById('subscribe');
+            var subscribeItems = document.getElementById('subscribe-items');
+            var cuisineWeek = document.getElementById('cuisine-week');
+            // var cuisines_3_5 = document.getElementById('cuisines_3_5');
+            var allCuisines = document.getElementById('all-cuisines');
 
-        if (subscribe) {
-            subscribe.addEventListener('click', setSubscribe, false);
-            subscribeItems.addEventListener('click', setSubscribeItems, false);
-            cuisineWeek.addEventListener('click', setCuisineWeek, false);
-            // cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
-        }
+            if (subscribe) {
+                subscribe.addEventListener('click', setSubscribe, false);
+                subscribeItems.addEventListener('click', setSubscribeItems, false);
+                cuisineWeek.addEventListener('click', setCuisineWeek, false);
+                // cuisines_3_5.addEventListener('click', setCuisines_3_5, false);
+            }
+
+            function setSubscribe(event) {
+                enableBlock(event);
+            }
+
+            function setSubscribeItems(event) {
+                enableBlock(event);
+            }
+
+            function setCuisineWeek(event) {
+                enableBlock(event);
+            }
+
+            getStartCuisine();
 
 
-        function setSubscribe(event) {
-            enableBlock(event);
-        }
-
-        function setSubscribeItems(event) {
-            enableBlock(event);
-        }
-
-        function setCuisineWeek(event) {
-            enableBlock(event);
-        }
-
-        getStartCuisine();
-
-
-        function getStartCuisine() {
-            getCurrentDate ();
-            selectCuisineItem();
+            function getStartCuisine() {
+                getCurrentDate ();
+                selectCuisineItem();
+            }
         }
 
 
@@ -360,7 +371,7 @@
             // there are 2 weeks - №1 and №2
             cuisineListener.week = weekNumber % 2 + 1;
 
-            if (dayNumber === 0 && hourNumber >= 15) {
+            if (dayNumber === 0 && hourNumber >= 12) {
                 cuisineListener.week = (weekNumber + 1) % 2 + 1;
             }
         }
@@ -407,34 +418,33 @@
         }
 
         function changeListener(identifier, event) {
-            if(event.currentTarget === subscribe) {
-                cuisineListener.subscribe = identifier;
+            if(window.CONFIG.page === 'home'){
+                if(event.currentTarget === subscribe) {
+                    cuisineListener.subscribe = identifier;
 
-                if (identifier === 'fit') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'prem') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'veg') {
-                    cuisineListener.calories = '1200';
-                } else if (identifier === 'stand') {
-                    cuisineListener.calories = '1200';
+                    if (identifier === 'fit') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'prem') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'veg') {
+                        cuisineListener.calories = '1200';
+                    } else if (identifier === 'stand') {
+                        cuisineListener.calories = '1200';
+                    }
+
+                    getCurrentDate ();
+
+
+                    checkHighLightedItem();
+
+                } else if (event.currentTarget === subscribeItems) {
+                    if(identifier)	cuisineListener.calories = identifier;
+                } else if (event.currentTarget === cuisineWeek) {
+                    cuisineListener.day = identifier;
                 }
 
-                getCurrentDate ();
-
-
-                checkHighLightedItem();
-
-            } else if (event.currentTarget === subscribeItems) {
-                if(identifier)	cuisineListener.calories = identifier;
-            } else if (event.currentTarget === cuisineWeek) {
-                cuisineListener.day = identifier;
+                selectCuisineItem();
             }
-            //  else if (event.currentTarget == cuisines_3_5) {
-            // 	cuisineListener.cuisines = identifier;
-            // }
-
-            selectCuisineItem();
         }
 
         function selectCuisineItem(callback, customSelector) {
@@ -786,9 +796,11 @@
 
 
         // Select options
+        $('[data-target="form_2"]').on('click', function () {
+          selectOtions ();
+        });
 
-
-        function selectOtions (targetNode) {
+        function selectOtions () {
             var selectSubscribe = document.getElementById('form-input_subscribe');
             var selectCalories = document.getElementById('form-input_calories');
 
@@ -826,11 +838,10 @@
             }
 
             setPriceInForm(dataSub, dataCal);
-
         }
 
 
-        $('#form_2 form').on('change', function (event) {
+        $('#wpcf7-f2087-o7 form').on('change', function (event) {
 
             var selectSubscribe = document.getElementById('form-input_subscribe').value;
             var selectCalories = document.getElementById('form-input_calories').value;
@@ -839,7 +850,7 @@
                 selectSubscribe = 'fit';
             } else if(selectSubscribe === 'Премиум') {
                 selectSubscribe = 'prem';
-            } else if (selectSubscribe === 'Вегетарианский') {
+            } else if (selectSubscribe === 'Без Мяса') {
                 selectSubscribe = 'veg';
             } else if (selectSubscribe === 'Стандарт') {
                 selectSubscribe = 'stand';
@@ -851,8 +862,6 @@
 
         });
 
-
-
         function setPriceInForm(subscribe, calories){
 
             selectCuisineItem(function() {
@@ -863,7 +872,6 @@
                 }
 
                 $('#form-input_price').val(cuisineListener.price);
-                console.log(2);
             }, '#'+subscribe+'-'+cuisineListener.week+'-mo');
 
         }
@@ -919,7 +927,7 @@
 
 
     // Header toggling
-    if( $('.how-it-works').length ){
+    if( $('.how-it-works').length && window.CONFIG.page === 'home' ){
         toggleHeader();
 
         $(window).on('scroll', function() {
@@ -944,5 +952,165 @@
             $(this).removeAttr('width').removeAttr('height');
         });
     }
+    // delete img attributes 'width/height'
+
+
+    /* Bootstrap carousel swipe feature */
+    $(".carousel").swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction == 'left') $(this).carousel('next');
+            if (direction == 'right') $(this).carousel('prev');
+        },
+        allowPageScroll:"vertical"
+    });
+    /* Bootstrap carousel swipe feature */
+
+
+
+    /* set user-data into forms */
+    setUserData();
+
+    function setUserData() {
+        var $form = $('.wpcf7-form');
+        var userData = localStorage.getItem('userInfo') ? JSON.parse( localStorage.getItem('userInfo') ) : null;
+
+        if (userData) {
+            setUserData()
+        }
+
+        $('[data-target^="form_"]').on('click', function () {
+            if (userData) {
+                setUserData()
+            }
+        });
+
+        $form.on('submit', function (e) {
+            var userInfo = {
+                name:$form.find('[name="your-name"]').val() || '',
+                email:$form.find('[name=your-email]').val() || '',
+                phone:$form.find('[name="tel-611"]').val() || '',
+            };
+
+            localStorage.setItem( 'userInfo',  JSON.stringify(userInfo) );
+        });
+
+        function setUserData() {
+            $form.find('[name="your-name"]').val( userData.name );
+            $form.find('[name=your-email]').val( userData.email );
+            $form.find('[name="tel-611"]').val( userData.phone );
+        }
+
+    }
+
+
+    getText();
+    function getText(){
+        var date = new Date();
+        if(date.getHours() > 12) {
+            jQuery('#popup-success-content').html(' :) ')
+        }
+    }
+
+
+    /* set user-data into forms */
+
+
+    /* Page init */
+    switch(this.CONFIG.page) {
+        case 'desserts'                   : _initDesserts();                 break;
+        case 'drinks'                     : _initDrinks();                   break;
+    }
+    /* Page init */
+
+    function _initDesserts() {
+        _initDDPage('#wpcf7-f3052-o6', 'select[name="menu-230"]');
+    }
+    function _initDrinks() {
+        _initDDPage('#wpcf7-f3143-o5', 'select[name="menu-232"]');
+    }
+
+    function _initDDPage(form, menuSelect) {
+        var $ddForm =  $(form);
+        var $ddSelect =  $ddForm.find(menuSelect);
+
+        $ddSelect.children().remove();
+
+        $('.dd__title').each(function(i, item){
+            $ddSelect.append( '<option>' + $(item).text() + '</option>');
+        });
+
+        $('.dd__button-cnt').on('click', function(){
+            var currentDessert = $(this).closest('.dd__item').find('.dd__title').text();
+
+            $ddSelect.find('option').each(function(i, item){
+                $(item).removeAttr('selected');
+
+                if($(item).text() === currentDessert){
+                    $(item).attr('selected', true);
+                }
+            });
+        });
+    }
+
+
+
+  //  Image Lazy loading
+
+  var lazyLoadTimeout = null;
+  initLazyLoad();
+
+
+  $(window).bind('scroll', lazyLoadHandler);
+
+  function lazyLoadHandler() {
+    clearTimeout(lazyLoadTimeout);
+
+    lazyLoadTimeout = setTimeout(function () {
+      initLazyLoad();
+    }, 100);
+  }
+
+  function initLazyLoad() {
+    var windowTopPosition = $(window)[0].pageYOffset,
+        windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
+        $items = $('[data-bg-src], [data-src]'),
+        showOffsets = $(window)[0].innerHeight;
+
+    if(!$items.length) {
+      $(window).unbind('scroll', lazyLoadHandler);
+    }
+
+    if( window.matchMedia("(max-width: 768px)").matches ){
+      showOffsets =  $(window)[0].innerHeight * 4;
+    }
+
+    $items.each(function(i, item){
+      if (
+          ( windowTopPosition - ( $(item).offset().top + $(item).height ) <= showOffsets ) ||
+          (windowBottomPosition + showOffsets >= $(item).offset().top )
+      ) {
+        setSource(item)
+      }
+    });
+
+    function setSource (img) {
+
+      if ( img.hasAttribute("data-bg-src") ){
+        $(img).css({
+          'background-image' : 'url(' + img.getAttribute('data-bg-src') + ')'
+        });
+
+        img.removeAttribute('data-bg-src');
+        img.setAttribute('data-bg', '');
+      } else {
+        img.setAttribute('src', img.getAttribute('data-src'));
+
+        img.onload = function () {
+          img.removeAttribute('data-src');
+        };
+      }
+    }
+  }
+  //  Image Lazy loading
 
 }(jQuery));
