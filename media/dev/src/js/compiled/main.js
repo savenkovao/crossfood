@@ -2692,7 +2692,7 @@ if (typeof jQuery === 'undefined') {
 
         var cuisineListener = {
             subscribe: 'stand',
-            week: 1,
+            week: 2,
             calories: '1200',
             day: 'mo',
             cuisines: 5,
@@ -2757,11 +2757,13 @@ if (typeof jQuery === 'undefined') {
 
         function getWeek(weekNumber, dayNumber, hourNumber) {
             // there are 2 weeks - №1 and №2
-            cuisineListener.week = weekNumber % 2 + 1;
+            var week = weekNumber % 2 ===0 ? 2 : 1;
 
             if (dayNumber === 0 && hourNumber >= 12) {
-                cuisineListener.week = (weekNumber + 1) % 2 + 1;
+                week = (weekNumber + 1) % 2 ===0 ? 2 : 1;
             }
+
+            cuisineListener.week = week;
         }
 
 
