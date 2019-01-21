@@ -60,7 +60,9 @@
         </div>
         <div class="footer-contact-block__btn-cont">
           <button data-meta-node data-target="form_1" data-action="activate"
-                  class="button button_bordered-dark footer-button-btn">Связаться с нами
+                  class="button button_bordered-dark footer-button-btn">
+            Написать нам
+            <!--            Связаться с нами-->
           </button>
         </div>
 
@@ -94,6 +96,7 @@
   fbq('track', 'PageView');
   fbq('track', 'ViewContent');
   fbq('track', 'InitiateCheckout');
+  fbq('track', 'Purchase', {value : '0.00', currency : 'USD'});
   fbq('track', 'Lead');
 </script>
 <noscript>
