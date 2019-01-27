@@ -302,7 +302,8 @@
       calories : '1200',
       day : 'mo',
       cuisines : 5,
-      price : '280/320'
+      price : '280/320',
+      selector : ''
     };
 
     if(window.CONFIG.page === 'home') {
@@ -508,7 +509,7 @@
       console.log(selector);
 
       cuisineListener.price = $('#' + selector + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
-
+      cuisineListener.selector = selector;
       // cuisineListener.cuisines
 
       if(currentItem) {
@@ -782,7 +783,7 @@
 
     function activateNode(targetNode) {
       targetNode.classList.add('active');
-      selectOtions(targetNode);
+      selectOptions(targetNode);
     }
 
     function deactivateNode(targetNode) {
@@ -792,10 +793,10 @@
 
     // Select options
     $('[data-target="form_2"]').on('click', function () {
-      selectOtions();
+      selectOptions();
     });
 
-    function selectOtions() {
+    function selectOptions() {
       var selectSubscribe = document.getElementById('form-input_subscribe');
       var selectCalories = document.getElementById('form-input_calories');
 
@@ -831,7 +832,6 @@
         selectCalories.selectedIndex = 3;
         dataCal = 2500;
       }
-
       setPriceInForm(dataSub, dataCal);
     }
 
@@ -866,6 +866,7 @@
           cuisineListener.price = $('#' + subscribe).html();
         }
 
+        $('input[name="product-name"]').val(cuisineListener.selector);
         $('#form-input_price').val(cuisineListener.price);
       }, '#' + subscribe + '-' + cuisineListener.week + '-mo');
 
@@ -983,7 +984,12 @@
       email : $form.find('[name="your-email"]').val() || '',
       phone : $form.find('[name="tel-611"]').val() || '',
       address : $form.find('[name="your-address"]').val() || '',
-      time : $form.find('[name="your-time"]').val() || ''
+      time : $form.find('[name="your-time"]').val() || '',
+
+      product : $('input[name="product-name"]').val() ||
+      $('#form-input_sweets').val() ||
+      $('#form-input_drinks').val() || '',
+      price : $form.find('#form-input_price').val() || 0
     };
 
     localStorage.setItem('userInfo', JSON.stringify(userInfo));

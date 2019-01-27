@@ -222,13 +222,19 @@ function ga_callback_func()
     document.addEventListener('wpcf7mailsent', function (event) {
       if('2085' == event.detail.contactFormId) {
 
-        gtag('event', 'callback_click', {
-          'event_category' : 'callback',
-          'event_label' : 'Callback'
+        // gtag('event', 'callback_click', {
+        //   'event_category' : 'callback',
+        //   'event_label' : 'Callback'
+        // });
+
+        dataLayer.push({
+          'event': 'callback',
+          'callbackData': {
+            'event_category' : 'callback',
+            'event_label' : 'Callback'
+          }
         });
       }
-
-
     }, false);
   </script>
     <?php
@@ -244,9 +250,20 @@ function ga_purchase_func()
     document.addEventListener('wpcf7mailsent', function (event) {
       if('2087' == event.detail.contactFormId) {
 
-        gtag('event', 'purchase_click', {
-          'event_category' : 'purchase',
-          'event_label' : 'Purchase'
+        // gtag('event', 'purchase_click', {
+        //   'event_category' : 'purchase',
+        //   'event_label' : 'Purchase'
+        // });
+
+        dataLayer.push({
+          'event': 'subscribe',
+          'subscribeData': {
+            'event_category' : 'subscribe',
+            'currencyCode': 'UAH',
+            'event_label' : 'Subscribe',
+            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
+          }
         });
       }
     }, false);
@@ -263,10 +280,47 @@ function ga_desserts_func()
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
       if('3052' == event.detail.contactFormId) {
+        //
+        // gtag('event', 'desserts_click', {
+        //   'event_category' : 'desserts',
+        //   'event_label' : 'Desserts'
+        // });
 
-        gtag('event', 'desserts_click', {
-          'event_category' : 'desserts',
-          'event_label' : 'Desserts'
+        dataLayer.push({
+          'event': 'desserts',
+          'dessertsData': {
+            'event_category' : 'desserts',
+            'currencyCode': 'UAH',
+            'event_label' : 'Desserts',
+            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
+          }
+        });
+      }
+    }, false);
+  </script>
+    <?php
+}
+
+
+
+add_action('wp_footer', 'ga_drinks_func');
+
+function ga_drinks_func()
+{
+    ?>
+  <script type="text/javascript">
+    document.addEventListener('wpcf7mailsent', function (event) {
+      if('3143' == event.detail.contactFormId) {
+        dataLayer.push({
+          'event': 'drinks',
+          'dessertsData': {
+            'event_category' : 'drinks',
+            'currencyCode': 'UAH',
+            'event_label' : 'Drinks',
+            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
+          }
         });
       }
     }, false);
