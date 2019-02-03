@@ -109,13 +109,14 @@
 .news__button-btn {
 }
 
-.news__carousel-arrow{
+.carousel-arrow{
 	width: 12px;
 	height: 32px;
 	position: absolute;
 	//.top(50%,-,21px);
 	top: 275px;
 	cursor: pointer;
+    z-index: 2;
 	.setBackgroundImage(@slider-arrow-img);
 
 	@media @tablet {
@@ -123,7 +124,7 @@
 	}
 }
 
-.news__carousel-arrow.left{
+.carousel-arrow.left{
 	left: -8%;
 	background-position: bottom;
 
@@ -131,7 +132,7 @@
 		left: 0;
 	}
 }
-.news__carousel-arrow.right{
+.carousel-arrow.right{
 	right: -8%;
 	background-position: top;
 

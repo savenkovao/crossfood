@@ -861,7 +861,8 @@
 
       selectCuisineItem(function () {
         if(subscribe !== 'trial') {
-          cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
+          // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
+          cuisineListener.price = $('#subscribe-items ' + '[data-subscribe="'+ subscribe +'"] ' + '[data-identifier="' + calories +'"] .subscribe__price strong').html();
         } else if(subscribe === 'trial') {
           cuisineListener.price = $('#' + subscribe).html();
         }
@@ -952,12 +953,11 @@
   // delete img attributes 'width/height'
 
 
-  $('.carousel-inner').slick({
+  $('.carousel').slick({
     arrows: true,
-    prevArrow: '<div class="news__carousel-arrow left"></div>',
-    nextArrow: '<div class="news__carousel-arrow right"></div>',
+    prevArrow: '<div class="carousel-arrow left"></div>',
+    nextArrow: '<div class="carousel-arrow right"></div>',
   });
-  console.log('ooo783')
 
   /* Bootstrap carousel swipe feature */
   // $('.carousel').swipe({

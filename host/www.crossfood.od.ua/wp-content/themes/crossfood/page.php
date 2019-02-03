@@ -334,7 +334,7 @@
 	</section>
 
 
-    <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" <!--style="display: none;"-->>
+    <section id="desserts-drinks"  class="desserts-drinks desserts-drinks_position wrapper" <!--style="display: none;"-->
         <div class="desserts-drink-container">
             <p class="descript">
                 <?php $post = get_post($post_id = 3098); echo $post->post_content; ?>
@@ -383,8 +383,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
 
@@ -394,72 +392,68 @@
 		</div>
 		<div class="news-block">
 			<div class="main-carousel-cont">
-				<div id="carousel" class="carousel slide" data-interval="false">	
+				<div id="carousel" class="carousel" data-slick="'{autoplay: true}'">
+                    <?php $posts = get_posts ("category_name=news&orderby=date&numberposts=3");
+                                $i = 0;
+                    ?>
+                    <?php if ($posts) : ?>
+                    <?php foreach ($posts as $post) : setup_postdata ($post); ?>
 
-					<div class="carousel-inner">
+                        <div class="item <?php echo $i == 0 ? 'active' : ''; ?>">
+                            <div class="news-item">
 
-						<?php $posts = get_posts ("category_name=news&orderby=date&numberposts=3"); 
-									$i = 0;
-						?> 
-						<?php if ($posts) : ?>
-						<?php foreach ($posts as $post) : setup_postdata ($post); ?>					 
-								
-							<div class="item <?php echo $i == 0 ? 'active' : ''; ?>">
-								<div class="news-item">
+                            <?php
+                                $thumb_id = get_post_thumbnail_id();
+                                $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+                            ?>
 
-								<?php
-									$thumb_id = get_post_thumbnail_id();
-									$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-								?>
-				
-									<div class="news-item__img-cont">
+                                <div class="news-item__img-cont">
 
 
-										<?php  
-											if (has_post_thumbnail()) {
-											  $thumb_id = get_post_thumbnail_id();
-												$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+                                    <?php
+                                        if (has_post_thumbnail()) {
+                                          $thumb_id = get_post_thumbnail_id();
+                                            $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
-												echo '<img class="news-item__img" data-src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
-											}
-											else {
-											    echo '<img class="news-item__img" data-src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
-											}
-										?>	
+                                            echo '<img class="news-item__img" data-src="' . $thumb_url[0]  . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+                                        }
+                                        else {
+                                            echo '<img class="news-item__img" data-src="' . get_bloginfo('template_directory') . '/src/img/dsg/backgrounds/news-thumbnail.jpg' . '"  alt="Кроссфуд. Правильное питание - это просто" />';
+                                        }
+                                    ?>
 
-									</div>
-		
-									<div class="news-item__descr-cont">
-										<div class="news-item__title-cont">
-											<h4  class="news-item__title"><?php the_title(); ?></h4>
-										</div>
-				
-										<div class="news-item__req-cont">
-											<p class="news-item__author">Автор: <?php echo get_post_meta( get_the_ID(), 'news_author', 1); ?></p>
-											<p class="news-item__date"><?php the_modified_date(); ?></p>
-										</div>
-				
-										<div class="news-item__txt-cont">
-											<div  class="news-item__txt"><?php the_excerpt(); ?></div>
-										</div>
-				
-				
-										<div class="news-item__read-cont">
-											<a href="<?php the_permalink() ?>" class="button button_def button_filled news__button-btn">Читать дальше</a>
-										</div>
-				
-									</div>
-								</div>
-							</div>
+                                </div>
 
-						<?php $i++; endforeach; else:	?>
+                                <div class="news-item__descr-cont">
+                                    <div class="news-item__title-cont">
+                                        <h4  class="news-item__title"><?php the_title(); ?></h4>
+                                    </div>
 
-							<p><?php _e('“We believe that every human being deserves love, respect, and a chance to live a dignified life.”'); ?></p>
+                                    <div class="news-item__req-cont">
+                                        <p class="news-item__author">Автор: <?php echo get_post_meta( get_the_ID(), 'news_author', 1); ?></p>
+                                        <p class="news-item__date"><?php the_modified_date(); ?></p>
+                                    </div>
 
-						<?php 
-							wp_reset_postdata();
-						endif; ?>
-					</div>
+                                    <div class="news-item__txt-cont">
+                                        <div  class="news-item__txt"><?php the_excerpt(); ?></div>
+                                    </div>
+
+
+                                    <div class="news-item__read-cont">
+                                        <a href="<?php the_permalink() ?>" class="button button_def button_filled news__button-btn">Читать дальше</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php $i++; endforeach; else:	?>
+
+                        <p><?php _e('“We believe that every human being deserves love, respect, and a chance to live a dignified life.”'); ?></p>
+
+                    <?php
+                        wp_reset_postdata();
+                    endif; ?>
 				</div>
 			</div>
 		</div>

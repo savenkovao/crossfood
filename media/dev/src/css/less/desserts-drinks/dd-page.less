@@ -35,7 +35,8 @@
 }
 
 
-.carousel-control.dd__carousel-arrow, .dd_background {
+.dd__carousel .carousel-arrow,
+.dd_background {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent
@@ -82,7 +83,8 @@
 }
 
 
-.carousel-control.dd__carousel-arrow, .reviews-slider__arrow {
+.dd__carousel .carousel-arrow,
+.reviews-slider__arrow {
   background-image: url(@slider-arrow-img);
   background-size: cover
 }
@@ -125,7 +127,7 @@
   min-height: 100px
 }
 
-.carousel-control.dd__carousel-arrow {
+.dd__carousel .carousel-arrow {
   width: 12px;
   height: 32px;
   position: absolute;
@@ -134,12 +136,12 @@
   cursor: pointer
 }
 
-.carousel-control.dd__carousel-arrow.left {
+.dd__carousel .carousel-arrow.left {
   left: 2%;
   background-position: bottom
 }
 
-.carousel-control.dd__carousel-arrow.right {
+.dd__carousel .carousel-arrow.right {
   right: 2%;
   background-position: top
 }
@@ -178,11 +180,11 @@
     min-height: inherit
   }
 
-  .carousel-control.dd__carousel-arrow.left {
+  .dd__carousel .carousel-arrow.left {
     left: 20px;
   }
 
-  .carousel-control.dd__carousel-arrow.right {
+  .dd__carousel .carousel-arrow.right {
     right:20px;
   }
 
@@ -201,11 +203,11 @@
     min-height: 360px;
     max-height: 360px
   }
-  .news__carousel-arrow.left {
+  .carousel-arrow.left {
     left: 0
   }
 
-  .news__carousel-arrow.right {
+  .carousel-arrow.right {
     right: 0
   }
 }
