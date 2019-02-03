@@ -385,6 +385,35 @@
         </div>
     </section>
 
+    <section id="faq" class="faq p-t-30 p-b-30 desserts-drinks_position wrapper">
+        <div class="title-3">
+            <h3 class="title-3__h3 title-3__h3_dark hr-line">FAQ</h3>
+        </div>
+
+        <div class="p-t-50 faq__cont">
+            <?php $posts = get_posts ("category_name=faq&orderby=date&order=ASC&numberposts=999");
+            $i = 0;
+            ?>
+            <?php if ($posts) : ?>
+            <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+                <div class="dropdown dropdown-pallet dropdown-pallet-arrow">
+                    <div class="dropdown-toggle">
+                        <?php the_title(); ?>
+                    </div>
+                    <div class="dropdown-content p">
+                      <?php echo $post->post_content; ?>
+                    </div>
+                </div>
+            <?php $i++; endforeach; else: ?>
+
+                <p><?php _e('“We believe that every human being deserves love, respect, and a chance to live a dignified life.”'); ?></p>
+
+                <?php
+                wp_reset_postdata();
+            endif; ?>
+        </div>
+    </section>
+
 
 	<section id="news" class="news news_position wrapper">
 		<div class="title-3">

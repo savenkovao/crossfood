@@ -1132,4 +1132,15 @@
 
   //  Image Lazy loading
 
+
+  /* Dropdown */
+  $(document).on('click', '.dropdown-toggle', function(e)  {
+    e.preventDefault();
+    $(e.target).closest('.dropdown').find('.dropdown-content').slideToggle(function () {
+
+      $(e.target).closest('.dropdown').toggleClass('active');
+    });
+  })
+  /* Dropdown */
+
 }(jQuery));
