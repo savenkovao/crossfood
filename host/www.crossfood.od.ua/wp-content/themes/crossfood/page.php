@@ -460,11 +460,6 @@
 							wp_reset_postdata();
 						endif; ?>
 					</div>
-					
-					<a href="#carousel" class="left carousel-control main-carousel__control news__carousel-arrow" data-slide="prev">
-					</a>
-					<a href="#carousel" class="right carousel-control main-carousel__control news__carousel-arrow" data-slide="next">
-					</a>
 				</div>
 			</div>
 		</div>

@@ -952,14 +952,21 @@
   // delete img attributes 'width/height'
 
 
-  /* Bootstrap carousel swipe feature */
-  $('.carousel').swipe({
-    swipe : function (event, direction, distance, duration, fingerCount, fingerData) {
-      if(direction == 'left') $(this).carousel('next');
-      if(direction == 'right') $(this).carousel('prev');
-    },
-    allowPageScroll : 'vertical'
+  $('.carousel-inner').slick({
+    arrows: true,
+    prevArrow: '<div class="news__carousel-arrow left"></div>',
+    nextArrow: '<div class="news__carousel-arrow right"></div>',
   });
+  console.log('ooo783')
+
+  /* Bootstrap carousel swipe feature */
+  // $('.carousel').swipe({
+  //   swipe : function (event, direction, distance, duration, fingerCount, fingerData) {
+  //     if(direction == 'left') $(this).carousel('next');
+  //     if(direction == 'right') $(this).carousel('prev');
+  //   },
+  //   allowPageScroll : 'vertical'
+  // });
   /* Bootstrap carousel swipe feature */
 
 
