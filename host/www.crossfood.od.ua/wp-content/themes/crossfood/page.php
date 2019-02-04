@@ -385,7 +385,8 @@
         </div>
     </section>
 
-    <section id="faq" class="faq p-t-30 p-b-30 desserts-drinks_position wrapper">
+    <section id="faq" class="faq faq_position">
+      <div class="wrapper">
         <div class="title-3">
             <h3 class="title-3__h3 title-3__h3_dark hr-line">FAQ</h3>
         </div>
@@ -412,6 +413,7 @@
                 wp_reset_postdata();
             endif; ?>
         </div>
+      </div>
     </section>
 
 
