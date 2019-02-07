@@ -862,7 +862,7 @@
       selectCuisineItem(function () {
         if(subscribe !== 'trial') {
           // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
-          cuisineListener.price = $('#subscribe-items ' + '[data-subscribe="'+ subscribe +'"] ' + '[data-identifier="' + calories +'"] .subscribe__price strong').html();
+          cuisineListener.price = $('#subscribe-items ' + '[data-subscribe="' + subscribe + '"] ' + '[data-identifier="' + calories + '"] .subscribe__price strong').html();
         } else if(subscribe === 'trial') {
           cuisineListener.price = $('#' + subscribe).html();
         }
@@ -954,9 +954,9 @@
 
 
   $('.carousel').slick({
-    arrows: true,
-    prevArrow: '<div class="carousel-arrow left"></div>',
-    nextArrow: '<div class="carousel-arrow right"></div>',
+    arrows : true,
+    prevArrow : '<div class="carousel-arrow left"></div>',
+    nextArrow : '<div class="carousel-arrow right"></div>'
   });
 
   /* Bootstrap carousel swipe feature */
@@ -1008,11 +1008,13 @@
 
   function setUserData($form) {
     updateUserDataObj();
-    $form.find('[name="your-name"]').val(userData.name);
-    $form.find('[name="your-email"]').val(userData.email);
-    $form.find('[name="tel-611"]').val(userData.phone);
-    $form.find('[name="your-address"]').val(userData.address);
-    $form.find('[name="your-time"]').val(userData.time);
+    if(userData) {
+      $form.find('[name="your-name"]').val(userData.name);
+      $form.find('[name="your-email"]').val(userData.email);
+      $form.find('[name="tel-611"]').val(userData.phone);
+      $form.find('[name="your-address"]').val(userData.address);
+      $form.find('[name="your-time"]').val(userData.time);
+    }
   }
 
   getText();
@@ -1134,13 +1136,13 @@
 
 
   /* Dropdown */
-  $(document).on('click', '.dropdown-toggle', function(e)  {
+  $(document).on('click', '.dropdown-toggle', function (e) {
     e.preventDefault();
     $(e.target).closest('.dropdown').find('.dropdown-content').slideToggle(function () {
 
       $(e.target).closest('.dropdown').toggleClass('active');
     });
-  })
+  });
   /* Dropdown */
 
 }(jQuery));

@@ -385,7 +385,7 @@
         </div>
     </section>
 
-    <section id="faq" class="faq faq_position">
+    <section id="faq" class="faq faq_position" style="display: none;">
       <div class="wrapper">
         <div class="title-3">
             <h3 class="title-3__h3 title-3__h3_dark hr-line">FAQ</h3>
