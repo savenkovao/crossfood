@@ -1135,6 +1135,7 @@
   //  Image Lazy loading
 
 
+
   /* Dropdown */
   $(document).on('click', '.dropdown-toggle', function (e) {
     e.preventDefault();
