@@ -102,7 +102,7 @@
   }
 }
 
-.wpcf7-form-control {
+.wpcf7-form-control:not(.wpcf7-checkbox) {
   width: 100%;
   border: 1px solid #d4d4d4;
   background-color: #fff;
@@ -122,6 +122,26 @@
     width: 90%;
   }
 }
+
+.wpcf7-checkbox {
+  text-align: left;
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  .wpcf7-list-item-label {
+    vertical-align: top;
+  }
+
+  input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+  }
+}
+
+
 
 .wpcf7-form-control.wpcf7-textarea {
   max-height: 100px;

@@ -78,37 +78,45 @@
 				</div>
 
 				<div id="subscribe-items" class="tab-block__tabs subscribe_tabs-position">
-					<div data-subscribe="stand" class="tab-block__tab-item">
-						
-						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
+					<div data-subscribe="stand">
+                        <?php $post = get_post($post_id = 6447); if ($post->post_content) : ?>
+                            <p class="text-center subscribe__desc">
+                                <?php echo $post->post_content; ?>
+                            </p>
+                        <?php endif; ?>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
 
-						</div>
+                        <div class="tab-block__tab-item">
 
-						<div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
-							
-							<?php $post = get_post($post_id = 1616); echo $post->post_content; ?>
+                            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-						</div>
+                                <?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
 
-						<div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
-							
-							<?php $post = get_post($post_id = 1618); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-						</div>
+                            </div>
 
-						<div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
+                            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
+
+                                <?php $post = get_post($post_id = 1616); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
+
+                                <?php $post = get_post($post_id = 1618); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+                            </div>
+
+                            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
 							
 							<?php $post = get_post($post_id = 1621); echo $post->post_content; ?>
 
@@ -116,135 +124,158 @@
 								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
 							</div>
 						</div>
+                        </div>
 					</div>
 
-					<div data-subscribe="fit" class="tab-block__tab-item" style="display: none;">
-						
-						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 105); echo $post->post_content; ?>
+                    <div  data-subscribe="fit" style="display: none;">
+                        <?php $post = get_post($post_id = 6449); if ($post->post_content) : ?>
+                            <p class="text-center subscribe__desc">
+                                <?php echo $post->post_content; ?>
+                            </p>
+                        <?php endif; ?>
+                        <div class="tab-block__tab-item">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
+                            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-						</div>
+                                <?php $post = get_post($post_id = 105); echo $post->post_content; ?>
 
-						<div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
-							
-							<?php $post = get_post($post_id = 107); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-						</div>
+                            </div>
 
-						<div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
-							
-							<?php $post = get_post($post_id = 109); echo $post->post_content; ?>
+                            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-						</div>
+                                <?php $post = get_post($post_id = 107); echo $post->post_content; ?>
 
-						<div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
-							
-							<?php $post = get_post($post_id = 111); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+                            </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-						</div>
-					</div>
+                            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
 
-					<div data-subscribe="prem" class="tab-block__tab-item" style="display: none;" >
-						
-						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 353); echo $post->post_content; ?>
+                                <?php $post = get_post($post_id = 109); echo $post->post_content; ?>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+                            </div>
 
-						<div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 355); echo $post->post_content; ?>
+                            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
+                                <?php $post = get_post($post_id = 111); echo $post->post_content; ?>
 
-						<div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 357); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>						
 
-						<div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 359); echo $post->post_content; ?>
+                    <div  data-subscribe="prem" style="display: none;">
+                        <?php $post = get_post($post_id = 6451); if ($post->post_content) : ?>
+                            <p class="text-center subscribe__desc">
+                                <?php echo $post->post_content; ?>
+                            </p>
+                        <?php endif; ?>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
-					</div>
+                        <div class="tab-block__tab-item" >
 
-					<div data-subscribe="veg" class="tab-block__tab-item" style="display: none;" >
-						
-						<div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 361); echo $post->post_content; ?>
+                            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
+                                <?php $post = get_post($post_id = 353); echo $post->post_content; ?>
 
-						<div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 363); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
+                            </div>
 
-						<div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 365); echo $post->post_content; ?>
+                            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>						
+                                <?php $post = get_post($post_id = 355); echo $post->post_content; ?>
 
-						<div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
-							
-							<?php $post = get_post($post_id = 367); echo $post->post_content; ?>
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
 
-							<div class="subscribe__button-cnt">
-								<button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
-							</div>
-			
-						</div>
-					</div>
+                            </div>
 
-				</div>	
+                            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 357); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+
+                            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 359); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div  data-subscribe="veg" style="display: none;">
+                        <?php $post = get_post($post_id = 6453); if ($post->post_content) : ?>
+                            <p class="text-center subscribe__desc">
+                                <?php echo $post->post_content; ?>
+                            </p>
+                        <?php endif; ?>
+
+					    <div class="tab-block__tab-item">
+                            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 361); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+
+                            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 363); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+
+                            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 365); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+
+                            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+
+                                <?php $post = get_post($post_id = 367); echo $post->post_content; ?>
+
+                                <div class="subscribe__button-cnt">
+                                    <button class="button button_bordered subscribe__button-btn"  data-meta-node data-target="form_2" data-action="activate">Заказать</button>
+                                </div>
+
+                            </div>
+                        </div>
+				    </div>
+				</div>
 
 			</div>
 		</div>
@@ -385,6 +416,7 @@
         </div>
     </section>
 
+<!--    <section id="faq" class="faq faq_position">-->
     <section id="faq" class="faq faq_position" style="display: none;">
       <div class="wrapper">
         <div class="title-3">
