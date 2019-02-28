@@ -456,7 +456,7 @@
 		<div class="news-block">
 			<div class="main-carousel-cont">
 				<div id="carousel" class="carousel" data-slick="'{autoplay: true}'">
-                    <?php $posts = get_posts ("category_name=news&orderby=date&numberposts=3");
+                    <?php $posts = get_posts ("category_name=news&orderby=date&numberposts=20");
                                 $i = 0;
                     ?>
                     <?php if ($posts) : ?>
