@@ -1039,6 +1039,48 @@
 
   /* set user-data into forms */
 
+  /* UTM */
+
+  getUtmParams();
+
+  function getUtmParams() {
+    var url_string = location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get('utm_source');
+
+    window.UTM_DATA = {
+      utm_source : url.searchParams.get('utm_source') || null,
+      utm_medium : url.searchParams.get('utm_medium') || null,
+      utm_term : url.searchParams.get('utm_term') || null,
+      utm_campaign : url.searchParams.get('utm_campaign') || null
+    };
+    var cachedData = JSON.parse(localStorage.UTM_DATA) || null;
+
+    if(cachedData) {
+      cachedData.utm_source = window.UTM_DATA.utm_source || cachedData.utm_source;
+      cachedData.utm_medium = window.UTM_DATA.utm_medium || cachedData.utm_medium;
+      cachedData.utm_term = window.UTM_DATA.utm_term || cachedData.utm_term;
+      cachedData.utm_campaign = window.UTM_DATA.utm_campaign || cachedData.utm_campaign;
+      localStorage.setItem('UTM_DATA', JSON.stringify(cachedData));
+    } else {
+      localStorage.setItem('UTM_DATA', JSON.stringify(UTM_DATA));
+    }
+  }
+
+  initUTMFields();
+
+  function initUTMFields() {
+    var utmData = JSON.parse(localStorage.UTM_DATA) || window.UTM_DATA;
+    if(utmData) {
+      $('input[name="utm_source"]').val(utmData.utm_source || null);
+      $('input[name="utm_medium"]').val(utmData.utm_medium || null);
+      $('input[name="utm_term"]').val(utmData.utm_term || null);
+      $('input[name="utm_campaign"]').val(utmData.utm_campaign || null);
+    }
+  }
+
+  /* UTM */
+
 
   /* Page init */
   switch (this.CONFIG.page) {
@@ -1143,7 +1185,6 @@
   }
 
   //  Image Lazy loading
-
 
 
   /* Dropdown */

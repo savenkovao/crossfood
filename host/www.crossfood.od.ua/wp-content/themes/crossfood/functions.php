@@ -186,37 +186,6 @@ function crossfood_scripts()
 
 add_action('wp_enqueue_scripts', 'crossfood_scripts');
 
-//https://crossfood.od.ua/
-//?utm_source=google
-//&utm_medium=cpc
-//&utm_term=%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5
-//&utm_campaign=pravolnoe_pitanie
-//&gclid=Cj0KCQiA5NPjBRDDARIsAM9X1GIORdSSJYPGu74Qnh9dWKHpVl3rhhE4EUSzrP-D4OZiVPcVXecTUJ4aAmxgEALw_wcB
-
-
-add_action('wp_footer', 'utm_callback_func');
-function utm_callback_func()
-{
-    ?>
-  <script type="text/javascript">
-    getUtmParams();
-
-    function getUtmParams() {
-      var url_string = location.href;
-      var url = new URL(url_string);
-      var c = url.searchParams.get('utm_source');
-      window.UTM_DATA = {
-        utm_source : url.searchParams.get('utm_source') || null,
-        utm_medium : url.searchParams.get('utm_medium') || null,
-        utm_term : url.searchParams.get('utm_term') || null,
-        utm_campaign : url.searchParams.get('utm_campaign') || null
-      };
-      console.log(window.UTM_DATA);
-    }
-  </script>
-    <?php
-}
-
 // ga
 
 add_action('wp_footer', 'ga_callback_func');
