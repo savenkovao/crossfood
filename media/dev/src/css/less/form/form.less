@@ -6,7 +6,6 @@
   }
 }
 
-
 .wpcf7 {
   display: flex;
   //position: fixed;
@@ -128,26 +127,33 @@
 
   .wpcf7-list-item {
     margin: 0;
+    display: flex;
+    align-items: flex-start;
   }
 
   .wpcf7-list-item-label {
     vertical-align: top;
+    font-size: 14px;
   }
 
-  input[type="checkbox"]{
+  input[type="checkbox"] {
     width: 20px;
     height: 20px;
     vertical-align: top;
   }
 }
 
-
-
 .wpcf7-form-control.wpcf7-textarea {
   max-height: 100px;
   height: 100px;
   resize: none;
   vertical-align: top;
+}
+
+@media @tablet {
+  .wpcf7-list-item {
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -216,27 +222,26 @@ div.wpcf7 .ajax-loader {
   }
 }
 
-
 .close-btn_f-pos {
-  display: none!important;
+  display: none !important;
   z-index: 2;
 }
 
-.pum-theme-3212 .pum-content+.pum-close,
-.pum-theme-lightbox .pum-content+.pum-close {
-  right: 0!important;
-  top: 0!important;
-  box-shadow: none!important;
-  text-shadow: none!important;
-  color: rgba(0,0,0,1)!important;
-  background-color: transparent!important;
+.pum-theme-3212 .pum-content + .pum-close,
+.pum-theme-lightbox .pum-content + .pum-close {
+  right: 0 !important;
+  top: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  color: rgba(0, 0, 0, 1) !important;
+  background-color: transparent !important;
 }
 
 .pum-theme-3212 .pum-container,
 .pum-theme-lightbox .pum-container {
-  max-width: 720px!important;
+  max-width: 720px !important;
   width: 100% !important;
-  border-radius: 4px!important;
+  border-radius: 4px !important;
 
   .button {
     font-size: 16px;
@@ -245,12 +250,10 @@ div.wpcf7 .ajax-loader {
   }
 }
 
-
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .pum-theme-3212 .pum-container,
   .pum-theme-lightbox .pum-container {
-    max-width: 100%!important;
+    max-width: 100% !important;
     width: 90% !important;
   }
 }

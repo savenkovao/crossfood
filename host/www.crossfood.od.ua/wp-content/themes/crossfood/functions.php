@@ -186,6 +186,36 @@ function crossfood_scripts()
 
 add_action('wp_enqueue_scripts', 'crossfood_scripts');
 
+//https://crossfood.od.ua/
+//?utm_source=google
+//&utm_medium=cpc
+//&utm_term=%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5
+//&utm_campaign=pravolnoe_pitanie
+//&gclid=Cj0KCQiA5NPjBRDDARIsAM9X1GIORdSSJYPGu74Qnh9dWKHpVl3rhhE4EUSzrP-D4OZiVPcVXecTUJ4aAmxgEALw_wcB
+
+
+add_action('wp_footer', 'utm_callback_func');
+function utm_callback_func()
+{
+    ?>
+  <script type="text/javascript">
+    getUtmParams();
+
+    function getUtmParams() {
+      var url_string = location.href;
+      var url = new URL(url_string);
+      var c = url.searchParams.get('utm_source');
+      window.UTM_DATA = {
+        utm_source : url.searchParams.get('utm_source') || null,
+        utm_medium : url.searchParams.get('utm_medium') || null,
+        utm_term : url.searchParams.get('utm_term') || null,
+        utm_campaign : url.searchParams.get('utm_campaign') || null
+      };
+      console.log(window.UTM_DATA);
+    }
+  </script>
+    <?php
+}
 
 // ga
 
@@ -202,14 +232,17 @@ function ga_callback_func()
         //   'event_category' : 'callback',
         //   'event_label' : 'Callback'
         // });
-
-        dataLayer.push({
-          'event': 'callback',
-          'callbackData': {
-            'event_category' : 'callback',
-            'event_label' : 'Callback'
-          }
-        });
+        dataLayer.push(Object.assign(
+          {},
+          {
+            'event' : 'callback',
+            'callbackData' : {
+              'event_category' : 'callback',
+              'event_label' : 'Callback'
+            }
+          },
+          window.UTM_DATA
+        ));
       }
     }, false);
   </script>
@@ -231,16 +264,20 @@ function ga_purchase_func()
         //   'event_label' : 'Purchase'
         // });
 
-        dataLayer.push({
-          'event': 'subscribe',
-          'subscribeData': {
-            'event_category' : 'subscribe',
-            'currencyCode': 'UAH',
-            'event_label' : 'Subscribe',
-            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-          }
-        });
+        dataLayer.push(Object.assign(
+          {},
+          {
+            'event' : 'subscribe',
+            'subscribeData' : {
+              'event_category' : 'subscribe',
+              'currencyCode' : 'UAH',
+              'event_label' : 'Subscribe',
+              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price)
+            }
+          },
+          window.UTM_DATA
+        ));
       }
     }, false);
   </script>
@@ -262,22 +299,25 @@ function ga_desserts_func()
         //   'event_label' : 'Desserts'
         // });
 
-        dataLayer.push({
-          'event': 'desserts',
-          'dessertsData': {
-            'event_category' : 'desserts',
-            'currencyCode': 'UAH',
-            'event_label' : 'Desserts',
-            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-          }
-        });
+        dataLayer.push(Object.assign(
+          {},
+          {
+            'event' : 'desserts',
+            'dessertsData' : {
+              'event_category' : 'desserts',
+              'currencyCode' : 'UAH',
+              'event_label' : 'Desserts',
+              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price)
+            }
+          },
+          window.UTM_DATA
+        ));
       }
     }, false);
   </script>
     <?php
 }
-
 
 
 add_action('wp_footer', 'ga_drinks_func');
@@ -289,13 +329,13 @@ function ga_drinks_func()
     document.addEventListener('wpcf7mailsent', function (event) {
       if('3143' == event.detail.contactFormId) {
         dataLayer.push({
-          'event': 'drinks',
-          'dessertsData': {
+          'event' : 'drinks',
+          'dessertsData' : {
             'event_category' : 'drinks',
-            'currencyCode': 'UAH',
+            'currencyCode' : 'UAH',
             'event_label' : 'Drinks',
             'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
+            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price)
           }
         });
       }
