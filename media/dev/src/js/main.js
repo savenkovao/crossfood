@@ -1044,7 +1044,7 @@
       utm_term : url.searchParams.get('utm_term') || null,
       utm_campaign : url.searchParams.get('utm_campaign') || null
     };
-    var cachedData = JSON.parse(localStorage.UTM_DATA) || null;
+    var cachedData = localStorage.UTM_DATA ? JSON.parse(localStorage.UTM_DATA) : null;
 
     if(cachedData) {
       cachedData.utm_source = window.UTM_DATA.utm_source || cachedData.utm_source;
@@ -1066,6 +1066,7 @@
       $('input[name="utm_medium"]').val(utmData.utm_medium || null);
       $('input[name="utm_term"]').val(utmData.utm_term || null);
       $('input[name="utm_campaign"]').val(utmData.utm_campaign || null);
+      $('input[name="utm_referrer"]').val(document.referrer || null);
     }
   }
 
