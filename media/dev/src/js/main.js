@@ -1090,7 +1090,7 @@
   }
 
   function _initDrinks() {
-    _initDDPage('#wpcf7-f3143-o5', 'select[name="menu-232"]');
+    _initDDPage('#wpcf7-f3143-o7', 'select[name="menu-232"]');
   }
 
   function _initDDPage(form, menuSelect) {
