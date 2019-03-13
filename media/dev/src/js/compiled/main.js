@@ -1082,6 +1082,10 @@
 
   /* UTM */
 
+  /* SPAM PROTECTION */
+  $('.agree').prop('checked', false);
+  /* SPAM PROTECTION */
+
 
   /* Page init */
   switch (this.CONFIG.page) {
