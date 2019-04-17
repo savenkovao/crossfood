@@ -969,6 +969,35 @@
     nextArrow : '<div class="carousel-arrow right"></div>'
   });
 
+
+  $('.carousel-review').slick({
+    arrows : true,
+    dots : true,
+    slidesToShow : 3,
+    slidesToScroll : 3,
+    prevArrow : '<div class="carousel-arrow left"></div>',
+    nextArrow : '<div class="carousel-arrow right"></div>',
+    responsive : [
+      {
+        breakpoint : 1024,
+        settings : {
+          slidesToShow : 2,
+          slidesToScroll : 2,
+          dots : false
+
+        }
+      },
+      {
+        breakpoint : 600,
+        settings : {
+          slidesToShow : 1,
+          slidesToScroll : 1,
+          dots : false
+        }
+      }
+    ]
+  });
+
   /* Bootstrap carousel swipe feature */
   // $('.carousel').swipe({
   //   swipe : function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -1004,8 +1033,8 @@
       time : $form.find('[name="your-time"]').val() || '',
 
       product : $('input[name="product-name"]').val() ||
-      $('#form-input_sweets').val() ||
-      $('#form-input_drinks').val() || '',
+        $('#form-input_sweets').val() ||
+        $('#form-input_drinks').val() || '',
       price : $form.find('#form-input_price').val() || 0
     };
 

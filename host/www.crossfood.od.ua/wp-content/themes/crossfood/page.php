@@ -528,17 +528,10 @@
 			<div id="reviews" class="title-3">
 				<h3 class="title-3__h3 title-3__h3_dark hr-line">Отзывы</h3>	
 			</div>
-			
-			<div id="reviews-slider" data-slides-onpage="3" class="slider reviews-slider">
-				
+
+
+			<div class="m-t-50">
 				<?php $post = get_post($post_id = 200); echo $post->post_content; ?>
-				
-				<div id="reviews-slider-nav-arw">
-					<div data-action="left" data-meta-node class="slider__arrow  slider_arrow-left reviews-slider__arrow reviews-slider__arrow-left"></div>
-					<div data-action="right" data-meta-node class="slider__arrow  slider_arrow-right reviews-slider__arrow reviews-slider__arrow-right"></div>
-				</div>
-					
-				<div id="reviews-slider-nav-btn" class="slider__btn-nav reviews-slider__btn-nav"></div>
 			</div>
 
 
