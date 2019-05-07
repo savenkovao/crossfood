@@ -816,8 +816,8 @@
       time : $form.find('[name="your-time"]').val() || '',
 
       product : $('input[name="product-name"]').val() ||
-        $('#form-input_sweets').val() ||
-        $('#form-input_drinks').val() || '',
+      $('#form-input_sweets').val() ||
+      $('#form-input_drinks').val() || '',
       price : $form.find('#form-input_price').val() || 0
     };
 
@@ -895,9 +895,14 @@
   /* UTM */
 
   /* SPAM PROTECTION */
-  $('.agree').prop('checked', false);
-  /* SPAM PROTECTION */
+  $('.agree').click();
 
+  document.addEventListener('wpcf7mailsent', function (event) {
+    setTimeout(function () {
+      $('.agree').click();
+    }, 500);
+  }, false);
+  /* SPAM PROTECTION */
 
   /* Page init */
   switch (this.CONFIG.page) {
