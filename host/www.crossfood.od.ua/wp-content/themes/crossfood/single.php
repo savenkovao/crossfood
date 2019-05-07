@@ -34,28 +34,21 @@ if (is_single()) {
 
         <?php the_content(); ?>
 
-        <?php $id = get_the_ID(); ?>
+        <?php  $global_id = get_the_ID(); ?>
 
         <?php wp_reset_postdata(); ?>
 
       <div class="recommend_posts">
         <h3>Похожие статьи: </h3>
           <?php $posts = get_posts("category_name=news&orderby=date&numberposts=3");
-          $i = 0;
-          ?>
+          $i = 0; ?>
           <?php if ($posts) : ?>
               <?php
-              foreach ($posts as $post) : setup_postdata($post);
-
-                  $current_id = get_the_ID();
-                  if ($id == $current_id) :
-                      ?>
+              foreach ($posts as $post) : setup_postdata($post); ?>
 
                     <div>
                       <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                     </div>
-
-                  <?php endif; ?>
 
                   <?php $i++; endforeach; else: ?>
             <p><?php _e('“Пока что нет похожих статей”'); ?></p>
