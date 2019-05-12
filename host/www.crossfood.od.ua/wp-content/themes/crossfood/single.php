@@ -71,3 +71,48 @@ if (is_single()) {
 }
 ?>
 
+<!--<ol class="carousel-review">
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-57-49.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-57-52.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-57-53.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-57-56.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-57-59.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-01.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-08.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-09.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-11.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-12.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-17.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-18.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-19.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-21.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-23.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-25.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-27.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-28.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+  <li>
+    <img class="alignnone size-full wp-image-202" data-src="//crossfood.od.ua/wp-content/uploads/2019/04/photo_2019-04-17_22-58-30.jpg" alt="Отзыв покупателя" data-meta-node=""></li>
+</ol>-->
+<!--
+Структура изображения в слайде
+ 	<li><img data-meta-node src="Путь к картинке" alt="Замещающий текст" class="Может быть пустым" /></li>
+Все остальные атрибуты удалить.
+-->
