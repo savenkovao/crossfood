@@ -72,6 +72,8 @@
 </footer>
 
 
+<link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/fonts.css">
+
 <!-- Facebook Pixel Code -->
 <script>
   !function (f, b, e, v, n, t, s) {
