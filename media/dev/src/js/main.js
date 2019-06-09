@@ -625,11 +625,12 @@
         selectCalories.selectedIndex = 3;
         dataCal = 2500;
       }
+
       setPriceInForm(dataSub, dataCal);
     }
 
 
-    $('#wpcf7-f2087-o7 form').on('change', function (event) {
+    $('#wpcf7-f2087-o5 form').on('change', function (event) {
 
       var selectSubscribe = document.getElementById('form-input_subscribe').value;
       var selectCalories = document.getElementById('form-input_calories').value;
@@ -645,6 +646,7 @@
       } else if(selectSubscribe === 'Пробный день') {
         selectSubscribe = 'trial';
       }
+      console.log(selectSubscribe, selectCalories);
 
       setPriceInForm(selectSubscribe, selectCalories);
 
