@@ -809,18 +809,17 @@
   $('.wpcf7-form').on('submit', function (e) {
     var $form = $(e.currentTarget);
     var userInfo = {
-      name : $form.find('[name="your-name"]').val() || '',
-      email : $form.find('[name="your-email"]').val() || '',
-      phone : $form.find('[name="tel-611"]').val() || '',
-      address : $form.find('[name="your-address"]').val() || '',
-      time : $form.find('[name="your-time"]').val() || '',
+      name : $form.find('[name="your-name"]').val() || userData.name || '',
+      email : $form.find('[name="your-email"]').val() || userData.email || '',
+      phone : $form.find('[name="tel-611"]').val() || userData.phone || '',
+      address : $form.find('[name="your-address"]').val() || userData.address || '',
+      time : $form.find('[name="your-time"]').val() || userData.time || '',
 
       product : $('input[name="product-name"]').val() ||
-      $('#form-input_sweets').val() ||
-      $('#form-input_drinks').val() || '',
+        $('#form-input_sweets').val() ||
+        $('#form-input_drinks').val() || '',
       price : $form.find('#form-input_price').val() || 0
     };
-
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
   });
 
@@ -895,11 +894,13 @@
   /* UTM */
 
   /* SPAM PROTECTION */
-  $('.agree').click();
+  $('[name="agree"]').click();
 
   document.addEventListener('wpcf7mailsent', function (event) {
     setTimeout(function () {
-      $('.agree').click();
+      $('[name="agree"]').each(function (i, item) {
+        if(item.checked) item.click();
+      });
     }, 500);
   }, false);
   /* SPAM PROTECTION */

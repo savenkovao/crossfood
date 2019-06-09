@@ -21,7 +21,7 @@
   </section>
 
   <section id="dd" class="dd_background desserts_background"
-           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/desserts-bg.jpg?ver_1.01">
+           data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/desserts-bg.jpg?ver_1.01">
     <div class="dd_position wrapper">
 
 

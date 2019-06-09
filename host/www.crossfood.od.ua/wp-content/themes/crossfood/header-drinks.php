@@ -34,7 +34,7 @@
 
 	<header class="header">
         <div class="dd-banner drinks-banner"
-             data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-banner.jpg?ver_1.01"></div>
+             data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-banner.jpg?ver_1.01"></div>
 		<div class="wrapper header_position_single">
 
 			<div class="header-menu">

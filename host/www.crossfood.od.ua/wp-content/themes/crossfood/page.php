@@ -24,10 +24,10 @@
       <div class="how-it-works_steps-pos">
         <div class="steps">
           <img class="steps__img-desktop"
-               data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png"
+               data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps.png"
                alt="Crossfood - как это работает">
           <img class="steps__img-mobile"
-               data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png"
+               data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/steps-mobile.png"
                alt="Crossfood - как это работает">
 
             <?php $post = get_post($post_id = 27);
@@ -42,7 +42,7 @@
   </section>
 
   <section id="advantages" class="advantages advantages_background"
-           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/advantages-background.jpg?ver_1.01">
+           data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/advantages-background.jpg?ver_1.01">
     <div class="wrapper advantages_position">
       <div class="title-3">
         <h3 class="title-3__h3 title-3__h3_light hr-line">Преимущества</h3>
@@ -347,7 +347,7 @@
 
   <section id="menu" class="cuisine cuisine_background"
 
-           data-bg-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/cuisine-background.jpg?ver_1.01">
+           data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/cuisine-background.jpg?ver_1.01">
     <div class="wrapper cuisine_position">
       <div class="title-3">
         <h3 class="title-3__h3 title-3__h3_light hr-line">Наше меню</h3>
@@ -448,7 +448,7 @@
 
       <div class="desserts-drinks__item-media">
         <img class="desserts-drinks__item-img"
-             data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg"
+             data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg"
              alt="Десерты Crossfood">
 
         <div class="desserts-drinks__btn-cont">
@@ -473,7 +473,7 @@
 
       <div class="desserts-drinks__item-media">
         <img class="desserts-drinks__item-img"
-             data-src="//www.crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg"
+             data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-home-bg.jpg"
              alt="Напитки Crossfood">
 
         <div class="desserts-drinks__btn-cont">
