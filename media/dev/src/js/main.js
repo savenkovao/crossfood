@@ -755,44 +755,41 @@
   });
 
 
-  $('.carousel-review').slick({
-    arrows : true,
-    dots : true,
-    slidesToShow : 3,
-    slidesToScroll : 3,
-    prevArrow : '<div class="carousel-arrow left"></div>',
-    nextArrow : '<div class="carousel-arrow right"></div>',
-    responsive : [
-      {
-        breakpoint : 1024,
-        settings : {
-          slidesToShow : 2,
-          slidesToScroll : 2,
-          dots : false
+  // function initReviewsSilder() {
+    var $carousel = $('.carousel-review');
 
-        }
-      },
-      {
-        breakpoint : 600,
-        settings : {
-          slidesToShow : 1,
-          slidesToScroll : 1,
-          dots : false
-        }
-      }
-    ]
-  });
+    // if(!$carousel.parent().attr('data-display-show')) {
+    //   setTimeout(function () {
+        $carousel.slick({
+          arrows : true,
+          dots : true,
+          slidesToShow : 3,
+          slidesToScroll : 3,
+          prevArrow : '<div class="carousel-arrow left"></div>',
+          nextArrow : '<div class="carousel-arrow right"></div>',
+          responsive : [
+            {
+              breakpoint : 1024,
+              settings : {
+                slidesToShow : 2,
+                slidesToScroll : 2,
+                dots : false
 
-  /* Bootstrap carousel swipe feature */
-  // $('.carousel').swipe({
-  //   swipe : function (event, direction, distance, duration, fingerCount, fingerData) {
-  //     if(direction == 'left') $(this).carousel('next');
-  //     if(direction == 'right') $(this).carousel('prev');
-  //   },
-  //   allowPageScroll : 'vertical'
-  // });
-  /* Bootstrap carousel swipe feature */
-
+              }
+            },
+            {
+              breakpoint : 600,
+              settings : {
+                slidesToShow : 1,
+                slidesToScroll : 1,
+                dots : false
+              }
+            }
+          ]
+        });
+      // }, 1500);
+    // }
+  // }
 
   /* set user-data into forms */
   var userData;
@@ -970,40 +967,48 @@
   function initLazyLoad() {
     var windowTopPosition = $(window)[0].pageYOffset,
       windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
-      $items = $('[data-bg-src], [data-src]'),
-      showOffsets = $(window)[0].innerHeight;
+      $items = $('[data-bg-src], [data-src], [data-display]'),
+      showOffsets = $(window)[0].innerHeight*0.5;
 
     if(!$items.length) {
       $(window).unbind('scroll', lazyLoadHandler);
     }
 
     if(window.matchMedia('(max-width: 768px)').matches) {
-      showOffsets = $(window)[0].innerHeight * 4;
+      showOffsets = $(window)[0].innerHeight*0.75;
     }
 
     $items.each(function (i, item) {
       if(
-        (windowTopPosition - ($(item).offset().top + $(item).height) <= showOffsets) ||
-        (windowBottomPosition + showOffsets >= $(item).offset().top)
+        (windowTopPosition - showOffsets <= $(item).offset().top + $(item).height() &&
+          windowTopPosition - showOffsets > $(item).offset().top) ||
+        windowBottomPosition + showOffsets >= $(item).offset().top
       ) {
         setSource(item);
       }
     });
 
-    function setSource(img) {
+    function setSource(item) {
 
-      if(img.hasAttribute('data-bg-src')) {
-        $(img).css({
-          'background-image' : 'url(' + img.getAttribute('data-bg-src') + ')'
+      if(item.hasAttribute('data-bg-src')) {
+        $(item).css({
+          'background-image' : 'url(' + item.getAttribute('data-bg-src') + ')'
         });
 
-        img.removeAttribute('data-bg-src');
-        img.setAttribute('data-bg', '');
-      } else {
-        img.setAttribute('src', img.getAttribute('data-src'));
+        item.removeAttribute('data-bg-src');
+        item.setAttribute('data-bg', '');
+      } else if(item.hasAttribute('data-display')) {
+        $(item).find('[data-display-show]').css({
+          'display' : 'block'
+        }).removeAttr('data-display-show').end()
+          .removeAttr('data-display');
 
-        img.onload = function () {
-          img.removeAttribute('data-src');
+        // initReviewsSilder();
+      } else {
+        item.setAttribute('src', item.getAttribute('data-src'));
+
+        item.onload = function () {
+          item.removeAttribute('data-src');
         };
       }
     }

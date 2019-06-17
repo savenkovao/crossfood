@@ -96,12 +96,16 @@ img {
   transition: opacity 0.3s;
 }
 
+
+[data-display],
 img[data-src] {
   opacity: 0;
 }
 
+[data-display],
 [data-bg],
 [data-bg-src] {
+  opacity: 1;
   transition: .2s;
 }
 /* Image lazy load*/
