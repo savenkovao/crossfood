@@ -55,7 +55,7 @@ gulp.task('browserSync', function () {
 
 
 gulp.task('less', function(){
-    return gulp.src([path.less + 'style.less'/*, path.less + 'less/fonts.less'*/])
+    return gulp.src([path.less + 'style.less', path.less + 'less/fonts.less'])
         .pipe(less()) // используем gulp-less
         .pipe(autoprefixer())
         .pipe(cssmin({keepSpecialComments : 0}))
