@@ -914,6 +914,17 @@
   }, false);
   /* SPAM PROTECTION */
 
+  /* Add listeners to contactForm 7 form events */
+  $('form.wpcf7-form').on('submit', function (e) {
+    showLoader(e.currentTarget);
+  });
+
+  $(document).on('wpcf7submit wpcf7mailsent wpcf7invalid wpcf7spam wpcf7mailfailed', function( e ) {
+    hideLoader($(e.target).find('form'));
+  } );
+  /* Add listeners to contactForm 7 form events */
+
+
   /* Page init */
   switch (this.CONFIG.page) {
     case 'desserts'                   :
