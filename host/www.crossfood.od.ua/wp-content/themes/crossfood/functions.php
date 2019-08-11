@@ -212,6 +212,8 @@ function ga_callback_func()
           },
           window.UTM_DATA
         ));
+
+        fbq('trackCustom', window.FB_CONTACT_EVENT || 'GetContact1');
       }
     }, false);
   </script>
@@ -247,6 +249,12 @@ function ga_purchase_func()
           },
           window.UTM_DATA
         ));
+
+        fbq('track', 'LeadMain', {
+          value: 12,
+          currency: 'USD',
+        });
+
       }
     }, false);
   </script>
@@ -282,6 +290,11 @@ function ga_desserts_func()
           },
           window.UTM_DATA
         ));
+
+        fbq('track', 'LeadDessert', {
+          value: 6,
+          currency: 'USD',
+        });
       }
     }, false);
   </script>
@@ -306,6 +319,11 @@ function ga_drinks_func()
             'name' : JSON.parse(localStorage.getItem('userInfo')).product,
             'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price)
           }
+        });
+
+        fbq('track', 'LeadDrinks', {
+          value: 1,
+          currency: 'USD',
         });
       }
     }, false);

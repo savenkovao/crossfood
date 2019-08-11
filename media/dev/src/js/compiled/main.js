@@ -922,7 +922,34 @@
   $(document).on('wpcf7submit wpcf7mailsent wpcf7invalid wpcf7spam wpcf7mailfailed', function( e ) {
     hideLoader($(e.target).find('form'));
   } );
+
   /* Add listeners to contactForm 7 form events */
+
+  /* Send fb pixel events */
+  $('header [data-target="form_1"]').on('click', function( e ) {
+    /* Save from trigger */
+    window.FB_CONTACT_EVENT = 'GetContact1';
+    fbq('trackCustom', 'Contact1');
+  } );
+
+  $('footer [data-target="form_1"]').on('click', function( e ) {
+    /* Save from trigger */
+    window.FB_CONTACT_EVENT = 'GetContact2';
+    fbq('trackCustom', 'Contact2');
+  } );
+
+  $('[data-target="form_2"]').on('click', function( e ) {
+    fbq('track', 'InitiateCheckoutMain');
+  } );
+
+  $('[data-target="form_3"]').on('click', function( e ) {
+    fbq('track', 'InitiateCheckoutDesserts');
+  } );
+
+  $('[data-target="form_4"]').on('click', function( e ) {
+    fbq('track', 'InitiateCheckoutDrinks');
+  } );
+  /* Send fb pixel events */
 
 
   /* Page init */
