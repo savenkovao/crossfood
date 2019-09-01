@@ -20,7 +20,6 @@
 <footer class="footer">
   <div class="wrapper footer_position">
     <div class="footer-content">
-
       <div class="tagline-block footer-tagline-block">
 
           <?php if (!is_front_page()) { ?>
@@ -110,6 +109,10 @@
 
       </div>
     </div>
+
+    <div class="text-center copyright">
+      © 2016 Crossfood. <a class="link" href="/privacy-policy">Политика конфиденциальности</a>
+    </div>
   </div>
 </footer>
 
@@ -119,12 +122,12 @@
 <!-- Facebook Pixel Code -->
 <script>
   !function (f, b, e, v, n, t, s) {
-    if(f.fbq) return;
+    if (f.fbq) return;
     n = f.fbq = function () {
       n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
     };
-    if(!f._fbq) f._fbq = n;
+    if (!f._fbq) f._fbq = n;
     n.push = n;
     n.loaded = !0;
     n.version = '2.0';
@@ -133,21 +136,15 @@
     t.async = !0;
     t.src = v;
     s = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
+    s.parentNode.insertBefore(t, s)
   }(window, document, 'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '250533495468251');
+      'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2437774649784255');
   fbq('track', 'PageView');
-  // fbq('track', 'ViewContent');
-  // fbq('track', 'InitiateCheckout');
-  // fbq('track', 'Purchase', {value : '0.00', currency : 'USD'});
-  // fbq('track', 'Lead');
 </script>
-<noscript>
-  <img height="1" width="1"
-       src="https://www.facebook.com/tr?id=250533495468251&ev=PageView
-	&noscript=1"/>
-</noscript>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=2437774649784255&ev=PageView&noscript=1"
+  /></noscript>
 <!-- End Facebook Pixel Code -->
 
 

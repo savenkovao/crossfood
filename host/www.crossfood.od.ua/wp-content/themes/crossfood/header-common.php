@@ -3,15 +3,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <?php if (is_single()) { ?>
-    <title>| <?php echo get_post_meta(get_the_ID(), 'news_title', 1); ?> | - <?php bloginfo("name"); ?>!</title>
+  <title>| <?php bloginfo("description"); ?> | - <?php bloginfo("name"); ?>!</title>
 
-  <?php } else if (is_404()) { ?>
-    <title>| Доставка Правильного Здорового Питания в Одессе | - CrossFood!</title>
-  <?php } ?>
-
-
-  <meta name="description" content="<?php echo get_post_meta(get_the_ID(), 'news_description', 1); ?>">
   <meta name="author" content="CrossFood">
 
   <meta name="robots" content="index, follow"/>
@@ -56,8 +49,9 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <header class="header">
+<!--  <div class="dd-banner drinks-banner"-->
+<!--       data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/drinks-banner.jpg?ver_1.01"></div>-->
   <div class="wrapper header_position_single">
-
     <div class="header-menu">
 
       <nav class="menu-sp">

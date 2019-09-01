@@ -2,7 +2,7 @@
 
   /* Common */
 
-  if(window.CONFIG.page == undefined) {
+  if (window.CONFIG.page == undefined) {
     window.CONFIG.page = '';
   }
 
@@ -62,14 +62,14 @@
 
     var teamSlider = document.getElementById('team-slider');
 
-    if(teamSlider) {
+    if (teamSlider) {
       teamSlider.addEventListener('click', browseTeamSlider, false);
     }
 
     function browseTeamSlider(event) {
       var e = getTarget(event);
 
-      if(e !== undefined) browseSlider(e);
+      if (e !== undefined) browseSlider(e);
 
     }
 
@@ -80,8 +80,8 @@
 
       while (target !== event.currentTarget) {
 
-        if(target.hasAttribute('data-meta-node')) {
-          var e = {target : target, currentTarget : currentTarget};
+        if (target.hasAttribute('data-meta-node')) {
+          var e = {target: target, currentTarget: currentTarget};
 
           return e;
 
@@ -98,7 +98,7 @@
 
       getScreenWidth();
 
-      if(currentScreenWidth >= 768) {
+      if (currentScreenWidth >= 768) {
 
         var target = e.target;
         var currentTarget = e.currentTarget;
@@ -113,7 +113,7 @@
         target.classList.add('l');
         target.setAttribute('data-action', 'l');
 
-        if(dataAction === 'ml') {
+        if (dataAction === 'ml') {
 
           var newSl = allItems.sr.cloneNode(true);
 
@@ -147,7 +147,7 @@
             allItems.sr.remove();
           }, 405);
 
-        } else if(dataAction === 'sl') {
+        } else if (dataAction === 'sl') {
 
           var newSl = allItems.sr.cloneNode(true);
           var newMl = allItems.mr.cloneNode(true);
@@ -186,7 +186,7 @@
             allItems.mr.remove();
           }, 205);
 
-        } else if(dataAction === 'mr') {
+        } else if (dataAction === 'mr') {
 
           var newSr = allItems.sl.cloneNode(true);
 
@@ -218,7 +218,7 @@
             allItems.sl.remove();
           }, 300);
 
-        } else if(dataAction === 'sr') {
+        } else if (dataAction === 'sr') {
 
           var newSr = allItems.ml.cloneNode(true);
           var newMr = allItems.sl.cloneNode(true);
@@ -269,26 +269,26 @@
       for (var i = 0; i < nodes.length; i++) {
         var current = nodes[i].getAttribute('data-action');
 
-        if(current === 'sl') {
+        if (current === 'sl') {
 
           var sl = nodes[i];
 
-        } else if(current === 'ml') {
+        } else if (current === 'ml') {
 
           var ml = nodes[i];
 
-        } else if(current === 'mr') {
+        } else if (current === 'mr') {
 
           var mr = nodes[i];
 
-        } else if(current === 'sr') {
+        } else if (current === 'sr') {
 
           var sr = nodes[i];
 
         }
       }
 
-      var items = {sl : sl, ml : ml, mr : mr, sr : sr};
+      var items = {sl: sl, ml: ml, mr: mr, sr: sr};
 
       return items;
     }
@@ -297,23 +297,23 @@
     // cuisine switching
 
     var cuisineListener = {
-      subscribe : 'stand',
-      week : 2,
-      calories : '1200',
-      day : 'mo',
-      cuisines : 5,
-      price : '280/320',
-      selector : ''
+      subscribe: 'stand',
+      week: 2,
+      calories: '1200',
+      day: 'mo',
+      cuisines: 5,
+      price: '280/320',
+      selector: ''
     };
 
-    if(window.CONFIG.page === 'home') {
+    if (window.CONFIG.page === 'home') {
       var subscribe = document.getElementById('subscribe');
       var subscribeItems = document.getElementById('subscribe-items');
       var cuisineWeek = document.getElementById('cuisine-week');
       // var cuisines_3_5 = document.getElementById('cuisines_3_5');
       var allCuisines = document.getElementById('all-cuisines');
 
-      if(subscribe) {
+      if (subscribe) {
         subscribe.addEventListener('click', setSubscribe, false);
         subscribeItems.addEventListener('click', setSubscribeItems, false);
         cuisineWeek.addEventListener('click', setCuisineWeek, false);
@@ -366,7 +366,7 @@
       // there are 2 weeks - №1 and №2
       var week = weekNumber % 2 === 0 ? 2 : 1;
 
-      if(dayNumber === 0 && hourNumber >= 12) {
+      if (dayNumber === 0 && hourNumber >= 12) {
         week = (weekNumber + 1) % 2 === 0 ? 2 : 1;
       }
 
@@ -376,7 +376,7 @@
 
     function enableBlock(event) {
       var e = getTarget(event);
-      if(e !== undefined) {
+      if (e !== undefined) {
         var dataAction = e.target.getAttribute('data-action');
         var dataIdentifier = e.target.getAttribute('data-identifier');
 
@@ -392,7 +392,7 @@
     function searchByAttribute(action, identifier, target) {
       var nodes = document.querySelectorAll('[' + action + ']');
 
-      if(action === 'data-subscribe') {
+      if (action === 'data-subscribe') {
 
         $(nodes).hide();
         $('[data-subscribe="' + identifier + '"]').fadeIn(function () {
@@ -403,7 +403,7 @@
         for (var i = 0; i < nodes.length; i++) {
           var currentIdentifier = nodes[i].getAttribute(action);
 
-          if(currentIdentifier === identifier) {
+          if (currentIdentifier === identifier) {
             nodes[i].classList.remove('disable');
           } else {
             nodes[i].classList.add('disable');
@@ -415,17 +415,17 @@
     }
 
     function changeListener(identifier, event) {
-      if(window.CONFIG.page === 'home') {
-        if(event.currentTarget === subscribe) {
+      if (window.CONFIG.page === 'home') {
+        if (event.currentTarget === subscribe) {
           cuisineListener.subscribe = identifier;
 
-          if(identifier === 'fit') {
+          if (identifier === 'fit') {
             cuisineListener.calories = '1200';
-          } else if(identifier === 'prem') {
+          } else if (identifier === 'prem') {
             cuisineListener.calories = '1200';
-          } else if(identifier === 'veg') {
+          } else if (identifier === 'veg') {
             cuisineListener.calories = '1200';
-          } else if(identifier === 'stand') {
+          } else if (identifier === 'stand') {
             cuisineListener.calories = '1200';
           }
 
@@ -434,9 +434,9 @@
 
           checkHighLightedItem();
 
-        } else if(event.currentTarget === subscribeItems) {
-          if(identifier) cuisineListener.calories = identifier;
-        } else if(event.currentTarget === cuisineWeek) {
+        } else if (event.currentTarget === subscribeItems) {
+          if (identifier) cuisineListener.calories = identifier;
+        } else if (event.currentTarget === cuisineWeek) {
           cuisineListener.day = identifier;
         }
 
@@ -448,25 +448,25 @@
 
       var selector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.calories + '-' + cuisineListener.day;
       var categorySelector = cuisineListener.subscribe + '-' + cuisineListener.week + '-' + cuisineListener.day;
-      if(customSelector) {
+      if (customSelector) {
         categorySelector = customSelector;
       }
 
-      if(!window.POSTS[categorySelector]) {
+      if (!window.POSTS[categorySelector]) {
         // с версии 2.8 'ajaxurl' всегда определен в админке
         var data = {
-          action : 'hello',
-          name : categorySelector
+          action: 'hello',
+          name: categorySelector
         };
 
-        if(window.FIRST_LOAD) {
+        if (window.FIRST_LOAD) {
           showLoader('body');
         }
 
         window.FIRST_LOAD = true;
 
         jQuery.post(myPlugin.ajaxurl, data, function (response) {
-          if(response) {
+          if (response) {
 
             var posts = JSON.parse(response);
 
@@ -487,7 +487,7 @@
 
             switchCuisineItems(selector);
           }
-          if(callback) {
+          if (callback) {
             callback();
           }
           hideLoader('body');
@@ -495,7 +495,7 @@
         });
       } else {
         switchCuisineItems(selector);
-        if(callback) {
+        if (callback) {
           callback();
         }
         hideLoader('body');
@@ -512,7 +512,7 @@
       cuisineListener.selector = selector;
       // cuisineListener.cuisines
 
-      if(currentItem) {
+      if (currentItem) {
 
         for (var i = 0; i < allCuisines.children.length; i++) {
           allCuisines.children[i].classList.add('disable');
@@ -529,7 +529,7 @@
       for (var i = 0; i < items.length; i++) {
         var itemIdentifier = items[i].getAttribute('data-identifier');
 
-        if(cuisineListener.calories === itemIdentifier) {
+        if (cuisineListener.calories === itemIdentifier) {
           highlight(items[i]);
         }
       }
@@ -557,17 +557,17 @@
     function switchNode(event) {
       var e = getTarget(event);
 
-      if(e !== undefined) {
+      if (e !== undefined) {
         var target = e.target;
         var action = target.getAttribute('data-action');
         var targetNodeSelector = target.getAttribute('data-target');
         var targetNode = document.getElementById(targetNodeSelector);
 
-        if(targetNode) {
+        if (targetNode) {
 
-          if(action === 'activate') {
+          if (action === 'activate') {
             activateNode(targetNode);
-          } else if(action === 'deactivate') {
+          } else if (action === 'deactivate') {
             deactivateNode(targetNode);
           }
         }
@@ -597,31 +597,31 @@
       var dataCal;
 
 
-      if(cuisineListener.subscribe === 'stand') {
+      if (cuisineListener.subscribe === 'stand') {
         selectSubscribe.selectedIndex = 0;
         dataSub = 'stand';
-      } else if(cuisineListener.subscribe === 'fit') {
+      } else if (cuisineListener.subscribe === 'fit') {
         selectSubscribe.selectedIndex = 1;
         dataSub = 'fit';
-      } else if(cuisineListener.subscribe === 'prem') {
+      } else if (cuisineListener.subscribe === 'prem') {
         selectSubscribe.selectedIndex = 2;
         dataSub = 'prem';
-      } else if(cuisineListener.subscribe === 'veg') {
+      } else if (cuisineListener.subscribe === 'veg') {
         selectSubscribe.selectedIndex = 3;
         dataSub = 'veg';
       }
 
 
-      if(cuisineListener.calories === '1200') {
+      if (cuisineListener.calories === '1200') {
         selectCalories.selectedIndex = 0;
         dataCal = 1200;
-      } else if(cuisineListener.calories === '1500') {
+      } else if (cuisineListener.calories === '1500') {
         selectCalories.selectedIndex = 1;
         dataCal = 1500;
-      } else if(cuisineListener.calories === '2000') {
+      } else if (cuisineListener.calories === '2000') {
         selectCalories.selectedIndex = 2;
         dataCal = 2000;
-      } else if(cuisineListener.calories === '2500') {
+      } else if (cuisineListener.calories === '2500') {
         selectCalories.selectedIndex = 3;
         dataCal = 2500;
       }
@@ -635,15 +635,15 @@
       var selectSubscribe = document.getElementById('form-input_subscribe').value;
       var selectCalories = document.getElementById('form-input_calories').value;
 
-      if(selectSubscribe === 'Фитнес') {
+      if (selectSubscribe === 'Фитнес') {
         selectSubscribe = 'fit';
-      } else if(selectSubscribe === 'Премиум') {
+      } else if (selectSubscribe === 'Премиум') {
         selectSubscribe = 'prem';
-      } else if(selectSubscribe === 'Без мяса') {
+      } else if (selectSubscribe === 'Без мяса') {
         selectSubscribe = 'veg';
-      } else if(selectSubscribe === 'Стандарт') {
+      } else if (selectSubscribe === 'Стандарт') {
         selectSubscribe = 'stand';
-      } else if(selectSubscribe === 'Пробный день') {
+      } else if (selectSubscribe === 'Пробный день') {
         selectSubscribe = 'trial';
       }
       console.log(selectSubscribe, selectCalories);
@@ -655,10 +655,10 @@
     function setPriceInForm(subscribe, calories) {
 
       selectCuisineItem(function () {
-        if(subscribe !== 'trial') {
+        if (subscribe !== 'trial') {
           // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
           cuisineListener.price = $('#subscribe-items ' + '[data-subscribe="' + subscribe + '"] ' + '[data-identifier="' + calories + '"] .subscribe__price strong').html();
-        } else if(subscribe === 'trial') {
+        } else if (subscribe === 'trial') {
           cuisineListener.price = $('#' + subscribe).html();
         }
 
@@ -672,8 +672,8 @@
     $('#header-menu').on('click', 'a', function (event) {
       event.preventDefault();
       var id = $(this).attr('href'),
-        top = $(id).offset().top;
-      $('body,html').animate({scrollTop : top}, 1500);
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
     });
 
     $('#forms').find('.sharedaddy.sd-sharing-enabled').remove();
@@ -689,21 +689,21 @@
   $('input[type=\'tel\']').mask('+38 (099) 999 99 99');
 
   function showLoader(selector) {
-    if(!$(selector).length) {
+    if (!$(selector).length) {
       return showLoader('body');
     }
 
-    if($(selector).css('position') === 'static') {
-      $(selector).css({'position' : 'relative'});
+    if ($(selector).css('position') === 'static') {
+      $(selector).css({'position': 'relative'});
     }
 
     hideLoader(selector);
 
     $(selector).append('<div class="loader" style="display: none"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>');
 
-    if($(selector)[0].nodeName === 'BODY') {
+    if ($(selector)[0].nodeName === 'BODY') {
       $(selector).children('.loader').css({
-        position : 'fixed'
+        position: 'fixed'
       });
     }
 
@@ -718,7 +718,7 @@
 
 
   // Header toggling
-  if($('.how-it-works').length && window.CONFIG.page === 'home') {
+  if ($('.how-it-works').length && window.CONFIG.page === 'home') {
     toggleHeader();
 
     $(window).on('scroll', function () {
@@ -728,7 +728,7 @@
     function toggleHeader() {
       var $headerMenu = $('.header-menu');
 
-      if($(window).scrollTop() >= $('.how-it-works').offset().top) {
+      if ($(window).scrollTop() >= $('.how-it-works').offset().top) {
         $headerMenu.addClass('header-menu_scrolled');
       } else {
         $headerMenu.removeClass('header-menu_scrolled');
@@ -749,47 +749,48 @@
 
 
   $('.carousel').slick({
-    arrows : true,
-    prevArrow : '<div class="carousel-arrow left"></div>',
-    nextArrow : '<div class="carousel-arrow right"></div>'
+    arrows: true,
+    prevArrow: '<div class="carousel-arrow left"></div>',
+    nextArrow: '<div class="carousel-arrow right"></div>'
   });
 
 
   // function initReviewsSilder() {
-    var $carousel = $('.carousel-review');
+  var $carousel = $('.carousel-review');
 
-    // if(!$carousel.parent().attr('data-display-show')) {
-    //   setTimeout(function () {
-        $carousel.slick({
-          arrows : true,
-          dots : true,
-          slidesToShow : 3,
-          slidesToScroll : 3,
-          prevArrow : '<div class="carousel-arrow left"></div>',
-          nextArrow : '<div class="carousel-arrow right"></div>',
-          responsive : [
-            {
-              breakpoint : 1024,
-              settings : {
-                slidesToShow : 2,
-                slidesToScroll : 2,
-                dots : false
+  // if(!$carousel.parent().attr('data-display-show')) {
+  //   setTimeout(function () {
+  $carousel.slick({
+    arrows: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<div class="carousel-arrow left"></div>',
+    nextArrow: '<div class="carousel-arrow right"></div>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: false
 
-              }
-            },
-            {
-              breakpoint : 600,
-              settings : {
-                slidesToShow : 1,
-                slidesToScroll : 1,
-                dots : false
-              }
-            }
-          ]
-        });
-      // }, 1500);
-    // }
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false
+        }
+      }
+    ]
+  });
+  // }, 1500);
   // }
+  // }
+
 
   /* set user-data into forms */
   var userData;
@@ -799,7 +800,7 @@
     // $('[data-target^="form_"]').on('click', function (e) {
     var $form = $('.pum-active form');
 
-    if($form.length) {
+    if ($form.length) {
       setUserData($form);
     }
 
@@ -808,16 +809,16 @@
   $('.wpcf7-form').on('submit', function (e) {
     var $form = $(e.currentTarget);
     var userInfo = {
-      name : $form.find('[name="your-name"]').val() || userData.name || '',
-      email : $form.find('[name="your-email"]').val() || userData.email || '',
-      phone : $form.find('[name="tel-611"]').val() || userData.phone || '',
-      address : $form.find('[name="your-address"]').val() || userData.address || '',
-      time : $form.find('[name="your-time"]').val() || userData.time || '',
+      name: $form.find('[name="your-name"]').val() || userData.name || '',
+      email: $form.find('[name="your-email"]').val() || userData.email || '',
+      phone: $form.find('[name="tel-611"]').val() || userData.phone || '',
+      address: $form.find('[name="your-address"]').val() || userData.address || '',
+      time: $form.find('[name="your-time"]').val() || userData.time || '',
 
-      product : $('input[name="product-name"]').val() ||
-        $('#form-input_sweets').val() ||
-        $('#form-input_drinks').val() || '',
-      price : $form.find('#form-input_price').val() || 0
+      product: $('input[name="product-name"]').val() ||
+          $('#form-input_sweets').val() ||
+          $('#form-input_drinks').val() || '',
+      price: $form.find('#form-input_price').val() || 0
     };
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
   });
@@ -828,7 +829,7 @@
 
   function setUserData($form) {
     updateUserDataObj();
-    if(userData) {
+    if (userData) {
       $form.find('[name="your-name"]').val(userData.name);
       $form.find('[name="your-email"]').val(userData.email);
       $form.find('[name="tel-611"]').val(userData.phone);
@@ -841,16 +842,31 @@
 
   function getText() {
     var date = new Date();
-    if(date.getHours() > 12) {
+    if (date.getHours() > 12) {
       jQuery('#popup-success-content').html(' :) ');
     }
   }
 
-
   /* set user-data into forms */
 
-  /* UTM */
+  /* Get ga Client ID from cookies & set to forms */
 
+
+  function getGAClientId() {
+    var tracker = ga.getAll()[0];
+    var clientId = tracker.get('clientId') || '';
+    localStorage.setItem('gaClientId', clientId);
+    $('input[name="ga_client_id"]').val(clientId);
+  }
+
+  /* GA script loaded */
+  ga(function () {
+    getGAClientId();
+  });
+  /* GA script loaded */
+  /* Get ga Client ID from cookies & set to forms */
+
+  /* UTM */
   getUtmParams();
 
   function getUtmParams() {
@@ -859,14 +875,14 @@
     var c = url.searchParams.get('utm_source');
 
     window.UTM_DATA = {
-      utm_source : url.searchParams.get('utm_source') || null,
-      utm_medium : url.searchParams.get('utm_medium') || null,
-      utm_term : url.searchParams.get('utm_term') || null,
-      utm_campaign : url.searchParams.get('utm_campaign') || null
+      utm_source: url.searchParams.get('utm_source') || null,
+      utm_medium: url.searchParams.get('utm_medium') || null,
+      utm_term: url.searchParams.get('utm_term') || null,
+      utm_campaign: url.searchParams.get('utm_campaign') || null
     };
     var cachedData = localStorage.UTM_DATA ? JSON.parse(localStorage.UTM_DATA) : null;
 
-    if(cachedData) {
+    if (cachedData) {
       cachedData.utm_source = window.UTM_DATA.utm_source || cachedData.utm_source;
       cachedData.utm_medium = window.UTM_DATA.utm_medium || cachedData.utm_medium;
       cachedData.utm_term = window.UTM_DATA.utm_term || cachedData.utm_term;
@@ -881,7 +897,7 @@
 
   function initUTMFields() {
     var utmData = JSON.parse(localStorage.UTM_DATA) || window.UTM_DATA;
-    if(utmData) {
+    if (utmData) {
       $('input[name="utm_source"]').val(utmData.utm_source || null);
       $('input[name="utm_medium"]').val(utmData.utm_medium || null);
       $('input[name="utm_term"]').val(utmData.utm_term || null);
@@ -898,7 +914,7 @@
   document.addEventListener('wpcf7mailsent', function (event) {
     setTimeout(function () {
       $('[name="agree"]').each(function (i, item) {
-        if(item.checked) item.click();
+        if (item.checked) item.click();
       });
     }, 500);
   }, false);
@@ -909,36 +925,36 @@
     showLoader(e.currentTarget);
   });
 
-  $(document).on('wpcf7submit wpcf7mailsent wpcf7invalid wpcf7spam wpcf7mailfailed', function( e ) {
+  $(document).on('wpcf7submit wpcf7mailsent wpcf7invalid wpcf7spam wpcf7mailfailed', function (e) {
     hideLoader($(e.target).find('form'));
-  } );
+  });
 
   /* Add listeners to contactForm 7 form events */
 
   /* Send fb pixel events */
-  $('header [data-target="form_1"]').on('click', function( e ) {
+  $('header [data-target="form_1"]').on('click', function (e) {
     /* Save from trigger */
     window.FB_CONTACT_EVENT = 'GetContact1';
     fbq('trackCustom', 'Contact1');
-  } );
+  });
 
-  $('footer [data-target="form_1"]').on('click', function( e ) {
+  $('footer [data-target="form_1"]').on('click', function (e) {
     /* Save from trigger */
     window.FB_CONTACT_EVENT = 'GetContact2';
     fbq('trackCustom', 'Contact2');
-  } );
+  });
 
-  $('[data-target="form_2"]').on('click', function( e ) {
+  $('[data-target="form_2"]').on('click', function (e) {
     fbq('track', 'InitiateCheckoutMain');
-  } );
+  });
 
-  $('[data-target="form_3"]').on('click', function( e ) {
+  $('[data-target="form_3"]').on('click', function (e) {
     fbq('track', 'InitiateCheckoutDesserts');
-  } );
+  });
 
-  $('[data-target="form_4"]').on('click', function( e ) {
+  $('[data-target="form_4"]').on('click', function (e) {
     fbq('track', 'InitiateCheckoutDrinks');
-  } );
+  });
   /* Send fb pixel events */
 
 
@@ -978,7 +994,7 @@
       $ddSelect.find('option').each(function (i, item) {
         $(item).removeAttr('selected');
 
-        if($(item).text() === currentDessert) {
+        if ($(item).text() === currentDessert) {
           $(item).attr('selected', true);
         }
       });
@@ -1004,23 +1020,23 @@
 
   function initLazyLoad() {
     var windowTopPosition = $(window)[0].pageYOffset,
-      windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
-      $items = $('[data-bg-src], [data-src], [data-display]'),
-      showOffsets = $(window)[0].innerHeight*0.5;
+        windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
+        $items = $('[data-bg-src], [data-src], [data-display]'),
+        showOffsets = $(window)[0].innerHeight * 0.5;
 
-    if(!$items.length) {
+    if (!$items.length) {
       $(window).unbind('scroll', lazyLoadHandler);
     }
 
-    if(window.matchMedia('(max-width: 768px)').matches) {
-      showOffsets = $(window)[0].innerHeight*0.75;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      showOffsets = $(window)[0].innerHeight * 0.75;
     }
 
     $items.each(function (i, item) {
-      if(
-        (windowTopPosition - showOffsets <= $(item).offset().top + $(item).height() &&
-          windowTopPosition - showOffsets > $(item).offset().top) ||
-        windowBottomPosition + showOffsets >= $(item).offset().top
+      if (
+          (windowTopPosition - showOffsets <= $(item).offset().top + $(item).height() &&
+              windowTopPosition - showOffsets > $(item).offset().top) ||
+          windowBottomPosition + showOffsets >= $(item).offset().top
       ) {
         setSource(item);
       }
@@ -1028,18 +1044,18 @@
 
     function setSource(item) {
 
-      if(item.hasAttribute('data-bg-src')) {
+      if (item.hasAttribute('data-bg-src')) {
         $(item).css({
-          'background-image' : 'url(' + item.getAttribute('data-bg-src') + ')'
+          'background-image': 'url(' + item.getAttribute('data-bg-src') + ')'
         });
 
         item.removeAttribute('data-bg-src');
         item.setAttribute('data-bg', '');
-      } else if(item.hasAttribute('data-display')) {
+      } else if (item.hasAttribute('data-display')) {
         $(item).find('[data-display-show]').css({
-          'display' : 'block'
+          'display': 'block'
         }).removeAttr('data-display-show').end()
-          .removeAttr('data-display');
+            .removeAttr('data-display');
 
         // initReviewsSilder();
       } else {
