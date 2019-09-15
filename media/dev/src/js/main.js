@@ -795,6 +795,7 @@
   /* set user-data into forms */
   var userData;
   updateUserDataObj();
+  toggleScheduleMessages();
 
   $('.pum').on('pumAfterOpen', function (e) {
     // $('[data-target^="form_"]').on('click', function (e) {
@@ -821,7 +822,35 @@
       price: $form.find('#form-input_price').val() || 0
     };
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+    toggleScheduleMessages();
   });
+
+  function toggleScheduleMessages() {
+    var $messages = $('[data-schedule-msg]');
+    var periodType = getPeriodType();
+    $messages.hide();
+    $('[data-schedule-msg="' + periodType + '"]').show();
+  }
+
+  /* Grt current schedule period
+  Periods:
+  * 1 - 00:01 - 11:59 (working day not started)
+  * 2 - 12:00 - 19:30 (working hours)
+  * 3 - 19:31 - 00:00 (working day finished)
+  * */
+  function getPeriodType() {
+    var date = new Date();
+    var time = date.getHours() + date.getMinutes()/60;
+
+    if(time >= 0 && time < 12) {
+      return 1
+    } else if (time >= 12 && time <= 19.5) {
+      return 2
+    } else {
+      return 3
+    }
+  }
 
   function updateUserDataObj() {
     userData = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
