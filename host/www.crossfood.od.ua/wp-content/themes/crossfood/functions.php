@@ -212,7 +212,7 @@ function ga_callback_func()
           },
           window.UTM_DATA
         ));
-
+        console.log(window.FB_CONTACT_EVENT);GetContact2
         fbq('trackCustom', window.FB_CONTACT_EVENT || 'GetContact1');
       }
     }, false);

@@ -804,7 +804,6 @@
     if ($form.length) {
       setUserData($form);
     }
-
   });
 
   $('.wpcf7-form').on('submit', function (e) {
@@ -853,7 +852,7 @@
   }
 
   function updateUserDataObj() {
-    userData = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
+    userData = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : {};
   }
 
   function setUserData($form) {
