@@ -840,9 +840,9 @@
   * */
   function getPeriodType() {
     var date = new Date();
-    var time = date.getHours() + date.getMinutes()/60;
+    var time = date.getHours() + date.getMinutes() / 60;
 
-    if(time >= 0 && time < 12) {
+    if (time >= 0 && time < 12) {
       return 1
     } else if (time >= 12 && time <= 19.5) {
       return 2
@@ -1108,5 +1108,54 @@
     });
   });
   /* Dropdown */
+
+  /* Show "Save on desktop" popup (IOS Safari mobile only, second visit)
+  * popup id - 9626
+  * */
+  setVisit();
+  displaySaveOnDesktopPopup();
+
+  function displaySaveOnDesktopPopup() {
+    if (checkIsSafari() && getVisit() === 1) {
+      setTimeout(function () {
+        openModal(9626);
+      }, 3000)
+    }
+  }
+
+  function setVisit() {
+    var visit = localStorage.getItem('saveOnDesktopPopup') || 0;
+    localStorage.setItem('saveOnDesktopPopup', +visit + 1);
+  }
+
+  function getVisit() {
+    return +localStorage.getItem('saveOnDesktopPopup') - 1;
+  }
+
+  function checkIsSafari() {
+    var ua = window.navigator ? window.navigator.userAgent : '';
+    var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    var webkit = !!ua.match(/WebKit/i);
+    console.log(iOS, webkit, !ua.match(/CriOS/i));
+    return iOS && webkit && !ua.match(/CriOS/i);
+  }
+
+  /* Show "Save on desktop" popup */
+
+  /* Popup service
+  * global modals service - window.PUM
+  * https://docs.wppopupmaker.com/article/42-popup-maker-jquery-api
+  * */
+  function openModal(id) {
+    if (!id) return;
+    window.PUM.open(id)
+  }
+
+  function closeModal(id) {
+    if (!id) return;
+    window.PUM.close(id)
+  }
+
+  /* Popup service */
 
 }(jQuery));
