@@ -1136,7 +1136,6 @@
     var ua = window.navigator ? window.navigator.userAgent : '';
     var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
     var webkit = !!ua.match(/WebKit/i);
-    console.log(iOS, webkit, !ua.match(/CriOS/i));
     return iOS && webkit && !ua.match(/CriOS/i);
   }
 
@@ -1147,12 +1146,12 @@
   * https://docs.wppopupmaker.com/article/42-popup-maker-jquery-api
   * */
   function openModal(id) {
-    if (!id) return;
+    if (!id || !window.PUM) return;
     window.PUM.open(id)
   }
 
   function closeModal(id) {
-    if (!id) return;
+    if (!id || !window.PUM) return;
     window.PUM.close(id)
   }
 
