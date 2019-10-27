@@ -630,7 +630,7 @@
     }
 
 
-    $('#wpcf7-f2087-o5 form').on('change', function (event) {
+    $('#wpcf7-f2087-o1 form').on('change', function (event) {
 
       var selectSubscribe = document.getElementById('form-input_subscribe').value;
       var selectCalories = document.getElementById('form-input_calories').value;
@@ -982,6 +982,10 @@
 
   $('[data-target="form_4"]').on('click', function (e) {
     fbq('track', 'InitiateCheckoutDrinks');
+  });
+
+  $('[data-target="form_5"]').on('click', function (e) {
+    fbq('track', 'InitiateCheckoutTrial');
   });
   /* Send fb pixel events */
 

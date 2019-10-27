@@ -229,12 +229,6 @@ function ga_purchase_func()
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
       if('2087' == event.detail.contactFormId) {
-
-        // gtag('event', 'purchase_click', {
-        //   'event_category' : 'purchase',
-        //   'event_label' : 'Purchase'
-        // });
-
         dataLayer.push(Object.assign(
           {},
           {
@@ -255,6 +249,41 @@ function ga_purchase_func()
           currency: 'USD',
         });
 
+      }
+    }, false);
+  </script>
+    <?php
+}
+
+
+
+add_action('wp_footer', 'ga_trial_func');
+
+function ga_trial_func()
+{
+    ?>
+  <script type="text/javascript">
+    document.addEventListener('wpcf7mailsent', function (event) {
+      if('9783' == event.detail.contactFormId) {
+        dataLayer.push(Object.assign(
+          {},
+          {
+            'event' : 'trial',
+            'subscribeData' : {
+              'event_category' : 'trial',
+              'currencyCode' : 'UAH',
+              'event_label' : 'Trial',
+              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price)
+            }
+          },
+          window.UTM_DATA
+        ));
+
+        fbq('track', 'LeadTrial', {
+          value: 12,
+          currency: 'USD',
+        });
       }
     }, false);
   </script>

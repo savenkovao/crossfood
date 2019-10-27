@@ -640,7 +640,7 @@
     }
 
 
-    $('#wpcf7-f2087-o5 form').on('change', function (event) {
+    $('#wpcf7-f2087-o1 form').on('change', function (event) {
 
       var selectSubscribe = document.getElementById('form-input_subscribe').value;
       var selectCalories = document.getElementById('form-input_calories').value;
@@ -993,6 +993,10 @@
   $('[data-target="form_4"]').on('click', function (e) {
     fbq('track', 'InitiateCheckoutDrinks');
   });
+
+  $('[data-target="form_5"]').on('click', function (e) {
+    fbq('track', 'InitiateCheckoutTrial');
+  });
   /* Send fb pixel events */
 
 
@@ -1146,7 +1150,6 @@
     var ua = window.navigator ? window.navigator.userAgent : '';
     var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
     var webkit = !!ua.match(/WebKit/i);
-    console.log(iOS, webkit, !ua.match(/CriOS/i));
     return iOS && webkit && !ua.match(/CriOS/i);
   }
 
@@ -1157,12 +1160,12 @@
   * https://docs.wppopupmaker.com/article/42-popup-maker-jquery-api
   * */
   function openModal(id) {
-    if (!id) return;
+    if (!id || !window.PUM) return;
     window.PUM.open(id)
   }
 
   function closeModal(id) {
-    if (!id) return;
+    if (!id || !window.PUM) return;
     window.PUM.close(id)
   }
 
