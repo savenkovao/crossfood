@@ -630,8 +630,8 @@
     }
 
 
-    $('#wpcf7-f2087-o2 form').on('change', function (event) {
-
+    $('[id^="wpcf7-f2087"] form').on('change', function (event) {
+      // $('#wpcf7-f2087-o7 form').on('change', function (event) {
       var selectSubscribe = document.getElementById('form-input_subscribe').value;
       var selectCalories = document.getElementById('form-input_calories').value;
 
@@ -672,7 +672,7 @@
     $('#header-menu').on('click', 'a', function (event) {
       event.preventDefault();
       var id = $(this).attr('href'),
-          top = $(id).offset().top;
+        top = $(id).offset().top;
       $('body,html').animate({scrollTop: top}, 1500);
     });
 
@@ -816,8 +816,8 @@
       time: $form.find('[name="your-time"]').val() || userData.time || '',
 
       product: $('input[name="product-name"]').val() ||
-          $('#form-input_sweets').val() ||
-          $('#form-input_drinks').val() || '',
+        $('#form-input_sweets').val() ||
+        $('#form-input_drinks').val() || '',
       price: $form.find('#form-input_price').val() || 0
     };
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
@@ -1003,16 +1003,15 @@
   /* Page init */
 
   function _initDesserts() {
-    _initDDPage('#wpcf7-f3052-o6', 'select[name="menu-230"]');
+    _initDDPage(/*'#wpcf7-f3052-o6', */'select[name="menu-230"]');
   }
 
   function _initDrinks() {
-    _initDDPage('#wpcf7-f3143-o7', 'select[name="menu-232"]');
+    _initDDPage(/*'#wpcf7-f3143-o5', */'select[name="menu-232"]');
   }
 
-  function _initDDPage(form, menuSelect) {
-    var $ddForm = $(form);
-    var $ddSelect = $ddForm.find(menuSelect);
+  function _initDDPage(menuSelect) {
+    var $ddSelect = $(menuSelect);
 
     $ddSelect.children().remove();
 
@@ -1052,9 +1051,9 @@
 
   function initLazyLoad() {
     var windowTopPosition = $(window)[0].pageYOffset,
-        windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
-        $items = $('[data-bg-src], [data-src], [data-display]'),
-        showOffsets = $(window)[0].innerHeight * 0.5;
+      windowBottomPosition = $(window)[0].pageYOffset + $(window)[0].innerHeight,
+      $items = $('[data-bg-src], [data-src], [data-display]'),
+      showOffsets = $(window)[0].innerHeight * 0.5;
 
     if (!$items.length) {
       $(window).unbind('scroll', lazyLoadHandler);
@@ -1066,9 +1065,9 @@
 
     $items.each(function (i, item) {
       if (
-          (windowTopPosition - showOffsets <= $(item).offset().top + $(item).height() &&
-              windowTopPosition - showOffsets > $(item).offset().top) ||
-          windowBottomPosition + showOffsets >= $(item).offset().top
+        (windowTopPosition - showOffsets <= $(item).offset().top + $(item).height() &&
+          windowTopPosition - showOffsets > $(item).offset().top) ||
+        windowBottomPosition + showOffsets >= $(item).offset().top
       ) {
         setSource(item);
       }
@@ -1087,7 +1086,7 @@
         $(item).find('[data-display-show]').css({
           'display': 'block'
         }).removeAttr('data-display-show').end()
-            .removeAttr('data-display');
+          .removeAttr('data-display');
 
         // initReviewsSilder();
       } else {
