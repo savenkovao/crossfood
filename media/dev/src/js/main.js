@@ -596,7 +596,6 @@
       var dataSub;
       var dataCal;
 
-
       if (cuisineListener.subscribe === 'stand') {
         selectSubscribe.selectedIndex = 0;
         dataSub = 'stand';
@@ -610,7 +609,6 @@
         selectSubscribe.selectedIndex = 3;
         dataSub = 'veg';
       }
-
 
       if (cuisineListener.calories === '1200') {
         selectCalories.selectedIndex = 0;
