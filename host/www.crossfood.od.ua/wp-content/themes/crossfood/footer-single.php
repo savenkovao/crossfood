@@ -111,9 +111,9 @@
     </div>
 
     <div class="text-center copyright">
-      © 2016 Crossfood. <a class="link" href="/privacy-policy">Политика конфиденциальности</a>
+      © 2016 - <?php echo date('Y'); ?> Crossfood. <a class="link" href="/privacy-policy">Политика конфиденциальности</a>
     </div>
-  </div>
+  </div> 
 </footer>
 
 
