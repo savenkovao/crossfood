@@ -374,10 +374,10 @@
 
     function getWeek(weekNumber, dayNumber, hourNumber) {
       // there are 2 weeks - №1 and №2
-      var week = weekNumber % 2 === 0 ? 2 : 1;
+      var week = weekNumber % 2 === 0 ? 1 : 2;
 
       if (dayNumber === 0 && hourNumber >= 12) {
-        week = (weekNumber + 1) % 2 === 0 ? 2 : 1;
+        week = (weekNumber + 1) % 2 === 0 ? 1 : 2;
       }
 
       cuisineListener.week = week;
@@ -606,7 +606,6 @@
       var dataSub;
       var dataCal;
 
-
       if (cuisineListener.subscribe === 'stand') {
         selectSubscribe.selectedIndex = 0;
         dataSub = 'stand';
@@ -620,7 +619,6 @@
         selectSubscribe.selectedIndex = 3;
         dataSub = 'veg';
       }
-
 
       if (cuisineListener.calories === '1200') {
         selectCalories.selectedIndex = 0;
