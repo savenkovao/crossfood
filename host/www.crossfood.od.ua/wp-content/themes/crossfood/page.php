@@ -1,7 +1,9 @@
 <?php get_header() ?>
 <script>
   window.CONFIG = {
-    page: 'home'
+    page: 'home',
+    week: <?php $post = get_post($post_id = 10537);
+        echo $post->week_number; ?>
   };
 </script>
 
