@@ -1,0 +1,11 @@
+drwxr-xr-x    2 1950       crossfood          11 Mar 14  2017 .
+drwxr-xr-x   20 1950       crossfood         210 Nov 13 01:32 ..
+-rw-r--r--    1 1950       crossfood        2141 Nov 13 01:32 comments.php
+-rw-r--r--    1 1950       crossfood         972 Nov 13 01:32 embed-404.php
+-rw-r--r--    1 1950       crossfood        3451 Feb 22  2019 embed-content.php
+-rw-r--r--    1 1950       crossfood         481 Feb 22  2019 embed.php
+-rw-r--r--    1 1950       crossfood         438 Jul 24  2017 footer-embed.php
+-rw-r--r--    1 1950       crossfood        1063 Nov 13 01:32 footer.php
+-rw-r--r--    1 1950       crossfood         704 Jul 24  2017 header-embed.php
+-rw-r--r--    1 1950       crossfood        1925 Nov 13 01:32 header.php
+-rw-r--r--    1 1950       crossfood        4279 Nov 13 01:32 sidebar.php

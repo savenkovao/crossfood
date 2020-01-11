@@ -1,0 +1,12 @@
+drwxr-xr-x    2 1950       crossfood          12 Nov  1 11:22 .
+drwxr-xr-x    8 1950       crossfood          24 Nov  1 11:22 ..
+-rw-r--r--    1 1950       crossfood       24794 Nov  1 11:22 class-fs-admin-menu-manager.php
+-rw-r--r--    1 1950       crossfood       16509 Nov  1 11:22 class-fs-admin-notice-manager.php
+-rw-r--r--    1 1950       crossfood        9435 Nov  1 11:22 class-fs-cache-manager.php
+-rw-r--r--    1 1950       crossfood        6033 Nov  1 11:22 class-fs-gdpr-manager.php
+-rw-r--r--    1 1950       crossfood       10232 Nov  1 11:22 class-fs-key-value-storage.php
+-rw-r--r--    1 1950       crossfood        2198 Nov  1 11:22 class-fs-license-manager.php
+-rw-r--r--    1 1950       crossfood       15178 Nov  1 11:22 class-fs-option-manager.php
+-rw-r--r--    1 1950       crossfood        3102 Nov  1 11:22 class-fs-plan-manager.php
+-rw-r--r--    1 1950       crossfood        4936 Nov  1 11:22 class-fs-plugin-manager.php
+-rw-r--r--    1 1950       crossfood          87 Nov  1 11:22 index.php

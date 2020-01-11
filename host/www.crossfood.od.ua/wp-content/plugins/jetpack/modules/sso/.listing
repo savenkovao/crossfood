@@ -1,0 +1,9 @@
+drwxr-xr-x    2 1950       crossfood           9 Dec  6 12:49 .
+drwxr-xr-x   44 1950       crossfood          97 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood        9316 Dec  6 12:49 class.jetpack-sso-helpers.php
+-rw-r--r--    1 1950       crossfood        6104 Dec  6 12:49 class.jetpack-sso-notices.php
+-rw-r--r--    1 1950       crossfood        2951 Dec  6 12:49 jetpack-sso-login-rtl.css
+-rw-r--r--    1 1950       crossfood        2377 Dec  6 12:49 jetpack-sso-login-rtl.min.css
+-rw-r--r--    1 1950       crossfood        2854 Dec  6 12:49 jetpack-sso-login.css
+-rw-r--r--    1 1950       crossfood        1317 Dec  6 12:49 jetpack-sso-login.js
+-rw-r--r--    1 1950       crossfood        2468 Dec  6 12:49 jetpack-sso-login.min.css

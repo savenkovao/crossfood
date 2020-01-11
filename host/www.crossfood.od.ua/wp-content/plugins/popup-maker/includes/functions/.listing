@@ -1,0 +1,10 @@
+drwxr-xr-x    6 1950       crossfood          10 Nov  1 11:22 .
+drwxr-xr-x   11 1950       crossfood          28 Nov  1 11:22 ..
+drwxr-xr-x    2 1950       crossfood           4 Nov  1 11:22 admin
+-rw-r--r--    1 1950       crossfood         894 Nov  1 11:22 developers.php
+-rw-r--r--    1 1950       crossfood         789 Nov  1 11:22 extensions.php
+-rw-r--r--    1 1950       crossfood        4349 Nov  1 11:22 general.php
+-rw-r--r--    1 1950       crossfood        2706 Nov  1 11:22 newsletter.php
+drwxr-xr-x    2 1950       crossfood           8 Nov  1 11:22 popups
+drwxr-xr-x    2 1950       crossfood           9 Nov  1 11:22 themes
+drwxr-xr-x    2 1950       crossfood           7 Nov  1 11:22 utils

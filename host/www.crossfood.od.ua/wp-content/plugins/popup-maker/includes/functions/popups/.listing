@@ -1,0 +1,8 @@
+drwxr-xr-x    2 1950       crossfood           8 Nov  1 11:22 .
+drwxr-xr-x    6 1950       crossfood          10 Nov  1 11:22 ..
+-rw-r--r--    1 1950       crossfood        1231 Nov  1 11:22 conditionals.php
+-rw-r--r--    1 1950       crossfood        3203 Nov  1 11:22 deprecated.php
+-rw-r--r--    1 1950       crossfood        1251 Nov  1 11:22 getters.php
+-rw-r--r--    1 1950       crossfood        7839 Nov  1 11:22 migrations.php
+-rw-r--r--    1 1950       crossfood        1529 Nov  1 11:22 queries.php
+-rw-r--r--    1 1950       crossfood        1850 Nov  1 11:22 template.php

@@ -137,6 +137,18 @@
 <noscript><img height="1" width="1" style="display:none"
                src="https://www.facebook.com/tr?id=2437774649784255&ev=PageView&noscript=1"
   /></noscript>
+  <!-- BEGIN OF UTMSTAT.COM CODE FOR CROSSFOOD -->
+<script type="text/javascript">
+    var utmStatConf = {projectId: "53b9ef061b210ebd0a62b13bbb9217e2", replaceTextElements: [], hasJivosite: false, hasMetrika: true, hasAnalytics: true, useCookieSync: false};
+    (function (u, t, m) {
+        var s = u.createElement(t), n = u.getElementsByTagName(t)[0];
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = m + "?v=" + Date.now();
+        n.parentNode.insertBefore(s, n);
+    })(document, "script", "//static.utmstat.com/client.min.js");
+</script>
+<!-- END OF UTMSTAT.COM CODE FOR CROSSFOOD -->
 <!-- End Facebook Pixel Code -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

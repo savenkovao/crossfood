@@ -1,0 +1,4 @@
+drwxr-xr-x    2 1950       crossfood           4 Dec  7  2018 .
+drwxr-xr-x    5 1950       crossfood           8 Dec  7  2018 ..
+-rw-r--r--    1 1950       crossfood        5626 Nov 13 01:32 class-wp-rest-post-search-handler.php
+-rw-r--r--    1 1950       crossfood        2130 Dec  7  2018 class-wp-rest-search-handler.php

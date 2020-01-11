@@ -1,0 +1,7 @@
+drwxr-xr-x    3 1950       crossfood           7 Nov  1 11:22 .
+drwxr-xr-x    8 1950       crossfood          24 Nov  1 11:22 ..
+drwxr-xr-x    2 1950       crossfood           8 Nov  1 11:22 Exceptions
+-rw-r--r--    1 1950       crossfood        6051 Nov  1 11:22 FreemiusBase.php
+-rw-r--r--    1 1950       crossfood       19981 Nov  1 11:22 FreemiusWordPress.php
+-rw-r--r--    1 1950       crossfood       18027 Nov  1 11:22 LICENSE.txt
+-rw-r--r--    1 1950       crossfood          87 Nov  1 11:22 index.php

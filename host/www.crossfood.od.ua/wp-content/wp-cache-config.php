@@ -5,11 +5,13 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$wpsc_version = 169;
+$wp_super_cache_comments = 1;
 $wpsc_last_post_update = 1508274730; //Added by WP-Cache Manager
 $wp_cache_debug_username = '5b33a119a91e9ec68793c5b01451a352'; //Added by WP-Cache Manager
 $wp_cache_mobile_groups = '';
 $wp_cache_home_path = '/'; //Added by WP-Cache Manager
-$wp_cache_slash_check = 1;
+$wp_cache_slash_check = 0;
 $cache_page_secret = 'be0371d8fae69a0d24d3c9012ec5fee5'; //Added by WP-Cache Manager
 $cache_time_interval = 600; //Added by WP-Cache Manager
 if ( ! defined('WPCACHEHOME') )
@@ -18,7 +20,7 @@ if ( ! defined('WPCACHEHOME') )
 $cache_compression = 1; //Added by WP-Cache Manager
 $cache_enabled = true;
 $super_cache_enabled = true;
-$cache_max_time = 1800; //Added by WP-Cache Manager
+$cache_max_time = 3600;
 //$use_flock = true; // Set it true or false if you know what to use
 $cache_path = WP_CONTENT_DIR . '/cache/';
 $file_prefix = 'wp-cache-';
@@ -46,7 +48,7 @@ if ( '/' != substr($cache_path, -1)) {
 
 $wp_cache_mobile = 0;
 $wp_cache_mobile_whitelist = 'Stand Alone/QNws';
-$wp_cache_mobile_browsers = '2.0 MMP, 240x320, 400X240, AvantGo, BlackBerry, Blazer, Cellphone, Danger, DoCoMo, Elaine/3.0, EudoraWeb, Googlebot-Mobile, hiptop, IEMobile, KYOCERA/WX310K, LG/U990, MIDP-2., MMEF20, MOT-V, NetFront, Newt, Nintendo Wii, Nitro, Nokia, Opera Mini, Palm, PlayStation Portable, portalmmm, Proxinet, ProxiNet, SHARP-TQ-GX10, SHG-i900, Small, SonyEricsson, Symbian OS, SymbianOS, TS21i-10, UP.Browser, UP.Link, webOS, Windows CE, WinWAP, YahooSeeker/M1A1-R2D2, iPhone, iPod, Android, BlackBerry9530, LG-TU915 Obigo, LGE VX, webOS, Nokia5800';
+$wp_cache_mobile_browsers = '2.0 MMP, 240x320, 400X240, AvantGo, BlackBerry, Blazer, Cellphone, Danger, DoCoMo, Elaine/3.0, EudoraWeb, Googlebot-Mobile, hiptop, IEMobile, KYOCERA/WX310K, LG/U990, MIDP-2., MMEF20, MOT-V, NetFront, Newt, Nintendo Wii, Nitro, Nokia, Opera Mini, Palm, PlayStation Portable, portalmmm, Proxinet, ProxiNet, SHARP-TQ-GX10, SHG-i900, Small, SonyEricsson, Symbian OS, SymbianOS, TS21i-10, UP.Browser, UP.Link, webOS, Windows CE, WinWAP, YahooSeeker/M1A1-R2D2, iPhone, iPod, iPad, Android, BlackBerry9530, LG-TU915 Obigo, LGE VX, webOS, Nokia5800';
 
 // change to relocate the supercache plugins directory
 $wp_cache_plugins_dir = WPCACHEHOME . 'plugins';
@@ -93,19 +95,19 @@ $wp_cache_mod_rewrite = 0;
 $wp_supercache_304 = 1;
 $wp_cache_front_page_checks = 1;
 $wp_cache_disable_utf8 = 0;
-$wp_cache_no_cache_for_get = 0;
-$cache_scheduled_time = '00:00'; //Added by WP-Cache Manager
-$wp_cache_preload_interval = 600; //Added by WP-Cache Manager
-$cache_schedule_type = 'time'; //Added by WP-Cache Manager
-$wp_cache_preload_posts = 'all'; //Added by WP-Cache Manager
-$wp_cache_preload_on = 0; //Added by WP-Cache Manager
-$wp_cache_preload_taxonomies = 0; //Added by WP-Cache Manager
-$wp_cache_preload_email_me = 0; //Added by WP-Cache Manager
-$wp_cache_preload_email_volume = 'none'; //Added by WP-Cache Manager
+$wp_cache_no_cache_for_get = 1;
+$cache_scheduled_time = '00:00';
+$wp_cache_preload_interval = 600;
+$cache_schedule_type = 'time';
+$wp_cache_preload_posts = 'all';
+$wp_cache_preload_on = 0;
+$wp_cache_preload_taxonomies = 0;
+$wp_cache_preload_email_me = 0;
+$wp_cache_preload_email_volume = 'none';
 $wp_cache_mobile_prefixes = 'w3c , w3c-, acs-, alav, alca, amoi, audi, avan, benq, bird, blac, blaz, brew, cell, cldc, cmd-, dang, doco, eric, hipt, htc_, inno, ipaq, ipod, jigs, kddi, keji, leno, lg-c, lg-d, lg-g, lge-, lg/u, maui, maxo, midp, mits, mmef, mobi, mot-, moto, mwbp, nec-, newt, noki, palm, pana, pant, phil, play, port, prox, qwap, sage, sams, sany, sch-, sec-, send, seri, sgh-, shar, sie-, siem, smal, smar, sony, sph-, symb, t-mo, teli, tim-, tosh, tsm-, upg1, upsi, vk-v, voda, wap-, wapa, wapi, wapp, wapr, webc, winw, winw, xda , xda-';
 $cached_direct_pages = array(  );
 $wpsc_served_header = false;
-$cache_gc_email_me = 0; //Added by WP-Cache Manager
+$cache_gc_email_me = 0;
 $wpsc_save_headers = 0;
-$cache_schedule_interval = 'hourly'; //Added by WP-Cache Manager
+$cache_schedule_interval = 'hourly';
 ?>

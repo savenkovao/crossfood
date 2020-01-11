@@ -1,0 +1,12 @@
+drwxr-xr-x    3 1950       crossfood          12 Nov  1 11:22 .
+drwxr-xr-x    8 1950       crossfood          29 Nov  1 11:22 ..
+-rw-r--r--    1 1950       crossfood       28465 Nov  1 11:22 affiliation.php
+drwxr-xr-x    2 1950       crossfood           6 Nov  1 11:22 deactivation
+-rw-r--r--    1 1950       crossfood          87 Nov  1 11:22 index.php
+-rw-r--r--    1 1950       crossfood       26218 Nov  1 11:22 license-activation.php
+-rw-r--r--    1 1950       crossfood        8421 Nov  1 11:22 optout.php
+-rw-r--r--    1 1950       crossfood        8331 Nov  1 11:22 premium-versions-upgrade-handler.php
+-rw-r--r--    1 1950       crossfood        1494 Nov  1 11:22 premium-versions-upgrade-metadata.php
+-rw-r--r--    1 1950       crossfood        7106 Nov  1 11:22 resend-key.php
+-rw-r--r--    1 1950       crossfood       11710 Nov  1 11:22 subscription-cancellation.php
+-rw-r--r--    1 1950       crossfood        5313 Nov  1 11:22 trial-start.php

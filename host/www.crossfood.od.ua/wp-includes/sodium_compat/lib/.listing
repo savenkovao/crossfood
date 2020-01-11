@@ -1,0 +1,6 @@
+drwxr-xr-x    2 1950       crossfood           6 Jul 24 17:51 .
+drwxr-xr-x    5 1950       crossfood           8 Jul 24 17:51 ..
+-rw-r--r--    1 1950       crossfood        4101 Jul 24 17:51 constants.php
+-rw-r--r--    1 1950       crossfood        1275 Jul 24 17:51 namespaced.php
+-rw-r--r--    1 1950       crossfood       31941 Jul 24 17:51 php72compat.php
+-rw-r--r--    1 1950       crossfood       24458 Jul 24 17:51 sodium_compat.php

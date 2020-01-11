@@ -1,0 +1,15 @@
+drwxr-xr-x   11 1950       crossfood          15 Dec  8 00:10 .
+drwxr-xr-x    6 1950       crossfood          38 Dec  9 04:54 ..
+-rw-r--r--    1 1950       crossfood        1129 Feb 27  2018 advanced-cache.php
+drwxr-xr-x    5 1950       crossfood           7 Dec  9 04:33 cache
+-rw-r--r--    1 1950       crossfood           0 Apr 11  2017 index.php
+drwxr-xr-x    4 1950       crossfood          28 Nov 29 01:38 languages
+drwxr-xr-x    2 1950       crossfood           2 May 17  2017 logs
+drwxr-xr-x    2 1950       crossfood           3 Jan 13  2019 mu-plugins
+drwxr-xr-x   22 1950       crossfood          24 Dec  8 00:09 plugins
+-rw-r--r--    1 1950       crossfood      139560 Dec  8 23:11 siteground-migrator.log
+drwxr-xr-x    5 1950       crossfood           6 Nov 16 01:32 themes
+drwxr-xr-x    2 1950       crossfood           2 Dec  8 00:09 upgrade
+drwxr-xr-x   10 1950       crossfood          11 Dec  8 23:11 uploads
+-rw-------    1 1950       crossfood        4912 Dec  7 14:15 wp-cache-config.php
+drwxr-xr-x    5 1950       crossfood           7 Oct 28  2018 wp-recall

@@ -1,0 +1,6 @@
+drwxr-xr-x    4 1950       crossfood           6 Dec  6 12:49 .
+drwxr-xr-x   16 1950       crossfood          62 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood         178 Dec  6 12:49 autoload.php
+-rw-r--r--    1 1950       crossfood        4644 Dec  6 12:49 autoload_packages.php
+drwxr-xr-x   17 1950       crossfood          17 Dec  6 12:49 automattic
+drwxr-xr-x    2 1950       crossfood          12 Dec  6 12:49 composer

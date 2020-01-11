@@ -1,0 +1,23 @@
+{
+    "name": "CrossFood",
+    "short_name": "CrossFood",
+    "description": "\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u0417\u0434\u043e\u0440\u043e\u0432\u043e\u0433\u043e \u041f\u0438\u0442\u0430\u043d\u0438\u044f \u0432 \u041e\u0434\u0435\u0441\u0441\u0435",
+    "icons": [
+        {
+            "src": "https:\/\/crossfood.od.ua\/wp-content\/uploads\/2019\/10\/CF-logo-icon-2.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        },
+        {
+            "src": "https:\/\/crossfood.od.ua\/wp-content\/uploads\/2019\/10\/CF-logo-icon-512.png",
+            "sizes": "512x512",
+            "type": "image\/png"
+        }
+    ],
+    "background_color": "#D5E0EB",
+    "theme_color": "#6b9e3d",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "https:\/\/crossfood.od.ua\/",
+    "scope": "https:\/\/crossfood.od.ua\/"
+}

@@ -1,0 +1,7 @@
+drwxr-xr-x    2 1950       crossfood           7 Dec  6 12:49 .
+drwxr-xr-x    3 1950       crossfood           3 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood        4048 Dec  6 12:49 editor-view.min.js
+-rw-r--r--    1 1950       crossfood         842 Dec  6 12:49 gutenberg-video-upload.min.js
+-rw-r--r--    1 1950       crossfood         831 Dec  6 12:49 media-video-widget-extensions.min.js
+-rw-r--r--    1 1950       crossfood        5739 Dec  6 12:49 videopress-plupload.min.js
+-rw-r--r--    1 1950       crossfood        2305 Dec  6 12:49 videopress-uploader.min.js

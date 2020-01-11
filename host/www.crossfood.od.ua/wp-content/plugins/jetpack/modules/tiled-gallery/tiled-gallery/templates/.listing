@@ -1,0 +1,7 @@
+drwxr-xr-x    3 1950       crossfood           7 Dec  6 12:49 .
+drwxr-xr-x    4 1950       crossfood          13 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood         863 Dec  6 12:49 carousel-container.php
+-rw-r--r--    1 1950       crossfood          53 Dec  6 12:49 circle-layout.php
+drwxr-xr-x    2 1950       crossfood           4 Dec  6 12:49 partials
+-rw-r--r--    1 1950       crossfood        1030 Dec  6 12:49 rectangular-layout.php
+-rw-r--r--    1 1950       crossfood         873 Dec  6 12:49 square-layout.php

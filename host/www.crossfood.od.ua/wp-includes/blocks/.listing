@@ -1,0 +1,12 @@
+drwxr-xr-x    2 1950       crossfood          12 Jul 24 17:51 .
+drwxr-xr-x   20 1950       crossfood         210 Nov 13 01:32 ..
+-rw-r--r--    1 1950       crossfood        3282 Nov 13 01:32 archives.php
+-rw-r--r--    1 1950       crossfood        1006 Nov 13 01:32 block.php
+-rw-r--r--    1 1950       crossfood        2073 Nov 13 01:32 calendar.php
+-rw-r--r--    1 1950       crossfood        3078 Nov 13 01:32 categories.php
+-rw-r--r--    1 1950       crossfood        5753 Nov 13 01:32 latest-comments.php
+-rw-r--r--    1 1950       crossfood        4833 Nov 13 01:32 latest-posts.php
+-rw-r--r--    1 1950       crossfood        4460 Nov 13 01:32 rss.php
+-rw-r--r--    1 1950       crossfood        2181 Nov 13 01:32 search.php
+-rw-r--r--    1 1950       crossfood         794 Nov 13 01:32 shortcode.php
+-rw-r--r--    1 1950       crossfood        1821 Nov 13 01:32 tag-cloud.php

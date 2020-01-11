@@ -1,0 +1,15 @@
+drwxr-xr-x    3 1950       crossfood          15 Dec  6 12:49 .
+drwxr-xr-x   44 1950       crossfood          97 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood        8631 Dec  6 12:49 admin-sharing-rtl.css
+-rw-r--r--    1 1950       crossfood        7248 Dec  6 12:49 admin-sharing-rtl.min.css
+-rw-r--r--    1 1950       crossfood        8537 Dec  6 12:49 admin-sharing.css
+-rw-r--r--    1 1950       crossfood       14559 Dec  6 12:49 admin-sharing.js
+-rw-r--r--    1 1950       crossfood        7342 Dec  6 12:49 admin-sharing.min.css
+drwxr-xr-x    2 1950       crossfood          81 Dec  6 12:49 images
+-rw-r--r--    1 1950       crossfood        5345 Dec  6 12:49 recaptcha.php
+-rw-r--r--    1 1950       crossfood        9979 Dec  6 12:49 sharedaddy.php
+-rw-r--r--    1 1950       crossfood       27579 Dec  6 12:49 sharing-service.php
+-rw-r--r--    1 1950       crossfood       54577 Dec  6 12:49 sharing-sources.php
+-rw-r--r--    1 1950       crossfood       19470 Dec  6 12:49 sharing.css
+-rw-r--r--    1 1950       crossfood       15504 Dec  6 12:49 sharing.js
+-rw-r--r--    1 1950       crossfood       23747 Dec  6 12:49 sharing.php

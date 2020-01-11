@@ -1,0 +1,9 @@
+drwxr-xr-x    5 1950       crossfood           9 Nov 16 01:29 .
+drwxr-xr-x   22 1950       crossfood          24 Dec  8 00:09 ..
+drwxr-xr-x    2 1950       crossfood           7 Nov 16 01:29 block-editor
+drwxr-xr-x   17 1950       crossfood          17 Nov 16 01:29 mce
+drwxr-xr-x    3 1950       crossfood           5 Nov 16 01:29 plugin-assets
+-rw-r--r--    1 1950       crossfood       16282 Nov 16 01:29 readme.txt
+-rw-r--r--    1 1950       crossfood       43112 Nov 16 01:29 tadv_admin.php
+-rw-r--r--    1 1950       crossfood       42725 Nov 16 01:29 tinymce-advanced.php
+-rw-r--r--    1 1950       crossfood         535 Nov 16 01:29 uninstall.php

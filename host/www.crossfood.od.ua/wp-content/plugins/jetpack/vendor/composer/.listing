@@ -1,0 +1,12 @@
+drwxr-xr-x    2 1950       crossfood          12 Dec  6 12:49 .
+drwxr-xr-x    4 1950       crossfood           6 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood       13459 Dec  6 12:49 ClassLoader.php
+-rw-r--r--    1 1950       crossfood        1070 Dec  6 12:49 LICENSE
+-rw-r--r--    1 1950       crossfood        8668 Dec  6 12:49 autoload_classmap.php
+-rw-r--r--    1 1950       crossfood       17562 Dec  6 12:49 autoload_classmap_package.php
+-rw-r--r--    1 1950       crossfood         449 Dec  6 12:49 autoload_files.php
+-rw-r--r--    1 1950       crossfood         149 Dec  6 12:49 autoload_namespaces.php
+-rw-r--r--    1 1950       crossfood        1196 Dec  6 12:49 autoload_psr4.php
+-rw-r--r--    1 1950       crossfood        2103 Dec  6 12:49 autoload_real.php
+-rw-r--r--    1 1950       crossfood       12306 Dec  6 12:49 autoload_static.php
+-rw-r--r--    1 1950       crossfood       16401 Dec  6 12:49 installed.json

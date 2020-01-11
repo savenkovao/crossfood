@@ -1,0 +1,11 @@
+drwxr-xr-x    2 1950       crossfood          11 Nov 16  2017 .
+drwxr-xr-x   13 1950       crossfood         112 Nov 13 01:32 ..
+-rw-r--r--    1 1950       crossfood       18708 Nov 13 01:32 handlers.js
+-rw-r--r--    1 1950       crossfood       11264 Nov 13 01:32 handlers.min.js
+-rw-r--r--    1 1950       crossfood       17987 Jul 24  2017 license.txt
+-rw-r--r--    1 1950       crossfood      254084 Nov 16  2017 moxie.js
+-rw-r--r--    1 1950       crossfood       88108 Nov 13 01:32 moxie.min.js
+-rw-r--r--    1 1950       crossfood       60314 Nov 16  2017 plupload.js
+-rw-r--r--    1 1950       crossfood       15658 Nov 13 01:32 plupload.min.js
+-rw-r--r--    1 1950       crossfood       15825 Nov 13 01:32 wp-plupload.js
+-rw-r--r--    1 1950       crossfood        5638 Nov 13 01:32 wp-plupload.min.js

@@ -1,0 +1,9 @@
+drwxr-xr-x    3 1950       crossfood           9 Dec  6 12:49 .
+drwxr-xr-x    5 1950       crossfood           9 Dec  6 12:49 ..
+-rw-r--r--    1 1950       crossfood         161 Dec  6 12:49 admin.css
+-rw-r--r--    1 1950       crossfood         845 Dec  6 12:49 comics-rtl.css
+-rw-r--r--    1 1950       crossfood         567 Dec  6 12:49 comics-rtl.min.css
+-rw-r--r--    1 1950       crossfood         751 Dec  6 12:49 comics.css
+-rw-r--r--    1 1950       crossfood        3514 Dec  6 12:49 comics.js
+-rw-r--r--    1 1950       crossfood         661 Dec  6 12:49 comics.min.css
+drwxr-xr-x    2 1950       crossfood           3 Dec  6 12:49 rtl
