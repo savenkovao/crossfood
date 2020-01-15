@@ -116,6 +116,7 @@
   </div> 
 </footer>
 
+<?php dynamic_sidebar('widgets_1'); ?>
 
 <link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/fonts.css">
 
@@ -148,7 +149,7 @@
 <!-- End Facebook Pixel Code -->
 <!-- BEGIN OF UTMSTAT.COM CODE FOR CROSSFOOD -->
 <script type="text/javascript">
-    var utmStatConf = {projectId: "53b9ef061b210ebd0a62b13bbb9217e2", replaceTextElements: [], hasJivosite: false, hasMetrika: true, hasAnalytics: true, useCookieSync: false};
+    var utmStatConf = {projectId: "53b9ef061b210ebd0a62b13bbb9217e2", replaceTextElements: [], hasJivosite: true, hasMetrika: true, hasAnalytics: true, useCookieSync: false};
     (function (u, t, m) {
         var s = u.createElement(t), n = u.getElementsByTagName(t)[0];
         s.type = "text/javascript";

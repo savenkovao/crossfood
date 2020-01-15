@@ -47,6 +47,21 @@ function crossfood_setup()
 
 add_action('after_setup_theme', 'crossfood_setup');
 
+function register_my_widgets(){
+  if ( function_exists('register_sidebar') ){
+    register_sidebar( array(
+      'id' => 'widgets_1',
+      'name' => "Виджеты скриптов в футере",
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => '',
+    ) );
+  } 
+}
+
+add_action('widgets_init', 'register_my_widgets', 1);
+
 // подключаем функцию активации мета блока (my_extra_fields)
 add_action('add_meta_boxes', 'my_extra_fields', 1);
 function my_extra_fields()
