@@ -64,6 +64,8 @@ Disallow: /menu-stand-1/*
 Disallow: /menu-stand-2
 Disallow: /menu-stand-2/*
 Disallow: /menu-trial
+Disallow: /offerta-rest
+Disallow: /offerta-rest/*
 
 Host: https://crossfood.od.ua
 Sitemap: https://crossfood.od.ua/sitemap.xml
