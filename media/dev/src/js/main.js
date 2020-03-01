@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
   /* Common */
 
   if (window.CONFIG.page == undefined) {
@@ -7,7 +7,7 @@
 
   /* Common */
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     window.POSTS = {};
     window.FIRST_LOAD = false;
     // Mobile menu enabling
@@ -125,11 +125,11 @@
 
           currentTarget.insertBefore(newSl, currentTarget.firstChild);
 
-          setTimeout(function() {
+          setTimeout(function () {
             newSl.style.marginLeft = 0;
           }, 0);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sr.remove();
           }, 405);
         } else if (dataAction === "sl") {
@@ -157,11 +157,11 @@
           allItems.ml.classList.remove("ml");
           allItems.ml.classList.add("mr");
 
-          setTimeout(function() {
+          setTimeout(function () {
             newMl.style.marginLeft = 0;
           }, 0);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sr.remove();
             allItems.mr.remove();
           }, 205);
@@ -186,11 +186,11 @@
 
           currentTarget.appendChild(newSr);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sl.style.marginLeft = -targetWidth * 1 + "px";
           }, 0);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sl.remove();
           }, 300);
         } else if (dataAction === "sr") {
@@ -221,11 +221,11 @@
           currentTarget.appendChild(newMr);
           currentTarget.appendChild(newSr);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sl.style.marginLeft = -targetWidth * 2 + "px";
           }, 0);
 
-          setTimeout(function() {
+          setTimeout(function () {
             allItems.sl.remove();
             allItems.ml.remove();
           }, 400);
@@ -304,7 +304,7 @@
     function getCurrentDate() {
       var date = new Date();
 
-      Date.prototype.getWeekNumber = function() {
+      Date.prototype.getWeekNumber = function () {
         var d = new Date(+this);
         d.setHours(0, 0, 0, 0);
         d.setDate(d.getDate() + 4 - (d.getDay() || 7));
@@ -364,7 +364,7 @@
 
       if (action === "data-subscribe") {
         $(nodes).hide();
-        $('[data-subscribe="' + identifier + '"]').fadeIn(function() {
+        $('[data-subscribe="' + identifier + '"]').fadeIn(function () {
           $(".subscribe__item>p").addClass("animated zoomIn");
         });
       } else {
@@ -440,11 +440,11 @@
 
         window.FIRST_LOAD = true;
 
-        jQuery.post(myPlugin.ajaxurl, data, function(response) {
+        jQuery.post(myPlugin.ajaxurl, data, function (response) {
           if (response) {
             var posts = JSON.parse(response);
 
-            posts.forEach(function(item, i, arr) {
+            posts.forEach(function (item, i, arr) {
               var postItem = $(
                 '<div class="tab-block__tab-item disable"><div class="cuisine__item-text-cont"></div></div>'
               );
@@ -484,9 +484,9 @@
 
       cuisineListener.price = $(
         "#" +
-          selector +
-          " .cuisine__item-price-text" +
-          "[data-cuisine-qount = 5]"
+        selector +
+        " .cuisine__item-price-text" +
+        "[data-cuisine-qount = 5]"
       ).html();
       cuisineListener.selector = selector;
       // cuisineListener.cuisines
@@ -559,8 +559,19 @@
       targetNode.classList.remove("active");
     }
 
+    // Вставка типов подписок в селект формы оформления подписок 
+    var subscribeTypes = window.CONFIG.subscribeTypes;
+    var subscribeTypesHtml = '';
+
+    Object.keys(subscribeTypes).forEach(function (item) {
+      subscribeTypesHtml += '<option value="' + subscribeTypes[item] + '">' + subscribeTypes[item] + '</option>'
+    });
+
+    $('#form-input_subscribe').html(subscribeTypesHtml);
+    // Вставка типов подписок в селект формы оформления подписок 
+
     // Select options
-    $('[data-target="form_2"]').on("click", function() {
+    $('[data-target="form_2"]').on("click", function () {
       selectOptions();
     });
 
@@ -572,16 +583,16 @@
       var dataCal;
 
       if (cuisineListener.subscribe === "stand") {
-        selectSubscribe.selectedIndex = 0;
+        $(selectSubscribe).val(subscribeTypes.stand);
         dataSub = "stand";
       } else if (cuisineListener.subscribe === "fit") {
-        selectSubscribe.selectedIndex = 1;
+        $(selectSubscribe).val(subscribeTypes.fit);
         dataSub = "fit";
       } else if (cuisineListener.subscribe === "prem") {
-        selectSubscribe.selectedIndex = 2;
+        $(selectSubscribe).val(subscribeTypes.prem);
         dataSub = "prem";
       } else if (cuisineListener.subscribe === "veg") {
-        selectSubscribe.selectedIndex = 3;
+        $(selectSubscribe).val(subscribeTypes.veg);
         dataSub = "veg";
       }
 
@@ -602,40 +613,40 @@
       setPriceInForm(dataSub, dataCal);
     }
 
-    $('[id^="wpcf7-f2087"] form').on("change", function(event) {
+
+    $('[id^="wpcf7-f2087"] form').on("change", function (event) {
       // $('#wpcf7-f2087-o7 form').on('change', function (event) {
       var selectSubscribe = document.getElementById("form-input_subscribe")
         .value;
       var selectCalories = document.getElementById("form-input_calories").value;
 
-      if (selectSubscribe === "Фитнес") {
+      if (selectSubscribe === subscribeTypes.fit) {
         selectSubscribe = "fit";
-      } else if (selectSubscribe === "Премиум") {
+      } else if (selectSubscribe === subscribeTypes.prem) {
         selectSubscribe = "prem";
-      } else if (selectSubscribe === "Без мяса") {
+      } else if (selectSubscribe === subscribeTypes.veg) {
         selectSubscribe = "veg";
-      } else if (selectSubscribe === "Стандарт") {
+      } else if (selectSubscribe === subscribeTypes.stand) {
         selectSubscribe = "stand";
-      } else if (selectSubscribe === "Пробный день") {
+      } else if (selectSubscribe === subscribeTypes.trial) {
         selectSubscribe = "trial";
       }
-      console.log(selectSubscribe, selectCalories);
 
       setPriceInForm(selectSubscribe, selectCalories);
     });
 
     function setPriceInForm(subscribe, calories) {
-      selectCuisineItem(function() {
+      selectCuisineItem(function () {
         if (subscribe !== "trial") {
           // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
           cuisineListener.price = $(
             "#subscribe-items " +
-              '[data-subscribe="' +
-              subscribe +
-              '"] ' +
-              '[data-identifier="' +
-              calories +
-              '"] .subscribe__price strong'
+            '[data-subscribe="' +
+            subscribe +
+            '"] ' +
+            '[data-identifier="' +
+            calories +
+            '"] .subscribe__price strong'
           ).html();
         } else if (subscribe === "trial") {
           cuisineListener.price = $("#" + subscribe).html();
@@ -646,7 +657,7 @@
       }, "#" + subscribe + "-" + cuisineListener.week + "-mo");
     }
 
-    $("#header-menu").on("click", "a", function(event) {
+    $("#header-menu").on("click", "a", function (event) {
       event.preventDefault();
       var id = $(this).attr("href"),
         top = $(id).offset().top;
@@ -657,7 +668,7 @@
       .find(".sharedaddy.sd-sharing-enabled")
       .remove();
 
-    $("img").each(function() {
+    $("img").each(function () {
       $(this).removeAttr("height");
       $(this).removeAttr("width");
     });
@@ -696,7 +707,7 @@
   function hideLoader(selector) {
     $(selector)
       .children(".loader")
-      .fadeOut(function() {
+      .fadeOut(function () {
         $(this).remove();
       });
   }
@@ -705,7 +716,7 @@
   if ($(".how-it-works").length && window.CONFIG.page === "home") {
     toggleHeader();
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
       toggleHeader();
     });
 
@@ -724,7 +735,7 @@
   removeImgAttribures();
 
   function removeImgAttribures() {
-    $("img").each(function() {
+    $("img").each(function () {
       $(this)
         .removeAttr("width")
         .removeAttr("height");
@@ -779,7 +790,7 @@
   updateUserDataObj();
   toggleScheduleMessages();
 
-  $(".pum").on("pumAfterOpen", function(e) {
+  $(".pum").on("pumAfterOpen", function (e) {
     // $('[data-target^="form_"]').on('click', function (e) {
     var $form = $(".pum-active form");
 
@@ -788,7 +799,7 @@
     }
   });
 
-  $(".wpcf7-form").on("submit", function(e) {
+  $(".wpcf7-form").on("submit", function (e) {
     var $form = $(e.currentTarget);
     var userInfo = {
       name: $form.find('[name="your-name"]').val() || userData.name || "",
@@ -874,7 +885,7 @@
   }
 
   /* GA script loaded */
-  ga(function() {
+  ga(function () {
     getGAClientId();
   });
   /* GA script loaded */
@@ -932,9 +943,9 @@
 
   document.addEventListener(
     "wpcf7mailsent",
-    function(event) {
-      setTimeout(function() {
-        $('[name="agree"]').each(function(i, item) {
+    function (event) {
+      setTimeout(function () {
+        $('[name="agree"]').each(function (i, item) {
           if (item.checked) item.click();
         });
       }, 500);
@@ -944,13 +955,13 @@
   /* SPAM PROTECTION */
 
   /* Add listeners to contactForm 7 form events */
-  $("form.wpcf7-form").on("submit", function(e) {
+  $("form.wpcf7-form").on("submit", function (e) {
     showLoader(e.currentTarget);
   });
 
   $(document).on(
     "wpcf7submit wpcf7mailsent wpcf7invalid wpcf7spam wpcf7mailfailed",
-    function(e) {
+    function (e) {
       hideLoader($(e.target).find("form"));
     }
   );
@@ -958,31 +969,31 @@
   /* Add listeners to contactForm 7 form events */
 
   /* Send fb pixel events */
-  $('header [data-target="form_1"]').on("click", function(e) {
+  $('header [data-target="form_1"]').on("click", function (e) {
     /* Save from trigger */
     window.FB_CONTACT_EVENT = "GetContact1";
     fbq("trackCustom", "Contact1");
   });
 
-  $('footer [data-target="form_1"]').on("click", function(e) {
+  $('footer [data-target="form_1"]').on("click", function (e) {
     /* Save from trigger */
     window.FB_CONTACT_EVENT = "GetContact2";
     fbq("trackCustom", "Contact2");
   });
 
-  $('[data-target="form_2"]').on("click", function(e) {
+  $('[data-target="form_2"]').on("click", function (e) {
     fbq("track", "InitiateCheckoutMain");
   });
 
-  $('[data-target="form_3"]').on("click", function(e) {
+  $('[data-target="form_3"]').on("click", function (e) {
     fbq("track", "InitiateCheckoutDesserts");
   });
 
-  $('[data-target="form_4"]').on("click", function(e) {
+  $('[data-target="form_4"]').on("click", function (e) {
     fbq("track", "InitiateCheckoutDrinks");
   });
 
-  $('[data-target="form_5"]').on("click", function(e) {
+  $('[data-target="form_5"]').on("click", function (e) {
     fbq("track", "InitiateCheckoutTrial");
   });
   /* Send fb pixel events */
@@ -1012,17 +1023,17 @@
 
     $ddSelect.children().remove();
 
-    $(".dd__title").each(function(i, item) {
+    $(".dd__title").each(function (i, item) {
       $ddSelect.append("<option>" + $(item).text() + "</option>");
     });
 
-    $(".dd__button-cnt").on("click", function() {
+    $(".dd__button-cnt").on("click", function () {
       var currentDessert = $(this)
         .closest(".dd__item")
         .find(".dd__title")
         .text();
 
-      $ddSelect.find("option").each(function(i, item) {
+      $ddSelect.find("option").each(function (i, item) {
         $(item).removeAttr("selected");
 
         if ($(item).text() === currentDessert) {
@@ -1042,7 +1053,7 @@
   function lazyLoadHandler() {
     clearTimeout(lazyLoadTimeout);
 
-    lazyLoadTimeout = setTimeout(function() {
+    lazyLoadTimeout = setTimeout(function () {
       initLazyLoad();
     }, 100);
   }
@@ -1062,7 +1073,7 @@
       showOffsets = $(window)[0].innerHeight * 0.75;
     }
 
-    $items.each(function(i, item) {
+    $items.each(function (i, item) {
       if (
         (windowTopPosition - showOffsets <=
           $(item).offset().top + $(item).height() &&
@@ -1095,7 +1106,7 @@
       } else {
         item.setAttribute("src", item.getAttribute("data-src"));
 
-        item.onload = function() {
+        item.onload = function () {
           item.removeAttribute("data-src");
         };
       }
@@ -1105,12 +1116,12 @@
   //  Image Lazy loading
 
   /* Dropdown */
-  $(document).on("click", ".dropdown-toggle", function(e) {
+  $(document).on("click", ".dropdown-toggle", function (e) {
     e.preventDefault();
     $(e.target)
       .closest(".dropdown")
       .find(".dropdown-content")
-      .slideToggle(function() {
+      .slideToggle(function () {
         $(e.target)
           .closest(".dropdown")
           .toggleClass("active");
@@ -1126,7 +1137,7 @@
 
   function displaySaveOnDesktopPopup() {
     if (checkIsSafari() && getVisit() === 1) {
-      setTimeout(function() {
+      setTimeout(function () {
         openModal(9626);
       }, 3000);
     }

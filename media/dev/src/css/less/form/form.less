@@ -26,7 +26,10 @@
   font-family: Roboto, sans-serif;
   color: #3D3D3D;
   display: block;
-  -webkit-appearance: none;
+
+  &:not(select) {
+    -webkit-appearance: none;
+  }
 }
 
 .menu-sp, .post-auth {

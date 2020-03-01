@@ -3,7 +3,14 @@
   window.CONFIG = {
     page: 'home',
     week: <?php $post = get_post($post_id = 10537);
-        echo $post->week_number; ?>
+        echo $post->week_number; ?>,
+    subscribeTypes:{
+      fit: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>",
+      prem: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?>",
+      stand: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>",
+      trial: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>",
+      veg: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>",
+    }
   };
 </script>
 
@@ -72,21 +79,21 @@
       <div id="subscribe" class="tab-block__navigation">
         <div data-action="data-subscribe" data-identifier="stand" data-meta-node
              class="tab-block__nav-button subscribe__nav-button active">
-          <span>Стандарт</span>
+          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?></span>
         </div>
 
         <div data-action="data-subscribe" data-identifier="fit" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span>Фитнес</span>
+          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?></span>
         </div>
 
         <div data-action="data-subscribe" data-identifier="prem" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span>Премиум</span>
+          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?></span>
         </div>
         <div data-action="data-subscribe" data-identifier="veg" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span>Без мяса</span>
+          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?></span>
         </div>
 
       </div>
@@ -421,8 +428,7 @@
     <div class="cuisine-notation_position">
       <p class="cuisine-notation">
 
-        <?php $post = get_post($post_id = 195);
-        echo $post->post_content; ?>
+        <?php $post = get_post($post_id = 195); echo $post->post_content; ?>
 
       </p>
       <p class="notation-text">
@@ -436,15 +442,24 @@
 <section id="trial-block" class="trial trial_position trial_background">
   <div class="trial-content wrapper">
     <div class="title-3">
-      <h3 class="title-3__h3 title-3__h3_dark hr-line">Пробный день</h3>
+      <h3 class="title-3__h3 title-3__h3_dark hr-line">
+      <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
+      </h3>
 
       <div class="trial__text">
         <p class="p text-center cuisine-notation">
-          Закажите пробный день прямо сейчас!
+          Закажите <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?> прямо сейчас!
         </p>
         <p class="p text-center">
-          Любой рацион из категорий Фитнес/Стандрат или Без Мяса <strong>всего 320 грн</strong>! <br>
-          Рацион премиум <strong>350 грн</strong>!
+          Любой рацион из категорий 
+
+        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>
+        /
+        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
+        или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
+          <strong>всего 320 грн</strong>! <br>
+          Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
+          <strong>350 грн</strong>!
         </p>
       </div>
 
