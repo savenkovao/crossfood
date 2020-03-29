@@ -1,11 +1,4 @@
 <?php
-
-/*
-Template Post Type: post, 
-WP Post Template: recipe template
-Description: This is recipe post template
-*/
-
 if (is_single()) {
     include(TEMPLATEPATH.'/header-single.php');
 } else {
