@@ -229,11 +229,9 @@ function ga_callback_func()
           {},
           {
             'event' : eventName,
-            'callbackData' : {
-              'event_action' : eventName,
-              'event_category' : eventName,
-              'event_label' : getUniqueOrderId(eventName+'_'+event.detail.contactFormId) // string like 'callback_2085_731508190767'
-            }
+            'event_action' : eventName,
+            'event_category' : eventName,
+            'event_label' : JSON.parse(localStorage.getItem('userInfo')).orderId // string like 'f2085_731508190767'
           },
           window.UTM_DATA
         ));
@@ -258,12 +256,10 @@ function ga_purchase_func()
           {},
           {
             'event' : eventName,
-            'subscribeData' : {
-              'event_action' : eventName,
-              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
-              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-            }
+            'event_action' : eventName,
+            'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'event_label': JSON.parse(localStorage.getItem('userInfo')).orderId,
+            'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
           },
           window.UTM_DATA
         ));
@@ -294,12 +290,10 @@ function ga_trial_func()
           {},
           {
             'event' : eventName,
-            'trialData' : {
-              'event_action' : eventName,
-              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
-              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-            }
+            'event_action' : eventName,
+            'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'event_label': JSON.parse(localStorage.getItem('userInfo')).orderId,
+            'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
           },
           window.UTM_DATA
         ));
@@ -328,12 +322,10 @@ function ga_desserts_func()
           {},
           {
             'event' : eventName,
-            'dessertsData' : {
-              'event_action' : eventName,
-              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
-              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-            }
+            'event_action' : eventName,
+            'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'event_label': JSON.parse(localStorage.getItem('userInfo')).orderId,
+            'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
           },
           window.UTM_DATA
         ));
@@ -358,15 +350,17 @@ function ga_drinks_func()
     document.addEventListener('wpcf7mailsent', function (event) {
       var eventName = 'newevent_drinks';
       if('3143' == event.detail.contactFormId) {
-        dataLayer.push({
-          'event' : eventName,
-          'drinksData' : {
+        dataLayer.push(Object.assign(
+          {},
+          {
+            'event' : eventName,
             'event_action' : eventName,
             'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
             'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-            'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
-          }
-        });
+            'event_label': JSON.parse(localStorage.getItem('userInfo')).orderId,
+          },
+          window.UTM_DATA
+        ));
 
         fbq('track', 'LeadDrinks', {
           value: 1,

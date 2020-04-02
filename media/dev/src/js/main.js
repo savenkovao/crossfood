@@ -814,8 +814,10 @@
         $("#form-input_sweets").val() ||
         $("#form-input_drinks").val() ||
         "",
-      price: $form.find("#form-input_price").val() || 0
+      price: $form.find("#form-input_price").val() || 0,
+      orderId:  $('input[name="event_label"]').val() || getUniqueOrderId(event.detail.contactFormId),
     };
+    
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
 
     toggleScheduleMessages();
@@ -862,6 +864,12 @@
       $form.find('[name="your-address"]').val(userData.address);
       $form.find('[name="your-time"]').val(userData.time);
     }
+
+    $form.find('[name="event_label"]').val(getUniqueOrderId($form.attr('action').split('-')[1] || 'form'));
+  }
+
+  function getUniqueOrderId (formEventId) {
+    return formEventId + '_' + (Math.random() * new Date().getTime()).toFixed(0);
   }
 
   getText();
