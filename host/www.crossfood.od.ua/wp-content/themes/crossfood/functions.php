@@ -222,21 +222,17 @@ function ga_callback_func()
     }
 
     document.addEventListener('wpcf7mailsent', function (event) {
-      var event = 'callback';
+      var eventName = 'newevent_callback';
+      
       if('2085' == event.detail.contactFormId) {
-
-        // gtag('event', 'callback_click', {
-        //   'event_category' : 'callback',
-        //   'event_label' : 'Callback'
-        // });
         dataLayer.push(Object.assign(
           {},
           {
-            'event' : event,
+            'event' : eventName,
             'callbackData' : {
-              'event_category' : event,
-              'event_label' : 'Callback',
-              'order_id': getUniqueOrderId(event+'_'+event.detail.contactFormId) // string like 'callback_2085_731508190767'
+              'event_action' : eventName,
+              'event_category' : eventName,
+              'event_label' : getUniqueOrderId(eventName+'_'+event.detail.contactFormId) // string like 'callback_2085_731508190767'
             }
           },
           window.UTM_DATA
@@ -256,19 +252,17 @@ function ga_purchase_func()
     ?>
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
-      var event = 'subscribe';
+      var eventName = 'newevent_subscribe';
       if('2087' == event.detail.contactFormId) {
         dataLayer.push(Object.assign(
           {},
           {
-            'event' : event,
+            'event' : eventName,
             'subscribeData' : {
-              'event_category' : event,
-              'currencyCode' : 'UAH',
-              'event_label' : 'Subscribe',
-              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-              'order_id': getUniqueOrderId(event+'_'+event.detail.contactFormId)
+              'event_action' : eventName,
+              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
+              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
             }
           },
           window.UTM_DATA
@@ -294,19 +288,17 @@ function ga_trial_func()
     ?>
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
-      var event = 'trial'; 
+      var eventName = 'newevent_trial'; 
       if('9783' == event.detail.contactFormId) {
         dataLayer.push(Object.assign(
           {},
           {
-            'event' : event,
-            'subscribeData' : {
-              'event_category' : event,
-              'currencyCode' : 'UAH',
-              'event_label' : 'Trial',
-              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-              'order_id': getUniqueOrderId(event+'_'+event.detail.contactFormId)
+            'event' : eventName,
+            'trialData' : {
+              'event_action' : eventName,
+              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
+              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
             }
           },
           window.UTM_DATA
@@ -330,25 +322,17 @@ function ga_desserts_func()
     ?>
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
-      var event = 'desserts';
+      var eventName = 'newevent_desserts';
       if('3052' == event.detail.contactFormId) {
-        //
-        // gtag('event', 'desserts_click', {
-        //   'event_category' : 'desserts',
-        //   'event_label' : 'Desserts'
-        // });
-
         dataLayer.push(Object.assign(
           {},
           {
-            'event' : event,
+            'event' : eventName,
             'dessertsData' : {
-              'event_category' : event,
-              'currencyCode' : 'UAH',
-              'event_label' : 'Desserts',
-              'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-              'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-              'order_id': getUniqueOrderId(event+'_'+event.detail.contactFormId)
+              'event_action' : eventName,
+              'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+              'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
+              'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
             }
           },
           window.UTM_DATA
@@ -372,17 +356,15 @@ function ga_drinks_func()
     ?>
   <script type="text/javascript">
     document.addEventListener('wpcf7mailsent', function (event) {
-      var event = 'drinks';
+      var eventName = 'newevent_drinks';
       if('3143' == event.detail.contactFormId) {
         dataLayer.push({
-          'event' : event,
-          'dessertsData' : {
-            'event_category' : event,
-            'currencyCode' : 'UAH',
-            'event_label' : 'Drinks',
-            'name' : JSON.parse(localStorage.getItem('userInfo')).product,
-            'price' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
-            'order_id': getUniqueOrderId(event+'_'+event.detail.contactFormId)
+          'event' : eventName,
+          'drinksData' : {
+            'event_action' : eventName,
+            'event_category' : JSON.parse(localStorage.getItem('userInfo')).product,
+            'value' : parseInt(JSON.parse(localStorage.getItem('userInfo')).price),
+            'event_label': getUniqueOrderId(eventName+'_'+event.detail.contactFormId),
           }
         });
 
