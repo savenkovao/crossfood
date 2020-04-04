@@ -2,7 +2,7 @@
 Contributors: magazine3
 Requires at least: 3.0
 Tested up to: 5.3
-Stable tag: 1.7.5
+Stable tag: 1.7.9.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: PWA, Review, Progressive Web Apps, Mobile, Web Manifest, Manifest, Offline Support, Cache, Pagespeed, Service Worker, Web app, pwa
@@ -36,7 +36,7 @@ You can give the APP-like experience to your audience which will get your websit
 * Set Device Orientation easily.
 * Tested with Google Lighthouse
 * More PWA Features Coming soon.
-* **[Premium]** the ability to expand PWA for WP with [Call to Action](https://pwa-for-wp.com/extensions/call-to-action-for-pwa/), [Loading Icon Library](https://pwa-for-wp.com/extensions/loading-icon-library-for-pwa/) and [Data Analytics](https://pwa-for-wp.com/extensions/data-analytics-for-pwa/) and [Pull to Refresh](https://pwa-for-wp.com/extensions/pull-to-refresh-for-pwa/) extensions
+* **[Premium]** the ability to expand PWA for WP with [Call to Action](https://pwa-for-wp.com/extensions/call-to-action-for-pwa/), [Loading Icon Library](https://pwa-for-wp.com/extensions/loading-icon-library-for-pwa/), [Data Analytics](https://pwa-for-wp.com/extensions/data-analytics-for-pwa/), [Pull to Refresh](https://pwa-for-wp.com/extensions/pull-to-refresh-for-pwa/) and [Scroll Progress Bar](https://pwa-for-wp.com/extensions/scroll-progress-bar-for-pwa/) extensions
 
 **We Act Fast on Feedback!**
 We are actively developing this plugin and our aim is to make this plugin into the #1 solution for PWA in the world. You can [Request a Feature](https://github.com/ahmedkaludi/pwa-for-wp/issues) or [Report a Bug](https://pwa-for-wp.com/contact-us/).
@@ -63,6 +63,53 @@ Yes, Absolutely! We would suggest you send your feature request by creating an i
 You can contact us from [here](https://pwa-for-wp.com/contact-us/)
 
 == Changelog ==
+= 1.7.9.3.1 (31 March 2020) =
+* Bug Fixed   : Security patch: Service worker file read permission updated
+
+= 1.7.9.3 (19 March 2020) =
+* Added	  	  : Add to Home screen banner for No scroll view website #346
+* Bug Fixed   : Fixed Upload Theme button in Appearance. #350
+* Bug Fixed   : Push notification is sending to user even after disabling this feature. #272
+
+= 1.7.9.2 (6 March 2020) =
+* Bug Fixed	  : Removed javascript issue for call to action banner  #343
+
+= 1.7.9.1 (2 March 2020) =
+* Improvement : Minor bug fixes
+
+= 1.7.9 (25 February 2020) =
+* Added	  	  : Added Image field in send push notification #342
+* Added	  	  : In Notification while create or update post featured image will send as big image #342
+* Added 	  : Add image option in Send manual notification with FCM integration #325
+* Improvement : Minor code improvement
+
+= 1.7.8.1 (19 February 2020) =
+* Bug Fixed	  : Html cannot fetch properly #342
+* Bug Fixed   : manifest not working with multisite after performance resolve #341
+
+= 1.7.8 (17 February 2020) =
+* Resolved	  : Remove JQuery dependency from Front-end #330
+* Bug Fixed   : while install with Pushnotification.io integration does not activate the plugin if already exists #338
+* Added 	  : Added an option asking were to show the loader only in mobile or in desktop #307
+* Improvement : Performance Resolve, call of PWA manifest JSON will load via static file if permission exists #336
+* Bug Fixed   : 404 Page not showing Network only and network first caching strategies #334
+
+= 1.7.7 (04 February 2020) =
+* Improvement : Moved Call to action options in Features tabs #313
+* Bug Fixed   : In background service worker when Push notifications are Selected and FCM keys are filled then also only one of either setting should be loaded in PWA, not both. #326
+* Resolved    : Features tab modal design issue like contents goes out, submit button not shows #328
+* Added 	  : Option to change color of the 'loader icons' #312
+* Added 	  : Added apple-touch-icon-precomposed rel link in the head tag for apple app icon #321
+
+= 1.7.6 (18 January 2020) =
+* Resolved    : Fatal error of Cannot redeclare checkStatus() function #297
+* Bug Fixed   : After Selection of pushnotification.io also shows options of FCM if user previously using FCM integration #304
+* Improvement : AMP proper support with pushnotification.io version 1.6 support #303 
+* Resolved    : Wordpress Multi site always show Service worker status "Click here to setup" #298
+* Fixed       : Refresh the content when default strategy is Network first from Inside APP first opening #306
+* Added       : Option to user can stop or allow to share data #297
+* Resolved	  : Add to Home screen custom banner is not showing in Samsung default browsers(PWA Support Dependent) #296
+
 = 1.7.5 (11 January 2020) =
 * Bug Fixed : PWA CTA bar shows behind default browser banner due in AMP #275
 * Improved : Manifest loading issue if REST API not disabled #292

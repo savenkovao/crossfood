@@ -57,8 +57,6 @@ if (is_single()) {
           endif; ?>
       </div>
     </div>
-
-
   </div>
 </section>
 

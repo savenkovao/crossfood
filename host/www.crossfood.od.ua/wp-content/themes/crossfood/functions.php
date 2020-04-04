@@ -47,6 +47,8 @@ function crossfood_setup()
 
 add_action('after_setup_theme', 'crossfood_setup');
 
+add_theme_support( 'woocommerce' );
+
 function register_my_widgets(){
   if ( function_exists('register_sidebar') ){
     register_sidebar( array(

@@ -572,10 +572,12 @@
     // Вставка типов подписок в селект формы оформления подписок 
     var subscribeTypes = window.CONFIG.subscribeTypes;
     var subscribeTypesHtml = '';
-
-    Object.keys(subscribeTypes).forEach(function (item) {
-      subscribeTypesHtml += '<option value="' + subscribeTypes[item] + '">' + subscribeTypes[item] + '</option>'
-    });
+  
+    if(subscribeTypes) {
+      Object.keys(subscribeTypes).forEach(function (item) {
+        subscribeTypesHtml += '<option value="' + subscribeTypes[item] + '">' + subscribeTypes[item] + '</option>'
+      });
+    }
 
     $('#form-input_subscribe').html(subscribeTypesHtml);
     // Вставка типов подписок в селект формы оформления подписок 
