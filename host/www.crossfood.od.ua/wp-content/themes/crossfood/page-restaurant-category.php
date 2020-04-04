@@ -9,11 +9,11 @@
   <div class="wrapper">
     <div class="products-cont">
       <h1 class="post-title">
-        Магазин
+        Ресторан
       </h1>
       <?php the_content(); ?>
 
-      <?php echo do_shortcode('[product_categories ids="125, 126, 127"]') ?>
+      <?php echo do_shortcode('[product_categories ids="128, 129, 130, 131"]') ?>
     </div>
   </div>
 </section>
