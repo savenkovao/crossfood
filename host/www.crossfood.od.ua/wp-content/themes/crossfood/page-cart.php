@@ -10,6 +10,12 @@
     <div class="products-cont woocommerce">
       <h1 class="post-title">Корзина</h1>
 
+      <div class="m-b-30">
+        Вернуться: 
+        <a href="/products/restaurant">Ресторан</a>, 
+        <a href="/products/magazin">Магазин</a>
+      </div>
+
       <?php
         /**
          * Cart Page

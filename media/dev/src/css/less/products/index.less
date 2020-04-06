@@ -1,14 +1,105 @@
-.products,
-.product,
-.woocommerce .wrapper .woocommerce-breadcrumb,
-.woocommerce-result-count {
-    // font-size: 1.6em;
-}
-
 .products-cont {
-    // max-width: 750px;
     margin: 30px auto;
     font-size: 1.6em;
     line-height: 1.8;
     padding: 0 15px;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    border-radius: 30px !important;
+    font-weight: normal !important;
+}
+
+.woocommerce-cart-form__contents {
+    #respond input#submit,
+    a.button,
+    button.button,
+    input.button {
+        text-transform: unset;
+    }
+}
+
+.woocommerce ul.products li.product .button {
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+
+    &.add_to_cart_button {
+        background-color: @main-color;
+        color: @colorWhite;
+
+        &:hover,
+        &:active {
+            background-color: darken(@main-color, 5%);
+        }
+    }
+
+    &:not(.add_to_cart_button) {
+        margin-top: ~"calc(1.5em + 23px)";
+    }
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    width: 100%;
+    max-width: 250px;
+    background-color: @main-color;
+    color: @colorWhite;
+
+    &:hover,
+    &:active {
+        background-color: darken(@main-color, 5%);
+    }
+}
+
+.woocommerce a.added_to_cart {
+    width: 100%;
+    text-align: center;
+    color: @main-color;
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+        color: darken(@main-color, 5%);
+        text-decoration: underline;
+    }
+}
+
+.woocommerce #review_form #respond p {
+    text-align: right;
+
+    &.comment-form-comment {
+        text-align: left;
+    }
+
+    &.stars {
+        text-align: left;
+
+        a:before {
+            color: @main-color;
+        }
+    }
+}
+
+.comment-form-rating {
+    margin-top: 20px;
+}
+
+.woocommerce-Reviews-title {
+    margin-bottom: 20px;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+    height: 68px;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.woocommerce form .form-row label.radio,
+.woocommerce-page form .form-row label.radio {
+    display: inline-block;
 }

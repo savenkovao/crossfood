@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'common' ); ?>
+get_header( 'product-category' ); ?>
 <script>
   window.CONFIG = {
     page: 'single'

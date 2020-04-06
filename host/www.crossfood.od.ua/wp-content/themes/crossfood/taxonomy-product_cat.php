@@ -27,6 +27,7 @@ get_header( 'product-category' );?>
 <section>
   <div class="wrapper">
 	<div class="products-cont">
+	
 		<?php 
 			/**
 			 * Hook: woocommerce_before_main_content.
@@ -44,7 +45,7 @@ get_header( 'product-category' );?>
 						<?php woocommerce_page_title(); ?>
 						</h1>
 					<?php endif; ?>
-
+ 
 					<?php
 					/**
 					 * Hook: woocommerce_archive_description.

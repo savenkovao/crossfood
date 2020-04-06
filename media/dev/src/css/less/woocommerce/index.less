@@ -1,6 +1,48 @@
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-    font-weight: normal;
+.theme-crossfood .woocommerce {
+    #respond input#submit,
+    a.button,
+    button.button,
+    input.button {
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px !important;
+
+        &.alt {
+            .setButton ( #fff, @btn-background-color, @btn-background-color, #fff, darken(@btn-background-color, 5%) ,darken(@btn-background-color, 5%) );;
+        }
+    }
+}
+
+.theme-crossfood.woocommerce {
+    #respond input#submit,
+    a.button,
+    button.button,
+    input.button {
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px !important;
+
+        &.alt {
+            .setButton ( #fff, @btn-background-color, @btn-background-color, #fff, darken(@btn-background-color, 5%) ,darken(@btn-background-color, 5%) );;
+        }
+
+        &.button_filled {
+            .setButton ( #fff, @btn-background-color, @btn-background-color, #fff, darken(@btn-background-color, 5%) ,darken(@btn-background-color, 5%) );;
+        }
+
+        &.button_bordered {
+            .setButton
+                ( @btn-background-color, transparent, @btn-background-color, #fff, @btn-background-color, @btn-background-color );
+        }
+
+        &.button_bordered-dark {
+            .setButton
+                (#272929, transparent, #272929, #fff, @btn-background-color, @btn-background-color );
+        }
+
+        &.button_bordered-white {
+            .setButton
+                (#fff, transparent, #fff, #fff, @btn-background-color, @btn-background-color );
+        }
+    }
 }
