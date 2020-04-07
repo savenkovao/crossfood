@@ -125,6 +125,7 @@
 }
 
 .cart-cont {
+    position: relative;
     font-size: 1.6em;
     color: @colorBlack;
     transition: 0.3s;
@@ -149,4 +150,21 @@
             fill: @main-color;
         }
     }
+}
+
+.cart-count {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    min-width: 20px;
+    padding: 0 4px;
+    top: -6px;
+    left: 15px;
+    max-width: 33px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: @main-color;
+    color: @colorWhite;
 }

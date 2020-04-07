@@ -49,6 +49,19 @@ add_action('after_setup_theme', 'crossfood_setup');
 
 add_theme_support( 'woocommerce' );
 
+// Update cart count
+add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
+function wc_refresh_mini_cart_count($fragments){
+    ob_start();
+    ?>
+    <span id="cart-count" class="cart-count">
+        <?php echo WC()->cart->get_cart_contents_count(); ?>
+    </span>
+    <?php
+        $fragments['#cart-count'] = ob_get_clean();
+    return $fragments;
+}
+
 function register_my_widgets(){
   if ( function_exists('register_sidebar') ){
     register_sidebar( array(
