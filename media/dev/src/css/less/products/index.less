@@ -103,3 +103,46 @@
 .woocommerce-page form .form-row label.radio {
     display: inline-block;
 }
+
+.woocommerce .star-rating span:before {
+    color: @main-color;
+    transition: 0.3s;
+}
+
+.woocommerce-review-link,
+.product_meta a,
+.woocommerce .woocommerce-breadcrumb a {
+    color: @main-color;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+        color: darken(@main-color, 5%);
+        text-decoration: underline;
+    }
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    margin-bottom: 30px;
+}
+
+.woocommerce-Reviews-title span {
+    color: @main-color;
+    font-weight: bold;
+}
+
+.woocommerce div.product form.cart {
+    display: flex;
+    align-items: center;
+}
+
+.woocommerce #review_form #respond textarea {
+    width: 100% !important;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+    color: @colorBlack;
+}
