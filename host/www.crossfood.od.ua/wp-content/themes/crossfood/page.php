@@ -523,7 +523,7 @@
 
       <div class="desserts-drinks__item-media">
         <img class="desserts-drinks__item-img"
-             data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/dessets-home-bg.jpg"
+             data-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/shop-home-bg.jpg"
              alt="Магазин Crossfood">
 
         <div class="desserts-drinks__btn-cont">

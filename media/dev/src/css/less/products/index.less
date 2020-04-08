@@ -1,9 +1,10 @@
-.header-product {    position: fixed;
+.header-product {
+    position: fixed;
     width: 100%;
     background: white;
     top: 0;
     z-index: 10;
-    box-shadow: 0 0 10px rgba(0,0,0,.14);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
 }
 
 .products-cont {
@@ -78,6 +79,7 @@
 .woocommerce #review_form #respond p {
     text-align: right;
 
+    &.comment-notes,
     &.comment-form-comment {
         text-align: left;
     }
@@ -153,4 +155,17 @@
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce ul.products li.product h3 {
     color: @colorBlack;
+}
+
+.comment-form {
+    input {
+        .input-text;
+        max-width: 350px;
+        
+    }
+
+    label {
+        display: inline-block;
+        margin-right: 15px;
+    }
 }
