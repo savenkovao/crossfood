@@ -12,7 +12,7 @@
         Наши продукты
       </h1>
 
-      <div class="descript">
+      <div class="descript m-b-35">
         Вы можете заказать безопасную доставку отдельных блюд из нашего 
         <strong class="descript__highlited text-green">Ресторана</strong> <br>
         или продуктов и полуфабрикатов из нашего <strong class="descript__highlited text-green">Магазина</strong>.

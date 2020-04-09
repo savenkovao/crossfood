@@ -426,11 +426,11 @@
 
 			 -->
     <div class="cuisine-notation_position">
-      <p class="cuisine-notation">
+      <div class="cuisine-notation">
 
         <?php $post = get_post($post_id = 195); echo $post->post_content; ?>
 
-      </p>
+      </div>
       <p class="notation-text">
         Данное меню предоставлено в ознакомительных целях, возможно внесение изменений.
       </p>
@@ -457,7 +457,7 @@
         /
         <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
         или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
-          <strong>всего 320 грн</strong>! <br>
+          <strong>всего 290 грн</strong>! <br>
           Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
           <strong>350 грн</strong>!
         </p>

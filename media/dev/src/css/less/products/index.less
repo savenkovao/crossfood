@@ -161,11 +161,37 @@
     input {
         .input-text;
         max-width: 350px;
-        
     }
 
     label {
         display: inline-block;
         margin-right: 15px;
     }
+}
+
+.woocommerce-products-header {
+    margin-bottom: 35px;
+}
+
+.woocommerce,
+.woocommerce-page {
+    ul.products li.product {
+        transition: 0.3s;
+
+        img {
+            border-radius: 4px;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}
+
+.woocommerce
+    div.product
+    div.images
+    .woocommerce-product-gallery__image--placeholder,
+.woocommerce div.product div.images img {
+    border-radius: 4px;
 }
