@@ -49,6 +49,24 @@ add_action('after_setup_theme', 'crossfood_setup');
 
 add_theme_support( 'woocommerce' );
 
+// Add min value to the quantity field (default = 1)
+add_filter('woocommerce_quantity_input_min', 'min_decimal');
+function min_decimal($val) {
+    return 0.1;
+}
+
+// Add step value to the quantity field (default = 1)
+add_filter('woocommerce_quantity_input_step', 'nsk_allow_decimal');
+function nsk_allow_decimal($val) {
+    return 0.1;
+}
+
+// Removes the WooCommerce filter, that is validating the quantity to be an int
+remove_filter('woocommerce_stock_amount', 'intval');
+
+// Add a filter, that validates the quantity to be a float
+add_filter('woocommerce_stock_amount', 'floatval');
+
 // Update cart count
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 function wc_refresh_mini_cart_count($fragments){
@@ -60,6 +78,13 @@ function wc_refresh_mini_cart_count($fragments){
     <?php
         $fragments['#cart-count'] = ob_get_clean();
     return $fragments;
+}
+
+// Trial shortcode
+add_shortcode( 'trial_price', 'trial_func' );
+function trial_func() {
+  $post = get_post($post_id = 11711); 
+	 return $post->trial_form_price;
 }
 
 function register_my_widgets(){

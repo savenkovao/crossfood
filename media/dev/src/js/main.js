@@ -652,6 +652,7 @@
           ).html();
         } else if (subscribe === "trial") {
           cuisineListener.price = $("#" + subscribe).html();
+          cuisineListener.price = window.CONFIG.trialPrice;
         }
 
         $('input[name="product-name"]').val(cuisineListener.selector);

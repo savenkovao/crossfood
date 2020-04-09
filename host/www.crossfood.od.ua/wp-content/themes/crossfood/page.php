@@ -10,7 +10,8 @@
       stand: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>",
       trial: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>",
       veg: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>",
-    }
+    },
+    trialPrice: "<?php $post = get_post($post_id = 11711); echo $post->trial_form_price; ?>"
   };
 </script>
 
@@ -427,7 +428,6 @@
 			 -->
     <div class="cuisine-notation_position">
       <div class="cuisine-notation">
-
         <?php $post = get_post($post_id = 195); echo $post->post_content; ?>
 
       </div>
@@ -443,7 +443,7 @@
   <div class="trial-content wrapper">
     <div class="title-3">
       <h3 class="title-3__h3 title-3__h3_dark hr-line">
-      <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
+        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
       </h3>
 
       <div class="trial__text">
@@ -457,9 +457,9 @@
         /
         <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
         или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
-          <strong>всего 290 грн</strong>! <br>
+          <strong>всего <?php $post = get_post($post_id = 11711); echo $post->trial_min; ?> грн</strong>! <br>
           Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
-          <strong>350 грн</strong>!
+          <strong><?php $post = get_post($post_id = 11711); echo $post->trial_max; ?> грн</strong>!
         </p>
       </div>
 
