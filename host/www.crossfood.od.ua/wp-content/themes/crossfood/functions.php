@@ -73,7 +73,7 @@ function wc_refresh_mini_cart_count($fragments){
     ob_start();
     ?>
     <span id="cart-count" class="cart-count">
-        <?php echo WC()->cart->get_cart_contents_count(); ?>
+        <?php echo count (WC()->cart->get_cart() ); ?>
     </span>
     <?php
         $fragments['#cart-count'] = ob_get_clean();

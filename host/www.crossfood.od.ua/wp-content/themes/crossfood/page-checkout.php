@@ -1,4 +1,4 @@
-<?php get_header('common') ?>
+<?php get_header('product-category') ?>
 <script>
   window.CONFIG = {
     page: 'single'
@@ -7,13 +7,14 @@
 
 <section>
   <div class="wrapper">
-    <div class="post-cont">
+    <div class="products-cont woocommerce">
       <h1 class="post-title">Оплата</h1>
       
       <div class="m-b-30">
         Вернуться: 
-        <a href="/products/restaurant">Ресторан</a>, 
-        <a href="/products/magazin">Магазин</a>
+        <a class="link" href="/products/restaurant">Ресторан</a>, 
+        <a class="link" href="/products/magazin">Магазин</a>,
+        <a class="link" href="/cart">Корзина</a>
       </div>
 
       <?php the_content(); ?>

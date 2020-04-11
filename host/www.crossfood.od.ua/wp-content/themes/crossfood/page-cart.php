@@ -1,4 +1,4 @@
-<?php get_header('common') ?>
+<?php get_header('product-category') ?>
 <script>
   window.CONFIG = {
     page: 'single'
@@ -12,8 +12,8 @@
 
       <div class="m-b-30">
         Вернуться: 
-        <a href="/products/restaurant">Ресторан</a>, 
-        <a href="/products/magazin">Магазин</a>
+        <a class="link" href="/products/restaurant">Ресторан</a>, 
+        <a class="link" href="/products/magazin">Магазин</a>
       </div>
 
       <?php

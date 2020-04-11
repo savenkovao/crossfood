@@ -7,7 +7,7 @@
 
 <section>
   <div class="wrapper">
-    <div class="post-cont">
+    <div class="products-cont woocommerce">
       <h1 class="post-title">Все продукты</h1>
       <?php the_content(); ?>
     </div>

@@ -50,3 +50,63 @@
 mark {
     background: transparent;
 }
+
+#wpadminbar {
+    top: auto !important;
+    bottom: 0 !important;
+}
+
+.theme-crossfood.woocommerce nav.woocommerce-pagination,
+.theme-crossfood .woocommerce nav.woocommerce-pagination {
+    ul {
+        border: none;
+
+        li {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            border-right: none;
+            font-family: "Lato", sans-serif;
+            border: none;
+            // border: 1px solid @main-color;
+            margin-right: 10px;
+            transition: 0.3s;
+
+            span,
+            a {
+                color: @colorBlack;
+                transition: 0.3s;
+                height: 100%;
+                padding: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.next,
+                &.prev {
+                    font-size: 13px;
+                }
+            }
+
+            a:focus,
+            a:hover,
+            span.current {
+                background: @main-color;
+                color: @colorWhite;
+            }
+        }
+    }
+}
+
+.woocommerce-cart-form {
+    a {
+        color: @colorBlack;
+        transition: 0.3s;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            color: @main-color;
+        }
+    }
+}

@@ -107,6 +107,7 @@
 
 .input-text,
 .wpcf7-form-control:not(.wpcf7-checkbox) {
+  font-family: "Lato", sans-serif;
   width: 100%;
   border: 1px solid #d4d4d4;
   background-color: #fff;
@@ -120,6 +121,11 @@
   &:focus {
     outline: none;
     border: 1px solid #6b9e3d;
+  }
+
+  &::placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
   }
 
   @media @tablet {
