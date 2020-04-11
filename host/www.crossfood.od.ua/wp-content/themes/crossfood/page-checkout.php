@@ -7,7 +7,7 @@
 
 <section>
   <div class="wrapper">
-    <div class="products-cont woocommerce">
+    <div class="post-cont woocommerce m-t-60">
       <h1 class="post-title">Оплата</h1>
       
       <div class="m-b-30">
