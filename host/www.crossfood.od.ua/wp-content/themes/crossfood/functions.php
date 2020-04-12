@@ -49,6 +49,8 @@ add_action('after_setup_theme', 'crossfood_setup');
 
 add_theme_support( 'woocommerce' );
 
+require 'inc/woocommerce/class-wc-payment-gateways.php';
+
 // Add min value to the quantity field (default = 1)
 add_filter('woocommerce_quantity_input_min', 'min_decimal');
 function min_decimal($val) {
