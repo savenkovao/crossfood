@@ -34,10 +34,14 @@ defined( 'ABSPATH' ) || exit;
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
 		$fields = $checkout->get_checkout_fields( 'billing' );
-
 		foreach ( $fields as $key => $field ) {
-			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-		}
+				if(
+					$key !== 'billing_shipping_time' ||
+					($key == 'billing_shipping_time' &&  preg_replace("/[^0-9\.]/", "", WC()->cart->get_cart_shipping_total()) > 0)
+				) {
+					woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+				}
+			}
 		?>
 	</div>
 
