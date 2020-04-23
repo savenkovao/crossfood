@@ -65,10 +65,10 @@
                     </p>
                   </div>
               </a>
-            </div>
+            </li>
 
           <?php $i++; endforeach; else: ?>
-            <p><?php _e('“Пока что нет рецептов”'); ?></p>
+            <li><?php _e('“Пока что нет рецептов”'); ?></li>
           <?php wp_reset_postdata(); endif; ?>
       </ul>
     </div>
@@ -76,10 +76,5 @@
 </section>
 
 <?php
-
-  if (is_single()) {
-      include(TEMPLATEPATH . '/footer-single.php');
-  } else {
-      include(TEMPLATEPATH . '/footer.php');
-  }
+  include(TEMPLATEPATH . '/footer-single.php');
 ?>
