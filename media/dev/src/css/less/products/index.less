@@ -143,8 +143,27 @@
 }
 
 .woocommerce div.product form.cart {
-    display: flex;
-    align-items: center;
+    &.grouped_form {        
+        .group_table {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .button {
+            float: right;
+        }
+    }
+    .button {
+        float: right;
+        margin-left: 20px;
+    }
+
+    @media @laptop {
+        &:not(.grouped_form) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
 }
 
 .woocommerce #review_form #respond textarea {
