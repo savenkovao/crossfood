@@ -807,6 +807,7 @@
 
   $(".wpcf7-form").on("submit", function (e) {
     var $form = $(e.currentTarget);
+    console.log(e, 777)
     var userInfo = {
       name: $form.find('[name="your-name"]').val() || userData.name || "",
       email: $form.find('[name="your-email"]').val() || userData.email || "",
@@ -821,7 +822,8 @@
         $("#form-input_drinks").val() ||
         "",
       price: $form.find("#form-input_price").val() || 0,
-      orderId:  $('input[name="event_label"]').val() || getUniqueOrderId(event.detail.contactFormId),
+      orderId:  $('input[name="event_label"]').val() || 
+        getUniqueOrderId($form.attr('action').split('-')[1] || 'form'),
     };
     
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
@@ -863,6 +865,7 @@
 
   function setUserData($form) {
     updateUserDataObj();
+
     if (userData) {
       $form.find('[name="your-name"]').val(userData.name);
       $form.find('[name="your-email"]').val(userData.email);
