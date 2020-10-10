@@ -4,12 +4,24 @@
     page: 'home',
     week: <?php $post = get_post($post_id = 10537);
         echo $post->week_number; ?>,
-    subscribeTypes:{
-      fit: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>",
-      prem: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?>",
-      stand: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>",
-      trial: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>",
-      veg: "<?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>",
+    subscribeTypes: {
+      <?php 
+        $post = get_post($post_id = 10959);
+        echo 'fit: "' . $post->subscribeTypeFit . '",';
+        echo 'prem: "' . $post->subscribeTypePrem . '",';
+        echo 'stand: "' . $post->subscribeTypeStand . '",';
+        echo 'trial: "' . $post->subscribeTypeTrial . '",';
+        echo 'veg: "' . $post->subscribeTypeVeg . '"';
+      ?>
+    },
+    calories: {
+      <?php 
+        $post = get_post($post_id = 12877);
+        echo 'min: "' . $post->min . '",';
+        echo 'semi: "' . $post->semi . '",';
+        echo 'normal: "' . $post->normal . '",';
+        echo 'max: "' . $post->max . '",';
+      ?>
     },
     trialPrice: "<?php $post = get_post($post_id = 11711); echo $post->trial_form_price; ?>"
   };
@@ -69,6 +81,40 @@
   </div>
 </section>
 
+
+
+<section id="trial-block" class="trial trial_position trial_background">
+  <div class="trial-content wrapper">
+    <div class="title-3">
+      <h3 class="title-3__h3 title-3__h3_dark hr-line">
+        Технические работы
+      </h3>
+
+      <div class="trial__text">
+        <p class="p text-center cuisine-notation">
+          На сайте ведутся технические работы. <br>
+          Приносим свои извинения.
+        </p>
+        <p class="p text-center">
+          Уже совсем скоро вы сможете ознакомиться с нашим новым меню! <br>
+          А пока, на все интересующие вас вопросы ответит наш менеджер по телефону: <br>  
+          <a href="tel:+380732086048"><span itemprop="telephone">+38(073)208-60-48</span></a>,
+          либо мы вам перезвоним.
+        </p>
+      </div>
+
+      <div class="header__button-cnt">
+        <button data-meta-node data-target="form_1" data-action="activate"
+                class="button button_filled header__button-btn">Связаться с нами
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 <section class="subscribe subscribe_background">
   <div class="wrapper subscribe_position">
     <div class="title-3">
@@ -108,13 +154,14 @@
             </p>
           <?php endif; ?>
 
-
+          
           <div class="tab-block__tab-item">
 
-            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div class="subscribe__item subscribe__item-col-2 active"
+              data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>" 
+              data-meta-node>
 
-              <?php $post = get_post($post_id = 1614);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -124,7 +171,8 @@
 
             </div>
 
-            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>" 
+            data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1616);
               echo $post->post_content; ?>
@@ -136,7 +184,8 @@
               </div>
             </div>
 
-            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1618);
               echo $post->post_content; ?>
@@ -148,7 +197,8 @@
               </div>
             </div>
 
-            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1621);
               echo $post->post_content; ?>
@@ -171,7 +221,8 @@
           <?php endif; ?>
           <div class="tab-block__tab-item">
 
-            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>" 
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 105);
               echo $post->post_content; ?>
@@ -184,7 +235,8 @@
 
             </div>
 
-            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 107);
               echo $post->post_content; ?>
@@ -195,8 +247,9 @@
                 </button>
               </div>
             </div>
-
-            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2">
+            
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 109);
               echo $post->post_content; ?>
@@ -208,7 +261,8 @@
               </div>
             </div>
 
-            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 111);
               echo $post->post_content; ?>
@@ -233,7 +287,8 @@
 
           <div class="tab-block__tab-item">
 
-            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 353);
               echo $post->post_content; ?>
@@ -246,7 +301,8 @@
 
             </div>
 
-            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 355);
               echo $post->post_content; ?>
@@ -259,7 +315,8 @@
 
             </div>
 
-            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 357);
               echo $post->post_content; ?>
@@ -272,7 +329,8 @@
 
             </div>
 
-            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 359);
               echo $post->post_content; ?>
@@ -296,7 +354,8 @@
           <?php endif; ?>
 
           <div class="tab-block__tab-item">
-            <div data-identifier="1200" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 361);
               echo $post->post_content; ?>
@@ -309,7 +368,8 @@
 
             </div>
 
-            <div data-identifier="1500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 363);
               echo $post->post_content; ?>
@@ -322,7 +382,8 @@
 
             </div>
 
-            <div data-identifier="2000" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 365);
               echo $post->post_content; ?>
@@ -335,7 +396,8 @@
 
             </div>
 
-            <div data-identifier="2500" data-meta-node class="subscribe__item subscribe__item-col-2 active">
+            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 367);
               echo $post->post_content; ?>
@@ -355,126 +417,122 @@
   </div>
 </section>
 
-<section id="menu" class="cuisine cuisine_background"
 
-         data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/cuisine-background.jpg?ver_1.01">
-  <div class="wrapper cuisine_position">
-    <div class="title-3">
-      <h3 class="title-3__h3 title-3__h3_light hr-line">Наше меню</h3>
-    </div>
 
-    <div class="tab-block cuisine-block_position">
+  <section id="menu" class="cuisine cuisine_background"
 
-      <div id="cuisine-week" class="tab-block__navigation cuisine-block__navigation_pos">
-        <div data-identifier="mo" data-meta-node class="tab-block__nav-button cuisine-block__button active">
-
-          <span class="cuisine-block__button-desktop">Понедельник</span>
-          <span class="cuisine-block__button-mobile">Пн</span>
-
-        </div>
-        <div data-identifier="tu" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Вторник</span>
-          <span class="cuisine-block__button-mobile">Вт</span>
-
-        </div>
-        <div data-identifier="we" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Среда</span>
-          <span class="cuisine-block__button-mobile">Ср</span>
-
-        </div>
-        <div data-identifier="th" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Четверг</span>
-          <span class="cuisine-block__button-mobile">Чт</span>
-
-        </div>
-        <div data-identifier="fr" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Пятница</span>
-          <span class="cuisine-block__button-mobile">Пт</span>
-
-        </div>
-        <div data-identifier="sa" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Суббота</span>
-          <span class="cuisine-block__button-mobile">Сб</span>
-
-        </div>
-        <div data-identifier="su" data-meta-node class="tab-block__nav-button cuisine-block__button">
-
-          <span class="cuisine-block__button-desktop">Воскресенье</span>
-          <span class="cuisine-block__button-mobile">Вс</span>
-
-        </div>
+          data-bg-src="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/backgrounds/cuisine-background.jpg?ver_1.01">
+    <div class="wrapper cuisine_position">
+      <div class="title-3">
+        <h3 class="title-3__h3 title-3__h3_light hr-line">Наше меню</h3>
       </div>
 
-      <div id="all-cuisines" class="tab-block__tabs cuisine__tabs-position">
+      <div class="tab-block cuisine-block_position">
 
+        <div id="cuisine-week" class="tab-block__navigation cuisine-block__navigation_pos">
+          <div data-identifier="mo" data-meta-node class="tab-block__nav-button cuisine-block__button active">
 
-        <!-- stand-1-xxx-yy -->
+            <span class="cuisine-block__button-desktop">Понедельник</span>
+            <span class="cuisine-block__button-mobile">Пн</span>
 
-        <div class="tab-block__tab-item">
-          <div class="cuisine__item">
-            <?php $post = get_post($post_id = 1376);
-            echo $post->post_content; ?>
+          </div>
+          <div data-identifier="tu" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Вторник</span>
+            <span class="cuisine-block__button-mobile">Вт</span>
+
+          </div>
+          <div data-identifier="we" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Среда</span>
+            <span class="cuisine-block__button-mobile">Ср</span>
+
+          </div>
+          <div data-identifier="th" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Четверг</span>
+            <span class="cuisine-block__button-mobile">Чт</span>
+
+          </div>
+          <div data-identifier="fr" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Пятница</span>
+            <span class="cuisine-block__button-mobile">Пт</span>
+
+          </div>
+          <div data-identifier="sa" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Суббота</span>
+            <span class="cuisine-block__button-mobile">Сб</span>
+
+          </div>
+          <div data-identifier="su" data-meta-node class="tab-block__nav-button cuisine-block__button">
+
+            <span class="cuisine-block__button-desktop">Воскресенье</span>
+            <span class="cuisine-block__button-mobile">Вс</span>
+
           </div>
         </div>
 
+        <div id="all-cuisines" class="tab-block__tabs cuisine__tabs-position">
+          <div class="tab-block__tab-item">
+            <div class="cuisine__item">
+              <?php $post = get_post($post_id = 1376);
+              echo $post->post_content; ?>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div><!--
+      <div class="cuisine-notation_position">
+        <div class="cuisine-notation">
+          <?php $post = get_post($post_id = 195); echo $post->post_content; ?>
 
-			 -->
-    <div class="cuisine-notation_position">
-      <div class="cuisine-notation">
-        <?php $post = get_post($post_id = 195); echo $post->post_content; ?>
-
-      </div>
-      <p class="notation-text">
-        Данное меню предоставлено в ознакомительных целях, возможно внесение изменений.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="trial-block" class="trial trial_position trial_background">
-  <div class="trial-content wrapper">
-    <div class="title-3">
-      <h3 class="title-3__h3 title-3__h3_dark hr-line">
-        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
-      </h3>
-
-      <div class="trial__text">
-        <p class="p text-center cuisine-notation">
-          Закажите <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?> прямо сейчас!
-        </p>
-        <p class="p text-center">
-          Любой рацион из категорий 
-
-        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>
-        /
-        <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
-        или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
-          <strong>всего <?php $post = get_post($post_id = 11711); echo $post->trial_min; ?> грн</strong>! <br>
-          Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
-          <strong><?php $post = get_post($post_id = 11711); echo $post->trial_max; ?> грн</strong>!
+        </div>
+        <p class="notation-text">
+          Данное меню предоставлено в ознакомительных целях, возможно внесение изменений.
         </p>
       </div>
 
-      <div class="text-center">
-        <button class="button button_bordered subscribe__button-btn pum-trigger"
-                data-meta-node="" data-target="form_5" data-action="activate" style="cursor: pointer;">
-          Попробовать
-        </button>
+    </div>
+  </section>
+
+  <section id="trial-block" class="trial trial_position trial_background">
+    <div class="trial-content wrapper">
+      <div class="title-3">
+        <h3 class="title-3__h3 title-3__h3_dark hr-line">
+          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
+        </h3>
+
+        <div class="trial__text">
+          <p class="p text-center cuisine-notation">
+            Закажите <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?> прямо сейчас!
+          </p>
+          <p class="p text-center">
+            Любой рацион из категорий 
+
+          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>
+          /
+          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
+          или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
+            <strong>всего <?php $post = get_post($post_id = 11711); echo $post->trial_min; ?> грн</strong>! <br>
+            Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
+            <strong><?php $post = get_post($post_id = 11711); echo $post->trial_max; ?> грн</strong>!
+          </p>
+        </div>
+
+        <div class="text-center">
+          <button class="button button_bordered subscribe__button-btn pum-trigger"
+                  data-meta-node="" data-target="form_5" data-action="activate" style="cursor: pointer;">
+            Попробовать
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section id="desserts-drinks" class="desserts-drinks desserts-drinks_position wrapper"> <!--style="display: none;"-->
+<!-- <section id="desserts-drinks" class="desserts-drinks desserts-drinks_position wrapper"> 
   <div class="desserts-drink-container">
     <div class="descript">
       <?php $post = get_post($post_id = 3098);
@@ -483,7 +541,7 @@
   </div>
 
   <div class="desserts-drink-content">
-    <!-- <div class="desserts-drinks__item desserts-drinks__desserts-block">
+    <div class="desserts-drinks__item desserts-drinks__desserts-block">
       <div class="title-3">
         <h3 class="title-3__h3 title-3__h3_dark hr-line">Десерты</h3>
       </div>
@@ -514,7 +572,7 @@
           <a href="/drinks" class="button button_def button_bordered-white desserts-drinks__btn">Выбрать напиток</a>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div id="store" class="desserts-drinks__item desserts-drinks__desserts-block">
       <div class="title-3">
@@ -548,8 +606,9 @@
         </div>
       </div>
     </div>
+    
   </div>
-</section>
+</section> -->
 
    <section id="faq" class="faq faq_position">
 <!-- <section id="faq" class="faq faq_position" style="display: none;"> -->

@@ -89,6 +89,32 @@ function trial_func() {
 	 return $post->trial_form_price;
 }
 
+/**
+ * Returns post meta
+ *
+ * Usage:
+ * [grab_post_meta id="15" key="meta_key"]
+ * [grab_post_meta key="meta_key"]
+ *
+ * For more information on how to use this shortcode view: https://hunterwebdev.io/blog/create-a-custom-shortcode-to-grab-post-meta
+ */
+function grab_post_meta_shortcode_fn( $atts ) {
+	$atts = extract( shortcode_atts( array(
+		'post_id' => false,
+		'key'     => ''
+	), $atts ) );
+	if ( ! $key ) {
+		return;
+	}
+	$post_id = (int)($post_id === false ? get_the_ID() : $post_id);
+	$data 	 = get_post_meta( $post_id, $key, true );
+	
+	if ( $data ) {
+		return '<span class="grab-post-meta-value ' . sanitize_html_class('id-' . $post_id) . ' ' . sanitize_html_class('key-' . $key) . '">'. $data .'</span>';
+	}
+}
+add_shortcode( 'grab_post_meta', 'grab_post_meta_shortcode_fn' );
+
 function register_my_widgets(){
   if ( function_exists('register_sidebar') ){
     register_sidebar( array(
