@@ -149,7 +149,7 @@
               data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
               data-meta-node>
 
-              <?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 1614); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -162,8 +162,7 @@
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>" 
             data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 1616);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 1616); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -175,8 +174,7 @@
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 1618);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 1618); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -188,8 +186,7 @@
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 1621);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 1621); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -212,8 +209,7 @@
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 105);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 105); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -226,8 +222,7 @@
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 107);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 107); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -239,8 +234,7 @@
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 109);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 109); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -252,8 +246,7 @@
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
-              <?php $post = get_post($post_id = 111);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 111); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -278,8 +271,7 @@
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 353);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 353); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -292,8 +284,7 @@
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 355);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 355); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -306,8 +297,7 @@
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 357);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 357); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -320,8 +310,7 @@
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 359);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 359); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -345,8 +334,7 @@
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 361);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 361); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -359,8 +347,7 @@
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 363);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 363); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -373,8 +360,7 @@
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 365);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 365); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"
@@ -387,8 +373,7 @@
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
-              <?php $post = get_post($post_id = 367);
-              echo $post->post_content; ?>
+              <?php $post = get_post($post_id = 367); echo do_shortcode($post->post_content); ?>
 
               <div class="subscribe__button-cnt">
                 <button class="button button_bordered subscribe__button-btn" data-meta-node data-target="form_2"

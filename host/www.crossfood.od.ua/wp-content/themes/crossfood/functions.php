@@ -44,6 +44,7 @@ function crossfood_setup()
     });
     add_filter('excerpt_length', 'new_excerpt_length');
     add_filter( 'widget_text', 'do_shortcode'); 
+    remove_filter ('widget_text', 'wpautop'); 
 }
 
 add_action('after_setup_theme', 'crossfood_setup');
@@ -92,6 +93,18 @@ function trial_func() {
 }
 
 add_shortcode( 'trial_price', 'trial_func' );
+
+function getCalories($atts) {
+	$atts = shortcode_atts( array(
+		'type' => 'min',
+	), $atts );
+
+  $caloriesConfig = json_decode(get_post($post_id = 12877)->config, true); 
+
+  return $caloriesConfig[$atts['type']]['value'];
+}
+
+add_shortcode( 'get_calories', 'getCalories' );
 
 function register_my_widgets(){
   if ( function_exists('register_sidebar') ){
