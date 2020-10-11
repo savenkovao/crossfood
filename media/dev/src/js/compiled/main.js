@@ -224,11 +224,12 @@
 
         // cuisine switching
         var APP_CALORIES = window.CONFIG.calories || {};
+        var APP_SUBSCRIBE_TYPES = window.CONFIG.subscribeTypes || {};
 
         var cuisineListener = {
             subscribe: "stand",
             week: 2,
-            calories: APP_CALORIES.min || 'min',
+            calories: APP_CALORIES.min.label || "min",
             day: "mo",
             cuisines: 5,
             price: "280/320",
@@ -361,7 +362,7 @@
                     cuisineListener.subscribe = identifier;
 
                     if (identifier !== "trial") {
-                        cuisineListener.calories = APP_CALORIES.min;
+                        cuisineListener.calories = APP_CALORIES.min.label;
                     }
 
                     getCurrentDate();
@@ -386,7 +387,7 @@
                 cuisineListener.calories +
                 "-" +
                 cuisineListener.day;
-                
+
             var categorySelector =
                 cuisineListener.subscribe +
                 "-" +
@@ -477,10 +478,8 @@
                 "[" + "data-identifier" + "]"
             );
 
-            
-            
             for (var i = 0; i < items.length; i++) {
-              var itemIdentifier = items[i].getAttribute("data-identifier");
+                var itemIdentifier = items[i].getAttribute("data-identifier");
 
                 if (cuisineListener.calories === itemIdentifier) {
                     highlight(items[i]);
@@ -533,23 +532,36 @@
             targetNode.classList.remove("active");
         }
 
-        // Вставка типов подписок в селект формы оформления подписок
-        var subscribeTypes = window.CONFIG.subscribeTypes;
-        var subscribeTypesHtml = "";
+        setSubscribeFormSelectOptions();
 
-        if (subscribeTypes) {
-            Object.keys(subscribeTypes).forEach(function (item) {
-                subscribeTypesHtml +=
-                    '<option value="' +
-                    subscribeTypes[item] +
-                    '">' +
-                    subscribeTypes[item] +
-                    "</option>";
-            });
+        function setSubscribeFormSelectOptions() {
+            // Вставка типов подписок в селект формы оформления подписок
+            if (APP_SUBSCRIBE_TYPES) {
+                var subscribeTypesHtml = "";
+
+                for(var key in APP_SUBSCRIBE_TYPES) {
+                    var type = APP_SUBSCRIBE_TYPES[key];
+
+                    subscribeTypesHtml += '<option value="' + type.value + '">' + type.label + "</option>";
+                }
+                
+                $("#form-input_subscribe").html(subscribeTypesHtml);
+            }
+            
+            // Вставка ККАЛ к в селект формы оформления подписок
+            if (APP_CALORIES) {
+                var caloriesHtml = "";
+
+                for(var key in APP_CALORIES) {
+                    var calory = APP_CALORIES[key];
+
+                    caloriesHtml += '<option value="' + calory.label + '">' + calory.value + "</option>";
+                }
+                
+                $("#form-input_calories").html(caloriesHtml);
+            }
+
         }
-
-        $("#form-input_subscribe").html(subscribeTypesHtml);
-        // Вставка типов подписок в селект формы оформления подписок
 
         // Select options
         $('[data-target="form_2"]').on("click", function () {
@@ -557,116 +569,19 @@
         });
 
         function selectOptions() {
-            var selectSubscribe = document.getElementById(
-                "form-input_subscribe"
-            );
-            var selectCalories = document.getElementById("form-input_calories");
+            var dataSub = cuisineListener.subscribe || "stand";
 
-            var dataSub;
-            var dataCal;
+            $("#form-input_subscribe").val(APP_SUBSCRIBE_TYPES[dataSub].value);
+            $('#form-input_calories').val(cuisineListener.calories);
 
-            // if (cuisineListener.subscribe === "stand") {
-            //     $(selectSubscribe).val(subscribeTypes.stand);
-            //     dataSub = "stand";
-            // } else if (cuisineListener.subscribe === "fit") {
-            //     $(selectSubscribe).val(subscribeTypes.fit);
-            //     dataSub = "fit";
-            // } else if (cuisineListener.subscribe === "prem") {
-            //     $(selectSubscribe).val(subscribeTypes.prem);
-            //     dataSub = "prem";
-            // } else if (cuisineListener.subscribe === "veg") {
-            //     $(selectSubscribe).val(subscribeTypes.veg);
-            //     dataSub = "veg";
-            // }
-
-            dataSub = cuisineListener.subscribe || 'stand';
-            $(selectSubscribe).val(subscribeTypes[dataSub]);
-
-            // if (cuisineListener.calories === "1200") {
-            //     selectCalories.selectedIndex = 0;
-            //     dataCal = 1200;
-            // } else if (cuisineListener.calories === "1500") {
-            //     selectCalories.selectedIndex = 1;
-            //     dataCal = 1500;
-            // } else if (cuisineListener.calories === "2000") {
-            //     selectCalories.selectedIndex = 2;
-            //     dataCal = 2000;
-            // } else if (cuisineListener.calories === "2500") {
-            //     selectCalories.selectedIndex = 3;
-            // }
-
-            switch(cuisineListener.calories) {
-              case(APP_CALORIES.min): {
-                selectCalories.selectedIndex = 0;
-                break;
-              }
-              case(APP_CALORIES.semi): {
-                selectCalories.selectedIndex = 1;
-                break;
-              }
-              case(APP_CALORIES.normal): {
-                selectCalories.selectedIndex = 2;
-                break;
-              }
-              case(APP_CALORIES.max): {
-                selectCalories.selectedIndex = 3;
-                break;
-              }
-              default : {
-                selectCalories.selectedIndex = 0;
-                break;
-              }
-            }
-
-            dataCal = cuisineListener.calories;
-
-            setPriceInForm(dataSub, dataCal);
+            setPriceInForm(dataSub, cuisineListener.calories);
         }
 
         $('[id^="wpcf7-f2087"] form').on("change", function (event) {
-            // $('#wpcf7-f2087-o7 form').on('change', function (event) {
-            var selectSubscribe = document.getElementById(
-                "form-input_subscribe"
-            ).value;
-            var selectCalories = document.getElementById("form-input_calories").value;
-            var selectCaloriesName = APP_CALORIES.min;
-
-            switch(selectCalories) {
-              case('900'): {
-                selectCaloriesName = APP_CALORIES.min;
-                break;
-              }
-              case('1200'): {
-                selectCaloriesName = APP_CALORIES.semi;
-                break;
-              }
-              case('1500'): {
-                selectCaloriesName = APP_CALORIES.normal;
-                break;
-              }
-              case('2000'): {
-                selectCaloriesName = APP_CALORIES.max;
-                break;
-              }
-              default : {
-                selectCaloriesName = APP_CALORIES.min;
-                break;
-              }
-            }
-
-            // TODO change (Convertion 'Стандарт' to 's'tand')
-            if (selectSubscribe === subscribeTypes.fit) {
-                selectSubscribe = "fit";
-            } else if (selectSubscribe === subscribeTypes.prem) {
-                selectSubscribe = "prem";
-            } else if (selectSubscribe === subscribeTypes.veg) {
-                selectSubscribe = "veg";
-            } else if (selectSubscribe === subscribeTypes.stand) {
-                selectSubscribe = "stand";
-            } else if (selectSubscribe === subscribeTypes.trial) {
-                selectSubscribe = "trial";
-            }
-            setPriceInForm(selectSubscribe, selectCaloriesName);
+            setPriceInForm(
+                $("#form-input_subscribe").val(),
+                $("#form-input_calories").val()
+            );
         });
 
         function setPriceInForm(subscribe, calories) {

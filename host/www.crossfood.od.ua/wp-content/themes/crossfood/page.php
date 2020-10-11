@@ -1,29 +1,17 @@
 <?php get_header() ?>
+<?php 
+  $subscribeTypeConfig = json_decode(get_post($post_id = 10959)->config, true); 
+  $caloriesConfig = json_decode(get_post($post_id = 12877)->config, true); 
+  $trialPrice = get_post($post_id = 11711); 
+?>
+
 <script>
   window.CONFIG = {
     page: 'home',
-    week: <?php $post = get_post($post_id = 10537);
-        echo $post->week_number; ?>,
-    subscribeTypes: {
-      <?php 
-        $post = get_post($post_id = 10959);
-        echo 'fit: "' . $post->subscribeTypeFit . '",';
-        echo 'prem: "' . $post->subscribeTypePrem . '",';
-        echo 'stand: "' . $post->subscribeTypeStand . '",';
-        echo 'trial: "' . $post->subscribeTypeTrial . '",';
-        echo 'veg: "' . $post->subscribeTypeVeg . '"';
-      ?>
-    },
-    calories: {
-      <?php 
-        $post = get_post($post_id = 12877);
-        echo 'min: "' . $post->min . '",';
-        echo 'semi: "' . $post->semi . '",';
-        echo 'normal: "' . $post->normal . '",';
-        echo 'max: "' . $post->max . '",';
-      ?>
-    },
-    trialPrice: "<?php $post = get_post($post_id = 11711); echo $post->trial_form_price; ?>"
+    week: <?php $post = get_post($post_id = 10537); echo $post->week_number; ?>,
+    subscribeTypes: JSON.parse('<?php echo json_encode($subscribeTypeConfig); ?>'),
+    calories: JSON.parse('<?php echo json_encode($caloriesConfig); ?>'),
+    trialPrice: "<?php echo $trialPrice->trial_form_price; ?>"
   };
 </script>
 
@@ -83,7 +71,7 @@
 
 
 
-<section id="trial-block" class="trial trial_position trial_background">
+<!-- <section id="trial-block" class="trial trial_position trial_background">
   <div class="trial-content wrapper">
     <div class="title-3">
       <h3 class="title-3__h3 title-3__h3_dark hr-line">
@@ -92,11 +80,11 @@
 
       <div class="trial__text">
         <p class="p text-center cuisine-notation">
-          На сайте ведутся технические работы. <br>
+          В данный момент на сайте ведутся технические работы. <br>
           Приносим свои извинения.
         </p>
         <p class="p text-center">
-          Уже совсем скоро вы сможете ознакомиться с нашим новым меню! <br>
+          Мы обновляем наше меню и уже совсем скоро Вы сможете ознакомиться с ним! <br>
           А пока, на все интересующие вас вопросы ответит наш менеджер по телефону: <br>  
           <a href="tel:+380732086048"><span itemprop="telephone">+38(073)208-60-48</span></a>,
           либо мы вам перезвоним.
@@ -110,7 +98,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -126,21 +114,21 @@
       <div id="subscribe" class="tab-block__navigation">
         <div data-action="data-subscribe" data-identifier="stand" data-meta-node
              class="tab-block__nav-button subscribe__nav-button active">
-          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?></span>
+          <span><?php echo($subscribeTypeConfig['stand']['label']); ?></span>
         </div>
 
         <div data-action="data-subscribe" data-identifier="fit" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?></span>
+          <span><?php echo($subscribeTypeConfig['fit']['label']); ?></span>
         </div>
 
         <div data-action="data-subscribe" data-identifier="prem" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?></span>
+          <span><?php echo($subscribeTypeConfig['prem']['label']); ?></span>
         </div>
         <div data-action="data-subscribe" data-identifier="veg" data-meta-node
              class="tab-block__nav-button subscribe__nav-button">
-          <span><?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?></span>
+          <span><?php echo($subscribeTypeConfig['veg']['label']); ?></span>
         </div>
 
       </div>
@@ -158,7 +146,7 @@
           <div class="tab-block__tab-item">
 
             <div class="subscribe__item subscribe__item-col-2 active"
-              data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>" 
+              data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
               data-meta-node>
 
               <?php $post = get_post($post_id = 1614); echo $post->post_content; ?>
@@ -171,7 +159,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>" 
+            <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>" 
             data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1616);
@@ -184,7 +172,7 @@
               </div>
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1618);
@@ -197,7 +185,7 @@
               </div>
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 1621);
@@ -221,7 +209,7 @@
           <?php endif; ?>
           <div class="tab-block__tab-item">
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>" 
+            <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 105);
@@ -235,7 +223,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 107);
@@ -248,7 +236,7 @@
               </div>
             </div>
             
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 109);
@@ -261,7 +249,7 @@
               </div>
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 111);
@@ -287,7 +275,7 @@
 
           <div class="tab-block__tab-item">
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 353);
@@ -301,7 +289,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 355);
@@ -315,7 +303,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 357);
@@ -329,7 +317,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 359);
@@ -354,7 +342,7 @@
           <?php endif; ?>
 
           <div class="tab-block__tab-item">
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->min; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 361);
@@ -368,7 +356,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->semi; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 363);
@@ -382,7 +370,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->normal; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 365);
@@ -396,7 +384,7 @@
 
             </div>
 
-            <div data-identifier="<?php $post = get_post($post_id = 12877); echo $post->max; ?>"
+            <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
               data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 367);
@@ -501,23 +489,23 @@
     <div class="trial-content wrapper">
       <div class="title-3">
         <h3 class="title-3__h3 title-3__h3_dark hr-line">
-          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?>
+          <?php echo($subscribeTypeConfig['trial']['label']); ?>
         </h3>
 
         <div class="trial__text">
           <p class="p text-center cuisine-notation">
-            Закажите <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeTrial; ?> прямо сейчас!
+            Закажите <?php echo($subscribeTypeConfig['trial']['label']); ?> прямо сейчас!
           </p>
           <p class="p text-center">
-            Любой рацион из категорий 
+            Любой рацион из категорий
 
-          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeFit; ?>
+          <?php echo($subscribeTypeConfig['fit']['label']); ?>
           /
-          <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeStand; ?>
-          или <?php $post = get_post($post_id = 10959); echo $post->subscribeTypeVeg; ?>
-            <strong>всего <?php $post = get_post($post_id = 11711); echo $post->trial_min; ?> грн</strong>! <br>
-            Рацион <?php $post = get_post($post_id = 10959); echo $post->subscribeTypePrem; ?> 
-            <strong><?php $post = get_post($post_id = 11711); echo $post->trial_max; ?> грн</strong>!
+          <?php echo($subscribeTypeConfig['stand']['label']); ?>
+          или <?php echo($subscribeTypeConfig['veg']['label']); ?>
+            <strong>всего <?php echo $trialPrice->trial_min; ?> грн</strong>! <br>
+            Рацион <?php echo($subscribeTypeConfig['prem']['label']); ?> 
+            <strong><?php echo $trialPrice->trial_max; ?> грн</strong>!
           </p>
         </div>
 
