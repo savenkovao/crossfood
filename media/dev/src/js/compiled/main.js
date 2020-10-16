@@ -229,7 +229,7 @@
         var cuisineListener = {
             subscribe: "stand",
             week: 2,
-            calories: APP_CALORIES.min.label || "min",
+            calories: APP_CALORIES.normal.label || "normal",
             day: "mo",
             cuisines: 5,
             price: "280/320",
@@ -362,7 +362,7 @@
                     cuisineListener.subscribe = identifier;
 
                     if (identifier !== "trial") {
-                        cuisineListener.calories = APP_CALORIES.min.label;
+                        cuisineListener.calories = APP_CALORIES.normal.label;
                     }
 
                     getCurrentDate();

@@ -145,7 +145,7 @@
           
           <div class="tab-block__tab-item">
 
-            <div class="subscribe__item subscribe__item-col-2 active"
+            <div class="subscribe__item subscribe__item-col-2"
               data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
               data-meta-node>
 
@@ -172,7 +172,7 @@
             </div>
 
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2">
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 1618); echo do_shortcode($post->post_content); ?>
 
@@ -207,7 +207,7 @@
           <div class="tab-block__tab-item">
 
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>" 
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 105); echo do_shortcode($post->post_content); ?>
 
@@ -232,7 +232,7 @@
             </div>
             
             <div data-identifier="<?php echo $caloriesConfig['normal']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2">
+              data-meta-node class="subscribe__item subscribe__item-col-2 active">
 
               <?php $post = get_post($post_id = 109); echo do_shortcode($post->post_content); ?>
 
@@ -269,7 +269,7 @@
           <div class="tab-block__tab-item">
 
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 353); echo do_shortcode($post->post_content); ?>
 
@@ -282,7 +282,7 @@
             </div>
 
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 355); echo do_shortcode($post->post_content); ?>
 
@@ -308,7 +308,7 @@
             </div>
 
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 359); echo do_shortcode($post->post_content); ?>
 
@@ -332,7 +332,7 @@
 
           <div class="tab-block__tab-item">
             <div data-identifier="<?php echo $caloriesConfig['min']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 361); echo do_shortcode($post->post_content); ?>
 
@@ -345,7 +345,7 @@
             </div>
 
             <div data-identifier="<?php echo $caloriesConfig['semi']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 363); echo do_shortcode($post->post_content); ?>
 
@@ -371,7 +371,7 @@
             </div>
 
             <div data-identifier="<?php echo $caloriesConfig['max']['label']; ?>"
-              data-meta-node class="subscribe__item subscribe__item-col-2 active">
+              data-meta-node class="subscribe__item subscribe__item-col-2">
 
               <?php $post = get_post($post_id = 367); echo do_shortcode($post->post_content); ?>
 
