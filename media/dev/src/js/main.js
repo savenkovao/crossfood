@@ -532,6 +532,10 @@
                 for(var key in APP_SUBSCRIBE_TYPES) {
                     var type = APP_SUBSCRIBE_TYPES[key];
 
+                    if(key === 'trial') {
+                        continue;
+                    }
+
                     subscribeTypesHtml += '<option value="' + type.value + '">' + type.label + "</option>";
                 }
                 
