@@ -3,12 +3,13 @@
   $subscribeTypeConfig = json_decode(get_post($post_id = 10959)->config, true); 
   $caloriesConfig = json_decode(get_post($post_id = 12877)->config, true); 
   $trialPrice = get_post($post_id = 11711); 
+  $weekConfig = json_decode(get_post($post_id = 10537)->config, true);
 ?>
 
 <script>
   window.CONFIG = {
     page: 'home',
-    week: <?php $post = get_post($post_id = 10537); echo $post->week_number; ?>,
+    weekConfig: JSON.parse('<?php echo json_encode($weekConfig); ?>'),
     subscribeTypes: JSON.parse('<?php echo json_encode($subscribeTypeConfig); ?>'),
     calories: JSON.parse('<?php echo json_encode($caloriesConfig); ?>'),
     trialPrice: "<?php echo $trialPrice->trial_form_price; ?>"

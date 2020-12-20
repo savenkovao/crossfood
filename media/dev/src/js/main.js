@@ -31,7 +31,7 @@
 
             while (target !== event.currentTarget) {
                 if (target.hasAttribute("data-meta-node")) {
-                    var e = { target: target, currentTarget: currentTarget };
+                    var e = {target: target, currentTarget: currentTarget};
 
                     return e;
                 }
@@ -207,7 +207,7 @@
                 }
             }
 
-            var items = { sl: sl, ml: ml, mr: mr, sr: sr };
+            var items = {sl: sl, ml: ml, mr: mr, sr: sr};
 
             return items;
         }
@@ -218,7 +218,7 @@
 
         var cuisineListener = {
             subscribe: "stand",
-            week: 2,
+            week: 1,
             calories: APP_CALORIES.normal.label || "normal",
             day: "mo",
             cuisines: 5,
@@ -259,12 +259,12 @@
             getStartCuisine();
 
             function getStartCuisine() {
-                getCurrentDate();
+                setCurrentWeek();
                 selectCuisineItem();
             }
         }
 
-        function getCurrentDate() {
+        function setCurrentWeek() {
             var date = new Date();
 
             Date.prototype.getWeekNumber = function () {
@@ -280,35 +280,28 @@
             var dayNumber = date.getDay();
             var hourNumber = date.getHours();
 
-            getWeek(weekNumber, dayNumber, hourNumber);
+            cuisineListener.week = getSubscribeWeek(weekNumber, dayNumber, hourNumber);
         }
 
-        function getWeek(weekNumber, dayNumber, hourNumber) {
-            var evenWeekMenuNumber = getSystemConfig();
-            var oddWeekMenuNumber = evenWeekMenuNumber === 1 ? 2 : 1;
+        function getSubscribeWeek(weekNumber, dayNumber, hourNumber) {
+            var config = window.CONFIG.weekConfig;
+            var weeksCount = config && config.quantity;
+            var startWeekNumber = config && config.start;
+            var week = cuisineListener.week;
 
-            var week =
-                weekNumber % 2 === 0 ? evenWeekMenuNumber : oddWeekMenuNumber;
+            if (weeksCount && startWeekNumber) {
+                if (dayNumber === 0 && hourNumber >= 12) weekNumber++;
 
-            if (dayNumber === 0 && hourNumber >= 12) {
-                week =
-                    (weekNumber + 1) % 2 === 0
-                        ? evenWeekMenuNumber
-                        : oddWeekMenuNumber;
+                var rest = weekNumber % weeksCount;
+
+                var preCalc = (rest + startWeekNumber - 1) % weeksCount;
+
+                week = preCalc || weeksCount;
             }
 
-            cuisineListener.week = week;
-        }
-
-        function getSystemConfig() {
-            var week = +window.CONFIG.week;
-
-            // there are 2 weeks - №1 and №2
-            if (week != 1 && week != 2) {
-                week = 2;
-            }
-
-            return week;
+            return !week || week > weeksCount || week <= 0
+                ? 1
+                : week;
         }
 
         function enableBlock(event) {
@@ -355,7 +348,7 @@
                         cuisineListener.calories = APP_CALORIES.normal.label;
                     }
 
-                    getCurrentDate();
+                    setCurrentWeek();
 
                     checkHighLightedItem();
                 } else if (event.currentTarget === subscribeItems) {
@@ -447,9 +440,9 @@
 
             cuisineListener.price = $(
                 "#" +
-                    selector +
-                    " .cuisine__item-price-text" +
-                    "[data-cuisine-qount = 5]"
+                selector +
+                " .cuisine__item-price-text" +
+                "[data-cuisine-qount = 5]"
             ).html();
             cuisineListener.selector = selector;
             // cuisineListener.cuisines
@@ -529,29 +522,29 @@
             if (APP_SUBSCRIBE_TYPES) {
                 var subscribeTypesHtml = "";
 
-                for(var key in APP_SUBSCRIBE_TYPES) {
+                for (var key in APP_SUBSCRIBE_TYPES) {
                     var type = APP_SUBSCRIBE_TYPES[key];
 
-                    if(key === 'trial') {
+                    if (key === 'trial') {
                         continue;
                     }
 
                     subscribeTypesHtml += '<option value="' + type.value + '">' + type.label + "</option>";
                 }
-                
+
                 $("#form-input_subscribe").html(subscribeTypesHtml);
             }
-            
+
             // Вставка ККАЛ к в селект формы оформления подписок
             if (APP_CALORIES) {
                 var caloriesHtml = "";
 
-                for(var key in APP_CALORIES) {
+                for (var key in APP_CALORIES) {
                     var calory = APP_CALORIES[key];
 
                     caloriesHtml += '<option value="' + calory.label + '">' + calory.value + "</option>";
                 }
-                
+
                 $("#form-input_calories").html(caloriesHtml);
             }
 
@@ -584,12 +577,12 @@
                     // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
                     cuisineListener.price = $(
                         "#subscribe-items " +
-                            '[data-subscribe="' +
-                            subscribe +
-                            '"] ' +
-                            '[data-identifier="' +
-                            calories +
-                            '"] .subscribe__price strong'
+                        '[data-subscribe="' +
+                        subscribe +
+                        '"] ' +
+                        '[data-identifier="' +
+                        calories +
+                        '"] .subscribe__price strong'
                     ).html();
                 } else if (subscribe === "trial") {
                     cuisineListener.price = $("#" + subscribe).html();
@@ -607,7 +600,7 @@
             if (id[0] === "#") {
                 event.preventDefault();
                 var top = $(id).offset().top;
-                $("body,html").animate({ scrollTop: top }, 1500);
+                $("body,html").animate({scrollTop: top}, 1500);
             }
         });
 
@@ -627,7 +620,7 @@
         }
 
         if ($(selector).css("position") === "static") {
-            $(selector).css({ position: "relative" });
+            $(selector).css({position: "relative"});
         }
 
         hideLoader(selector);
