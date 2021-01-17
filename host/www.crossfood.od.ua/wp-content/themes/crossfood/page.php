@@ -716,4 +716,15 @@
   </div>
 </section>
 
+<?php
+//     https://polylang.wordpress.com/documentation/documentation-for-developers/functions-reference/;
+
+//     echo pll_current_language();
+//
+//     pll_the_languages();
+//
+//     $post = get_post($post_id = pll_get_post(25));
+//     echo $post->post_content;
+ ?>
+
 <?php get_footer() ?>
