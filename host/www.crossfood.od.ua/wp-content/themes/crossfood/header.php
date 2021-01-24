@@ -11,12 +11,9 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet"
-        href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.56">
+        href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/header.css?ver_1.01">
 
   <link rel="shortcut icon" href="//crossfood.od.ua/wp-content/themes/crossfood/src/img/dsg/favicon/favicon.ico">
-
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap&subset=cyrillic"
-        rel="stylesheet">
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {

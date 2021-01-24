@@ -1,6 +1,5 @@
 var gulp            = require('gulp');
 //less-css
-var browserSync     = require('browser-sync');
 var less            = require('gulp-less');
 var cssmin          = require('gulp-minify-css');
 var autoprefixer    = require('gulp-autoprefixer');
@@ -45,18 +44,12 @@ var path = {
 
 //Поднятие сервера
 
-gulp.task('browserSync', function () {
-   browserSync({
-       server: {
-           baseDir: './'
-       }
-   });
-});
-
-
 gulp.task('less', function(){
-    return gulp.src([path.less + 'style.less', path.less + 'less/fonts.less'])
-        .pipe(less()) // используем gulp-less
+    return gulp.src([
+        path.less + 'style.less',
+        path.less + 'header.less'
+    ])
+        .pipe(less())
         .pipe(autoprefixer())
         .pipe(cssmin({keepSpecialComments : 0}))
         .pipe(gulp.dest(path.css))
@@ -92,12 +85,6 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(PUBLIC_DIR+'src/fonts'));
 });
 
-gulp.task('bower', function() {
-    return gulp.src('bower_components/**/*.*')
-        .pipe(copy())
-        .pipe(gulp.dest(PUBLIC_DIR+'bower_components'));
-});
-
 gulp.task('img', function() {
     return gulp.src(path.img)
         .pipe(imagemin())
@@ -112,8 +99,6 @@ gulp.task('clean:cache', function(done){
     return cache.clearAll(done);
 });
 
-
-
 // Watchers
 gulp.task(
     'default',
@@ -123,7 +108,6 @@ gulp.task(
         runSequence(
             // 'clean:cache',
             [
-                // 'browserSync',
                 'less',
                 'scripts',
                 'img'
@@ -133,7 +117,6 @@ gulp.task(
 
         gulp.watch(path.less + '**/*.*', ['less']);
         gulp.watch(path.js + '**/*.js', ['scripts']);
-        // gulp.watch('*.html', browserSync.reload);
     }
 );
 

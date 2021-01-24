@@ -111,7 +111,11 @@
 
 <?php dynamic_sidebar('widgets_1'); ?>
 
-<link rel="stylesheet" href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/fonts.css">
+<link rel="stylesheet"
+        href="//crossfood.od.ua/wp-content/themes/crossfood/src/css/style.css?ver_1.57">
+        
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap&subset=cyrillic"
+      rel="stylesheet">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -136,6 +140,7 @@
   fbq('init', '2437774649784255');
   fbq('track', 'PageView');
 </script>
+
 <noscript><img height="1" width="1" style="display:none"
                src="https://www.facebook.com/tr?id=2437774649784255&ev=PageView&noscript=1"
   /></noscript>
@@ -152,59 +157,6 @@
 </script>
 <!-- END OF UTMSTAT.COM CODE FOR CROSSFOOD -->
 <!-- End Facebook Pixel Code -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97004051-1"></script>-->
-<!--<script>-->
-<!--  window.dataLayer = window.dataLayer || [];-->
-<!---->
-<!--  function gtag() {-->
-<!--    dataLayer.push(arguments);-->
-<!--  }-->
-<!---->
-<!--  gtag('js', new Date());-->
-<!---->
-<!--  gtag('config', 'UA-97004051-1');-->
-<!--</script>-->
-
-
-<!-- Yandex.Metrika counter -->
-<!--<script type="text/javascript">-->
-<!--  (function (d, w, c) {-->
-<!--    (w[c] = w[c] || []).push(function () {-->
-<!--      try {-->
-<!--        w.yaCounter44057639 = new Ya.Metrika({-->
-<!--          id : 44057639,-->
-<!--          clickmap : true,-->
-<!--          trackLinks : true,-->
-<!--          accurateTrackBounce : true,-->
-<!--          webvisor : true,-->
-<!--          trackHash : true-->
-<!--        });-->
-<!--      } catch (e) {-->
-<!--      }-->
-<!--    });-->
-<!---->
-<!--    var n = d.getElementsByTagName('script')[0],-->
-<!--      s = d.createElement('script'),-->
-<!--      f = function () {-->
-<!--        n.parentNode.insertBefore(s, n);-->
-<!--      };-->
-<!--    s.type = 'text/javascript';-->
-<!--    s.async = true;-->
-<!--    s.src = 'https://mc.yandex.ru/metrika/watch.js';-->
-<!---->
-<!--    if(w.opera == '[object Opera]') {-->
-<!--      d.addEventListener('DOMContentLoaded', f, false);-->
-<!--    } else {-->
-<!--      f();-->
-<!--    }-->
-<!--  })(document, window, 'yandex_metrika_callbacks');-->
-<!--</script>-->
-<!--<noscript>-->
-<!--  <div><img src="https://mc.yandex.ru/watch/44057639" style="position:absolute; left:-9999px;" alt=""/></div>-->
-<!--</noscript>-->
-<!-- /Yandex.Metrika counter -->
 
 <?php wp_footer(); ?>
 </body>

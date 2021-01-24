@@ -11,27 +11,13 @@
         window.POSTS = {};
         window.FIRST_LOAD = false;
 
-        // team slider browsing
-
-        var teamSlider = document.getElementById("team-slider");
-
-        if (teamSlider) {
-            teamSlider.addEventListener("click", browseTeamSlider, false);
-        }
-
-        function browseTeamSlider(event) {
-            var e = getTarget(event);
-
-            if (e !== undefined) browseSlider(e);
-        }
-
         function getTarget(event) {
             var target = event.target;
             var currentTarget = event.currentTarget;
 
             while (target !== event.currentTarget) {
                 if (target.hasAttribute("data-meta-node")) {
-                    var e = {target: target, currentTarget: currentTarget};
+                    var e = { target: target, currentTarget: currentTarget };
 
                     return e;
                 }
@@ -40,176 +26,6 @@
             }
 
             return;
-        }
-
-        function browseSlider(e) {
-            getScreenWidth();
-
-            if (currentScreenWidth >= 768) {
-                var target = e.target;
-                var currentTarget = e.currentTarget;
-
-                var targetWidth = target.clientWidth;
-                var dataAction = target.getAttribute("data-action");
-                var allItems = getItems();
-
-                var lItem = teamSlider.querySelectorAll(".l")[0];
-                lItem.classList.remove("l");
-                target.classList.remove(dataAction);
-                target.classList.add("l");
-                target.setAttribute("data-action", "l");
-
-                if (dataAction === "ml") {
-                    var newSl = allItems.sr.cloneNode(true);
-
-                    newSl.style.marginLeft = -targetWidth * 1 + "px";
-
-                    newSl.setAttribute("data-action", "sl");
-                    newSl.setAttribute("data-meta-node", "");
-                    newSl.classList.remove("sr");
-                    newSl.classList.add("sl");
-
-                    allItems.sl.setAttribute("data-action", "ml");
-                    allItems.sl.classList.remove("sl");
-                    allItems.sl.classList.add("ml");
-
-                    lItem.classList.add("mr");
-                    lItem.setAttribute("data-action", "mr");
-
-                    allItems.mr.setAttribute("data-action", "sr");
-                    allItems.mr.classList.remove("mr");
-                    allItems.mr.classList.add("sr");
-
-                    currentTarget.insertBefore(newSl, currentTarget.firstChild);
-
-                    setTimeout(function () {
-                        newSl.style.marginLeft = 0;
-                    }, 0);
-
-                    setTimeout(function () {
-                        allItems.sr.remove();
-                    }, 405);
-                } else if (dataAction === "sl") {
-                    var newSl = allItems.sr.cloneNode(true);
-                    var newMl = allItems.mr.cloneNode(true);
-
-                    newMl.setAttribute("data-action", "sl");
-                    newMl.setAttribute("data-meta-node", "");
-                    newMl.classList.remove("mr");
-                    newMl.classList.add("sl");
-
-                    newSl.setAttribute("data-action", "ml");
-                    newSl.setAttribute("data-meta-node", "");
-                    newSl.classList.remove("sr");
-                    newSl.classList.add("ml");
-
-                    newMl.style.marginLeft = -targetWidth * 2 + "px";
-                    currentTarget.insertBefore(newSl, currentTarget.firstChild);
-                    currentTarget.insertBefore(newMl, currentTarget.firstChild);
-
-                    lItem.classList.add("sr");
-                    lItem.setAttribute("data-action", "sr");
-
-                    allItems.ml.setAttribute("data-action", "mr");
-                    allItems.ml.classList.remove("ml");
-                    allItems.ml.classList.add("mr");
-
-                    setTimeout(function () {
-                        newMl.style.marginLeft = 0;
-                    }, 0);
-
-                    setTimeout(function () {
-                        allItems.sr.remove();
-                        allItems.mr.remove();
-                    }, 205);
-                } else if (dataAction === "mr") {
-                    var newSr = allItems.sl.cloneNode(true);
-
-                    newSr.setAttribute("data-action", "sr");
-                    newSr.setAttribute("data-meta-node", "");
-                    newSr.classList.remove("sl");
-                    newSr.classList.add("sr");
-
-                    allItems.sr.setAttribute("data-action", "mr");
-                    allItems.sr.classList.remove("sr");
-                    allItems.sr.classList.add("mr");
-
-                    lItem.classList.add("ml");
-                    lItem.setAttribute("data-action", "ml");
-
-                    allItems.ml.setAttribute("data-action", "sl");
-                    allItems.ml.classList.remove("ml");
-                    allItems.ml.classList.add("sl");
-
-                    currentTarget.appendChild(newSr);
-
-                    setTimeout(function () {
-                        allItems.sl.style.marginLeft = -targetWidth * 1 + "px";
-                    }, 0);
-
-                    setTimeout(function () {
-                        allItems.sl.remove();
-                    }, 300);
-                } else if (dataAction === "sr") {
-                    var newSr = allItems.ml.cloneNode(true);
-                    var newMr = allItems.sl.cloneNode(true);
-
-                    newSr.setAttribute("data-action", "sr");
-                    newSr.setAttribute("data-meta-node", "");
-                    newSr.classList.remove("ml");
-                    newSr.classList.add("sr");
-
-                    newMr.setAttribute("data-action", "mr");
-                    newMr.setAttribute("data-meta-node", "");
-                    newMr.classList.remove("sl");
-                    newMr.classList.add("mr");
-
-                    allItems.sr.setAttribute("data-action", "l");
-                    allItems.sr.classList.remove("sr");
-                    allItems.sr.classList.add("l");
-
-                    allItems.mr.setAttribute("data-action", "ml");
-                    allItems.mr.classList.remove("mr");
-                    allItems.mr.classList.add("ml");
-
-                    lItem.classList.add("sl");
-                    lItem.setAttribute("data-action", "sl");
-
-                    currentTarget.appendChild(newMr);
-                    currentTarget.appendChild(newSr);
-
-                    setTimeout(function () {
-                        allItems.sl.style.marginLeft = -targetWidth * 2 + "px";
-                    }, 0);
-
-                    setTimeout(function () {
-                        allItems.sl.remove();
-                        allItems.ml.remove();
-                    }, 400);
-                }
-            }
-        }
-
-        function getItems() {
-            var nodes = teamSlider.querySelectorAll("[data-action]");
-
-            for (var i = 0; i < nodes.length; i++) {
-                var current = nodes[i].getAttribute("data-action");
-
-                if (current === "sl") {
-                    var sl = nodes[i];
-                } else if (current === "ml") {
-                    var ml = nodes[i];
-                } else if (current === "mr") {
-                    var mr = nodes[i];
-                } else if (current === "sr") {
-                    var sr = nodes[i];
-                }
-            }
-
-            var items = {sl: sl, ml: ml, mr: mr, sr: sr};
-
-            return items;
         }
 
         // cuisine switching
@@ -280,7 +96,11 @@
             var dayNumber = date.getDay();
             var hourNumber = date.getHours();
 
-            cuisineListener.week = getSubscribeWeek(weekNumber, dayNumber, hourNumber);
+            cuisineListener.week = getSubscribeWeek(
+                weekNumber,
+                dayNumber,
+                hourNumber
+            );
         }
 
         function getSubscribeWeek(weekNumber, dayNumber, hourNumber) {
@@ -299,9 +119,7 @@
                 week = preCalc || weeksCount;
             }
 
-            return !week || week > weeksCount || week <= 0
-                ? 1
-                : week;
+            return !week || week > weeksCount || week <= 0 ? 1 : week;
         }
 
         function enableBlock(event) {
@@ -377,6 +195,7 @@
                 cuisineListener.week +
                 "-" +
                 cuisineListener.day;
+
             if (customSelector) {
                 categorySelector = customSelector;
             }
@@ -419,9 +238,11 @@
 
                         switchCuisineItems(selector);
                     }
+
                     if (callback) {
                         callback();
                     }
+
                     hideLoader("body");
                 });
             } else {
@@ -440,9 +261,9 @@
 
             cuisineListener.price = $(
                 "#" +
-                selector +
-                " .cuisine__item-price-text" +
-                "[data-cuisine-qount = 5]"
+                    selector +
+                    " .cuisine__item-price-text" +
+                    "[data-cuisine-qount = 5]"
             ).html();
             cuisineListener.selector = selector;
             // cuisineListener.cuisines
@@ -525,11 +346,16 @@
                 for (var key in APP_SUBSCRIBE_TYPES) {
                     var type = APP_SUBSCRIBE_TYPES[key];
 
-                    if (key === 'trial') {
+                    if (key === "trial") {
                         continue;
                     }
 
-                    subscribeTypesHtml += '<option value="' + type.value + '">' + type.label + "</option>";
+                    subscribeTypesHtml +=
+                        '<option value="' +
+                        type.value +
+                        '">' +
+                        type.label +
+                        "</option>";
                 }
 
                 $("#form-input_subscribe").html(subscribeTypesHtml);
@@ -542,12 +368,16 @@
                 for (var key in APP_CALORIES) {
                     var calory = APP_CALORIES[key];
 
-                    caloriesHtml += '<option value="' + calory.label + '">' + calory.value + "</option>";
+                    caloriesHtml +=
+                        '<option value="' +
+                        calory.label +
+                        '">' +
+                        calory.value +
+                        "</option>";
                 }
 
                 $("#form-input_calories").html(caloriesHtml);
             }
-
         }
 
         // Select options
@@ -559,7 +389,7 @@
             var dataSub = cuisineListener.subscribe || "stand";
 
             $("#form-input_subscribe").val(APP_SUBSCRIBE_TYPES[dataSub].value);
-            $('#form-input_calories').val(cuisineListener.calories);
+            $("#form-input_calories").val(cuisineListener.calories);
 
             setPriceInForm(dataSub, cuisineListener.calories);
         }
@@ -577,12 +407,12 @@
                     // cuisineListener.price = $('#' + subscribe + '-' + cuisineListener.week + '-' + calories + '-' + 'mo' + ' .cuisine__item-price-text' + '[data-cuisine-qount = 5]').html();
                     cuisineListener.price = $(
                         "#subscribe-items " +
-                        '[data-subscribe="' +
-                        subscribe +
-                        '"] ' +
-                        '[data-identifier="' +
-                        calories +
-                        '"] .subscribe__price strong'
+                            '[data-subscribe="' +
+                            subscribe +
+                            '"] ' +
+                            '[data-identifier="' +
+                            calories +
+                            '"] .subscribe__price strong'
                     ).html();
                 } else if (subscribe === "trial") {
                     cuisineListener.price = $("#" + subscribe).html();
@@ -600,7 +430,7 @@
             if (id[0] === "#") {
                 event.preventDefault();
                 var top = $(id).offset().top;
-                $("body,html").animate({scrollTop: top}, 1500);
+                $("body,html").animate({ scrollTop: top }, 1500);
             }
         });
 
@@ -615,27 +445,29 @@
     $("input[type='tel']").mask("+38 (099) 999 99 99");
 
     function showLoader(selector) {
-        if (!$(selector).length) {
-            return showLoader("body");
-        }
+        setTimeout(function () {
+            if (!$(selector).length) {
+                return showLoader("body");
+            }
 
-        if ($(selector).css("position") === "static") {
-            $(selector).css({position: "relative"});
-        }
+            if ($(selector).css("position") === "static") {
+                $(selector).css({ position: "relative" });
+            }
 
-        hideLoader(selector);
+            hideLoader(selector);
 
-        $(selector).append(
-            '<div class="loader" style="display: none"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>'
-        );
+            $(selector).append(
+                '<div class="loader" style="display: none"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>'
+            );
 
-        if ($(selector)[0].nodeName === "BODY") {
-            $(selector).children(".loader").css({
-                position: "fixed",
-            });
-        }
+            if ($(selector)[0].nodeName === "BODY") {
+                $(selector).children(".loader").css({
+                    position: "fixed",
+                });
+            }
 
-        $(selector).children(".loader").fadeIn();
+            $(selector).children(".loader").fadeIn();
+        }, 100);
     }
 
     function hideLoader(selector) {
